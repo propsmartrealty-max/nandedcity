@@ -18,6 +18,8 @@ const TrustSection = dynamic(() => import('./components/TrustSection'), { ssr: t
 const Testimonials = dynamic(() => import('./components/Testimonials'), { ssr: true });
 const SearchIntelligence = dynamic(() => import('./components/SearchIntelligence'), { ssr: true });
 const ROICalculator = dynamic(() => import('./components/ROICalculator'), { ssr: true });
+import HomeFaq from './components/HomeFaq';
+import { homeFaqs } from '../data/faqs';
 import { RealEstateAgent, WebSite, BreadcrumbList, LocalBusiness, SpeakableSpecification, WithContext, Offer, Residence } from 'schema-dts';
 import { SITE_CONFIG } from '../config/site';
 
@@ -106,24 +108,14 @@ export default function Home() {
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the price of a 2 BHK in Nanded City Township Pune?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The price of a 2 BHK in Nanded City starts from ₹68 Lakhs depending on the cluster like Bageshree, Sargam, or Asawari."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Nanded City a good investment in Pune Real Estate Market?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, Nanded City Township offers high ROI and rental yields, making it one of the most appreciating assets in the Central Pune and Sinhgad Road real estate market."
-          }
+      "mainEntity": homeFaqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
         }
-      ]
+      }))
     },
     {
       "@context": "https://schema.org",
@@ -369,22 +361,39 @@ export default function Home() {
               </p>
             </div>
             <div style={{ padding: '24px', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#1e293b' }}>Premium Bungalow Plots</h3>
+              <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#1e293b' }}>Luxury 3 & 4 BHK Flats</h3>
               <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: '1.6' }}>
-                Invest in <strong>premium bungalow plots near Hinjewadi IT Park routes</strong> and Sinhagad Road. 
-                Secure your legacy with <Link href="/cluster/rhythm-1" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Rhythm</Link> today.
+                Looking for <strong>spacious 3, 3.5 & 4.5 BHK apartments in Pune</strong> with panoramic Sahyadri views? 
+                Explore high-rise residences at <Link href="/cluster/saajgiri" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Saajgiri</Link> and the flagship palace towers at <Link href="/cluster/harmony" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Harmony</Link>.
               </p>
             </div>
             <div style={{ padding: '24px', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#1e293b' }}>Affordable 2 BHK Homes</h3>
+              <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#1e293b' }}>Branded NA Bungalow Plots</h3>
+              <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: '1.6' }}>
+                Invest in <strong>gated villa plots near Hinjewadi IT Park routes</strong> and Sinhagad Road. 
+                Secure your family legacy with build-ready plots at <Link href="/cluster/melody-1" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Melody</Link> and <Link href="/cluster/rhythm-1" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Rhythm</Link>.
+              </p>
+            </div>
+            <div style={{ padding: '24px', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+              <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#1e293b' }}>2 & 2.5 BHK Urban Homes</h3>
               <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: '1.6' }}>
                 Discover vibrant community living with <strong>MahaRERA registered 2 BHK flats in Pune</strong>. 
-                Experience tranquility and modern design at <Link href="/cluster/aalaap-1" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Aalaap-I</Link>.
+                Experience tranquility and modern design at <Link href="/cluster/aalaap-1" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Aalaap-I</Link> and <Link href="/cluster/pancham" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Pancham Phase 1 & 2</Link>.
+              </p>
+            </div>
+            <div style={{ padding: '24px', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+              <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#1e293b' }}>Resale & Ready Possession</h3>
+              <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: '1.6' }}>
+                Seek immediate possession in thriving inhabited societies? 
+                Browse verified inventory across <Link href="/cluster/asawari" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Asawari</Link>, <Link href="/cluster/sargam" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Sargam</Link>, and <Link href="/cluster/lalit" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Lalit</Link>.
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Frequently Asked Questions (Google Compliant FAQPage Accordion) */}
+      <HomeFaq />
 
       {/* Contact Section */}
       <section id="contact" className="section-padding contact-section">

@@ -120,6 +120,30 @@ export const clusters: Cluster[] = [
     ]
   },
   {
+    id: "harmony",
+    name: "Harmony",
+    type: "new",
+    bhk: "3.5 & 4.5 BHK Luxury",
+    status: "New Launch",
+    rera: "P52100055134",
+    reraUrl: "https://maharerait.mahaonline.gov.in/SearchList/Search?RegNo=P52100055134",
+    qrImage: "/qrs/saajgiri-qr.png",
+    price: "₹1.85 Cr onwards",
+    area: "1,650 – 2,450 sq. ft. Carpet",
+    possession: "Dec 2027",
+    floors: "G+30",
+    units: "180 Luxury Residences",
+    description: "Harmony Nanded City — The pinnacle of ultra-luxury 3.5 & 4.5 BHK apartments on Sinhagad Road Pune. Palatial living with high ceilings, wrap-around sundecks, and exclusive Club Harmony privileges.",
+    highlights: ["Ultra-Luxury 3.5 & 4.5 BHK", "Club Harmony Privilege", "Expansive Valley Views", "Grand Double-Height Lobby"],
+    image: "https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp",
+    heroImage: "https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp",
+    faqs: [
+      { question: "What configurations are available in Harmony Nanded City?", answer: "Harmony offers ultra-spacious 3.5 BHK and 4.5 BHK residences with expansive carpet areas ranging from 1,650 to 2,450 sq. ft." },
+      { question: "Who is Harmony designed for?", answer: "Harmony is crafted for CXOs, business leaders, and discerning families seeking expansive palace-scale living within a fully self-contained 700-acre township." }
+    ],
+    searchKeywords: ["Harmony Nanded City", "3.5 BHK Nanded City", "4.5 BHK luxury flats Pune", "Harmony price", "Harmony floor plan", "Harmony Sinhagad Road"]
+  },
+  {
     id: "rhythm-1",
     name: "Rhythm I",
     type: "new",
@@ -180,21 +204,26 @@ export const clusters: Cluster[] = [
   },
   {
     id: "pancham",
-    name: "Pancham",
+    name: "Pancham (Phase 1 & 2)",
     type: "completed",
     bhk: "2 BHK",
     status: "Ready to Move",
-    rera: "Completed",
-    reraUrl: null,
+    rera: "P52100000288",
+    reraUrl: "https://maharerait.mahaonline.gov.in/SearchList/Search?RegNo=P52100000288",
     price: "₹72 Lakh onwards",
     area: "680 – 980 sq. ft. Carpet",
     possession: "Delivered",
     floors: "G+16",
     units: "288 Units",
-    description: "Pancham modern apartments Nanded City — Smart layout flats Pune with urban lifestyle infrastructure. High-rise living on Sinhagad Road.",
-    highlights: ["Pancham 2 BHK Nanded City", "Smart Urban Design", "High Rise Flats Pune", "Ready Possession Homes"],
+    description: "Pancham Phase 1 & Phase 2 modern apartments Nanded City — Smart layout 2 BHK flats on Sinhagad Road with urban lifestyle infrastructure. MahaRERA P52100000288.",
+    highlights: ["Pancham Phase 1 & 2", "MahaRERA P52100000288", "Smart 2 BHK Urban Design", "Ready Possession Resale"],
     image: "https://nandedcitypune.com/wp-content/uploads/2020/01/pancham-completed.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2020/01/pancham-completed.jpg",
+    faqs: [
+      { question: "What is the MahaRERA number for Pancham Phase 2?", answer: "Pancham Phase II in Nanded City holds MahaRERA registration number P52100000288." },
+      { question: "Are resale flats available in Pancham?", answer: "Yes, verified resale 2 BHK apartments in Pancham Phase 1 and 2 are regularly available. Contact our resale advisory desk." }
+    ],
+    searchKeywords: ["Pancham Nanded City", "Pancham Phase 1", "Pancham Phase 2", "P52100000288", "Pancham 2 BHK price", "Pancham resale flats"]
   },
   {
     id: "lalit",
@@ -213,6 +242,7 @@ export const clusters: Cluster[] = [
     highlights: ["Lalit Resale Flats", "Compact Smart Homes", "Low Maintenance Living", "Efficient Carpet Area"],
     image: "https://nandedcitypune.com/wp-content/uploads/2017/10/latil-1.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2017/10/latil-1.jpg",
+    searchKeywords: ["Lalit Nanded City", "Lalit 2.5 BHK", "Lalit flats for sale", "Lalit resale price", "Lalit Sinhagad Road"]
   },
   {
     id: "bageshree",
@@ -287,6 +317,7 @@ export const clusters: Cluster[] = [
     highlights: ["Sarang Scenic Living", "Hill View Flats Pune", "Green Zone Residency", "Peaceful Hillside Homes"],
     image: "https://nandedcitypune.com/wp-content/uploads/2017/10/sar-1-1.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2017/10/sar-1-1.jpg",
+    searchKeywords: ["Sarang Nanded City", "Sarang 2 BHK", "Sarang resale price", "Sarang flats for sale", "Sarang reviews Pune"]
   },
   {
     id: "shubh-kalyan",

@@ -3,7 +3,7 @@ export interface Cluster {
   name: string;
   type: 'new' | 'completed';
   bhk: string;
-  status: 'Ongoing' | 'Ready to Move' | 'Delivered';
+  status: 'Ongoing' | 'Ready to Move' | 'Delivered' | 'New Launch';
   rera: string;
   reraUrl: string | null;
   qrImage?: string;
