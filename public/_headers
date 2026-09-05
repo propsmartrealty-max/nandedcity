@@ -1,4 +1,4 @@
-# Cloudflare Pages Edge Headers
+# Cloudflare Pages Global Edge Headers
 /*
   X-Robots-Tag: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   X-DNS-Prefetch-Control: on
@@ -6,16 +6,43 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(self)
+  Timing-Allow-Origin: *
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Cross-Origin-Resource-Policy: cross-origin
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://nandedcitypune.com; connect-src 'self' https://www.google-analytics.com https://api.resend.com;
 
-# Cache-Control for Clusters
+# Cache-Control for Cluster Pages (High Edge Freshness)
 /cluster/*
-  Cache-Control: public, s-maxage=86400, stale-while-revalidate=43200
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
 
-# Cache-Control for Blog
+# Cache-Control for Market Intelligence Blog Posts
 /blog/*
-  Cache-Control: public, s-maxage=43200, stale-while-revalidate=21600
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
 
-# Static Next.js Assets
+# Cache-Control for Location Landing Pages
+/near/*
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
+
+# Cache-Control for Campaign LP Pages
+/lp/*
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
+
+# Search Engine Directives
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=1800, s-maxage=3600
+
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600, s-maxage=7200
+
+# Static Next.js Bundles (1-Year Immutable Edge Cache)
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Static Media & QR Assets
+/qrs/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+/assets/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
