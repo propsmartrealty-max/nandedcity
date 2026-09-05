@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
-  name: "Nanded City Pune — Independent Property Advisory",
-  description: "Independent Authorized Channel Partner for Nanded City Township, Pune. Explore 1, 2, 2.5 & 3 BHK premium flats and NA bungalow plots on Sinhagad Road.",
+  name: "Nanded City Township Pune",
+  description: "Official residential platform for Nanded City Township Pune, dominating the Pune Real Estate Market on Sinhagad Road and Central Pune. Explore 1, 2, 2.5 & 3 BHK luxury flats and branded NA bungalow plots.",
   baseUrl: "https://www.nanded-city.in",
   contact: {
     phone: "+91 7744009295",
