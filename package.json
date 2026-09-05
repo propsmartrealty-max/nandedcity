@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "pages:build": "next build",
     "start": "next start",
     "lint": "eslint",
     "seo:sweep": "node scripts/sovereign-sweep.js",
+    "seo:index": "node scripts/google-index.js",
     "prepare": "husky"
   },
   "dependencies": {

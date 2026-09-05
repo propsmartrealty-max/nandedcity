@@ -1,9 +1,8 @@
-import { NextResponse } from 'next/server';
-import { SITE_CONFIG } from '@/config/site';
-import { clusters } from '@/data/clusters';
-import { blogs } from '@/data/blogs';
+import { clusters } from '../../src/data/clusters';
+import { blogs } from '../../src/data/blogs';
+import { SITE_CONFIG } from '../../src/config/site';
 
-export async function GET() {
+export async function onRequestGet() {
   const latestBlogs = blogs.slice(0, 10);
   const activeClusters = clusters.filter(c => c.type === 'new');
 
@@ -16,7 +15,6 @@ export async function GET() {
     <language>en-in</language>
     <atom:link href="${SITE_CONFIG.baseUrl}/api/rss" rel="self" type="application/rss+xml" />`;
 
-  // Add Blogs
   latestBlogs.forEach((blog) => {
     rss += `
     <item>
@@ -27,7 +25,6 @@ export async function GET() {
     </item>`;
   });
 
-  // Add Real Estate Clusters
   activeClusters.forEach((cluster) => {
     rss += `
     <item>
@@ -42,7 +39,7 @@ export async function GET() {
   </channel>
 </rss>`;
 
-  return new NextResponse(rss, {
+  return new Response(rss, {
     headers: {
       'Content-Type': 'application/xml',
       'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=43200',

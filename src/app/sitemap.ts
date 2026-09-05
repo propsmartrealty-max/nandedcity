@@ -4,6 +4,8 @@ import { blogs } from '../data/blogs';
 import { Cluster } from '@/types';
 import { SITE_CONFIG } from '@/config/site';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.baseUrl;
   const currentDate = new Date().toISOString();
