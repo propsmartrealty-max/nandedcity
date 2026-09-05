@@ -403,7 +403,7 @@ export default function Home() {
             <h2 style={{ color: '#fff' }}>Talk to Our Team</h2>
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
               <ReraQrCode 
-                reraUrl="https://maharera.mahaonline.gov.in/" 
+                reraUrl="https://maharera.maharashtra.gov.in/" 
                 reraNumber="MahaRERA Registered Projects" 
                 qrImage="https://nandedcitypune.com/aalaap/assets/img/img-aalaap-qr-code.png" 
               />

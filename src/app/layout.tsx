@@ -300,7 +300,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Image src="https://www.nanded-city.in/aalaap/assets/img/img-aalaap-qr-code.png" alt="MahaRERA QR Code" width={48} height={48} style={{ background: '#fff', padding: '2px', borderRadius: '4px' }} />
                     <div>
                       <div style={{ color: '#fff', fontSize: '0.75rem', fontWeight: '600' }}>Official Verification</div>
-                      <a href="https://maharera.mahaonline.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', fontSize: '0.7rem' }}>maharera.online</a>
+                      <a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', fontSize: '0.75rem' }}>maharera.maharashtra.gov.in</a>
                     </div>
                   </div>
                 </div>

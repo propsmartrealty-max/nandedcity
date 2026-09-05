@@ -102,7 +102,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
   const defaultFaqs = [
     {
       question: `What is the MahaRERA number for ${cluster.name} in Nanded City?`,
-      answer: `${cluster.name} is a MahaRERA registered project. The registration number is ${cluster.rera}. You can verify this at maharera.mahaonline.gov.in.`
+      answer: `${cluster.name} is a MahaRERA registered project. The registration number is ${cluster.rera}. You can verify this at maharera.maharashtra.gov.in.`
     },
     {
       question: `When is the possession date for ${cluster.name}?`,
@@ -488,7 +488,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
                   </div>
                 )}
                 <a 
-                  href="https://maharerait.mahaonline.gov.in" 
+                  href="https://maharera.maharashtra.gov.in" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   style={{ fontSize: '0.85rem', color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '600', marginTop: '10px' }}
