@@ -201,6 +201,8 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--primary-green); line-height: 1.2
   font-weight: 800;
   margin: 16px 0 22px;
   letter-spacing: -1px;
+  line-height: 1.15;
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.7);
 }
 .hero h1 span { color: var(--accent-gold); }
 .hero > .container > .hero-inner > p,

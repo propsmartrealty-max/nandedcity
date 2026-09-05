@@ -145,7 +145,7 @@ export default function Home() {
       {/* Hero */}
       <ParallaxHero bgImage="https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp">
         <span className="badge badge-gold">Sinhagad Road · Pune</span>
-        <h1 className="speakable-title">Welcome to <span>Nanded City Township Pune</span></h1>
+        <h1 className="speakable-title">Welcome to <span className="metallic-gold-text">Nanded City Township Pune</span></h1>
         <p className="hero-seo-text">
           Discover <strong>premium 2 & 3 BHK luxury flats</strong> and the <strong>most aspiring community of Branded NA Bungalow Plots</strong> at Nanded City Township on Sinhgad Road. A curated ecosystem for <strong>CEOs, CXOs, Doctors, CAs, and Business Owners</strong> offering world-class infrastructure across a 700-Acre township.
         </p>
