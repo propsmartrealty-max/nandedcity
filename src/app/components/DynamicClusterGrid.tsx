@@ -34,28 +34,38 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
   const btnStyle = (isActive: boolean): React.CSSProperties => ({
     padding: '10px 24px',
     borderRadius: '30px',
-    border: `1px solid ${isActive ? 'var(--accent-gold)' : '#cbd5e1'}`,
-    backgroundColor: isActive ? 'var(--accent-gold)' : 'transparent',
-    color: isActive ? '#fff' : '#475569',
+    border: isActive ? '1px solid var(--accent-gold)' : '1px solid rgba(203, 213, 225, 0.6)',
+    backgroundColor: isActive ? 'var(--accent-gold)' : 'rgba(255, 255, 255, 0.75)',
+    backdropFilter: 'blur(10px)',
+    WebkitBackdropFilter: 'blur(10px)',
+    color: isActive ? '#fff' : '#334155',
     fontWeight: '600',
     cursor: 'pointer',
-    transition: 'all 0.3s ease',
-    fontSize: '0.9rem',
+    transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+    fontSize: '0.92rem',
     outline: 'none',
+    boxShadow: isActive 
+      ? '0 6px 20px -2px rgba(201, 168, 76, 0.45), inset 0 1px 1px rgba(255,255,255,0.4)'
+      : '0 4px 12px rgba(0,0,0,0.04), inset 0 1px 1px rgba(255,255,255,0.8)',
   });
 
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap', marginBottom: '40px' }}>
-        {['All', '2 BHK', '3 BHK', 'Bungalow Plots'].map((cat) => (
-          <button 
-            key={cat} 
-            onClick={() => setFilter(cat)}
-            style={btnStyle(filter === cat)}
-          >
-            {cat}
-          </button>
-        ))}
+        {['All', '2 BHK', '3 BHK', 'Bungalow Plots'].map((cat) => {
+          const isActive = filter === cat;
+          return (
+            <motion.button 
+              key={cat} 
+              onClick={() => setFilter(cat)}
+              style={btnStyle(isActive)}
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.96 }}
+            >
+              {cat}
+            </motion.button>
+          );
+        })}
       </div>
 
       <motion.div layout className="grid-cols-2">

@@ -87,22 +87,14 @@ export default function TownshipEcosystem() {
           {amenities.map((a, idx) => (
             <motion.div
               key={a.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.08, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="glass-card-interactive shimmer-hover"
               style={{
                 padding: '40px',
                 borderRadius: '32px',
-                backgroundColor: '#f8fafc',
-                border: '1px solid #f1f5f9',
-                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-              }}
-              whileHover={{ 
-                y: -8, 
-                backgroundColor: '#fff', 
-                boxShadow: '0 20px 40px -15px rgba(0,0,0,0.1)',
-                borderColor: 'var(--accent-gold)'
               }}
             >
               <div style={{ fontSize: '2.5rem', marginBottom: '24px' }}>{a.icon}</div>

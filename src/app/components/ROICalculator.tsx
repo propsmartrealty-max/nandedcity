@@ -72,21 +72,23 @@ export default function ROICalculator() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="glass-luxury-dark"
             style={{
               padding: '50px',
-              backgroundColor: 'rgba(30, 41, 59, 0.5)',
               borderRadius: '32px',
-              border: '1px solid rgba(197, 168, 114, 0.2)',
-              backdropFilter: 'blur(10px)',
               position: 'relative',
               overflow: 'hidden'
             }}
           >
-            <div style={{ position: 'absolute', top: 0, right: 0, width: '150px', height: '150px', background: 'radial-gradient(circle, rgba(197, 168, 114, 0.1) 0%, transparent 70%)' }} />
+            <div 
+              className="ambient-glow-orb ambient-glow-gold"
+              style={{ top: '-10%', right: '-10%', width: '220px', height: '220px', opacity: 0.35 }} 
+              aria-hidden="true"
+            />
             
-            <div style={{ marginBottom: '40px' }}>
+            <div style={{ marginBottom: '40px', position: 'relative', zIndex: 2 }}>
               <span style={{ fontSize: '0.75rem', fontWeight: '700', textTransform: 'uppercase', color: '#94a3b8', letterSpacing: '1px' }}>Projected Appreciation</span>
-              <div style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--accent-gold)', marginTop: '8px' }}>{formatCurrency(futureValue)}</div>
+              <div className="metallic-gold-text" style={{ fontSize: '2.8rem', fontWeight: '800', marginTop: '8px', letterSpacing: '-1px' }}>{formatCurrency(futureValue)}</div>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '30px' }}>

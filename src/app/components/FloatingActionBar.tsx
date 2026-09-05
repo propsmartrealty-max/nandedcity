@@ -87,13 +87,17 @@ export default function FloatingActionBar() {
                       onClick={a.onClick}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: idx * 0.06 }}
+                      whileHover={{ scale: 1.04, x: -4 }}
+                      whileTap={{ scale: 0.96 }}
+                      transition={{ delay: idx * 0.05 }}
                       style={{
                         display: 'flex', alignItems: 'center', gap: '10px',
                         padding: '12px 20px', borderRadius: '100px',
                         backgroundColor: a.color, color: '#fff',
                         fontWeight: '700', fontSize: '0.85rem',
-                        textDecoration: 'none', boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
+                        textDecoration: 'none', 
+                        boxShadow: '0 10px 25px -4px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.4)',
+                        border: '1px solid rgba(255,255,255,0.2)',
                         whiteSpace: 'nowrap'
                       }}
                     >
@@ -105,14 +109,16 @@ export default function FloatingActionBar() {
                       onClick={a.action}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: idx * 0.06 }}
+                      whileHover={{ scale: 1.04, x: -4 }}
+                      whileTap={{ scale: 0.96 }}
+                      transition={{ delay: idx * 0.05 }}
                       style={{
                         display: 'flex', alignItems: 'center', gap: '10px',
                         padding: '12px 20px', borderRadius: '100px',
                         backgroundColor: a.color, color: '#fff',
                         fontWeight: '700', fontSize: '0.85rem',
-                        border: 'none', cursor: 'pointer',
-                        boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
+                        border: '1px solid rgba(255,255,255,0.2)', cursor: 'pointer',
+                        boxShadow: '0 10px 25px -4px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.4)',
                         whiteSpace: 'nowrap'
                       }}
                     >
@@ -124,22 +130,38 @@ export default function FloatingActionBar() {
             )}
           </AnimatePresence>
 
-          {/* Main FAB Toggle */}
-          <motion.button
-            onClick={() => setIsOpen(!isOpen)}
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.94 }}
-            style={{
-              width: '58px', height: '58px', borderRadius: '50%',
-              backgroundColor: isOpen ? '#0f172a' : 'var(--accent-gold)',
-              color: '#fff', border: 'none', cursor: 'pointer',
-              fontSize: '1.4rem', boxShadow: '0 8px 25px rgba(0,0,0,0.25)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              transition: 'background 0.3s ease'
-            }}
-          >
-            {isOpen ? '✕' : '🏠'}
-          </motion.button>
+          {/* Main FAB Toggle with Ambient Glow */}
+          <div style={{ position: 'relative' }}>
+            <div 
+              style={{
+                position: 'absolute',
+                inset: '-4px',
+                borderRadius: '50%',
+                background: isOpen ? 'rgba(15, 23, 42, 0.4)' : 'rgba(201, 168, 76, 0.5)',
+                filter: 'blur(8px)',
+                animation: 'glowPulse 2.8s infinite ease-in-out',
+                pointerEvents: 'none'
+              }}
+            />
+            <motion.button
+              onClick={() => setIsOpen(!isOpen)}
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.94 }}
+              style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '58px', height: '58px', borderRadius: '50%',
+                backgroundColor: isOpen ? '#0f172a' : 'var(--accent-gold)',
+                color: '#fff', border: '1px solid rgba(255,255,255,0.4)', cursor: 'pointer',
+                fontSize: '1.4rem', 
+                boxShadow: '0 10px 25px rgba(0,0,0,0.28), inset 0 1px 1px rgba(255,255,255,0.4)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                transition: 'background 0.3s ease'
+              }}
+            >
+              {isOpen ? '✕' : '🏠'}
+            </motion.button>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

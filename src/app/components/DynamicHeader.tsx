@@ -66,15 +66,18 @@ export default function DynamicHeader() {
               pointerEvents: 'auto',
               display: 'flex',
               alignItems: 'center',
-              backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.92)',
-              backdropFilter: 'blur(20px)',
-              padding: '6px 8px 6px 20px',
+              backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.88)' : 'rgba(255, 255, 255, 0.76)',
+              backdropFilter: 'blur(28px) saturate(190%)',
+              WebkitBackdropFilter: 'blur(28px) saturate(190%)',
+              padding: '7px 10px 7px 24px',
               borderRadius: '100px',
-              boxShadow: scrolled ? '0 15px 35px -5px rgba(0,0,0,0.12), 0 5px 15px -5px rgba(0,0,0,0.08)' : '0 4px 15px -2px rgba(0,0,0,0.1)',
-              border: '1px solid rgba(226, 232, 240, 0.5)',
+              boxShadow: scrolled 
+                ? '0 20px 45px -10px rgba(15, 23, 42, 0.14), inset 0 1px 2px 0 rgba(255, 255, 255, 0.95)' 
+                : '0 12px 35px -8px rgba(0, 0, 0, 0.1), inset 0 1px 2px 0 rgba(255, 255, 255, 0.9)',
+              border: '1px solid rgba(255, 255, 255, 0.85)',
               width: '100%',
               maxWidth: '1140px',
-              marginTop: scrolled ? '0' : '8px',
+              marginTop: scrolled ? '0' : '10px',
               transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
               justifyContent: 'space-between'
             }}
@@ -138,7 +141,7 @@ export default function DynamicHeader() {
 
               <button 
                 onClick={() => openEnquiry()}
-                className="btn-enquiry-glow"
+                className="btn-enquiry-glow shimmer-hover"
                 style={{
                   padding: '10px 24px',
                   backgroundColor: 'var(--accent-gold)',

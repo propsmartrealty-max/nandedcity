@@ -18,8 +18,20 @@ export default function MarketIntelligence() {
   ];
 
   return (
-    <section style={{ padding: '80px 0', backgroundColor: '#f1f5f9' }}>
-      <div className="container">
+    <section style={{ padding: '90px 0', backgroundColor: '#f1f5f9', position: 'relative', overflow: 'hidden' }}>
+      {/* Subtle ambient lighting */}
+      <div 
+        className="ambient-glow-orb ambient-glow-gold"
+        style={{ top: '10%', right: '5%', width: '350px', height: '350px', opacity: 0.35 }}
+        aria-hidden="true"
+      />
+      <div 
+        className="ambient-glow-orb ambient-glow-emerald"
+        style={{ bottom: '5%', left: '5%', width: '300px', height: '300px', opacity: 0.25 }}
+        aria-hidden="true"
+      />
+
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
           <span className="section-eyebrow">Market Intelligence</span>
           <h2 style={{ color: '#0f172a', fontSize: '2.4rem', marginTop: '10px' }}>Sinhgad Road Growth Index</h2>
@@ -32,20 +44,25 @@ export default function MarketIntelligence() {
           {stats.map((stat, idx) => (
             <motion.div 
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="glass-card-interactive shimmer-hover"
               style={{
-                backgroundColor: '#fff',
                 padding: '40px 30px',
-                borderRadius: '24px',
-                boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05), 0 10px 15px -3px rgba(0,0,0,0.1)',
                 textAlign: 'center',
-                border: '1px solid #e2e8f0'
               }}
             >
-              <div style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--accent-gold)', marginBottom: '10px' }}>
+              <div 
+                className="metallic-gold-text"
+                style={{ 
+                  fontSize: '2.8rem', 
+                  fontWeight: '800', 
+                  marginBottom: '10px',
+                  letterSpacing: '-1px'
+                }}
+              >
                 {stat.value}
               </div>
               <div style={{ fontSize: '1.1rem', fontWeight: '700', color: '#1e293b', marginBottom: '4px' }}>
