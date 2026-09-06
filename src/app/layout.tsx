@@ -143,13 +143,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "Pune Real Estate Market",
       "Sinhgad Road Real Estate",
       "Central Pune Real Estate",
+      "700 Acres Integrated Township Pune",
       "Luxury Apartments Sinhagad Road",
       "NA Bungalow Plots Pune",
+      "Collector Sanctioned NA Plots",
       "MahaRERA Registered Projects",
       "Township Living Pune",
       "2 BHK, 2.5 BHK, 3 BHK, 3.5 BHK, 4.5 BHK Luxury Flats Pune",
       "Resale Flats Nanded City",
-      "Ready Possession Flats Pune"
+      "Ready Possession Flats Pune",
+      "Saajgiri Nanded City 3 BHK High-Rise",
+      "Harmony Nanded City 3.5 & 4.5 BHK",
+      "Aalaap-I Nanded City 2 & 3 BHK",
+      "Melody Nanded City NA Plots",
+      "Rhythm Nanded City Villa Plots",
+      "Dhanashree Plots Nanded City",
+      "Pancham Nanded City Phase 1 & 2",
+      "Asawari, Sargam, Bageshree, Kalashree Nanded City",
+      "Lalit, Sarang, Madhuvanti, Shubh Kalyan, Sur, Mangal Bhairav, Janaranjani",
+      "Nanded City Public School ICSE",
+      "Symphony IT Park Walk to Work",
+      "Destination Center Shopping Malls",
+      "Kridaangan Sports Complex"
     ]
   };
 

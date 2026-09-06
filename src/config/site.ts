@@ -96,63 +96,82 @@ export const SITE_CONFIG = {
       "4 BHK flats Nanded City",
       "4.5 BHK Nanded City",
 
-      // 5. High-Intent New Launches & Clusters
-      "Saajgiri Nanded City",
-      "Saajgiri 3 BHK",
-      "Saajgiri Sinhagad Road",
-      "Harmony Nanded City",
-      "Harmony 3.5 BHK",
-      "Harmony 4.5 BHK",
-      "Aalaap Nanded City",
-      "Melody Nanded City",
-      "Melody bungalow plots",
-      "Rhythm Nanded City",
-      "Dhanashree Plots Nanded City",
-      "Pancham Nanded City",
-      "Pancham Phase 1",
-      "Pancham Phase 2",
-      "Sarang Nanded City",
-      "Lalit Nanded City",
-      "Sargam Nanded City",
-      "Asawari Nanded City",
-      "Bageshree Nanded City",
-      "Kalashree Nanded City",
-      "Madhuvanti Nanded City",
-      "Shubh Kalyan Nanded City",
-      "Sur Nanded City",
-      "Mangal Bhairav Nanded City",
-      "Janaranjani Nanded City",
+      // 5. Exhaustive Permutations & Combinations for All 20 Clusters
+      // Saajgiri (3 BHK Luxury High-Rise)
+      "Saajgiri Nanded City", "Saajgiri 3 BHK Pune", "Saajgiri Sinhagad Road", "Saajgiri price list 2026", "Saajgiri floor plan brochure", "Saajgiri possession date", "Saajgiri MahaRERA PR1260002501621", "Saajgiri reviews", "Saajgiri sample flat",
+      // Harmony (3.5 & 4.5 BHK Luxury Residences)
+      "Harmony Nanded City", "Harmony 3.5 BHK Pune", "Harmony 4.5 BHK Pune", "Harmony luxury apartments", "Harmony Sinhagad Road", "Harmony floor plan", "Harmony price list", "Harmony MahaRERA P52100055134", "Harmony palace homes Pune",
+      // Aalaap-I (2 & 3 BHK Contemporary)
+      "Aalaap Nanded City", "Aalaap-I Nanded City", "Aalaap 2 BHK Pune", "Aalaap 3 BHK Sinhagad Road", "Aalaap price list", "Aalaap floor plan", "Aalaap MahaRERA P52100051867", "Aalaap possession",
+      // Melody (I, II, III NA Bungalow Plots)
+      "Melody Nanded City", "Melody 1 Nanded City", "Melody 2 Nanded City", "Melody 3 Nanded City", "Melody bungalow plots", "Melody NA plots Pune", "Melody plot price per sq ft", "Melody MahaRERA P52100051948", "Melody villa plots Sinhagad Road",
+      // Rhythm & Dhanashree (Plotted Estates)
+      "Rhythm Nanded City", "Rhythm 1 bungalow plots", "Rhythm plots Pune", "Dhanashree plots Nanded City", "Dhanashree bungalow plots Pune", "NA villa plots near Khadakwasla",
+      // Pancham (Phase 1 & Phase 2 - 2 BHK)
+      "Pancham Nanded City", "Pancham Phase 1", "Pancham Phase 2", "Pancham 2 BHK flats", "Pancham resale price", "Pancham MahaRERA P52100000288",
+      // Asawari (2 & 3 BHK Family Cluster)
+      "Asawari Nanded City", "Asawari 2 BHK flats", "Asawari 3 BHK apartments", "Asawari resale flats for sale", "Asawari rent Sinhagad Road",
+      // Sargam (2 & 2.5 BHK Skyline Towers)
+      "Sargam Nanded City", "Sargam 2 BHK flats", "Sargam 2.5 BHK apartments", "Sargam resale Nanded City", "Sargam flat price",
+      // Bageshree (2 BHK High-Demand Modern)
+      "Bageshree Nanded City", "Bageshree 2 BHK flats", "Bageshree resale flats Pune", "Bageshree rent price",
+      // Kalashree (Spacious 3 BHK)
+      "Kalashree Nanded City", "Kalashree 3 BHK luxury flats", "Kalashree resale price", "Kalashree carpet area",
+      // Lalit, Sarang, Madhuvanti, Shubh Kalyan, Sur, Mangal Bhairav, Janaranjani
+      "Lalit Nanded City", "Lalit 2 BHK flats", "Sarang Nanded City", "Sarang 2 BHK hill view", "Madhuvanti Nanded City", "Madhuvanti 2 BHK flats", "Shubh Kalyan Nanded City", "Shubh Kalyan 3 BHK luxury", "Sur Nanded City", "Sur 2 BHK apartments", "Mangal Bhairav Nanded City", "Mangal Bhairav 2 BHK resale", "Janaranjani Nanded City", "Janaranjani 2 BHK flats",
 
-      // 6. Plotted Land & Villas
+      // 6. Plotted Land & Villas Ecosystem
       "Nanded City bungalow plots",
       "Nanded City NA plots",
       "Nanded City villa plots",
       "NA bungalow plots Pune",
       "residential plots Sinhagad Road",
+      "Collector sanctioned NA plots Pune",
+      "gated community plots Pune",
+      "villa plots near Khadakwasla",
 
-      // 7. Amenities, Schools & Infrastructure
+      // 7. Amenities, Schools & Civic Infrastructure
       "Nanded City Public School",
-      "Pawar Public School Nanded",
+      "Nanded City Public School ICSE admission",
+      "Pawar Public School Nanded City",
       "Symphony IT Park Nanded City",
       "Destination Center Nanded City",
+      "Destination Center 1 and 2 shops",
       "Kridaangan Sports Complex Nanded City",
       "Stream Park Nanded City",
+      "Nanded City gym and clubhouse",
 
-      // 8. Locality Combinations & Connectivity
-      "Nanded City to Kothrud",
-      "Nanded City to Warje",
-      "Nanded City to Bavdhan",
-      "Nanded City to Hinjewadi",
-      "Nanded City to Swargate",
+      // 8. Locality Combinations & Commute Corridors
+      "Nanded City to Kothrud 15 mins",
+      "Nanded City to Warje flyover",
+      "Nanded City to Bavdhan highway",
+      "Nanded City to Hinjewadi IT Park commute",
+      "Nanded City to Swargate metro",
+      "flats near Dhayari Pune",
+      "flats near Anand Nagar Sinhagad Road",
+      "flats near Vadgaon Budruk",
+      "flats near Khadakwasla dam",
 
-      // 9. Comparison & Investment Queries
+      // 9. Transactional, Financial & Legal Keywords
+      "Nanded City price list 2026",
+      "Nanded City brochure pdf download",
+      "Nanded City resale flats for sale",
+      "Nanded City ready possession flats",
+      "Nanded City flats ready to move",
+      "Nanded City bank loan SBI HDFC ICICI",
+      "Nanded City MahaRERA registration certificate",
+      "Nanded City maintenance charges",
+      "Nanded City floor plans with dimensions",
+
+      // 10. Comparison & High-Intent Investment Queries
       "Nanded City vs Magarpatta City",
-      "Nanded City vs Amanora",
-      "Nanded City vs Life Republic",
-      "Nanded City ROI",
-      "Nanded City rental yield",
+      "Nanded City vs Amanora Park Town",
+      "Nanded City vs Life Republic Hinjewadi",
+      "Nanded City ROI 12.5 percent",
+      "Nanded City rental yield 2026",
       "Nanded City price per sq ft 2026",
-      "Nanded City resale flats"
+      "best integrated township in West Pune",
+      "700 acres township Pune Sinhagad Road"
     ].join(", "),
   }
 };
