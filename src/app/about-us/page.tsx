@@ -171,6 +171,14 @@ export default function AboutUs() {
               <div style={{ textAlign: 'left' }}>
                 <div style={{ fontWeight: 700, color: '#0f172a', fontSize: '0.95rem' }}>MahaRERA Registration</div>
                 <div style={{ color: '#64748b', fontSize: '0.85rem' }}>Agent Reg. No: {SITE_CONFIG.brand.rera}</div>
+                <a 
+                  href="https://maharera.maharashtra.gov.in/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ color: 'var(--accent-gold)', fontSize: '0.78rem', textDecoration: 'none', fontWeight: 600, display: 'inline-block', marginTop: '4px' }}
+                >
+                  Verify at maharera.maharashtra.gov.in ↗
+                </a>
               </div>
             </div>
           </div>

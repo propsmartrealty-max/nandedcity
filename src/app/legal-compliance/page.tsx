@@ -33,7 +33,7 @@ export default function LegalCompliance() {
             Legal Compliance Hub
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.6' }}>
-            Nanded City Developers Pune strictly adheres to all regulatory standards. Below are the official MahaRERA Registration details and direct links to the Govt. of Maharashtra database for every ongoing cluster.
+            Nanded City Developers Pune strictly adheres to all regulatory standards. Below are the official MahaRERA Registration details and direct verification links to the Govt. of Maharashtra portal (<a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)' }}>maharera.maharashtra.gov.in</a>) for every ongoing cluster.
           </p>
         </div>
       </section>
@@ -46,7 +46,7 @@ export default function LegalCompliance() {
               <div style={{ display: 'grid', gridTemplateColumns: '2fr 1.5fr 1fr', backgroundColor: '#f1f5f9', padding: '20px 32px', borderBottom: '2px solid #e2e8f0' }}>
                 <div style={{ fontWeight: '700', color: '#475569', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Project Name</div>
                 <div style={{ fontWeight: '700', color: '#475569', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px' }}>MahaRERA Registration No.</div>
-                <div style={{ fontWeight: '700', color: '#475569', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', textAlign: 'right' }}>Official Link</div>
+                <div style={{ fontWeight: '700', color: '#475569', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', textAlign: 'right' }}>Official Verification</div>
               </div>
 
               <div style={{ padding: '0 32px' }}>
@@ -65,8 +65,8 @@ export default function LegalCompliance() {
                     </div>
 
                     <div style={{ textAlign: 'right' }}>
-                      <a href={cluster.reraUrl || '#'} target="_blank" rel="noopener noreferrer" className="rera-link" style={{ display: 'inline-block', color: 'var(--accent-gold)', fontWeight: '600', fontSize: '0.95rem', textDecoration: 'none', transition: 'color 0.2s ease' }}>
-                        View Certificate ↗
+                      <a href={cluster.reraUrl || 'https://maharera.maharashtra.gov.in/'} target="_blank" rel="noopener noreferrer" className="rera-link" style={{ display: 'inline-block', color: 'var(--accent-gold)', fontWeight: '600', fontSize: '0.9rem', textDecoration: 'none', transition: 'color 0.2s ease' }}>
+                        maharera.maharashtra.gov.in ↗
                       </a>
                     </div>
 
