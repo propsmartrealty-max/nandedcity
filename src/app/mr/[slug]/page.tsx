@@ -44,7 +44,7 @@ const mrData: Record<string, MarathiData> = {
     clusterName: 'Melody / Rhythm',
     heroImg: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     bullets: [
-      '१,२०० चौ. फुटांपासून प्रशस्त प्लॉट्स',
+      '२,४०० चौ. फुटांपासून प्रशस्त प्लॉट्स',
       '१५,००० हून अधिक कुटुंबांचा विश्वास (नांदेड सिटी डेव्हलपर्स)',
       'स्वतःचा स्वतंत्र बंगला बांधण्याची सुवर्णसंधी'
     ],

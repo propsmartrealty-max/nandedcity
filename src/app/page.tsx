@@ -57,8 +57,10 @@ export default function Home() {
       },
       "description": `Independent Authorized Channel Partner for Nanded City Township.`,
 
-      "makesOffer": clusters.filter(c => c.type === 'new').map(c => ({
+      "makesOffer": clusters.map(c => ({
         "@type": "Offer",
+        "url": `${SITE_CONFIG.baseUrl}/cluster/${c.id}`,
+        "availability": c.status === 'Ready to Move' ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
         "itemOffered": {
           "@type": "Residence",
           "name": c.name,
@@ -66,8 +68,10 @@ export default function Home() {
           "numberOfRooms": c.bhk,
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Nanded City Township, Sinhagad Road",
             "addressLocality": "Pune",
             "addressRegion": "Maharashtra",
+            "postalCode": "411041",
             "addressCountry": "IN"
           }
         },

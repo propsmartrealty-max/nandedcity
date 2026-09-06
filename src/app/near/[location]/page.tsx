@@ -44,8 +44,88 @@ export default async function LocationPage({ params }: { params: Promise<Locatio
     ['saajgiri', 'harmony', 'aalaap-1', 'melody-1', 'asawari', 'pancham'].includes(c.id)
   );
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE_CONFIG.baseUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Locations",
+        "item": `${SITE_CONFIG.baseUrl}/near/${loc.slug}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": loc.name,
+        "item": `${SITE_CONFIG.baseUrl}/near/${loc.slug}`
+      }
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `How far is Nanded City Pune from ${loc.name}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Nanded City Township Pune is just ${loc.distance} from ${loc.name}, easily accessible via the Sinhagad Road arterial corridor and flyover network.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `What property types are available in Nanded City for buyers searching near ${loc.name}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nanded City offers premium 2 BHK, 2.5 BHK, 3 BHK, 3.5 & 4.5 BHK luxury high-rise apartments and Collector NA-sanctioned bungalow plots across 700 acres."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `Why choose Nanded City Township over standalone apartments in ${loc.name}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Unlike standalone buildings in ${loc.name}, Nanded City provides a self-sustaining 700-acre ecosystem with internal ICSE school, hospital, Destination Center shopping, Symphony IT Park, and 70% green open space.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are projects in Nanded City MahaRERA registered and approved by banks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all 20 residential clusters and plotted developments in Nanded City are MahaRERA registered and pre-approved for home loans by SBI, HDFC Bank, ICICI Bank, and Axis Bank."
+        }
+      }
+    ]
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": `Properties near ${loc.name} in Nanded City`,
+    "itemListElement": featuredClusters.map((c, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `${SITE_CONFIG.baseUrl}/cluster/${c.id}`,
+      "name": `${c.name} - ${c.bhk}`
+    }))
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbSchema, faqSchema, itemListSchema]) }}
+      />
       
       {/* Hero Section */}
       <section style={{ paddingTop: '140px', paddingBottom: '80px', backgroundColor: '#0f172a', color: '#fff', textAlign: 'center' }}>

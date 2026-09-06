@@ -31,7 +31,7 @@ export default function ContactPage() {
           />
           <h1 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '16px', marginTop: '24px' }}>Contact Our Experts</h1>
           <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.7)', maxWidth: '600px', lineHeight: '1.6' }}>
-            Looking for 1, 2, or 3 BHK luxury flats in Pune? Our residential advisors are ready to assist you with floor plans, pricing, and priority site visits.
+            Looking for 2, 2.5, 3, 3.5, or 4.5 BHK luxury flats or NA bungalow plots in Pune? Our residential advisors are ready to assist you with floor plans, pricing, and priority site visits.
           </p>
         </div>
       </section>

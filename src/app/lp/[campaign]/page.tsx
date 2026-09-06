@@ -68,7 +68,7 @@ const campaignData: Record<string, CampaignInfo> = {
     bhk: 'Plots',
     clusterName: 'Melody I',
     heroImg: 'https://nandedcitypune.com/wp-content/uploads/2023/08/Melody-I_Rera.jpeg',
-    bullets: ['High Appreciation Plots Sinhagad Road', 'Premium Infrastructure & Road Access', '1,200 - 3,500 sq.ft Plot Area Configurations'],
+    bullets: ['High Appreciation Plots Sinhagad Road', 'Premium Infrastructure & Road Access', '2,400 sq. ft. Onwards Plot Area Configurations'],
   },
 };
 
@@ -85,7 +85,7 @@ export default async function LandingPage({ params }: { params: Promise<Campaign
     "description": campaign.sub,
     "url": `https://www.nanded-city.in/lp/${resolvedParams.campaign}`,
     "image": campaign.heroImg,
-    "telephone": "+91-20-67500000",
+    "telephone": "+91 7744009295",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Nanded, Sinhagad Road",

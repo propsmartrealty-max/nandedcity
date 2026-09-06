@@ -1,6 +1,7 @@
 interface Env {
   RESEND_API_KEY?: string;
   LEAD_EMAIL?: string;
+  LEADS_KV?: any;
 }
 
 // In-memory rate limiter per edge worker instance
@@ -95,6 +96,26 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
     const recipientEmail = env.LEAD_EMAIL || 'propsmartrealty@gmail.com';
 
     const leadId = `NC-${Date.now()}-${Math.random().toString(36).substr(2, 4).toUpperCase()}`;
+
+    // Store in Cloudflare KV if bound
+    if (env.LEADS_KV) {
+      try {
+        await env.LEADS_KV.put(`lead:${leadId}`, JSON.stringify({
+          id: leadId,
+          timestamp: new Date().toISOString(),
+          name: cleanName,
+          phone: cleanPhone,
+          email: email || '',
+          project: cleanProject || 'Nanded City General',
+          message: cleanMessage || '',
+          source: cleanSource || 'Website',
+          intent: cleanIntent || '',
+          status: 'New'
+        }));
+      } catch (kvErr) {
+        console.warn('LEADS_KV put failed:', kvErr);
+      }
+    }
 
     if (!apiKey) {
       console.warn('RESEND_API_KEY is not configured in Cloudflare Pages environment.');
