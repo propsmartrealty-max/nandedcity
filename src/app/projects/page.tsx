@@ -10,7 +10,7 @@ import { locations } from '@/data/locations';
 
 export const metadata: Metadata = {
   title: `${SITE_CONFIG.name} Residential Clusters | All 20 Ongoing & Completed Projects`,
-  description: `Explore all 20 residential clusters in ${SITE_CONFIG.name}, Sinhagad Road, Pune. Comprehensive directory of 1, 2, 2.5, 3, 3.5, 4.5 BHK flats and NA bungalow plots with floor plans, prices, and MahaRERA details.`,
+  description: `Explore all 20 residential clusters in ${SITE_CONFIG.name}, Sinhagad Road, Pune. Comprehensive directory of 2, 2.5, 3, 3.5, 4.5 BHK luxury flats and branded NA bungalow plots across the 700-acre master township with floor plans, prices, and MahaRERA details.`,
   keywords: "Pune Real Estate Market, Central Pune Real Estate, Sinhgad Road Real Estate, Top Real Estate in Pune, Nanded City Projects, Ongoing projects in Pune, Ready to Move projects Pune, Nanded City 20 clusters, Saajgiri, Harmony, Aalaap, Melody, Asawari, Sargam, Pancham",
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/projects`,

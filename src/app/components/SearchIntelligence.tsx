@@ -15,8 +15,7 @@ const searchCategories: SearchCategory[] = [
     id: "configurations",
     name: "Configurations",
     keywords: [
-      { label: "1 BHK Flats Nanded City", href: "/cluster/mangal-bhairav" },
-      { label: "2 BHK Flats Nanded City", href: "/lp/2-bhk-flats" },
+      { label: "2 BHK Ready & Modern Flats", href: "/lp/2-bhk-flats" },
       { label: "2.5 BHK Flats Nanded City", href: "/cluster/aalaap-1" },
       { label: "3 BHK Luxury Flats Nanded City", href: "/lp/3-bhk-luxury" },
       { label: "3.5 & 4.5 BHK Harmony", href: "/cluster/harmony" },
@@ -43,11 +42,11 @@ const searchCategories: SearchCategory[] = [
       { label: "Kalashree Large Carpet 3 BHK", href: "/cluster/kalashree" },
       { label: "Sarang Scenic Hill-View", href: "/cluster/sarang" },
       { label: "Lalit Compact Smart Homes", href: "/cluster/lalit" },
-      { label: "Madhuvanti Budget 1 & 2 BHK", href: "/cluster/madhuvanti" },
+      { label: "Madhuvanti 2 BHK Resale", href: "/cluster/madhuvanti" },
       { label: "Shubh Kalyan Luxury 3 BHK", href: "/cluster/shubh-kalyan" },
       { label: "Sur Peaceful 2 BHK", href: "/cluster/sur" },
-      { label: "Mangal Bhairav 1 BHK", href: "/cluster/mangal-bhairav" },
-      { label: "Janaranjani MHADA Flats", href: "/cluster/janaranjani" },
+      { label: "Mangal Bhairav 2 BHK", href: "/cluster/mangal-bhairav" },
+      { label: "Janaranjani 2 BHK Flats", href: "/cluster/janaranjani" },
       { label: "All 20 Residential Clusters Directory", href: "/projects" }
     ]
   },
@@ -216,7 +215,7 @@ export default function SearchIntelligence() {
               Township Living & Architectural Landscape in Nanded City Pune
             </h3>
             <p style={{ marginBottom: '12px' }}>
-              <strong>Nanded City Township Pune</strong> is an integrated 700-acre residential, commercial, and educational ecosystem located on <strong>Sinhagad Road</strong>, Pune (Pin: 411041). Conceived on self-sustainable urban planning principles, Nanded City preserves over 70% open green cover while accommodating more than 15,000 resident families across diverse configurations: <strong>1 BHK starter homes</strong> (Mangal Bhairav, Madhuvanti), <strong>2 & 2.5 BHK modern apartments</strong> (Aalaap-I, Pancham Phase 1 & 2, Bageshree, Sargam, Asawari, Lalit), <strong>3 BHK luxury high-rises</strong> (Saajgiri, Kalashree, Shubh Kalyan), <strong>palatial 3.5 & 4.5 BHK residences</strong> (Harmony), and <strong>exclusive Branded NA Bungalow Plots</strong> (Melody I, II, III, Rhythm, Dhanashree).
+              <strong>Nanded City Township Pune</strong> is an integrated 700-acre residential, commercial, and educational ecosystem located on <strong>Sinhagad Road</strong>, Pune (Pin: 411041). Conceived on self-sustainable urban planning principles, Nanded City preserves over 70% open green cover while accommodating more than 15,000 resident families across diverse configurations: <strong>2 & 2.5 BHK modern apartments</strong> (Aalaap-I, Pancham Phase 1 & 2, Bageshree, Sargam, Asawari, Lalit, Madhuvanti, Mangal Bhairav, Janaranjani), <strong>3 BHK luxury high-rises</strong> (Saajgiri, Kalashree, Shubh Kalyan), <strong>palatial 3.5 & 4.5 BHK residences</strong> (Harmony), and <strong>exclusive Branded NA Bungalow Plots</strong> (Melody I, II, III, Rhythm, Dhanashree).
             </p>
             <p style={{ marginBottom: '12px' }}>
               <strong>Civic & Social Infrastructure:</strong> The township houses prestigious educational institutions like <em>Nanded City Public School (ICSE)</em> and Pawar Public School, healthcare dispensaries, the state-of-the-art <em>Symphony IT Park</em>, destination retail centers (Destination Center I & II), and the comprehensive <em>Kridaangan Olympic Sports Complex</em> equipped with tennis courts, skating rinks, and aquatic centers.

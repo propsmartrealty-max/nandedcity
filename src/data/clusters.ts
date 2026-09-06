@@ -71,7 +71,9 @@ export const clusters: Cluster[] = [
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2026/01/melody-banner-img-scaled.webp",
     faqs: [
       { question: "What makes Melody III plots different?", answer: "Melody III is the latest phase offering the most modern infrastructure and curated gated community features within Nanded City." }
-    ]
+    ],
+    searchKeywords: ["Melody III plots", "Nanded City NA plots", "Villa lifestyle plots Pune", "Bungalow community Sinhagad Road"],
+    coordinates: { lat: 18.4628, lng: 73.8035 }
   },
   {
     id: "aalaap-1",
@@ -94,7 +96,9 @@ export const clusters: Cluster[] = [
     faqs: [
       { question: "What are the configuration options in Aalaap-I?", answer: "Aalaap-I offers modern 2 BHK and 3 BHK residences with carpet areas ranging from 720 to 1,280 sq. ft." },
       { question: "When will I get possession of my Aalaap-I flat?", answer: "The estimated possession for Aalaap-I is June 2027, as per official timelines." }
-    ]
+    ],
+    searchKeywords: ["Aalaap 1 Nanded City", "2 BHK Aalaap", "3 BHK Aalaap Nanded City", "Aalaap price list", "New launch flats Sinhagad Road"],
+    coordinates: { lat: 18.4618, lng: 73.8018 }
   },
   {
     id: "saajgiri",
@@ -117,7 +121,9 @@ export const clusters: Cluster[] = [
     faqs: [
       { question: "Is Saajgiri a luxury high-rise project?", answer: "Yes, Saajgiri is a G+28 premium residential tower offering exclusive 3 BHK luxury residences with panoramic Sahyadri hill views." },
       { question: "What is the carpet area of Saajgiri 3 BHK flats?", answer: "Saajgiri offers expansive carpet areas ranging from 1,350 to 1,820 sq. ft., making it one of the largest 3 BHK segments in the township." }
-    ]
+    ],
+    searchKeywords: ["Saajgiri Nanded City", "Saajgiri 3 BHK", "Luxury high rise Nanded City", "Saajgiri floor plan", "Saajgiri price"],
+    coordinates: { lat: 18.4635, lng: 73.8010 }
   },
   {
     id: "harmony",
@@ -141,7 +147,8 @@ export const clusters: Cluster[] = [
       { question: "What configurations are available in Harmony Nanded City?", answer: "Harmony offers ultra-spacious 3.5 BHK and 4.5 BHK residences with expansive carpet areas ranging from 1,650 to 2,450 sq. ft." },
       { question: "Who is Harmony designed for?", answer: "Harmony is crafted for CXOs, business leaders, and discerning families seeking expansive palace-scale living within a fully self-contained 700-acre township." }
     ],
-    searchKeywords: ["Harmony Nanded City", "3.5 BHK Nanded City", "4.5 BHK luxury flats Pune", "Harmony price", "Harmony floor plan", "Harmony Sinhagad Road"]
+    searchKeywords: ["Harmony Nanded City", "3.5 BHK Nanded City", "4.5 BHK luxury flats Pune", "Harmony price", "Harmony floor plan", "Harmony Sinhagad Road"],
+    coordinates: { lat: 18.4640, lng: 73.8012 }
   },
   {
     id: "rhythm-1",
@@ -161,6 +168,12 @@ export const clusters: Cluster[] = [
     highlights: ["Exclusive Bungalow Land", "Residential Plots Sinhagad Road", "Luxury Plot Segment Pune", "Ready Possession Plots"],
     image: "https://nandedcitypune.com/wp-content/uploads/2022/01/rhy-hvr-img.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2022/01/rhy-hvr-img.jpg",
+    faqs: [
+      { question: "What is the plot size in Rhythm I?", answer: "Rhythm I offers premium residential bungalow plots starting from 2,400 sq. ft. in a gated community." },
+      { question: "Is Rhythm I MahaRERA registered?", answer: "Yes, Rhythm I holds MahaRERA registration number P52100028606." }
+    ],
+    searchKeywords: ["Rhythm plots Nanded City", "Rhythm 1 Sinhagad Road", "NA villa plots Pune", "Gated plots Nanded City"],
+    coordinates: { lat: 18.4615, lng: 73.8045 }
   },
   {
     id: "asawari",
@@ -179,6 +192,10 @@ export const clusters: Cluster[] = [
     highlights: ["Asawari Resale Flats", "Asawari 2 BHK Nanded City", "Peaceful Residential Society", "Top Township Amenities"],
     image: "https://nandedcitypune.com/wp-content/uploads/2017/10/aswari-1.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2017/10/aswari-1.jpg",
+    faqs: [
+      { question: "What configurations are available in Asawari Nanded City?", answer: "Asawari offers well-planned 2 BHK and 3 BHK family residences with carpet areas ranging from 840 to 1,350 sq. ft." },
+      { question: "Is Asawari ready to move?", answer: "Yes, Asawari is a delivered and fully inhabited community with verified resale options." }
+    ],
     searchKeywords: ["Asawari Nanded City resale", "2 BHK flats Sinhagad Road ready", "Asawari Pune apartments", "Ready to move flats Pune"],
     coordinates: { lat: 18.4590, lng: 73.8040 }
   },
@@ -196,10 +213,14 @@ export const clusters: Cluster[] = [
     floors: "G+18",
     units: "360 Units",
     description: "Sargam high-rise apartments Nanded City — Premium tower apartments with skyline views on Sinhagad Road. Modern tower living for urban professionals.",
-    highlights: ["Sargam 3 BHK Nanded City", "Ready Possession Sargam", "High Rise Towers Pune", "Spacious Floor Plans"],
+    highlights: ["Sargam 2 BHK Nanded City", "Ready Possession Sargam", "High Rise Towers Pune", "Spacious Floor Plans"],
     image: "https://nandedcitypune.com/wp-content/uploads/2020/01/sargam-completed.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2020/01/sargam-completed.jpg",
-    searchKeywords: ["Sargam Nanded City price", "3 BHK towers Sinhagad Road", "Sargam Pune reviews", "Luxury high rise Nanded City"],
+    faqs: [
+      { question: "What are the flat configurations in Sargam?", answer: "Sargam offers 2 BHK and 2.5 BHK high-rise residences with carpet areas from 760 to 1,100 sq. ft." },
+      { question: "Is Sargam ready for immediate occupancy?", answer: "Yes, Sargam is fully delivered and occupied, with resale units available." }
+    ],
+    searchKeywords: ["Sargam Nanded City price", "2 BHK towers Sinhagad Road", "Sargam Pune reviews", "Luxury high rise Nanded City"],
     coordinates: { lat: 18.4605, lng: 73.8055 }
   },
   {
@@ -223,7 +244,8 @@ export const clusters: Cluster[] = [
       { question: "What is the MahaRERA number for Pancham Phase 2?", answer: "Pancham Phase II in Nanded City holds MahaRERA registration number P52100000288." },
       { question: "Are resale flats available in Pancham?", answer: "Yes, verified resale 2 BHK apartments in Pancham Phase 1 and 2 are regularly available. Contact our resale advisory desk." }
     ],
-    searchKeywords: ["Pancham Nanded City", "Pancham Phase 1", "Pancham Phase 2", "P52100000288", "Pancham 2 BHK price", "Pancham resale flats"]
+    searchKeywords: ["Pancham Nanded City", "Pancham Phase 1", "Pancham Phase 2", "P52100000288", "Pancham 2 BHK price", "Pancham resale flats"],
+    coordinates: { lat: 18.4600, lng: 73.8030 }
   },
   {
     id: "lalit",
@@ -242,7 +264,12 @@ export const clusters: Cluster[] = [
     highlights: ["Lalit Resale Flats", "Compact Smart Homes", "Low Maintenance Living", "Efficient Carpet Area"],
     image: "https://nandedcitypune.com/wp-content/uploads/2017/10/latil-1.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2017/10/latil-1.jpg",
-    searchKeywords: ["Lalit Nanded City", "Lalit 2.5 BHK", "Lalit flats for sale", "Lalit resale price", "Lalit Sinhagad Road"]
+    faqs: [
+      { question: "What configurations does Lalit offer?", answer: "Lalit offers premium 2.5 BHK and 3 BHK family homes with carpet areas from 1,050 to 1,560 sq. ft." },
+      { question: "What is the handover status of Lalit?", answer: "Lalit is an established, delivered community with active society amenities." }
+    ],
+    searchKeywords: ["Lalit Nanded City", "Lalit 2.5 BHK", "Lalit flats for sale", "Lalit resale price", "Lalit Sinhagad Road"],
+    coordinates: { lat: 18.4595, lng: 73.8020 }
   },
   {
     id: "bageshree",
@@ -261,6 +288,10 @@ export const clusters: Cluster[] = [
     highlights: ["Bageshree 2 BHK flats", "Spacious Family Homes", "Upgraded Lifestyle towers", "Premium Amenities Access"],
     image: "https://nandedcitypune.com/wp-content/uploads/2024/02/Bageshree.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2024/02/Bageshree.jpg",
+    faqs: [
+      { question: "What are the sizes in Bageshree?", answer: "Bageshree features well-planned 2 BHK homes with 650 to 920 sq. ft. carpet area." },
+      { question: "Are resale flats available in Bageshree?", answer: "Yes, verified resale 2 BHK flats in Bageshree are available for immediate possession." }
+    ],
     searchKeywords: ["Bageshree Nanded City rent", "2 BHK Bageshree Pune", "Affordable 2 BHK Sinhagad Road", "Bageshree floor plans"],
     coordinates: { lat: 18.4630, lng: 73.8000 }
   },
@@ -281,24 +312,34 @@ export const clusters: Cluster[] = [
     highlights: ["Kalashree 3 BHK Nanded City", "Large Carpet Area", "Premium Family Homes", "Elite Residential Project"],
     image: "https://nandedcitypune.com/wp-content/uploads/2024/02/Kalashree-Bulding-01.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2024/02/Kalashree-Bulding-01.jpg",
+    faqs: [
+      { question: "What makes Kalashree distinct?", answer: "Kalashree offers some of the largest carpet areas in Nanded City for 2.5 and 3 BHK luxury living." }
+    ],
+    searchKeywords: ["Kalashree Nanded City", "Kalashree 3 BHK", "Kalashree resale price", "Large 3 BHK Pune"],
+    coordinates: { lat: 18.4632, lng: 73.8005 }
   },
   {
     id: "madhuvanti",
     name: "Madhuvanti",
     type: "completed",
-    bhk: "1 & 2 BHK",
+    bhk: "2 BHK",
     status: "Ready to Move",
     rera: "Completed",
     reraUrl: null,
-    price: "₹52 Lakh onwards",
-    area: "540 – 850 sq. ft. Carpet",
+    price: "₹62 Lakh onwards",
+    area: "650 – 850 sq. ft. Carpet",
     possession: "Delivered",
     floors: "G+14",
     units: "320 Units",
-    description: "Madhuvanti budget flats Nanded City — Affordable homes and value housing on Sinhagad Road. Ideal for first home buyers needing township lifestyle.",
-    highlights: ["Madhuvanti Affordable flats", "First Home Opportunity", "Budget-Friendly Living", "High Resale Value"],
+    description: "Madhuvanti family apartments Nanded City — Well-planned 2 BHK homes on Sinhagad Road. Ideal for home buyers needing 700-acre township lifestyle infrastructure.",
+    highlights: ["Madhuvanti 2 BHK Flats", "Family Township Living", "Peaceful Residential Society", "High Resale Demand"],
     image: "https://nandedcitypune.com/wp-content/uploads/2017/10/mad-1.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2017/10/mad-1.jpg",
+    faqs: [
+      { question: "What configurations are available in Madhuvanti?", answer: "Madhuvanti offers well-designed 2 BHK family apartments in Nanded City with efficient carpet layouts." }
+    ],
+    searchKeywords: ["Madhuvanti Nanded City", "Madhuvanti 2 BHK", "2 BHK Sinhagad Road", "Madhuvanti resale"],
+    coordinates: { lat: 18.4585, lng: 73.8015 }
   },
   {
     id: "sarang",
@@ -317,7 +358,11 @@ export const clusters: Cluster[] = [
     highlights: ["Sarang Scenic Living", "Hill View Flats Pune", "Green Zone Residency", "Peaceful Hillside Homes"],
     image: "https://nandedcitypune.com/wp-content/uploads/2017/10/sar-1-1.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2017/10/sar-1-1.jpg",
-    searchKeywords: ["Sarang Nanded City", "Sarang 2 BHK", "Sarang resale price", "Sarang flats for sale", "Sarang reviews Pune"]
+    faqs: [
+      { question: "What views does Sarang offer?", answer: "Sarang offers scenic hillside views and tranquil green landscape living on Sinhagad Road." }
+    ],
+    searchKeywords: ["Sarang Nanded City", "Sarang 2 BHK", "Sarang resale price", "Sarang flats for sale", "Sarang reviews Pune"],
+    coordinates: { lat: 18.4580, lng: 73.8035 }
   },
   {
     id: "shubh-kalyan",
@@ -336,6 +381,11 @@ export const clusters: Cluster[] = [
     highlights: ["Shubh Kalyan Luxury residences", "Elite Lifestyle towers", "Private Luxury enclave", "High-end High Rise"],
     image: "https://nandedcitypune.com/wp-content/uploads/2017/10/shu-1.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2017/10/shu-1.jpg",
+    faqs: [
+      { question: "What are the flat configurations in Shubh Kalyan?", answer: "Shubh Kalyan features expansive 3 BHK luxury residences with carpet areas from 1,200 to 1,600 sq. ft." }
+    ],
+    searchKeywords: ["Shubh Kalyan Nanded City", "Shubh Kalyan 3 BHK", "Luxury 3 BHK Sinhagad Road"],
+    coordinates: { lat: 18.4645, lng: 73.8018 }
   },
   {
     id: "sur",
@@ -354,42 +404,57 @@ export const clusters: Cluster[] = [
     highlights: ["Sur Peaceful Living", "Quiet Township Homes", "Balanced Layout Flats", "Senior-Friendly Community"],
     image: "https://nandedcitypune.com/wp-content/uploads/2017/10/aswari-1.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2017/10/aswari-1.jpg",
+    faqs: [
+      { question: "What is the living environment in Sur?", answer: "Sur is a peaceful residential cluster featuring serene 2 BHK apartments from 620 to 900 sq. ft." }
+    ],
+    searchKeywords: ["Sur Nanded City", "Sur 2 BHK", "Sur resale flats", "Quiet society Nanded City"],
+    coordinates: { lat: 18.4588, lng: 73.8028 }
   },
   {
     id: "mangal-bhairav",
     name: "Mangal Bhairav",
     type: "completed",
-    bhk: "1 BHK",
+    bhk: "2 BHK",
     status: "Ready to Move",
     rera: "Completed",
     reraUrl: null,
-    price: "₹38 Lakh onwards",
-    area: "420 – 580 sq. ft. Carpet",
+    price: "₹65 Lakh onwards",
+    area: "620 – 850 sq. ft. Carpet",
     possession: "Delivered",
     floors: "G+12",
     units: "840 Units",
-    description: "Mangal Bhairav affordable 1 BHK Nanded City — Entry level homes Pune for first-time buyers. High demand budget housing Sinhagad Road.",
-    highlights: ["1 BHK under 40 Lakh", "Starter Homes Pune", "High Rental Income", "Best Budget Value"],
+    description: "Mangal Bhairav residential cluster Nanded City — Well-connected 2 BHK flats on Sinhagad Road with access to 700-acre township amenities and green corridors.",
+    highlights: ["Mangal Bhairav 2 BHK", "Ready to Move Resale", "High Rental Demand", "700-Acre Township Access"],
     image: "https://nandedcitypune.com/wp-content/uploads/2020/01/pancham-completed.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2020/01/pancham-completed.jpg",
+    faqs: [
+      { question: "What configurations are in Mangal Bhairav?", answer: "Mangal Bhairav offers 2 BHK apartments in Nanded City with excellent connectivity and strong rental demand." }
+    ],
+    searchKeywords: ["Mangal Bhairav Nanded City", "Mangal Bhairav 2 BHK", "Mangal Bhairav resale price", "Flats near Sinhagad Road"],
+    coordinates: { lat: 18.4575, lng: 73.8040 }
   },
   {
     id: "janaranjani",
     name: "Janaranjani",
     type: "completed",
-    bhk: "1 BHK (MHADA)",
+    bhk: "2 BHK",
     status: "Ready to Move",
     rera: "Completed",
     reraUrl: null,
-    price: "₹28 Lakh onwards",
-    area: "320 – 450 sq. ft. Carpet",
+    price: "₹58 Lakh onwards",
+    area: "580 – 780 sq. ft. Carpet",
     possession: "Delivered",
     floors: "G+10",
     units: "512 Units",
-    description: "Janaranjani MHADA flats Nanded City — Government housing and low-cost homes Pune. Subsidized economical housing for all.",
-    highlights: ["Cheap Flats Sinhagad Road", "MHADA Nanded City", "Economical Township Living", "Ready Possession MHADA"],
+    description: "Janaranjani residential enclave Nanded City — Established community living in Pune's 700-acre township. Ready possession 2 BHK homes near Sinhagad Road.",
+    highlights: ["Janaranjani 2 BHK", "Township Living", "Ready Possession", "Gated Security"],
     image: "https://nandedcitypune.com/wp-content/uploads/2017/10/sar-1-1.jpg",
     heroImage: "https://nandedcitypune.com/wp-content/uploads/2017/10/sar-1-1.jpg",
+    faqs: [
+      { question: "What configurations are in Janaranjani?", answer: "Janaranjani features ready-to-move 2 BHK residences inside Nanded City Township Pune." }
+    ],
+    searchKeywords: ["Janaranjani Nanded City", "Janaranjani 2 BHK", "Janaranjani resale", "Nanded City resale flats"],
+    coordinates: { lat: 18.4570, lng: 73.8045 }
   },
   {
     id: "dhanashree",
@@ -409,5 +474,11 @@ export const clusters: Cluster[] = [
     highlights: ["Dhanashree NA Plots", "Luxury Villa Plots", "High Appreciation Land", "Gated Security Plots"],
     image: "https://nandedcitypune.com/melody/assets/img/overview-back.jpg",
     heroImage: "https://nandedcitypune.com/melody/assets/img/overview-back.jpg",
+    faqs: [
+      { question: "What are the plot dimensions in Dhanashree?", answer: "Dhanashree offers plots ranging from 2,000 to 4,500 sq. ft. for custom luxury bungalows." },
+      { question: "What is the MahaRERA number for Dhanashree?", answer: "Dhanashree holds MahaRERA registration number P52100002425." }
+    ],
+    searchKeywords: ["Dhanashree plots Nanded City", "Dhanashree Pune", "Villa plots Sinhagad Road", "P52100002425"],
+    coordinates: { lat: 18.4625, lng: 73.8050 }
   }
 ];

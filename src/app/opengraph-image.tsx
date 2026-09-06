@@ -76,7 +76,7 @@ export default function Image() {
               display: 'flex',
             }}
           >
-            700+ Acres · Sinhagad Road · Pune
+            700 Acres · Sinhagad Road · Pune
           </div>
         </div>
 
@@ -122,7 +122,7 @@ export default function Image() {
           </div>
           <div style={{ width: '1px', height: '40px', background: 'rgba(255,255,255,0.1)', display: 'flex' }} />
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div style={{ fontSize: '28px', fontWeight: 800, color: '#c8aa6e', display: 'flex' }}>13+</div>
+            <div style={{ fontSize: '28px', fontWeight: 800, color: '#c8aa6e', display: 'flex' }}>20</div>
             <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '1px', display: 'flex' }}>Clusters</div>
           </div>
           <div style={{ width: '1px', height: '40px', background: 'rgba(255,255,255,0.1)', display: 'flex' }} />

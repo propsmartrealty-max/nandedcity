@@ -25,18 +25,18 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
   const categories = useMemo(() => {
     const hasOngoing = clusters.some(c => c.type === 'new');
     const hasCompleted = clusters.some(c => c.type === 'completed');
-    const has1Bhk = clusters.some(c => c.bhk.includes('1 BHK'));
     const has2Bhk = clusters.some(c => c.bhk.includes('2 BHK') || c.bhk.includes('2.5'));
-    const has3Bhk = clusters.some(c => c.bhk.includes('3 BHK') || c.bhk.includes('3.5') || c.bhk.includes('4.5'));
+    const has3Bhk = clusters.some(c => c.bhk === '3 BHK' || c.bhk.includes('2 & 3 BHK') || c.bhk.includes('2.5 & 3 BHK'));
+    const hasLuxury = clusters.some(c => c.bhk.includes('3.5') || c.bhk.includes('4.5'));
     const hasPlots = clusters.some(c => c.bhk.toLowerCase().includes('plot'));
 
     const cats: string[] = ['All'];
     if (hasOngoing && hasCompleted) {
       cats.push('Ongoing Launches', 'Ready Possession');
     }
-    if (has1Bhk) cats.push('1 BHK');
     if (has2Bhk) cats.push('2 BHK');
     if (has3Bhk) cats.push('3 BHK');
+    if (hasLuxury) cats.push('3.5 & 4.5 BHK');
     if (hasPlots) cats.push('Bungalow Plots');
 
     return cats;
@@ -48,9 +48,9 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
       if (filter === 'Ongoing Launches') return cluster.type === 'new';
       if (filter === 'Ready Possession') return cluster.type === 'completed';
       if (filter === 'Bungalow Plots') return cluster.bhk.toLowerCase().includes('plot');
-      if (filter === '1 BHK') return cluster.bhk.includes('1 BHK');
       if (filter === '2 BHK') return cluster.bhk.includes('2 BHK') || cluster.bhk.includes('2.5');
-      if (filter === '3 BHK') return cluster.bhk.includes('3 BHK') || cluster.bhk.includes('3.5') || cluster.bhk.includes('4.5');
+      if (filter === '3 BHK') return cluster.bhk.includes('3 BHK');
+      if (filter === '3.5 & 4.5 BHK') return cluster.bhk.includes('3.5') || cluster.bhk.includes('4.5');
       return true;
     });
   }, [clusters, filter]);

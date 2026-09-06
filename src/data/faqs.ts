@@ -6,7 +6,7 @@ export interface FAQItem {
 export const homeFaqs: FAQItem[] = [
   {
     question: "What residential configurations and property types are available in Nanded City Pune?",
-    answer: "Nanded City Township offers a comprehensive spectrum of residential inventory: compact 1 BHK budget apartments in Mangal Bhairav and Madhuvanti; modern 2 & 2.5 BHK residences in Aalaap-I, Pancham (Phase 1 & 2), Bageshree, Sargam, Asawari, and Lalit; spacious 3 BHK luxury high-rises in Saajgiri, Kalashree, and Shubh Kalyan; palatial 3.5 & 4.5 BHK royal apartments in Harmony; and exclusive Branded NA Bungalow Plots in Melody I, II, III, Rhythm, and Dhanashree."
+    answer: "Nanded City Township offers a comprehensive spectrum of premium residential inventory across its 700-acre masterplan: modern 2 & 2.5 BHK residences in Aalaap-I, Pancham (Phase 1 & 2), Bageshree, Sargam, Asawari, Lalit, Mangal Bhairav, Madhuvanti, and Janaranjani; spacious 3 BHK luxury high-rises in Saajgiri, Kalashree, and Shubh Kalyan; palatial 3.5 & 4.5 BHK royal apartments in Harmony; and exclusive Branded NA Bungalow Plots in Melody I, II, III, Rhythm, and Dhanashree."
   },
   {
     question: "What are the new launch and upcoming projects in Nanded City for 2026?",

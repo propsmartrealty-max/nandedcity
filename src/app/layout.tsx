@@ -147,8 +147,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "NA Bungalow Plots Pune",
       "MahaRERA Registered Projects",
       "Township Living Pune",
-      "1 BHK, 2 BHK, 2.5 BHK, 3 BHK Flats Pune",
-      "MHADA Janaranjani Nanded City",
+      "2 BHK, 2.5 BHK, 3 BHK, 3.5 BHK, 4.5 BHK Luxury Flats Pune",
+      "Resale Flats Nanded City",
       "Ready Possession Flats Pune"
     ]
   };
@@ -319,7 +319,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
               {/* Highly Hardened Strategy Disclaimer */}
               <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.72rem', lineHeight: '1.7', marginBottom: '16px' }}>
-                The definitive Nanded City Township Pune Residential Platform. Explore premium 1 BHK, 2 BHK, 2.5 BHK, and 3 BHK flats near Sinhagad Road Pune. All residential clusters — including Asawari, Sargam, and Saajgiri — are MahaRERA compliant. Located near Nanded City Public School, Destination Centre, and Khadakwasla, Nanded City Township, Sinhagad Road, Pune – 411041.
+                The definitive Nanded City Township Pune Residential Platform across 700 Acres. Explore premium 2 BHK, 2.5 BHK, 3 BHK, 3.5 BHK, and 4.5 BHK luxury flats and branded NA bungalow plots near Sinhagad Road Pune. All residential clusters — including Asawari, Sargam, and Saajgiri — are MahaRERA compliant. Located near Nanded City Public School, Destination Centre, and Khadakwasla, Nanded City Township, Sinhagad Road, Pune – 411041.
               </p>
 
               <div style={{ backgroundColor: 'rgba(255,255,255,0.03)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', marginBottom: '32px' }}>

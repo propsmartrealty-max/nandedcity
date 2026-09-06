@@ -26,10 +26,10 @@ import { SITE_CONFIG } from '../config/site';
 
 export const metadata: Metadata = {
   title: `${SITE_CONFIG.name} | Dominating Pune Real Estate Market | Official Portal`,
-  description: `Official residential platform for Nanded City Township Pune, dominating the Pune Real Estate Market on Sinhagad Road and Central Pune. Explore premium 1, 2, 2.5, 3 BHK apartments and NA bungalow plots.`,
+  description: `Official residential platform for Nanded City Township Pune, dominating the Pune Real Estate Market on Sinhagad Road and Central Pune. Explore premium 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats and branded NA bungalow plots across 700 acres.`,
   keywords: SITE_CONFIG.seo.primaryKeywords,
   alternates: {
-    canonical: SITE_CONFIG.baseUrl,
+    canonical: `${SITE_CONFIG.baseUrl}`,
   },
 };
 
@@ -143,11 +143,11 @@ export default function Home() {
         </p>
         <HeroActions />
         <div className="hero-stats">
-          <div className="hero-stat"><strong>400+</strong><span>Acres</span></div>
+          <div className="hero-stat"><strong>700</strong><span>Acres</span></div>
           <div className="hero-stat-divider" />
           <div className="hero-stat"><strong>15k+</strong><span>Happy Families</span></div>
           <div className="hero-stat-divider" />
-          <div className="hero-stat"><strong>12+</strong><span>Clusters</span></div>
+          <div className="hero-stat"><strong>20</strong><span>Clusters</span></div>
           <div className="hero-stat-divider" />
           <div className="hero-stat"><strong>25+ Yrs</strong><span>Of Trust</span></div>
         </div>

@@ -78,10 +78,10 @@ export const blogs: BlogPost[] = [
       
       <h3>Price List & Brochure 2026</h3>
       <ul>
-        <li><strong>1 BHK:</strong> Under 50 Lakh (Janaranjani & Mangal Bhairav)</li>
-        <li><strong>2 BHK:</strong> ₹68L – ₹95L (Bageshree, Sargam, Asawari)</li>
-        <li><strong>3 BHK Luxury:</strong> ₹1.45 Cr+ (Saajgiri & Aalaap)</li>
-        <li><strong>NA Plots:</strong> On Request (Melody, Rhythm, Dhanashree)</li>
+        <li><strong>2 BHK:</strong> ₹65L – ₹95L (Bageshree, Sargam, Asawari, Mangal Bhairav, Madhuvanti, Janaranjani)</li>
+        <li><strong>2.5 BHK & 3 BHK:</strong> ₹98L – ₹1.45 Cr (Aalaap-I, Pancham, Kalashree, Shubh Kalyan)</li>
+        <li><strong>3.5 & 4.5 BHK Luxury:</strong> ₹1.85 Cr – ₹3.25 Cr (Harmony, Saajgiri)</li>
+        <li><strong>Branded NA Plots:</strong> ₹1.5 Cr – ₹3.5 Cr+ (Melody, Rhythm, Dhanashree)</li>
       </ul>
     `,
     relatedCluster: "saajgiri"
@@ -90,24 +90,24 @@ export const blogs: BlogPost[] = [
     slug: "affordable-homes-janaranjani-mhada-mangal-bhairav",
     category: "apartments",
     project: "janaranjani",
-    title: "Affordable Housing in Pune: A Guide to Janaranjani MHADA & Mangal Bhairav at Nanded City",
-    excerpt: "Searching for budget homes or 1 BHK under 50 lakh? Explore Janaranjani MHADA and Mangal Bhairav entry-level housing in Nanded City Township Pune.",
+    title: "Value 2 BHK Homes in Pune: A Guide to Janaranjani & Mangal Bhairav at Nanded City",
+    excerpt: "Searching for value-driven 2 BHK homes on Sinhagad Road? Explore Janaranjani and Mangal Bhairav entry-level 2 BHK housing in Nanded City Township Pune.",
     author: "ananya-kulkarni",
     date: "2026-04-27",
     readTime: "8 min read",
     coverImage: "https://images.unsplash.com/photo-1522708323590-d248b6d0267d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
     content: `
-      <h2>Budget Living Without Compromise</h2>
-      <p><strong>Nanded City Township Pune</strong> has democratized luxury by providing high-quality <strong>affordable flats near Sinhagad Road</strong>. Clusters like <a href="/cluster/janaranjani">Janaranjani MHADA</a> and <a href="/cluster/mangal-bhairav">Mangal Bhairav</a> offer the perfect entry-level opportunity for first-time buyers.</p>
+      <h2>Smart Township Living Without Compromise</h2>
+      <p><strong>Nanded City Township Pune</strong> has democratized luxury township living by providing high-quality <strong>value 2 BHK flats near Sinhagad Road</strong>. Clusters like <a href="/cluster/janaranjani">Janaranjani</a> and <a href="/cluster/mangal-bhairav">Mangal Bhairav</a> offer the perfect entry opportunity for first-time buyers seeking full access to 700 acres of world-class infrastructure.</p>
       
-      <h3>Keywords for Budget Seekers</h3>
+      <h3>Highlights for Value Home Seekers</h3>
       <ul>
-        <li><strong>1 BHK in Nanded City:</strong> Starting from ₹28 Lakh.</li>
-        <li><strong>MHADA flats in Nanded City:</strong> Government-backed low-cost housing.</li>
-        <li><strong>Cheap flats near Sinhagad Road:</strong> Quality living under 50 lakh budget.</li>
+        <li><strong>2 BHK in Nanded City:</strong> Value-priced 2 BHK configurations starting from attractive ticket sizes.</li>
+        <li><strong>Integrated Infrastructure:</strong> 700 acres masterplan with internal schools, sports complexes, and eco-parks.</li>
+        <li><strong>Sinhagad Road Connectivity:</strong> Seamless access via the newly operational flyover to Kothrud and Swargate.</li>
       </ul>
       
-      <p>Investing in <strong>Mangal Bhairav 1 BHK</strong> ensures high rental income and steady ROI due to the high demand for township living among young professionals.</p>
+      <p>Investing in <strong>Mangal Bhairav or Janaranjani 2 BHK</strong> ensures high rental income and steady capital appreciation due to the perennial rental demand from professionals working in Symphony IT Park and nearby commercial zones.</p>
     `,
     relatedCluster: "janaranjani"
   },
