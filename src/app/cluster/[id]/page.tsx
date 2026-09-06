@@ -9,7 +9,6 @@ import EnquiryForm from '../../components/EnquiryForm';
 import ReraQrCode from '../../components/ReraQrCode';
 import ScrollReveal from '../../components/ScrollReveal';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import DynamicHeader from '../../components/DynamicHeader';
 import FloatingActionBar from '../../components/FloatingActionBar';
 import StickyMobileCta from '../../components/StickyMobileCta';
 import EnquiryModal from '../../components/EnquiryModal';

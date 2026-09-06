@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { locations } from '../../../data/locations';
 import { clusters } from '../../../data/clusters';
 import { SITE_CONFIG } from '@/config/site';
-import DynamicHeader from '../../components/DynamicHeader';
 import SearchIntelligence from '../../components/SearchIntelligence';
 import ROICalculator from '../../components/ROICalculator';
 import Testimonials from '../../components/Testimonials';
@@ -47,7 +46,6 @@ export default async function LocationPage({ params }: { params: Promise<Locatio
 
   return (
     <main>
-      <DynamicHeader />
       
       {/* Hero Section */}
       <section style={{ paddingTop: '140px', paddingBottom: '80px', backgroundColor: '#0f172a', color: '#fff', textAlign: 'center' }}>

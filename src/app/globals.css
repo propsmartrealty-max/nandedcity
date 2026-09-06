@@ -128,14 +128,10 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--primary-green); line-height: 1.2
    5. HEADER
 ───────────────────────────────────────── */
 #site-header {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 1px 0 var(--border-color), var(--shadow-sm);
-  padding: 14px 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border: none;
 }
 .header-content {
   display: flex;
