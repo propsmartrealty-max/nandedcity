@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { clusters } from '../../../data/clusters';
+import { locations } from '../../../data/locations';
 import { notFound } from 'next/navigation';
 import EnquiryForm from '../../components/EnquiryForm';
 import ReraQrCode from '../../components/ReraQrCode';
@@ -299,7 +300,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
               </div>
             )}
 
-            <Link href="/" className="back-link">← All Projects</Link>
+            <Link href="/projects" className="back-link">← All 20 Clusters</Link>
             <span className={`badge ${cluster.type === 'new' ? 'badge-green' : 'badge-gold'}`}>
               {cluster.status}
             </span>
@@ -537,40 +538,199 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
         </div>
       </section>
 
-      {/* Project Lifecycle Continuity */}
-      <section className="section-padding" style={{ backgroundColor: '#fff' }}>
+      {/* Project Lifecycle Continuity & Township Cluster Mesh */}
+      <section className="section-padding" style={{ backgroundColor: '#fff', borderTop: '1px solid #e2e8f0' }}>
         <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px', flexWrap: 'wrap', gap: '16px' }}>
             <ScrollReveal>
-              <h2 style={{ fontSize: '2.5rem', color: 'var(--primary-green)' }}>Explore More Clusters</h2>
-              <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>Discover more residential options in Pune&apos;s finest township.</p>
+              <span style={{ fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent-gold)' }}>
+                Township Residential Portfolio
+              </span>
+              <h2 style={{ fontSize: '2.5rem', color: 'var(--primary-green)', marginTop: '6px' }}>
+                Similar Residences & Alternative Clusters
+              </h2>
+              <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', maxWidth: '650px' }}>
+                Compare configurations, pricing, and possession timelines with other verified enclaves in Nanded City.
+              </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <Link href="/projects" style={{ color: 'var(--primary-green)', fontWeight: '700', textDecoration: 'none', borderBottom: '2px solid var(--accent-gold)', paddingBottom: '4px' }}>
-                All Residences →
+              <Link 
+                href="/projects" 
+                style={{ 
+                  color: '#fff', 
+                  backgroundColor: '#0f172a',
+                  padding: '12px 24px',
+                  borderRadius: '100px',
+                  fontWeight: '700', 
+                  textDecoration: 'none', 
+                  fontSize: '0.9rem',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}
+              >
+                View All 20 Clusters →
               </Link>
             </ScrollReveal>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+          {/* 4 Matching Cluster Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginBottom: '60px' }}>
             {clusters
               .filter(c => c.id !== cluster.id)
               .sort((a, b) => (a.type === cluster.type ? -1 : 1))
-              .slice(0, 3)
+              .slice(0, 4)
               .map((other, idx) => (
                 <ScrollReveal key={other.id} delay={idx * 0.1}>
                   <Link href={`/cluster/${other.id}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-                    <div className="discovery-card" style={{ position: 'relative', height: '240px', borderRadius: '16px', overflow: 'hidden', marginBottom: '16px', border: '1px solid #eee' }}>
-                      <Image src={other.image} alt={`${other.name} - ${other.bhk} in Nanded City Township Pune Real Estate`} fill style={{ objectFit: 'cover', transition: 'transform 0.4s' }} />
-                      <div style={{ position: 'absolute', top: '16px', right: '16px', backgroundColor: 'rgba(255,255,255,0.9)', padding: '4px 12px', borderRadius: '4px', fontSize: '0.75rem', fontWeight: '700', color: '#000' }}>
-                        {other.type === 'new' ? 'ONGOING' : 'READY'}
+                    <div className="discovery-card" style={{ position: 'relative', height: '220px', borderRadius: '16px', overflow: 'hidden', marginBottom: '14px', border: '1px solid #e2e8f0' }}>
+                      <Image 
+                        src={other.image} 
+                        alt={`${other.name} - ${other.bhk} in Nanded City Township Pune Real Estate`} 
+                        fill 
+                        sizes="(max-width:768px) 100vw, 25vw"
+                        style={{ objectFit: 'cover', transition: 'transform 0.4s' }} 
+                      />
+                      <div style={{ position: 'absolute', top: '14px', right: '14px', backgroundColor: 'rgba(255,255,255,0.92)', padding: '4px 10px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: '800', color: other.type === 'new' ? '#0369a1' : '#15803d' }}>
+                        {other.type === 'new' ? 'ONGOING' : 'READY TO MOVE'}
+                      </div>
+                      <div style={{ position: 'absolute', bottom: '12px', left: '12px', backgroundColor: 'rgba(15,23,42,0.85)', backdropFilter: 'blur(8px)', color: 'var(--accent-gold)', padding: '4px 10px', borderRadius: '6px', fontSize: '0.82rem', fontWeight: '800' }}>
+                        {other.price}
                       </div>
                     </div>
-                    <h3 style={{ fontSize: '1.25rem', color: '#0f172a', marginBottom: '4px' }}>{other.name}</h3>
-                    <p style={{ color: '#64748b', fontSize: '0.9rem' }}>{other.bhk} — {other.area} sq.ft.</p>
+                    <h3 style={{ fontSize: '1.2rem', color: '#0f172a', marginBottom: '4px', fontWeight: '700' }}>{other.name}</h3>
+                    <p style={{ color: '#64748b', fontSize: '0.88rem', margin: 0 }}>{other.bhk} · 📐 {other.area}</p>
                   </Link>
                 </ScrollReveal>
               ))}
+          </div>
+
+          {/* Master 20-Cluster Township Directory Matrix */}
+          <div style={{ backgroundColor: '#f8fafc', padding: '40px', borderRadius: '24px', border: '1px solid #e2e8f0', marginBottom: '60px' }}>
+            <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+              <span style={{ fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent-gold)' }}>
+                700-Acre Master Ecosystem
+              </span>
+              <h3 style={{ fontSize: '1.8rem', color: '#0f172a', margin: '8px 0', fontWeight: '800' }}>
+                Complete Nanded City Cluster Directory
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.95rem' }}>
+                Click any cluster below to inspect floor plans, pricing, possession dates, and MahaRERA records.
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
+              {/* Ongoing Launches Column */}
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#0284c7' }} />
+                  <h4 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#0f172a', margin: 0 }}>
+                    Ongoing Towers & Plots ({clusters.filter(c => c.type === 'new').length})
+                  </h4>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {clusters.filter(c => c.type === 'new').map(c => {
+                    const isCurrent = c.id === cluster.id;
+                    return (
+                      <Link 
+                        key={c.id} 
+                        href={`/cluster/${c.id}`}
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          padding: '12px 16px',
+                          backgroundColor: isCurrent ? 'rgba(201, 168, 76, 0.12)' : '#fff',
+                          border: isCurrent ? '1.5px solid var(--accent-gold)' : '1px solid #e2e8f0',
+                          borderRadius: '12px',
+                          textDecoration: 'none',
+                          transition: 'all 0.2s ease'
+                        }}
+                      >
+                        <div>
+                          <div style={{ fontWeight: '700', fontSize: '0.92rem', color: isCurrent ? 'var(--accent-gold)' : '#0f172a' }}>
+                            {c.name} {isCurrent && '(Viewing)'}
+                          </div>
+                          <div style={{ fontSize: '0.78rem', color: '#64748b' }}>{c.bhk}</div>
+                        </div>
+                        <div style={{ textAlign: 'right' }}>
+                          <div style={{ fontSize: '0.82rem', fontWeight: '700', color: 'var(--accent-gold)' }}>{c.price}</div>
+                          <span style={{ fontSize: '0.75rem', color: '#0284c7', fontWeight: '600' }}>→</span>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Completed Societies Column */}
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#16a34a' }} />
+                  <h4 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#0f172a', margin: 0 }}>
+                    Ready Possession Societies ({clusters.filter(c => c.type === 'completed').length})
+                  </h4>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                  {clusters.filter(c => c.type === 'completed').map(c => {
+                    const isCurrent = c.id === cluster.id;
+                    return (
+                      <Link 
+                        key={c.id} 
+                        href={`/cluster/${c.id}`}
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          padding: '10px 14px',
+                          backgroundColor: isCurrent ? 'rgba(201, 168, 76, 0.12)' : '#fff',
+                          border: isCurrent ? '1.5px solid var(--accent-gold)' : '1px solid #e2e8f0',
+                          borderRadius: '12px',
+                          textDecoration: 'none',
+                          transition: 'all 0.2s ease'
+                        }}
+                      >
+                        <div style={{ fontWeight: '700', fontSize: '0.88rem', color: isCurrent ? 'var(--accent-gold)' : '#0f172a' }}>
+                          {c.name}
+                        </div>
+                        <div style={{ fontSize: '0.75rem', color: '#64748b', marginTop: '2px' }}>{c.bhk}</div>
+                        <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#16a34a', marginTop: '4px' }}>{c.price}</div>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Hyperlocal Connectivity Mesh */}
+          <div style={{ textAlign: 'center' }}>
+            <span style={{ fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent-gold)' }}>
+              Hyperlocal Advantage
+            </span>
+            <h4 style={{ fontSize: '1.4rem', color: '#0f172a', margin: '8px 0 16px', fontWeight: '700' }}>
+              Connected Neighborhoods around {cluster.name}
+            </h4>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
+              {locations.slice(0, 8).map(loc => (
+                <Link 
+                  key={loc.slug}
+                  href={`/near/${loc.slug}`}
+                  style={{
+                    padding: '8px 16px',
+                    backgroundColor: '#fff',
+                    borderRadius: '100px',
+                    border: '1px solid #e2e8f0',
+                    color: '#475569',
+                    textDecoration: 'none',
+                    fontSize: '0.82rem',
+                    fontWeight: '600',
+                    boxShadow: '0 2px 4px rgba(0,0,0,0.02)'
+                  }}
+                >
+                  📍 Near {loc.name} ({loc.distance})
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

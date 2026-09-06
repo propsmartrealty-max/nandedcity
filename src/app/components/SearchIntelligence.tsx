@@ -33,7 +33,9 @@ const searchCategories: SearchCategory[] = [
       { label: "Saajgiri 3 BHK High-Rise", href: "/cluster/saajgiri" },
       { label: "Harmony 3.5 & 4.5 BHK Launch", href: "/cluster/harmony" },
       { label: "Aalaap-I 2 & 3 BHK", href: "/cluster/aalaap-1" },
-      { label: "Melody I & II Plots", href: "/cluster/melody-1" },
+      { label: "Melody I, II & III Plots", href: "/cluster/melody-1" },
+      { label: "Rhythm I Signature Plots", href: "/cluster/rhythm-1" },
+      { label: "Dhanashree Gated Plots", href: "/cluster/dhanashree" },
       { label: "Pancham Phase 1 & 2 (P52100000288)", href: "/cluster/pancham" },
       { label: "Sargam Skyline Towers", href: "/cluster/sargam" },
       { label: "Asawari Family Cluster", href: "/cluster/asawari" },
@@ -41,7 +43,12 @@ const searchCategories: SearchCategory[] = [
       { label: "Kalashree Large Carpet 3 BHK", href: "/cluster/kalashree" },
       { label: "Sarang Scenic Hill-View", href: "/cluster/sarang" },
       { label: "Lalit Compact Smart Homes", href: "/cluster/lalit" },
-      { label: "Madhuvanti Budget 1 & 2 BHK", href: "/cluster/madhuvanti" }
+      { label: "Madhuvanti Budget 1 & 2 BHK", href: "/cluster/madhuvanti" },
+      { label: "Shubh Kalyan Luxury 3 BHK", href: "/cluster/shubh-kalyan" },
+      { label: "Sur Peaceful 2 BHK", href: "/cluster/sur" },
+      { label: "Mangal Bhairav 1 BHK", href: "/cluster/mangal-bhairav" },
+      { label: "Janaranjani MHADA Flats", href: "/cluster/janaranjani" },
+      { label: "All 20 Residential Clusters Directory", href: "/projects" }
     ]
   },
   {

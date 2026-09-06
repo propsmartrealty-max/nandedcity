@@ -244,20 +244,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                 {/* Column 2: Residential Projects Hub */}
                 <div>
-                  <h4 style={{ color: '#fff', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '20px' }}>Nanded City Gambit</h4>
-                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <h4 style={{ color: '#fff', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '20px' }}>Residential Portfolio</h4>
+                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                     {[
+                      { name: 'Saajgiri — Luxury 3 BHK', href: '/cluster/saajgiri' },
+                      { name: 'Harmony — 3.5 & 4.5 BHK', href: '/cluster/harmony' },
+                      { name: 'Aalaap-I — 2 & 3 BHK', href: '/cluster/aalaap-1' },
+                      { name: 'Melody — NA Villa Plots', href: '/cluster/melody-1' },
                       { name: 'Asawari — Resale Flats', href: '/cluster/asawari' },
                       { name: 'Sargam — High Rise Towers', href: '/cluster/sargam' },
+                      { name: 'Pancham — Phase 1 & 2', href: '/cluster/pancham' },
+                      { name: 'Bageshree — 2 BHK Towers', href: '/cluster/bageshree' },
                       { name: 'Janaranjani — MHADA Flats', href: '/cluster/janaranjani' },
-                      { name: 'Mangal Bhairav — 1 BHK Budget', href: '/cluster/mangal-bhairav' },
-                      { name: 'Aalaap — New Launch 2.5 BHK', href: '/cluster/aalaap-1' },
-                      { name: 'Saajgiri — Luxury 3 BHK', href: '/cluster/saajgiri' },
                     ].map(p => (
                       <li key={p.name}>
-                        <Link href={p.href} className="footer-link" style={{ fontWeight: '500' }}>{p.name}</Link>
+                        <Link href={p.href} className="footer-link" style={{ fontWeight: '500', fontSize: '0.82rem' }}>{p.name}</Link>
                       </li>
                     ))}
+                    <li style={{ marginTop: '6px' }}>
+                      <Link href="/projects" style={{ color: 'var(--accent-gold)', fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', textDecoration: 'none' }}>
+                        All 20 Clusters & Specs →
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 

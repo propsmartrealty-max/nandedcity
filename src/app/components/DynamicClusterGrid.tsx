@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -21,15 +21,39 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
     return ENQUIRY_CONTEXTS.APARTMENT;
   };
 
-  const ongoingClusters = clusters.filter(c => c.type === 'new');
+  // Compute adaptive categories based on the provided clusters
+  const categories = useMemo(() => {
+    const hasOngoing = clusters.some(c => c.type === 'new');
+    const hasCompleted = clusters.some(c => c.type === 'completed');
+    const has1Bhk = clusters.some(c => c.bhk.includes('1 BHK'));
+    const has2Bhk = clusters.some(c => c.bhk.includes('2 BHK') || c.bhk.includes('2.5'));
+    const has3Bhk = clusters.some(c => c.bhk.includes('3 BHK') || c.bhk.includes('3.5') || c.bhk.includes('4.5'));
+    const hasPlots = clusters.some(c => c.bhk.toLowerCase().includes('plot'));
 
-  const filteredClusters = ongoingClusters.filter(cluster => {
-    if (filter === 'All') return true;
-    if (filter === 'Bungalow Plots') return cluster.bhk.toLowerCase().includes('plot');
-    if (filter === '2 BHK') return cluster.bhk.includes('2 BHK') || cluster.bhk.includes('2.5');
-    if (filter === '3 BHK') return cluster.bhk.includes('3 BHK');
-    return true;
-  });
+    const cats: string[] = ['All'];
+    if (hasOngoing && hasCompleted) {
+      cats.push('Ongoing Launches', 'Ready Possession');
+    }
+    if (has1Bhk) cats.push('1 BHK');
+    if (has2Bhk) cats.push('2 BHK');
+    if (has3Bhk) cats.push('3 BHK');
+    if (hasPlots) cats.push('Bungalow Plots');
+
+    return cats;
+  }, [clusters]);
+
+  const filteredClusters = useMemo(() => {
+    return clusters.filter(cluster => {
+      if (filter === 'All') return true;
+      if (filter === 'Ongoing Launches') return cluster.type === 'new';
+      if (filter === 'Ready Possession') return cluster.type === 'completed';
+      if (filter === 'Bungalow Plots') return cluster.bhk.toLowerCase().includes('plot');
+      if (filter === '1 BHK') return cluster.bhk.includes('1 BHK');
+      if (filter === '2 BHK') return cluster.bhk.includes('2 BHK') || cluster.bhk.includes('2.5');
+      if (filter === '3 BHK') return cluster.bhk.includes('3 BHK') || cluster.bhk.includes('3.5') || cluster.bhk.includes('4.5');
+      return true;
+    });
+  }, [clusters, filter]);
 
   const btnStyle = (isActive: boolean): React.CSSProperties => ({
     padding: '10px 24px',
@@ -51,8 +75,9 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
 
   return (
     <div>
+      {/* Category Filter Pills */}
       <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap', marginBottom: '40px' }}>
-        {['All', '2 BHK', '3 BHK', 'Bungalow Plots'].map((cat) => {
+        {categories.map((cat) => {
           const isActive = filter === cat;
           return (
             <motion.button 
@@ -68,70 +93,96 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
         })}
       </div>
 
+      {/* Cluster Grid */}
       <motion.div layout className="grid-cols-2">
         <AnimatePresence>
-          {filteredClusters.map((cluster) => (
-            <motion.article 
-              key={cluster.id}
-              layout
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-              className="cluster-card"
-            >
-              <Link href={`/cluster/${cluster.id}`} className="card-image-link">
-                <div className="card-image">
-                  <Image 
-                    src={cluster.image} 
-                    alt={`${cluster.name} - ${cluster.bhk} Flats in Nanded City Township Pune Real Estate`} 
-                    fill 
-                    sizes="(max-width:768px) 100vw, 50vw" 
-                    style={{ objectFit: 'cover' }} 
-                  />
-                  <div className="card-badge-wrap">
-                    <span className="badge badge-green">{cluster.bhk}</span>
+          {filteredClusters.map((cluster) => {
+            const isCompleted = cluster.type === 'completed';
+            return (
+              <motion.article 
+                key={cluster.id}
+                layout
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.3 }}
+                className="cluster-card"
+              >
+                <Link href={`/cluster/${cluster.id}`} className="card-image-link">
+                  <div className="card-image">
+                    <Image 
+                      src={cluster.image} 
+                      alt={`${cluster.name} - ${cluster.bhk} in Nanded City Township Pune Real Estate`} 
+                      fill 
+                      sizes="(max-width:768px) 100vw, 50vw" 
+                      style={{ objectFit: 'cover' }} 
+                    />
+                    <div className="card-badge-wrap">
+                      <span className={`badge ${isCompleted ? 'badge-gold' : 'badge-green'}`}>
+                        {cluster.bhk}
+                      </span>
+                    </div>
+                    <div className="card-price-tag">{cluster.price}</div>
                   </div>
-                  <div className="card-price-tag">{cluster.price}</div>
-                </div>
-              </Link>
-              
-              <div className="card-content">
-                <h3 className="card-title">
-                  <Link href={`/cluster/${cluster.id}`}>{cluster.name}</Link>
-                </h3>
+                </Link>
                 
-                <div className="card-meta">
-                  <span className="status-dot ongoing" />
-                  <span>{cluster.status}</span>
-                  <span style={{ marginLeft: 'auto' }}>📐 {cluster.area}</span>
-                </div>
-                
-                <p className="card-desc">{cluster.description}</p>
-                
-                <div className="card-highlights">
-                  {cluster.highlights.slice(0, 3).map(h => (
-                    <span key={h} className="highlight-chip">{h}</span>
-                  ))}
-                </div>
+                <div className="card-content">
+                  <h3 className="card-title">
+                    <Link href={`/cluster/${cluster.id}`}>{cluster.name}</Link>
+                  </h3>
+                  
+                  <div className="card-meta">
+                    <span className={`status-dot ${isCompleted ? 'completed' : 'ongoing'}`} />
+                    <span style={{ fontWeight: '600', color: isCompleted ? 'var(--primary-green)' : '#0f172a' }}>
+                      {cluster.status}
+                    </span>
+                    <span style={{ marginLeft: 'auto', fontWeight: '500', color: '#64748b' }}>
+                      📐 {cluster.area}
+                    </span>
+                  </div>
+                  
+                  <p className="card-desc">{cluster.description}</p>
+                  
+                  <div className="card-highlights">
+                    {cluster.highlights.slice(0, 3).map(h => (
+                      <span key={h} className="highlight-chip">{h}</span>
+                    ))}
+                  </div>
 
-                <div className="rera-footer" style={{ padding: '0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '16px' }}>
-                  <ReraQrCode reraUrl={cluster.reraUrl} reraNumber={cluster.rera} qrImage={cluster.qrImage} />
-                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px' }}>
-                    <button 
-                      onClick={() => openEnquiry(cluster.id, getEnquiryContext(cluster))}
-                      style={{ background: 'none', border: 'none', color: 'var(--accent-gold)', fontWeight: '700', fontSize: '0.82rem', cursor: 'pointer', padding: 0 }}
-                    >
-                      Enquire Now →
-                    </button>
-                    <Link href={`/cluster/${cluster.id}`} className="btn-details">
-                      View Details
-                    </Link>
+                  <div className="rera-footer" style={{ padding: '0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '16px', gap: '12px' }}>
+                    {!isCompleted && cluster.qrImage && cluster.rera !== 'Completed' ? (
+                      <ReraQrCode reraUrl={cluster.reraUrl} reraNumber={cluster.rera} qrImage={cluster.qrImage} />
+                    ) : (
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                        <span style={{ fontSize: '0.78rem', fontWeight: '700', color: 'var(--primary-green)' }}>
+                          ✅ Delivered & Occupied
+                        </span>
+                        <a 
+                          href="https://maharera.maharashtra.gov.in/" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          style={{ fontSize: '0.72rem', color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '600' }}
+                        >
+                          maharera.maharashtra.gov.in ↗
+                        </a>
+                      </div>
+                    )}
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px', flexShrink: 0 }}>
+                      <button 
+                        onClick={() => openEnquiry(cluster.id, getEnquiryContext(cluster))}
+                        style={{ background: 'none', border: 'none', color: 'var(--accent-gold)', fontWeight: '700', fontSize: '0.82rem', cursor: 'pointer', padding: 0 }}
+                      >
+                        {isCompleted ? 'Resale Enquiry →' : 'Enquire Now →'}
+                      </button>
+                      <Link href={`/cluster/${cluster.id}`} className="btn-details">
+                        View Details →
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.article>
-          ))}
+              </motion.article>
+            );
+          })}
         </AnimatePresence>
       </motion.div>
     </div>

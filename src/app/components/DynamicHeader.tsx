@@ -13,6 +13,7 @@ export default function DynamicHeader() {
 
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [clustersMenuOpen, setClustersMenuOpen] = useState<boolean>(false);
   const { openEnquiry } = useEnquiryModal();
   const pathname = usePathname();
 
@@ -94,8 +95,104 @@ export default function DynamicHeader() {
             </Link>
 
             {/* Center: Desktop Nav (Hidden on Mobile) */}
-            <nav className="desktop-only" style={{ display: 'flex', gap: '24px', marginLeft: '30px' }}>
-              {navItems.map((item) => (
+            <nav className="desktop-only" style={{ display: 'flex', gap: '24px', marginLeft: '30px', alignItems: 'center' }}>
+              {/* Clusters Dropdown Menu */}
+              <div 
+                style={{ position: 'relative' }}
+                onMouseEnter={() => setClustersMenuOpen(true)}
+                onMouseLeave={() => setClustersMenuOpen(false)}
+              >
+                <Link 
+                  href="/projects"
+                  className="nav-link-premium"
+                  style={{ 
+                    color: '#475569', 
+                    fontSize: '0.8rem', 
+                    fontWeight: '700', 
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px',
+                    textDecoration: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    transition: 'color 0.23s ease'
+                  }}
+                >
+                  Residences <span style={{ fontSize: '0.65rem' }}>▼</span>
+                </Link>
+
+                <AnimatePresence>
+                  {clustersMenuOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.2 }}
+                      style={{
+                        position: 'absolute',
+                        top: '100%',
+                        left: '-20px',
+                        paddingTop: '14px',
+                        zIndex: 1100,
+                        minWidth: '380px'
+                      }}
+                    >
+                      <div style={{
+                        backgroundColor: '#ffffff',
+                        borderRadius: '16px',
+                        padding: '20px',
+                        boxShadow: '0 20px 40px -10px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.06)',
+                        border: '1px solid #e2e8f0'
+                      }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+                          <div>
+                            <span style={{ fontSize: '0.72rem', fontWeight: '800', color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                              Ongoing Launches
+                            </span>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '8px' }}>
+                              <Link href="/cluster/saajgiri" style={{ fontSize: '0.82rem', fontWeight: '600', color: '#0f172a', textDecoration: 'none' }}>Saajgiri (3 BHK)</Link>
+                              <Link href="/cluster/harmony" style={{ fontSize: '0.82rem', fontWeight: '600', color: '#0f172a', textDecoration: 'none' }}>Harmony (3.5/4.5 BHK)</Link>
+                              <Link href="/cluster/aalaap-1" style={{ fontSize: '0.82rem', fontWeight: '600', color: '#0f172a', textDecoration: 'none' }}>Aalaap-I (2/3 BHK)</Link>
+                              <Link href="/cluster/melody-1" style={{ fontSize: '0.82rem', fontWeight: '600', color: '#0f172a', textDecoration: 'none' }}>Melody (NA Plots)</Link>
+                            </div>
+                          </div>
+
+                          <div>
+                            <span style={{ fontSize: '0.72rem', fontWeight: '800', color: 'var(--primary-green)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                              Ready Possession
+                            </span>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '8px' }}>
+                              <Link href="/cluster/asawari" style={{ fontSize: '0.82rem', fontWeight: '600', color: '#0f172a', textDecoration: 'none' }}>Asawari (2/3 BHK)</Link>
+                              <Link href="/cluster/sargam" style={{ fontSize: '0.82rem', fontWeight: '600', color: '#0f172a', textDecoration: 'none' }}>Sargam (2/2.5 BHK)</Link>
+                              <Link href="/cluster/pancham" style={{ fontSize: '0.82rem', fontWeight: '600', color: '#0f172a', textDecoration: 'none' }}>Pancham (2 BHK)</Link>
+                              <Link href="/cluster/bageshree" style={{ fontSize: '0.82rem', fontWeight: '600', color: '#0f172a', textDecoration: 'none' }}>Bageshree (2 BHK)</Link>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div style={{ borderTop: '1px solid #f1f5f9', paddingTop: '12px', textAlign: 'center' }}>
+                          <Link 
+                            href="/projects"
+                            style={{ 
+                              fontSize: '0.82rem', 
+                              fontWeight: '700', 
+                              color: 'var(--accent-gold)', 
+                              textDecoration: 'none',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '4px'
+                            }}
+                          >
+                            Explore All 20 Clusters & Specifications →
+                          </Link>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {navItems.slice(1).map((item) => (
                 <Link 
                   key={item.name} 
                   href={item.href}
@@ -209,23 +306,73 @@ export default function DynamicHeader() {
               </button>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', overflowY: 'auto', maxHeight: 'calc(100vh - 250px)' }}>
               {navItems.map((item, idx) => (
                 <motion.div
                   key={item.name}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1 }}
+                  transition={{ delay: idx * 0.05 }}
                 >
                   <Link 
                     href={item.href} 
                     onClick={() => setMobileMenuOpen(false)}
-                    style={{ fontSize: '1.8rem', fontWeight: '700', color: '#0f172a', textDecoration: 'none' }}
+                    style={{ fontSize: '1.5rem', fontWeight: '700', color: '#0f172a', textDecoration: 'none' }}
                   >
                     {item.name}
                   </Link>
                 </motion.div>
               ))}
+
+              {/* Quick Project Links on Mobile */}
+              <div style={{ borderTop: '1px solid #f1f5f9', paddingTop: '16px', marginTop: '10px' }}>
+                <span style={{ fontSize: '0.75rem', fontWeight: '800', color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '10px' }}>
+                  Popular Clusters (20 Total)
+                </span>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                  {[
+                    { name: 'Saajgiri (3 BHK)', href: '/cluster/saajgiri' },
+                    { name: 'Harmony (3.5/4.5 BHK)', href: '/cluster/harmony' },
+                    { name: 'Aalaap-I (2/3 BHK)', href: '/cluster/aalaap-1' },
+                    { name: 'Melody (Plots)', href: '/cluster/melody-1' },
+                    { name: 'Asawari (Resale)', href: '/cluster/asawari' },
+                    { name: 'Pancham (2 BHK)', href: '/cluster/pancham' },
+                  ].map(c => (
+                    <Link
+                      key={c.name}
+                      href={c.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      style={{
+                        padding: '6px 12px',
+                        backgroundColor: '#f8fafc',
+                        borderRadius: '20px',
+                        fontSize: '0.78rem',
+                        fontWeight: '600',
+                        color: '#334155',
+                        border: '1px solid #e2e8f0',
+                        textDecoration: 'none'
+                      }}
+                    >
+                      {c.name}
+                    </Link>
+                  ))}
+                  <Link
+                    href="/projects"
+                    onClick={() => setMobileMenuOpen(false)}
+                    style={{
+                      padding: '6px 12px',
+                      backgroundColor: 'var(--accent-gold)',
+                      borderRadius: '20px',
+                      fontSize: '0.78rem',
+                      fontWeight: '700',
+                      color: '#fff',
+                      textDecoration: 'none'
+                    }}
+                  >
+                    All 20 Clusters →
+                  </Link>
+                </div>
+              </div>
             </div>
 
             <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>

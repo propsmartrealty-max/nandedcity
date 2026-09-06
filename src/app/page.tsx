@@ -261,32 +261,63 @@ export default function Home() {
 
           <div className="grid-cols-3">
             {completedClusters.map((cluster, index) => (
-              <ScrollReveal key={cluster.id} delay={index * 0.1}>
+              <ScrollReveal key={cluster.id} delay={index * 0.08}>
                 <article className="cluster-card cluster-card-sm">
-                <a href={`/cluster/${cluster.id}`} className="card-image-link">
-                  <div className="card-image card-image-sm">
-                    <Image src={cluster.image} alt={`${cluster.name} - Ready Possession ${cluster.bhk} Flats in Nanded City Township Pune`} fill sizes="(max-width:768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
-                    <div className="card-badge-wrap">
-                      <span className="badge" style={{ backgroundColor: '#e8f5e9', color: '#2e7d32' }}>Ready to Move</span>
+                  <Link href={`/cluster/${cluster.id}`} className="card-image-link">
+                    <div className="card-image card-image-sm">
+                      <Image 
+                        src={cluster.image} 
+                        alt={`${cluster.name} - Ready Possession ${cluster.bhk} Flats in Nanded City Township Pune`} 
+                        fill 
+                        sizes="(max-width:768px) 100vw, 33vw" 
+                        style={{ objectFit: 'cover' }} 
+                      />
+                      <div className="card-badge-wrap">
+                        <span className="badge badge-gold">{cluster.bhk}</span>
+                      </div>
+                      <div className="card-price-tag">{cluster.price}</div>
+                    </div>
+                  </Link>
+                  <div className="card-content">
+                    <h3 className="card-title card-title-sm">
+                      <Link href={`/cluster/${cluster.id}`}>{cluster.name}</Link>
+                    </h3>
+                    <div className="card-meta">
+                      <span className="status-dot completed" />
+                      <span style={{ color: 'var(--primary-green)', fontWeight: '600' }}>{cluster.status}</span>
+                      <span style={{ marginLeft: 'auto', fontSize: '0.8rem', color: '#64748b' }}>📐 {cluster.area}</span>
+                    </div>
+                    <p className="card-desc" style={{ fontSize: '0.875rem' }}>{cluster.description}</p>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '16px' }}>
+                      <span style={{ fontSize: '0.78rem', color: 'var(--accent-gold)', fontWeight: '700' }}>
+                        MahaRERA Handover ✅
+                      </span>
+                      <Link href={`/cluster/${cluster.id}`} className="btn-details">
+                        View Details →
+                      </Link>
                     </div>
                   </div>
-                </a>
-                <div className="card-content">
-                  <h3 className="card-title card-title-sm">
-                    <a href={`/cluster/${cluster.id}`}>{cluster.name}</a>
-                  </h3>
-                  <div className="card-meta">
-                    <span className="status-dot completed" />
-                    <span style={{ color: 'var(--primary-green)', fontWeight: '600' }}>{cluster.status}</span>
-                  </div>
-                  <p className="card-desc" style={{ fontSize: '0.875rem' }}>{cluster.description}</p>
-                  <a href={`/cluster/${cluster.id}`} className="btn-details" style={{ marginTop: '12px', display: 'inline-block' }}>
-                    View Details →
-                  </a>
-                </div>
-              </article>
+                </article>
               </ScrollReveal>
             ))}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '48px' }}>
+            <Link 
+              href="/projects" 
+              className="btn btn-outline" 
+              style={{ 
+                borderColor: 'var(--accent-gold)', 
+                color: '#0f172a', 
+                fontWeight: '700', 
+                padding: '16px 36px',
+                borderRadius: '100px',
+                fontSize: '1rem',
+                display: 'inline-block'
+              }}
+            >
+              Explore Complete 20-Cluster Master Directory & Specs →
+            </Link>
           </div>
         </div>
       </section>
