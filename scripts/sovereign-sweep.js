@@ -5,22 +5,39 @@ const path = require('path');
 // Configuration
 const SITE_URL = 'https://www.nanded-city.in';
 const INDEXNOW_KEY = 'a5f8b9e6c4d742e983f1a0b5c7d8e9fa';
-const SERVICE_ACCOUNT_PATH = './service-account.json';
+const SITEMAP_URL = `${SITE_URL}/sitemap.xml`;
 
-// Google Indexing API Config
-const GOOGLE_SCOPE = 'https://www.googleapis.com/auth/indexing';
-const GOOGLE_AUDIENCE = 'https://oauth2.googleapis.com/token';
+function getEnvCredentials() {
+  const envPath = path.resolve(process.cwd(), '.env.local');
+  if (!fs.existsSync(envPath)) return null;
+  const content = fs.readFileSync(envPath, 'utf8');
+  let email = null;
+  let privateKey = null;
 
-async function createGoogleJWT(keyData) {
-  const email = keyData.client_email;
-  const privateKey = keyData.private_key;
+  for (const line of content.split('\n')) {
+    const trimmed = line.trim();
+    if (trimmed.startsWith('GOOGLE_SERVICE_ACCOUNT_EMAIL=')) {
+      email = trimmed.substring('GOOGLE_SERVICE_ACCOUNT_EMAIL='.length).trim().replace(/^["']|["']$/g, '');
+    } else if (trimmed.startsWith('GOOGLE_CLIENT_EMAIL=')) {
+      email = trimmed.substring('GOOGLE_CLIENT_EMAIL='.length).trim().replace(/^["']|["']$/g, '');
+    } else if (trimmed.startsWith('GOOGLE_PRIVATE_KEY=')) {
+      privateKey = trimmed.substring('GOOGLE_PRIVATE_KEY='.length).trim().replace(/^["']|["']$/g, '').replace(/\\n/g, '\n');
+    }
+  }
 
+  if (email && privateKey) {
+    return { email, privateKey };
+  }
+  return null;
+}
+
+async function createGoogleJWT(email, privateKey, scope) {
   const now = Math.floor(Date.now() / 1000);
   const header = { alg: 'RS256', typ: 'JWT' };
   const payload = {
     iss: email,
-    scope: GOOGLE_SCOPE,
-    aud: GOOGLE_AUDIENCE,
+    scope: scope,
+    aud: 'https://oauth2.googleapis.com/token',
     iat: now,
     exp: now + 3600,
   };
@@ -35,9 +52,9 @@ async function createGoogleJWT(keyData) {
   return `${unsignedToken}.${signature}`;
 }
 
-async function getGoogleAccessToken(keyData) {
-  const jwt = await createGoogleJWT(keyData);
-  const res = await fetch(GOOGLE_AUDIENCE, {
+async function getGoogleAccessToken(email, privateKey, scope) {
+  const jwt = await createGoogleJWT(email, privateKey, scope);
+  const res = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams({
@@ -45,29 +62,29 @@ async function getGoogleAccessToken(keyData) {
       assertion: jwt,
     }),
   });
-  
+
   if (!res.ok) {
-    const error = await res.text();
-    throw new Error(`Google Auth Failed: ${error}`);
+    const err = await res.text();
+    throw new Error(`Google Auth Failed: ${err}`);
   }
-  
+
   const data = await res.json();
   return data.access_token;
 }
 
-async function notifyGoogle(url, accessToken) {
-  const res = await fetch('https://indexing.googleapis.com/v3/urlNotifications:publish', {
-    method: 'POST',
+async function submitGoogleSitemap(accessToken, siteUrl, sitemapUrl) {
+  const encodedSite = encodeURIComponent(siteUrl);
+  const encodedSitemap = encodeURIComponent(sitemapUrl);
+  const apiUrl = `https://www.googleapis.com/webmasters/v3/sites/${encodedSite}/sitemaps/${encodedSitemap}`;
+
+  const res = await fetch(apiUrl, {
+    method: 'PUT',
     headers: {
-      'Content-Type': 'application/json',
       Authorization: `Bearer ${accessToken}`,
     },
-    body: JSON.stringify({
-      url: url,
-      type: 'URL_UPDATED',
-    }),
   });
-  return await res.json();
+
+  return { status: res.status, text: await res.text() };
 }
 
 async function notifyIndexNow(urls) {
@@ -83,37 +100,49 @@ async function notifyIndexNow(urls) {
     headers: { 'Content-Type': 'application/json; charset=utf-8' },
     body: JSON.stringify(payload),
   });
-  
+
   return res.status;
 }
 
-// Extract URLs from project data
-function getAllUrls() {
+async function fetchSitemapUrls() {
+  try {
+    const res = await fetch(SITEMAP_URL);
+    if (res.ok) {
+      const xml = await res.text();
+      const matches = xml.match(/<loc>(https:\/\/[^<]+)<\/loc>/g);
+      if (matches && matches.length > 0) {
+        return matches.map((m) => m.replace('<loc>', '').replace('</loc>', '').trim());
+      }
+    }
+  } catch (e) {
+    console.warn('⚠️ Could not fetch remote sitemap, falling back to local files.');
+  }
+
+  // Fallback to local files if remote is unavailable
   const urls = [
     `${SITE_URL}/`,
-    `${SITE_URL}/blog`,
-    `${SITE_URL}/projects`,
-    `${SITE_URL}/about-us`,
-    `${SITE_URL}/legal-compliance`,
-    `${SITE_URL}/mr/2-bhk-flats`,
-    `${SITE_URL}/mr/bungalow-plots`,
-    `${SITE_URL}/lp/2-bhk-flats`,
-    `${SITE_URL}/lp/3-bhk-luxury`,
-    `${SITE_URL}/lp/na-bungalow-plots`,
+    `${SITE_URL}/projects/`,
+    `${SITE_URL}/contact/`,
+    `${SITE_URL}/blog/`,
+    `${SITE_URL}/about-us/`,
+    `${SITE_URL}/legal-compliance/`,
+    `${SITE_URL}/mr/2-bhk-flats/`,
+    `${SITE_URL}/mr/bungalow-plots/`,
+    `${SITE_URL}/lp/2-bhk-flats/`,
+    `${SITE_URL}/lp/3-bhk-luxury/`,
+    `${SITE_URL}/lp/na-bungalow-plots/`,
   ];
 
   try {
-    // Read clusters
     const clustersContent = fs.readFileSync('src/data/clusters.ts', 'utf-8');
     const clusterIds = clustersContent.match(/id:\s*['"]([^'"]+)['"]/g)?.map(m => m.match(/['"]([^'"]+)['"]/)[1]) || [];
-    clusterIds.forEach(id => urls.push(`${SITE_URL}/cluster/${id}`));
+    clusterIds.forEach(id => urls.push(`${SITE_URL}/cluster/${id}/`));
 
-    // Read blogs
     const blogsContent = fs.readFileSync('src/data/blogs.ts', 'utf-8');
     const blogSlugs = blogsContent.match(/slug:\s*['"]([^'"]+)['"]/g)?.map(m => m.match(/['"]([^'"]+)['"]/)[1]) || [];
-    blogSlugs.forEach(slug => urls.push(`${SITE_URL}/blog/${slug}`));
+    blogSlugs.forEach(slug => urls.push(`${SITE_URL}/blog/${slug}/`));
   } catch (err) {
-    console.warn('⚠️ Could not read data files for dynamic URLs, using static list only.');
+    // ignore
   }
 
   return [...new Set(urls)];
@@ -121,52 +150,51 @@ function getAllUrls() {
 
 async function main() {
   console.log('🌌 Starting Sovereign SEO Sweep...');
-  const urls = getAllUrls();
-  console.log(`🔗 Found ${urls.length} URLs to process.`);
+  const urls = await fetchSitemapUrls();
+  console.log(`🔗 Found ${urls.length} canonical URLs to calibrate.`);
 
-  // 1. IndexNow (Bing/Yandex) - Batch submission
-  console.log('\n🚀 Pinging IndexNow (Bing/Yandex)...');
+  // 1. IndexNow (Bing / Yandex / Seznam / Naver)
+  console.log('\n🚀 Pinging IndexNow protocol...');
   try {
     const status = await notifyIndexNow(urls);
-    if (status === 200) {
-      console.log('✅ IndexNow: Success (200)');
+    if (status === 200 || status === 202) {
+      console.log(`✅ IndexNow: Success (Status ${status}) - ${urls.length} URLs submitted.`);
     } else {
-      console.log(`❌ IndexNow: Failed (Status ${status})`);
+      console.log(`⚠️ IndexNow response: Status ${status}`);
     }
   } catch (err) {
     console.error('🔥 IndexNow Error:', err.message);
   }
 
-  // 2. Google Indexing API - Sequential submission
-  console.log('\n🚀 Pinging Google Indexing API...');
-  if (!fs.existsSync(SERVICE_ACCOUNT_PATH)) {
-    console.log('⚠️ service-account.json not found. Skipping Google Indexing.');
+  // 2. Google Search Console Sitemap Calibration
+  console.log('\n🚀 Calibrating Google Search Console Sitemap...');
+  const creds = getEnvCredentials();
+  if (!creds) {
+    console.log('⚠️ Google Service Account credentials not found in .env.local');
   } else {
     try {
-      const keyData = JSON.parse(fs.readFileSync(SERVICE_ACCOUNT_PATH, 'utf8'));
-      const accessToken = await getGoogleAccessToken(keyData);
-      
-      for (let i = 0; i < urls.length; i++) {
-        const url = urls[i];
-        process.stdout.write(`[${i+1}/${urls.length}] ${url} ... `);
-        const result = await notifyGoogle(url, accessToken);
-        if (result.error) {
-          console.log(`❌ ${result.error.message}`);
-        } else {
-          console.log('✅');
-        }
-        // Throttling to avoid Google rate limits
-        await new Promise(r => setTimeout(r, 200));
+      const gscScope = 'https://www.googleapis.com/auth/webmasters';
+      const token = await getGoogleAccessToken(creds.email, creds.privateKey, gscScope);
+      console.log('✅ Google OAuth2 Token generated successfully.');
+
+      const result = await submitGoogleSitemap(token, `${SITE_URL}/`, SITEMAP_URL);
+      if (result.status === 200 || result.status === 204) {
+        console.log(`✅ Google Search Console: Sitemap submitted successfully (${SITEMAP_URL})`);
+      } else if (result.status === 403) {
+        console.log('ℹ️ Google Search Console API requires one-time activation in your Google Cloud project.');
+        console.log('👉 Direct activation link: https://console.developers.google.com/apis/api/searchconsole.googleapis.com/overview?project=657035699673');
+      } else {
+        console.log(`⚠️ GSC Status ${result.status}:`, result.text);
       }
     } catch (err) {
-      console.error('🔥 Google Indexing Error:', err.message);
+      console.error('🔥 Google Calibration Error:', err.message);
     }
   }
 
-  console.log('\n🌟 Sovereign SEO Sweep Complete.');
+  console.log('\n🌟 Sovereign SEO Sweep Finished.');
 }
 
 main().catch(err => {
-  console.error('💥 Critical Error:', err);
+  console.error('💥 Fatal Error:', err);
   process.exit(1);
 });

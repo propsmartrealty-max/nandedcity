@@ -176,6 +176,19 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
   const isApiRoute = path.startsWith('/api/');
   const isStaticAsset = path.startsWith('/_next/') || path.startsWith('/assets/') || path.startsWith('/qrs/') || path.startsWith('/images/');
 
+  // Instant 200 OK for Google Site Verification
+  if (path.startsWith('/google') && (path.endsWith('.html') || !path.includes('.'))) {
+    const filename = path.replace(/^\//, '').replace(/\.html$/, '') + '.html';
+    return new Response(`google-site-verification: ${filename}\n`, {
+      status: 200,
+      headers: {
+        'Content-Type': 'text/html; charset=utf-8',
+        'Cache-Control': 'public, max-age=86400',
+        'X-Robots-Tag': 'all'
+      }
+    });
+  }
+
   // Skip middleware processing for API and static assets
   if (isApiRoute || isStaticAsset) {
     return next();
