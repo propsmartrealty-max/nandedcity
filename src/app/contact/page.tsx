@@ -18,8 +18,27 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   const ongoingClusters = clusters.filter(c => c.type === 'new');
   
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${SITE_CONFIG.baseUrl}/contact/#webpage`,
+    "url": `${SITE_CONFIG.baseUrl}/contact/`,
+    "name": "Contact Nanded City Township Pune Sales Team",
+    "description": "Get in touch with residential advisors for Nanded City Township Pune on Sinhagad Road.",
+    "mainEntity": {
+      "@type": "RealEstateAgent",
+      "@id": `${SITE_CONFIG.baseUrl}/#organization`,
+      "name": SITE_CONFIG.brand.organizationName,
+      "telephone": SITE_CONFIG.contact.phoneNumeric
+    }
+  };
+
   return (
     <div style={{ backgroundColor: '#fff', minHeight: '100vh' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
       {/* Hero Section */}
       <section style={{ backgroundColor: '#0f172a', padding: '120px 0 80px', color: '#fff' }}>
         <div className="container">

@@ -175,7 +175,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@id": `${SITE_CONFIG.baseUrl}/#website`,
     "name": "Nanded City Township Pune Residences",
     "url": SITE_CONFIG.baseUrl,
-    "description": "Official residential platform for Nanded City Township, Sinhagad Road, Pune — premium asavari, bageshree, sargam apartments and branded NA bungalow plots.",
+    "description": "Authorized partner platform for Nanded City Township, Sinhagad Road, Pune — premium 2, 2.5, 3, 3.5 & 4.5 BHK flats and branded NA bungalow plots.",
     "publisher": {
       "@id": `${SITE_CONFIG.baseUrl}/#organization`
     },
@@ -190,24 +190,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "inLanguage": "en-IN"
   };
 
-  const aboutSchema: any = {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "@id": "https://www.nanded-city.in/about-us/#webpage",
-    "url": "https://www.nanded-city.in/about-us",
-    "name": "About Nanded City Developers",
-    "mainEntity": { "@id": "https://www.nanded-city.in/#organization" }
-  };
-
-  const contactSchema: any = {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "@id": "https://www.nanded-city.in/#contact-page",
-    "url": "https://www.nanded-city.in/#contact",
-    "name": "Contact Nanded City Sales Team",
-    "mainEntity": { "@id": "https://www.nanded-city.in/#organization" }
-  };
-
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
@@ -217,7 +199,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema, aboutSchema, contactSchema]) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema]) }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
