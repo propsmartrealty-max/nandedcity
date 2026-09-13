@@ -30,6 +30,12 @@ export async function generateMetadata({ params }: { params: Promise<CampaignPar
     description: `Verified channel partner platform for ${campaign.title} in Nanded City. ${campaign.sub}. Book your priority site visit today.`,
     alternates: {
       canonical: `https://www.nanded-city.in/lp/${resolvedParams.campaign}/`,
+      languages: {
+        'en-IN': `https://www.nanded-city.in/lp/${resolvedParams.campaign}/`,
+        'x-default': `https://www.nanded-city.in/lp/${resolvedParams.campaign}/`,
+        ...(resolvedParams.campaign === '2-bhk-flats' ? { 'mr-IN': 'https://www.nanded-city.in/mr/2-bhk-flats/' } : {}),
+        ...(resolvedParams.campaign === 'na-bungalow-plots' ? { 'mr-IN': 'https://www.nanded-city.in/mr/bungalow-plots/' } : {}),
+      }
     },
     openGraph: {
       title: campaign.title,

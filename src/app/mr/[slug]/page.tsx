@@ -61,6 +61,11 @@ export async function generateMetadata({ params }: { params: Promise<MarathiPara
     description: `${data.sub} ${data.bullets[0]}`,
     alternates: {
       canonical: `https://www.nanded-city.in/mr/${resolvedParams.slug}/`,
+      languages: {
+        'mr-IN': `https://www.nanded-city.in/mr/${resolvedParams.slug}/`,
+        'en-IN': `https://www.nanded-city.in/lp/${resolvedParams.slug === 'bungalow-plots' ? 'na-bungalow-plots' : '2-bhk-flats'}/`,
+        'x-default': `https://www.nanded-city.in/lp/${resolvedParams.slug === 'bungalow-plots' ? 'na-bungalow-plots' : '2-bhk-flats'}/`,
+      }
     },
     openGraph: {
       title: data.title,

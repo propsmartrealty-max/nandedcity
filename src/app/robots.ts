@@ -20,6 +20,7 @@ export default function robots(): MetadataRoute.Robots {
           '/mr/',
           '/near/',
           '/projects',
+          '/infrastructure',
           '/about-us',
           '/legal-compliance',
           '/contact',

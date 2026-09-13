@@ -6,7 +6,7 @@ import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
   title: "MahaRERA Compliance & Legal Records | Nanded City Township Pune",
-  description: "Official legal compliance hub for Nanded City Developers Pune. Access all MahaRERA registration certificates and QR codes for all residential clusters.",
+  description: "Independent authorized channel partner compliance directory for Nanded City Township Pune. Verify all MahaRERA registration certificates and QR codes for ongoing residential clusters on Sinhagad Road.",
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/legal-compliance/`,
   },
@@ -17,7 +17,7 @@ export default function LegalCompliance() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "MahaRERA Legal Compliance - Nanded City Township Pune",
-    "description": "Comprehensive list of all MahaRERA registrations for Nanded City Developers."
+    "description": "Comprehensive list of all MahaRERA registrations for Nanded City Township clusters on Sinhagad Road Pune."
   };
 
   return (
@@ -27,13 +27,13 @@ export default function LegalCompliance() {
       <section style={{ backgroundColor: '#0f172a', padding: '100px 0 60px', color: '#fff', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '800px' }}>
           <span style={{ display: 'inline-block', backgroundColor: 'var(--accent-gold)', color: '#000', padding: '6px 14px', borderRadius: '4px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '24px' }}>
-            Transparency Guaranteed
+            Transparency & Compliance
           </span>
           <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '800', marginBottom: '24px', lineHeight: '1.2' }}>
-            Legal Compliance Hub
+            MahaRERA Compliance Hub
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.6' }}>
-            Nanded City Developers Pune strictly adheres to all regulatory standards. Below are the official MahaRERA Registration details and direct verification links to the Govt. of Maharashtra portal (<a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)' }}>maharera.maharashtra.gov.in</a>) for every ongoing cluster.
+            PropSmart Realty (MahaRERA: {SITE_CONFIG.brand.rera}) presents the verified regulatory compliance directory for Nanded City Township Pune. Below are the official MahaRERA Registration details and direct verification links to the Govt. of Maharashtra portal (<a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)' }}>maharera.maharashtra.gov.in</a>) for every active cluster.
           </p>
         </div>
       </section>
