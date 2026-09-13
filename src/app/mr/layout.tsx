@@ -11,9 +11,9 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: 'https://www.nanded-city.in/mr',
+    canonical: 'https://www.nanded-city.in/mr/',
     languages: {
-      'mr-IN': 'https://www.nanded-city.in/mr',
+      'mr-IN': 'https://www.nanded-city.in/mr/',
     },
   },
 };

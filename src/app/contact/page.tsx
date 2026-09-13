@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: `Contact ${SITE_CONFIG.name} Sales Team | Schedule Site Visit`,
   description: `Get in touch with the official ${SITE_CONFIG.name} sales & marketing team. Call ${SITE_CONFIG.contact.phone} or visit our office at ${SITE_CONFIG.contact.address} for project brochures and site visits.`,
   alternates: {
-    canonical: `${SITE_CONFIG.baseUrl}/contact`,
+    canonical: `${SITE_CONFIG.baseUrl}/contact/`,
   },
 };
 

@@ -26,11 +26,15 @@ export async function generateMetadata({ params }: { params: Promise<CampaignPar
   if (!campaign) return { title: 'Nanded City | Premium Residences' };
 
   return {
-    title: `${campaign.title} | Nanded City Official Sales`,
-    description: `Official Sales Partner for ${campaign.title} in Nanded City. ${campaign.sub}. Book your priority site visit today.`,
+    title: `${campaign.title} | Nanded City Pune Residences`,
+    description: `Verified channel partner platform for ${campaign.title} in Nanded City. ${campaign.sub}. Book your priority site visit today.`,
+    alternates: {
+      canonical: `https://www.nanded-city.in/lp/${resolvedParams.campaign}/`,
+    },
     openGraph: {
       title: campaign.title,
       description: campaign.sub,
+      url: `https://www.nanded-city.in/lp/${resolvedParams.campaign}/`,
       images: [{ url: campaign.heroImg, width: 1200, height: 630 }],
     }
   };

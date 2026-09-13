@@ -28,16 +28,16 @@ export async function generateMetadata({ params }: { params: Promise<PostParams>
   if (!post) return { title: 'Post Not Found' };
 
   return {
-    title: `${post.title} | Nanded City Official Insights`,
+    title: `${post.title} | Nanded City Township Pune`,
     description: post.excerpt,
     alternates: {
-      canonical: `${SITE_CONFIG.baseUrl}/blog/${post.slug}`,
+      canonical: `${SITE_CONFIG.baseUrl}/blog/${post.slug}/`,
     },
 
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `${SITE_CONFIG.baseUrl}/blog/${post.slug}`,
+      url: `${SITE_CONFIG.baseUrl}/blog/${post.slug}/`,
 
       type: 'article',
       publishedTime: post.date,

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: `About Nanded City Township Pune | Legacy, Infrastructure & Master Plan`,
   description: `Discover the 700-acre self-reliant ecosystem of Nanded City Township on Sinhagad Road, Pune. Learn about our schools, IT park, hospital, and sports facilities.`,
   alternates: {
-    canonical: `${SITE_CONFIG.baseUrl}/about-us`,
+    canonical: `${SITE_CONFIG.baseUrl}/about-us/`,
   },
 };
 

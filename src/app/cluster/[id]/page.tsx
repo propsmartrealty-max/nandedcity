@@ -55,11 +55,11 @@ export async function generateMetadata({ params }: { params: Promise<ClusterPara
     openGraph: {
       title: `${cluster.name} | ${SITE_CONFIG.name}`,
       description: cluster.description,
-      url: `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}`,
+      url: `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/`,
       images: [{ url: cluster.heroImage, width: 1200, height: 630 }],
     },
     alternates: {
-      canonical: `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}`,
+      canonical: `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/`,
     },
   };
 }

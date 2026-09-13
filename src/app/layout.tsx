@@ -31,13 +31,13 @@ export const metadata: Metadata = {
   keywords: SITE_CONFIG.seo.primaryKeywords,
   metadataBase: new URL(SITE_CONFIG.baseUrl),
   alternates: {
-    canonical: SITE_CONFIG.baseUrl,
+    canonical: `${SITE_CONFIG.baseUrl}/`,
     types: {
       'application/rss+xml': `${SITE_CONFIG.baseUrl}/api/rss`,
     },
     languages: {
-      'en-IN': SITE_CONFIG.baseUrl,
-      'mr-IN': `${SITE_CONFIG.baseUrl}/mr/2-bhk-flats`, // High-intent Marathi landing
+      'en-IN': `${SITE_CONFIG.baseUrl}/`,
+      'mr-IN': `${SITE_CONFIG.baseUrl}/mr/2-bhk-flats/`, // High-intent Marathi landing
     },
   },
   verification: {

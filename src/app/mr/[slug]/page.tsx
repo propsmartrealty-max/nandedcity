@@ -51,6 +51,26 @@ const mrData: Record<string, MarathiData> = {
   }
 };
 
+export async function generateMetadata({ params }: { params: Promise<MarathiParams> }) {
+  const resolvedParams = await params;
+  const data = mrData[resolvedParams.slug];
+  if (!data) return { title: 'नांदेड सिटी पुणे' };
+
+  return {
+    title: `${data.title} | Nanded City Pune`,
+    description: `${data.sub} ${data.bullets[0]}`,
+    alternates: {
+      canonical: `https://www.nanded-city.in/mr/${resolvedParams.slug}/`,
+    },
+    openGraph: {
+      title: data.title,
+      description: data.sub,
+      url: `https://www.nanded-city.in/mr/${resolvedParams.slug}/`,
+      images: [{ url: data.heroImg, width: 1200, height: 630 }],
+    },
+  };
+}
+
 export default async function MarathiLocalPage({ params }: { params: Promise<MarathiParams> }) {
   const resolvedParams = await params;
   const data = mrData[resolvedParams.slug];

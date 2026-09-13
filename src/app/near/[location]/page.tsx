@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<LocationPar
     description: `Looking for flats near ${loc.name}? Discover Nanded City Township Pune, just ${loc.distance} away. Explore premium 2, 2.5, & 3 BHK apartments and NA plots with MahaRERA compliance.`,
     keywords: `Flats near ${loc.name}, Real Estate near ${loc.name}, 2 BHK near ${loc.name}, 3 BHK near ${loc.name}, Nanded City Township Pune near ${loc.name}, ${SITE_CONFIG.seo.primaryKeywords}`,
     alternates: {
-      canonical: `${SITE_CONFIG.baseUrl}/near/${loc.slug}`,
+      canonical: `${SITE_CONFIG.baseUrl}/near/${loc.slug}/`,
     },
   };
 }

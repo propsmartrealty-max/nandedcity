@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "MahaRERA Compliance & Legal Records | Nanded City Township Pune",
   description: "Official legal compliance hub for Nanded City Developers Pune. Access all MahaRERA registration certificates and QR codes for all residential clusters.",
   alternates: {
-    canonical: `${SITE_CONFIG.baseUrl}/legal-compliance`,
+    canonical: `${SITE_CONFIG.baseUrl}/legal-compliance/`,
   },
 };
 
