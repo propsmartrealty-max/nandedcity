@@ -104,6 +104,8 @@ class EdgeHeadInjector {
 export async function onRequest(context: MiddlewareContext): Promise<Response> {
   const { request, next } = context;
   const url = new URL(request.url);
+  const userAgent = request.headers.get('user-agent') || '';
+  const isBot = isSearchBot(userAgent);
 
   // 1. Non-www to www Canonical Normalization
   if (url.hostname === 'nanded-city.in') {
@@ -111,20 +113,31 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
     return Response.redirect(url.toString(), 301);
   }
 
-  // 2. Trailing slash normalization for cluster and blog routes to prevent duplicate content
+  // 2. Prevent Googlebot & Search Crawlers from Indexing pages.dev Staging Domain
+  if (url.hostname.endsWith('.pages.dev') && isBot) {
+    url.hostname = 'www.nanded-city.in';
+    return Response.redirect(url.toString(), 301);
+  }
+
   const path = url.pathname;
-  const isHtmlRoute = !path.includes('.') || path.endsWith('.html');
   const isApiRoute = path.startsWith('/api/');
-  const isStaticAsset = path.startsWith('/_next/') || path.startsWith('/assets/') || path.startsWith('/qrs/');
+  const isStaticAsset = path.startsWith('/_next/') || path.startsWith('/assets/') || path.startsWith('/qrs/') || path.startsWith('/images/');
 
   // Skip middleware processing for API and static assets
   if (isApiRoute || isStaticAsset) {
     return next();
   }
 
-  // 3. Edge 301 redirect for uppercase paths to prevent case-sensitive Google penalties
+  // 3. Edge 301 redirect for uppercase paths to prevent duplicate content penalties
   if (path !== path.toLowerCase()) {
     url.pathname = path.toLowerCase();
+    return Response.redirect(url.toString(), 301);
+  }
+
+  // 4. Trailing slash normalization for HTML routes (Next.js static export alignment)
+  const hasFileExtension = path.split('/').pop()?.includes('.');
+  if (!hasFileExtension && !path.endsWith('/')) {
+    url.pathname = `${path}/`;
     return Response.redirect(url.toString(), 301);
   }
 
@@ -137,8 +150,6 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
     return response;
   }
 
-  const userAgent = request.headers.get('user-agent') || '';
-  const isBot = isSearchBot(userAgent);
   const edgeColo = request.cf?.colo || 'EDGE';
   const isHomePage = path === '/' || path === '/index.html';
 

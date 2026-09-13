@@ -10,14 +10,26 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: ['/', '/cluster/', '/blog/', '/lp/', '/mr/', '/projects', '/api/indexnow'],
-        disallow: ['/admin', '/private', '/_next/', '/api/google-index', '/*.json$'],
-        crawlDelay: 0, // Hardening: ensuring no artificial crawl delay for modern indexing
+        allow: [
+          '/',
+          '/_next/static/',
+          '/assets/',
+          '/cluster/',
+          '/blog/',
+          '/lp/',
+          '/mr/',
+          '/near/',
+          '/projects',
+          '/about-us',
+          '/legal-compliance',
+          '/contact',
+        ],
+        disallow: ['/admin', '/private', '/api/', '/*.json$'],
       },
       {
         userAgent: 'Googlebot',
-        allow: ['/'],
-        disallow: ['/admin', '/private', '/_next/static/'],
+        allow: ['/', '/_next/static/', '/assets/'],
+        disallow: ['/admin', '/private', '/api/'],
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
