@@ -24,7 +24,7 @@ const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "500", "600",
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_CONFIG.name} | Premium Luxury Residential Flats`,
+    default: `${SITE_CONFIG.name} | Luxury 2, 3 & 4 BHK Flats & NA Plots Sinhagad Road Pune`,
     template: `%s | ${SITE_CONFIG.name}`,
   },
   description: SITE_CONFIG.description,

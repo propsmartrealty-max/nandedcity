@@ -25,11 +25,11 @@ import { SITE_CONFIG } from '../config/site';
 
 
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.name} | Dominating Pune Real Estate Market | Official Portal`,
-  description: `Official residential platform for Nanded City Township Pune, dominating the Pune Real Estate Market on Sinhagad Road and Central Pune. Explore premium 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats and branded NA bungalow plots across 700 acres.`,
+  title: `${SITE_CONFIG.name} | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road`,
+  description: `Explore Nanded City Township Pune on Sinhagad Road. Authorized channel partner platform for 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats and branded NA bungalow plots across 700 acres. Check verified prices, floor plans, and amenities.`,
   keywords: SITE_CONFIG.seo.primaryKeywords,
   alternates: {
-    canonical: `${SITE_CONFIG.baseUrl}`,
+    canonical: `${SITE_CONFIG.baseUrl}/`,
   },
 };
 

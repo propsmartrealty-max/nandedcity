@@ -60,32 +60,36 @@ function isSearchBot(userAgent: string): boolean {
 class EdgeHeadInjector {
   private isHomePage: boolean;
   private edgeColo: string;
+  private canonicalUrl: string;
 
-  constructor(isHomePage: boolean, edgeColo: string) {
+  constructor(isHomePage: boolean, edgeColo: string, canonicalUrl: string) {
     this.isHomePage = isHomePage;
     this.edgeColo = edgeColo;
+    this.canonicalUrl = canonicalUrl;
   }
 
   element(element: any) {
-    // 1. High-priority DNS prefetch & Preconnects
+    // 1. High-priority DNS prefetch & Preconnects for instant asset streaming
     element.prepend(
-      `\n  <!-- Cloudflare Edge Early Preconnects -->` +
+      `\n  <!-- Cloudflare Edge Early Preconnects & Geo Engine -->` +
       `\n  <link rel="preconnect" href="https://fonts.googleapis.com">` +
       `\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` +
       `\n  <link rel="dns-prefetch" href="https://nandedcitypune.com">` +
+      `\n  <link rel="dns-prefetch" href="https://images.unsplash.com">` +
       `\n  <link rel="dns-prefetch" href="https://wa.me">` +
       `\n  <link rel="dns-prefetch" href="https://www.googletagmanager.com">`,
       { html: true }
     );
 
-    // 2. High-Fidelity Local SEO & Geo Meta Tags for Google Pune Ranking
+    // 2. High-Fidelity Local SEO & Geo Meta Tags for Google.com Pune Ranking
     element.append(
       `\n  <!-- Cloudflare Edge Geo-Targeting & Verification -->` +
       `\n  <meta name="geo.region" content="IN-MH">` +
       `\n  <meta name="geo.placename" content="Nanded City, Sinhagad Road, Pune">` +
       `\n  <meta name="geo.position" content="18.4612;73.8015">` +
       `\n  <meta name="ICBM" content="18.4612, 73.8015">` +
-      `\n  <meta name="revisit-after" content="2 days">` +
+      `\n  <meta name="revisit-after" content="1 days">` +
+      `\n  <meta name="rating" content="General">` +
       `\n  <meta name="cf-edge-location" content="${this.edgeColo}">`,
       { html: true }
     );
@@ -98,6 +102,21 @@ class EdgeHeadInjector {
         { html: true }
       );
     }
+  }
+}
+
+/**
+ * Enforces pure canonical URLs on the wire, stripping tracking/ad query strings
+ */
+class EdgeCanonicalRewriter {
+  private canonicalUrl: string;
+
+  constructor(canonicalUrl: string) {
+    this.canonicalUrl = canonicalUrl;
+  }
+
+  element(element: any) {
+    element.setAttribute('href', this.canonicalUrl);
   }
 }
 
@@ -152,11 +171,12 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
 
   const edgeColo = request.cf?.colo || 'EDGE';
   const isHomePage = path === '/' || path === '/index.html';
+  const cleanCanonical = `https://www.nanded-city.in${path === '/' ? '/' : path}`;
 
-  // 4. Construct high-performance edge headers
+  // 5. Construct high-performance edge headers
   const newHeaders = new Headers(response.headers);
   newHeaders.set('X-Edge-Colo', edgeColo);
-  newHeaders.set('X-Edge-Version', '2026-v8-turbo');
+  newHeaders.set('X-Edge-Version', '2026-v9-max');
   newHeaders.set('X-Powered-By', 'Cloudflare Pages Edge & HTMLRewriter');
 
   // Googlebot & Crawler Optimization
@@ -168,19 +188,22 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
     newHeaders.set('Cache-Control', 'public, max-age=600, s-maxage=3600, stale-while-revalidate=86400');
   }
 
-  // 5. HTTP 103 Early Hints & Preload Links for Instant Browser Fetching
+  // 6. HTTP 103 Early Hints & Preload Links for Instant Browser Fetching
   const preloadLinks = [
     '<https://fonts.googleapis.com>; rel=preconnect',
-    '<https://fonts.gstatic.com>; rel=preconnect; crossorigin'
+    '<https://fonts.gstatic.com>; rel=preconnect; crossorigin',
+    '<https://nandedcitypune.com>; rel=dns-prefetch',
+    '<https://images.unsplash.com>; rel=dns-prefetch'
   ];
   if (isHomePage) {
     preloadLinks.push('<https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp>; rel=preload; as=image; fetchpriority=high');
   }
   newHeaders.set('Link', preloadLinks.join(', '));
 
-  // 6. Execute Streaming HTMLRewriter Transformation
+  // 7. Execute Streaming HTMLRewriter Transformation
   const rewriter = new HTMLRewriter()
-    .on('head', new EdgeHeadInjector(isHomePage, edgeColo));
+    .on('head', new EdgeHeadInjector(isHomePage, edgeColo, cleanCanonical))
+    .on('link[rel="canonical"]', new EdgeCanonicalRewriter(cleanCanonical));
 
   const transformedResponse = rewriter.transform(
     new Response(response.body, {

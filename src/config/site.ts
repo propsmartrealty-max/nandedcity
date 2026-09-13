@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   name: "Nanded City Township Pune",
-  description: "Official residential platform for Nanded City Township Pune across 700 Acres, dominating the Pune Real Estate Market on Sinhagad Road and Central Pune. Explore 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats and branded NA bungalow plots.",
+  description: "Authorized channel partner platform for Nanded City Township Pune across 700 Acres on Sinhagad Road. Explore 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats and branded NA bungalow plots with certified floor plans, prices and RERA compliance.",
   baseUrl: "https://www.nanded-city.in",
   contact: {
     phone: "+91 7744009295",
