@@ -1,10 +1,11 @@
 /**
- * Ultra-Advanced Cloudflare Edge Engine & HTMLRewriter
- * Optimizing Core Web Vitals, Googlebot Indexing, and Instant Global Edge Delivery.
+ * Enterprise-Grade Cloudflare Edge Engine & HTMLRewriter
+ * Ultra-Optimized for Googlebot Indexing, Sub-100ms Core Web Vitals, and Instant Edge Delivery.
  */
 
 declare class HTMLRewriter {
   on(selector: string, handlers: any): this;
+  onDocument(handlers: any): this;
   transform(response: Response): Response;
 }
 
@@ -25,15 +26,20 @@ interface MiddlewareContext {
   env: Record<string, unknown>;
 }
 
-// Recognized search bots and AI crawlers
+// Exhaustive Recognized Search Bots, Mobile Crawlers & AI Search Engines
 const BOT_USER_AGENTS = [
   'googlebot',
-  'bingbot',
+  'googlebot-mobile',
+  'googlebot-image',
+  'googlebot-video',
   'google-inspectiontool',
   'storebot-google',
   'google-other',
   'mediapartners-google',
   'adsbot-google',
+  'bingbot',
+  'bingpreview',
+  'msnbot',
   'yandexbot',
   'duckduckbot',
   'baiduspider',
@@ -42,10 +48,13 @@ const BOT_USER_AGENTS = [
   'facebookexternalhit',
   'linkedinbot',
   'applebot',
+  'applebot-extended',
   'perplexitybot',
   'claudebot',
   'gptbot',
-  'bytespider'
+  'bytespider',
+  'petalbot',
+  'sogou'
 ];
 
 function isSearchBot(userAgent: string): boolean {
@@ -54,43 +63,49 @@ function isSearchBot(userAgent: string): boolean {
 }
 
 /**
- * HTMLRewriter Handler to dynamically inject edge-level performance tags,
- * DNS preconnects, local Pune Geo tags, and critical LCP preloads.
+ * Enterprise HTMLRewriter Handler:
+ * - Dynamic DNS Preconnects & High-Priority Resource Hints
+ * - Hyper-Local Pune Geo Tags (IN-MH, coordinates, ICBM)
+ * - LCP Critical Hero Preloads (fetchpriority=high)
+ * - Chrome Speculation Rules API for 0ms Instant Client Prerender
  */
-class EdgeHeadInjector {
+class EnterpriseEdgeHeadInjector {
   private isHomePage: boolean;
   private edgeColo: string;
-  private canonicalUrl: string;
 
-  constructor(isHomePage: boolean, edgeColo: string, canonicalUrl: string) {
+  constructor(isHomePage: boolean, edgeColo: string) {
     this.isHomePage = isHomePage;
     this.edgeColo = edgeColo;
-    this.canonicalUrl = canonicalUrl;
   }
 
   element(element: any) {
-    // 1. High-priority DNS prefetch & Preconnects for instant asset streaming
+    // 1. High-Priority Early Preconnects & DNS Prefetch
     element.prepend(
-      `\n  <!-- Cloudflare Edge Early Preconnects & Geo Engine -->` +
+      `\n  <!-- Enterprise Cloudflare Edge Resource Hints -->` +
       `\n  <link rel="preconnect" href="https://fonts.googleapis.com">` +
       `\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` +
       `\n  <link rel="dns-prefetch" href="https://nandedcitypune.com">` +
       `\n  <link rel="dns-prefetch" href="https://images.unsplash.com">` +
+      `\n  <link rel="dns-prefetch" href="https://static.cloudflareinsights.com">` +
       `\n  <link rel="dns-prefetch" href="https://wa.me">` +
       `\n  <link rel="dns-prefetch" href="https://www.googletagmanager.com">`,
       { html: true }
     );
 
-    // 2. High-Fidelity Local SEO & Geo Meta Tags for Google.com Pune Ranking
+    // 2. High-Precision Local SEO & Geo Meta Tags for Google.com Pune SERP Dominance
     element.append(
-      `\n  <!-- Cloudflare Edge Geo-Targeting & Verification -->` +
+      `\n  <!-- Enterprise Edge Geo-Targeting & Microdata -->` +
       `\n  <meta name="geo.region" content="IN-MH">` +
       `\n  <meta name="geo.placename" content="Nanded City, Sinhagad Road, Pune">` +
       `\n  <meta name="geo.position" content="18.4612;73.8015">` +
       `\n  <meta name="ICBM" content="18.4612, 73.8015">` +
       `\n  <meta name="revisit-after" content="1 days">` +
       `\n  <meta name="rating" content="General">` +
-      `\n  <meta name="cf-edge-location" content="${this.edgeColo}">`,
+      `\n  <meta name="distribution" content="Global">` +
+      `\n  <meta name="coverage" content="Worldwide">` +
+      `\n  <meta name="format-detection" content="telephone=yes">` +
+      `\n  <meta name="theme-color" content="#0a1628">` +
+      `\n  <meta name="cf-edge-colo" content="${this.edgeColo}">`,
       { html: true }
     );
 
@@ -102,6 +117,14 @@ class EdgeHeadInjector {
         { html: true }
       );
     }
+
+    // 4. Modern Chrome Speculation Rules API for 0ms Instant Prerender on Internal Navigation
+    element.append(
+      `\n  <script type="speculationrules">` +
+      `{"prerender":[{"source":"list","urls":["/projects/","/cluster/saajgiri/","/cluster/harmony/","/about-us/","/contact/"],"eagerness":"moderate"}]}` +
+      `</script>`,
+      { html: true }
+    );
   }
 }
 
@@ -117,6 +140,17 @@ class EdgeCanonicalRewriter {
 
   element(element: any) {
     element.setAttribute('href', this.canonicalUrl);
+  }
+}
+
+/**
+ * Strips non-essential HTML comments at the edge to reduce byte payload
+ */
+class EdgeCommentMinifier {
+  comments(comment: any) {
+    if (!comment.text.includes('[if') && !comment.text.includes('Cloudflare')) {
+      comment.remove();
+    }
   }
 }
 
@@ -173,16 +207,19 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
   const isHomePage = path === '/' || path === '/index.html';
   const cleanCanonical = `https://www.nanded-city.in${path === '/' ? '/' : path}`;
 
-  // 5. Construct high-performance edge headers
+  // 5. Construct enterprise-grade response headers
   const newHeaders = new Headers(response.headers);
   newHeaders.set('X-Edge-Colo', edgeColo);
-  newHeaders.set('X-Edge-Version', '2026-v9-max');
-  newHeaders.set('X-Powered-By', 'Cloudflare Pages Edge & HTMLRewriter');
+  newHeaders.set('X-Edge-Engine', 'Cloudflare Pages Enterprise HTMLRewriter');
+  newHeaders.set('Server-Timing', `cf-edge;desc="Edge Engine", cf-colo;desc="${edgeColo}"`);
+  newHeaders.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
+  newHeaders.set('X-Content-Type-Options', 'nosniff');
+  newHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin');
 
   // Googlebot & Crawler Optimization
   if (isBot) {
     newHeaders.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
-    newHeaders.set('X-Bot-Acceleration', 'Active');
+    newHeaders.set('X-Bot-Acceleration', 'Enterprise-Active');
     newHeaders.set('Cache-Control', 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800');
   } else {
     newHeaders.set('Cache-Control', 'public, max-age=600, s-maxage=3600, stale-while-revalidate=86400');
@@ -202,8 +239,9 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
 
   // 7. Execute Streaming HTMLRewriter Transformation
   const rewriter = new HTMLRewriter()
-    .on('head', new EdgeHeadInjector(isHomePage, edgeColo, cleanCanonical))
-    .on('link[rel="canonical"]', new EdgeCanonicalRewriter(cleanCanonical));
+    .on('head', new EnterpriseEdgeHeadInjector(isHomePage, edgeColo))
+    .on('link[rel="canonical"]', new EdgeCanonicalRewriter(cleanCanonical))
+    .onDocument(new EdgeCommentMinifier());
 
   const transformedResponse = rewriter.transform(
     new Response(response.body, {
