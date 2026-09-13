@@ -113,7 +113,7 @@ export default function SearchIntelligence() {
           
           <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto' }}>
             <span style={{ fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent-gold)' }}>
-              Entity Knowledge Graph & Search Index
+              Integrated Township Guide & Cluster Directory
             </span>
             <h2 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.3rem)', color: '#0f172a', fontWeight: '800', marginTop: '8px', marginBottom: '12px' }}>
               Nanded City Township Pune Directory

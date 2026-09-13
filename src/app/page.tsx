@@ -106,8 +106,32 @@ export default function Home() {
 
     {
       "@context": "https://schema.org",
-      "@type": "SpeakableSpecification",
-      "xpath": [".hero-seo-text", ".speakable-title"]
+      "@type": "WebPage",
+      "@id": `${SITE_CONFIG.baseUrl}/#webpage`,
+      "url": `${SITE_CONFIG.baseUrl}/`,
+      "name": "Nanded City Township Pune | Luxury Flats & NA Plots",
+      "description": "Authorized partner portal for Nanded City Township Pune on Sinhagad Road.",
+      "about": {
+        "@type": "Place",
+        "name": "Nanded City Pune",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Nanded City, Sinhagad Road",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "postalCode": "411041",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 18.4612,
+          "longitude": 73.8015
+        }
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".speakable-title", ".hero-seo-text"]
+      }
     },
     {
       "@context": "https://schema.org",
@@ -120,17 +144,6 @@ export default function Home() {
           "text": faq.answer
         }
       }))
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "SiteNavigationElement",
-      "name": ["Projects", "Market Blogs", "About Township", "Contact"],
-      "url": [
-        "https://www.nanded-city.in/projects",
-        "https://www.nanded-city.in/blog",
-        "https://www.nanded-city.in/about-us",
-        "https://www.nanded-city.in/contact"
-      ]
     }
   ];
 
@@ -141,9 +154,9 @@ export default function Home() {
       {/* Hero */}
       <ParallaxHero bgImage="https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp">
         <span className="badge badge-gold">Sinhagad Road · Pune</span>
-        <h1 className="speakable-title">Welcome to <span className="metallic-gold-text">Nanded City Township Pune</span></h1>
+        <h1 className="speakable-title"><span className="metallic-gold-text">Nanded City Township Pune</span> – 2, 2.5, 3 & 4 BHK Flats & NA Plots</h1>
         <p className="hero-seo-text">
-          Discover <strong>premium 2 & 3 BHK luxury flats</strong> and the <strong>most aspiring community of Branded NA Bungalow Plots</strong> at Nanded City Township on Sinhgad Road. A curated ecosystem for <strong>CEOs, CXOs, Doctors, CAs, and Business Owners</strong> offering world-class infrastructure across a 700-Acre township.
+          Explore <strong>premium 2, 2.5, 3 & 4 BHK luxury flats</strong> and exclusive <strong>branded NA bungalow plots</strong> at <strong>Nanded City Township on Sinhagad Road, Pune</strong>. An integrated 700-acre self-sustainable township featuring ICSE schools, Symphony IT Park, Destination Center retail, and Olympic-grade sports complexes.
         </p>
         <HeroActions />
         <div className="hero-stats">
