@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 interface Amenity {
@@ -116,6 +117,30 @@ export default function TownshipEcosystem() {
               <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: '1.6', margin: 0 }}>{a.desc}</p>
             </motion.div>
           ))}
+        </div>
+
+        <div style={{ textAlign: 'center', marginTop: '48px' }}>
+          <Link
+            href="/infrastructure/"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '10px',
+              backgroundColor: '#0f172a',
+              color: 'var(--accent-gold)',
+              border: '1px solid rgba(197, 168, 114, 0.4)',
+              padding: '16px 36px',
+              borderRadius: '100px',
+              fontWeight: '700',
+              fontSize: '0.95rem',
+              textDecoration: 'none',
+              transition: 'all 0.3s ease',
+              boxShadow: '0 8px 24px rgba(15, 23, 42, 0.12)'
+            }}
+          >
+            <span>Explore Complete 700-Acre Infrastructure Authority Guide</span>
+            <span>→</span>
+          </Link>
         </div>
       </div>
     </section>

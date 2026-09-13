@@ -291,6 +291,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <h4 style={{ color: '#fff', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '20px' }}>Hyperlocal Advantage</h4>
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '20px' }}>
                     {[
+                      { name: '700-Acre Infrastructure Guide', href: '/infrastructure' },
                       { name: 'Nanded City Public School', href: '/blog/nanded-city-township-amenities-lifestyle-guide' },
                       { name: 'Destination Centre Shopping', href: '/blog/nanded-city-township-amenities-lifestyle-guide' },
                       { name: 'Nanded City Bus Stop', href: '/blog/sinhgad-road-property-price-trends-2026' },

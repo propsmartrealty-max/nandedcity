@@ -121,7 +121,7 @@ class EnterpriseEdgeHeadInjector {
     // 4. Modern Chrome Speculation Rules API for 0ms Instant Prerender on Internal Navigation
     element.append(
       `\n  <script type="speculationrules">` +
-      `{"prerender":[{"source":"list","urls":["/projects/","/cluster/saajgiri/","/cluster/harmony/","/about-us/","/contact/"],"eagerness":"moderate"}]}` +
+      `{"prerender":[{"source":"list","urls":["/projects/","/infrastructure/","/cluster/saajgiri/","/cluster/harmony/","/about-us/","/contact/"],"eagerness":"moderate"}]}` +
       `</script>`,
       { html: true }
     );

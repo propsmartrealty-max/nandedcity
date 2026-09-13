@@ -35,6 +35,7 @@ export default function DynamicHeader() {
   }, [mobileMenuOpen]);
 
   const navLinks: NavItem[] = [
+    { name: 'Infrastructure', href: '/infrastructure' },
     { name: 'Connectivity', href: '/near/sinhagad-road' },
     { name: 'ROI Reports', href: '/blog' },
     { name: 'About', href: '/about-us' },
@@ -44,6 +45,7 @@ export default function DynamicHeader() {
 
   const mobileNavItems: NavItem[] = [
     { name: 'All 20 Residences & Plots', href: '/projects' },
+    { name: '700-Acre Infrastructure Guide', href: '/infrastructure' },
     { name: 'Locations & Connectivity', href: '/near/sinhagad-road' },
     { name: 'Market Insights & ROI', href: '/blog' },
     { name: 'About Township', href: '/about-us' },
