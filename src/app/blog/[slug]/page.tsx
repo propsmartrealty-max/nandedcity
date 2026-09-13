@@ -80,7 +80,7 @@ export default async function BlogPost({ params }: { params: Promise<PostParams>
     "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `${SITE_CONFIG.baseUrl}/blog/${post.slug}`
+      "@id": `${SITE_CONFIG.baseUrl}/blog/${post.slug}/`
     },
 
     "headline": post.title,
@@ -89,7 +89,7 @@ export default async function BlogPost({ params }: { params: Promise<PostParams>
     "author": {
       "@type": "Person",
       "name": authors.find(a => a.id === post.author)?.name || "Nanded City Intelligence Team",
-      "url": `${SITE_CONFIG.baseUrl}/about-us`,
+      "url": `${SITE_CONFIG.baseUrl}/about-us/`,
       "jobTitle": authors.find(a => a.id === post.author)?.role || "Senior Analyst",
       "sameAs": [
         "https://www.linkedin.com/company/prop-smart-realty/",
@@ -123,7 +123,7 @@ export default async function BlogPost({ params }: { params: Promise<PostParams>
       {
         "@type": "Place",
         "name": SITE_CONFIG.name,
-        "sameAs": SITE_CONFIG.baseUrl
+        "sameAs": `${SITE_CONFIG.baseUrl}/`
       },
 
       {
@@ -136,7 +136,7 @@ export default async function BlogPost({ params }: { params: Promise<PostParams>
       {
         "@type": "Accommodation",
         "name": relatedEntity.name,
-        "url": `${SITE_CONFIG.baseUrl}/cluster/${relatedEntity.id}`
+        "url": `${SITE_CONFIG.baseUrl}/cluster/${relatedEntity.id}/`
       },
 
       {
@@ -158,21 +158,21 @@ export default async function BlogPost({ params }: { params: Promise<PostParams>
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": SITE_CONFIG.baseUrl
+        "item": `${SITE_CONFIG.baseUrl}/`
       },
 
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Market Intelligence",
-        "item": `${SITE_CONFIG.baseUrl}/blog`
+        "item": `${SITE_CONFIG.baseUrl}/blog/`
       },
 
       {
         "@type": "ListItem",
         "position": 3,
         "name": post.title,
-        "item": `${SITE_CONFIG.baseUrl}/blog/${post.slug}`
+        "item": `${SITE_CONFIG.baseUrl}/blog/${post.slug}/`
       }
 
     ]

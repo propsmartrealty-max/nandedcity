@@ -31,7 +31,7 @@ export default function ProjectsPage() {
       "@type": "ListItem",
       "position": index + 1,
       "name": c.name,
-      "url": `${SITE_CONFIG.baseUrl}/cluster/${c.id}`
+      "url": `${SITE_CONFIG.baseUrl}/cluster/${c.id}/`
     }))
   };
   
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
           <Breadcrumbs 
             items={[
               { name: 'Home', href: '/' },
-              { name: 'Residential Clusters', href: '/projects', current: true }
+              { name: 'Residential Clusters', href: '/projects/', current: true }
             ]} 
           />
           <h1 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.2rem)', fontWeight: '800', marginBottom: '16px', marginTop: '24px' }}>

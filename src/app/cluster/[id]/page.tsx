@@ -81,7 +81,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
     "@type": "Residence",
     "name": cluster.name,
     "description": cluster.description,
-    "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}`,
+    "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/`,
     "image": cluster.heroImage,
     "numberOfRooms": cluster.bhk,
     "address": {
@@ -154,7 +154,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
     "@id": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/#project`,
     "name": `${cluster.name} by ${SITE_CONFIG.brand.developerName}`,
     "description": `${cluster.description}. A premium offering dominating the Pune Real Estate Market on Sinhagad Road and Central Pune.`,
-    "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}`,
+    "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/`,
     "image": cluster.heroImage,
     "address": {
       "@type": "PostalAddress",
@@ -207,7 +207,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
       "lowPrice": cluster.price.match(/\d+/) ? parseFloat(cluster.price.match(/\d+/)![0]) * (cluster.price.includes('Cr') ? 10000000 : 100000) : 0,
       "offerCount": cluster.units.match(/\d+/) ? parseInt(cluster.units.match(/\d+/)![0]) : 1,
       "availability": cluster.status === 'Ready to Move' ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
-      "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}`
+      "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/`
     }
   };
 
@@ -221,19 +221,19 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": SITE_CONFIG.baseUrl
+        "item": `${SITE_CONFIG.baseUrl}/`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Residential Clusters",
-        "item": `${SITE_CONFIG.baseUrl}/projects`
+        "item": `${SITE_CONFIG.baseUrl}/projects/`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": cluster.name,
-        "item": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}`
+        "item": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/`
       }
     ]
   };
@@ -242,7 +242,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/#webpage`,
-    "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}`,
+    "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/`,
     "name": `${cluster.name} | ${SITE_CONFIG.name}`,
     "description": cluster.description,
     "isPartOf": { "@id": `${SITE_CONFIG.baseUrl}/#website` },

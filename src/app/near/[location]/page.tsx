@@ -52,19 +52,19 @@ export default async function LocationPage({ params }: { params: Promise<Locatio
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": SITE_CONFIG.baseUrl
+        "item": `${SITE_CONFIG.baseUrl}/`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Locations",
-        "item": `${SITE_CONFIG.baseUrl}/near/${loc.slug}`
+        "item": `${SITE_CONFIG.baseUrl}/near/${loc.slug}/`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": loc.name,
-        "item": `${SITE_CONFIG.baseUrl}/near/${loc.slug}`
+        "item": `${SITE_CONFIG.baseUrl}/near/${loc.slug}/`
       }
     ]
   };

@@ -25,8 +25,8 @@ import { SITE_CONFIG } from '../config/site';
 
 
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.name} | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road`,
-  description: `Explore Nanded City Township Pune on Sinhagad Road. Authorized channel partner platform for 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats and branded NA bungalow plots across 700 acres. Check verified prices, floor plans, and amenities.`,
+  title: `Nanded City Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road`,
+  description: `Explore Nanded City Pune on Sinhagad Road. Authorized channel partner platform for 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats and branded NA bungalow plots across 700 acres. Updated 2026 price list, floor plans, RERA details & site visits.`,
   keywords: SITE_CONFIG.seo.primaryKeywords,
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/`,
@@ -41,79 +41,19 @@ export default function Home() {
   const jsonLd: any[] = [
     {
       "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "name": SITE_CONFIG.brand.organizationName,
-      "image": clusters[0].image,
-      "@id": `${SITE_CONFIG.baseUrl}/#organization`,
-      "url": SITE_CONFIG.baseUrl,
-      "telephone": SITE_CONFIG.contact.phoneNumeric,
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Nanded City Township, Sinhagad Road",
-        "addressLocality": "Pune",
-        "addressRegion": "Maharashtra",
-        "postalCode": "411041",
-        "addressCountry": "IN"
-      },
-      "description": `Independent Authorized Channel Partner for Nanded City Township.`,
-
-      "makesOffer": clusters.map(c => ({
-        "@type": "Offer",
-        "url": `${SITE_CONFIG.baseUrl}/cluster/${c.id}`,
-        "availability": c.status === 'Ready to Move' ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
-        "itemOffered": {
-          "@type": "Residence",
-          "name": c.name,
-          "description": c.description,
-          "numberOfRooms": c.bhk,
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Nanded City Township, Sinhagad Road",
-            "addressLocality": "Pune",
-            "addressRegion": "Maharashtra",
-            "postalCode": "411041",
-            "addressCountry": "IN"
-          }
-        },
-        "price": c.price,
-        "priceCurrency": "INR",
-      }))
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": SITE_CONFIG.name,
-      "url": SITE_CONFIG.baseUrl,
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": `${SITE_CONFIG.baseUrl}/blog?q={search_term_string}`,
-        "query-input": "required name=search_term_string"
-      }
-    },
-
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": SITE_CONFIG.baseUrl
-        }
-      ]
-    },
-
-    {
-      "@context": "https://schema.org",
       "@type": "WebPage",
       "@id": `${SITE_CONFIG.baseUrl}/#webpage`,
       "url": `${SITE_CONFIG.baseUrl}/`,
-      "name": "Nanded City Township Pune | Luxury Flats & NA Plots",
+      "name": "Nanded City Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots",
       "description": "Authorized partner portal for Nanded City Township Pune on Sinhagad Road.",
+      "isPartOf": {
+        "@id": `${SITE_CONFIG.baseUrl}/#website`
+      },
       "about": {
         "@type": "Place",
         "name": "Nanded City Pune",
+        "alternateName": "Nanded City Township Pune",
+        "description": "700-Acre Integrated Township on Sinhagad Road Pune with luxury flats and NA bungalow plots.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Nanded City, Sinhagad Road",
@@ -132,6 +72,30 @@ export default function Home() {
         "@type": "SpeakableSpecification",
         "cssSelector": [".speakable-title", ".hero-seo-text"]
       }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Nanded City Pune Residential Projects & Clusters",
+      "itemListElement": clusters.map((c, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "url": `${SITE_CONFIG.baseUrl}/cluster/${c.id}/`,
+        "name": c.name,
+        "description": `${c.name} - ${c.bhk} in Nanded City Pune. Price: ${c.price}, Status: ${c.status}.`
+      }))
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": `${SITE_CONFIG.baseUrl}/`
+        }
+      ]
     },
     {
       "@context": "https://schema.org",
@@ -154,9 +118,9 @@ export default function Home() {
       {/* Hero */}
       <ParallaxHero bgImage="https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp">
         <span className="badge badge-gold">Sinhagad Road · Pune</span>
-        <h1 className="speakable-title"><span className="metallic-gold-text">Nanded City Township Pune</span> – 2, 2.5, 3 & 4 BHK Flats & NA Plots</h1>
+        <h1 className="speakable-title"><span className="metallic-gold-text">Nanded City Pune</span> – Luxury 2, 2.5, 3 & 4 BHK Flats & NA Bungalow Plots</h1>
         <p className="hero-seo-text">
-          Explore <strong>premium 2, 2.5, 3 & 4 BHK luxury flats</strong> and exclusive <strong>branded NA bungalow plots</strong> at <strong>Nanded City Township on Sinhagad Road, Pune</strong>. An integrated 700-acre self-sustainable township featuring ICSE schools, Symphony IT Park, Destination Center retail, and Olympic-grade sports complexes.
+          Explore <strong>premium 2, 2.5, 3 & 4 BHK luxury flats</strong> and exclusive <strong>branded NA bungalow plots</strong> at <strong>Nanded City Pune on Sinhagad Road</strong>. An integrated 700-acre self-sustainable township featuring ICSE schools, Symphony IT Park, Destination Center retail, captive water & power infrastructure, and Olympic-grade sports complexes.
         </p>
         <HeroActions />
         <div className="hero-stats">
@@ -182,6 +146,119 @@ export default function Home() {
           </ScrollReveal>
 
           <DynamicClusterGrid clusters={clusters} />
+        </div>
+      </section>
+
+      {/* 2026 Master Price List & Configuration Directory (SEO Authority Matrix) */}
+      <section className="section-padding" style={{ backgroundColor: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+        <div className="container">
+          <ScrollReveal className="section-header" style={{ marginBottom: '32px' }}>
+            <span className="section-eyebrow">Market Calibration 2026</span>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)' }}>Nanded City Pune 2026 Price List & Configuration Directory</h2>
+            <p style={{ maxWidth: '780px', margin: '0 auto', color: '#64748b' }}>
+              Verified price list, carpet areas, and MahaRERA registration certificates across all 20 residential clusters and branded NA bungalow plots on Sinhagad Road, Pune.
+            </p>
+          </ScrollReveal>
+
+          <div style={{ overflowX: 'auto', backgroundColor: '#ffffff', borderRadius: '16px', border: '1px solid #e2e8f0', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem', textAlign: 'left' }}>
+              <thead style={{ backgroundColor: '#0f172a', color: '#ffffff' }}>
+                <tr>
+                  <th style={{ padding: '16px', fontWeight: '700' }}>Cluster / Project</th>
+                  <th style={{ padding: '16px', fontWeight: '700' }}>Configuration</th>
+                  <th style={{ padding: '16px', fontWeight: '700' }}>Carpet Area</th>
+                  <th style={{ padding: '16px', fontWeight: '700' }}>Starting Price*</th>
+                  <th style={{ padding: '16px', fontWeight: '700' }}>Status / Possession</th>
+                  <th style={{ padding: '16px', fontWeight: '700' }}>MahaRERA Reg.</th>
+                  <th style={{ padding: '16px', fontWeight: '700' }}>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { name: 'Saajgiri', bhk: '3 BHK Luxury High-Rise', area: '1,050 – 1,250 sq.ft.', price: '₹1.05 Cr* Onwards', status: 'Under Construction', rera: 'PR1260002501621', slug: 'saajgiri' },
+                  { name: 'Harmony', bhk: '3.5 & 4.5 BHK Royal Flats', area: '1,650 – 2,400 sq.ft.', price: '₹1.85 Cr* Onwards', status: 'Under Construction', rera: 'P52100055134', slug: 'harmony' },
+                  { name: 'Melody (Phase 1, 2, 3)', bhk: 'Branded NA Bungalow Plots', area: '2,000 – 4,500 sq.ft.', price: '₹1.35 Cr* Onwards', status: 'Ready to Build', rera: 'P52100051948', slug: 'melody-1' },
+                  { name: 'Rhythm', bhk: 'Villa NA Plots', area: '2,200 – 3,800 sq.ft.', price: '₹1.45 Cr* Onwards', status: 'Ready to Build', rera: 'P52100051950', slug: 'rhythm-1' },
+                  { name: 'Aalaap-I', bhk: '2 & 3 BHK Urban Residences', area: '780 – 1,020 sq.ft.', price: '₹78 L* Onwards', status: 'Ongoing', rera: 'P52100051234', slug: 'aalaap-1' },
+                  { name: 'Pancham Phase 1 & 2', bhk: '2 BHK Family Homes', area: '680 – 850 sq.ft.', price: '₹65 L* Onwards', status: 'Ready / Ongoing', rera: 'P52100000288', slug: 'pancham' },
+                  { name: 'Bageshree', bhk: '2 BHK Modern Towers', area: '620 – 750 sq.ft.', price: '₹58 L* Onwards', status: 'Ready to Move', rera: 'Delivered', slug: 'bageshree' },
+                  { name: 'Asawari', bhk: '2 & 3 BHK High-Rise', area: '850 – 1,150 sq.ft.', price: '₹75 L* (Resale)', status: 'Ready to Move', rera: 'Delivered', slug: 'asawari' },
+                  { name: 'Sargam', bhk: '2 & 3 BHK Towers', area: '880 – 1,200 sq.ft.', price: '₹80 L* (Resale)', status: 'Ready to Move', rera: 'Delivered', slug: 'sargam' },
+                  { name: 'Kalashree', bhk: '2.5 & 3 BHK Lake-Facing', area: '950 – 1,280 sq.ft.', price: '₹85 L* (Resale)', status: 'Ready to Move', rera: 'Delivered', slug: 'kalashree' }
+                ].map((item, idx) => (
+                  <tr key={item.name} style={{ borderBottom: '1px solid #f1f5f9', backgroundColor: idx % 2 === 0 ? '#f8fafc' : '#ffffff' }}>
+                    <td style={{ padding: '14px 16px', fontWeight: '700', color: '#0f172a' }}>
+                      <Link href={`/cluster/${item.slug}`} style={{ color: '#0f172a', textDecoration: 'none' }}>
+                        {item.name}
+                      </Link>
+                    </td>
+                    <td style={{ padding: '14px 16px', color: '#334155' }}>{item.bhk}</td>
+                    <td style={{ padding: '14px 16px', color: '#64748b' }}>{item.area}</td>
+                    <td style={{ padding: '14px 16px', fontWeight: '700', color: '#166534' }}>{item.price}</td>
+                    <td style={{ padding: '14px 16px' }}>
+                      <span style={{
+                        display: 'inline-block',
+                        padding: '4px 10px',
+                        borderRadius: '20px',
+                        fontSize: '0.75rem',
+                        fontWeight: '600',
+                        backgroundColor: item.status.includes('Ready') ? 'rgba(22, 101, 52, 0.1)' : 'rgba(197, 168, 114, 0.15)',
+                        color: item.status.includes('Ready') ? '#166534' : 'var(--accent-gold)'
+                      }}>
+                        {item.status}
+                      </span>
+                    </td>
+                    <td style={{ padding: '14px 16px', fontSize: '0.78rem', color: '#64748b', fontFamily: 'monospace' }}>{item.rera}</td>
+                    <td style={{ padding: '14px 16px' }}>
+                      <Link href={`/cluster/${item.slug}`} style={{ color: 'var(--accent-gold)', fontWeight: '700', fontSize: '0.82rem', textDecoration: 'none' }}>
+                        View Specs →
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap', marginTop: '32px' }}>
+            <Link
+              href="/infrastructure/"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: '#0f172a',
+                color: 'var(--accent-gold)',
+                padding: '12px 28px',
+                borderRadius: '100px',
+                fontWeight: '700',
+                fontSize: '0.9rem',
+                textDecoration: 'none'
+              }}
+            >
+              <span>Explore 700-Acre Township Infrastructure (WTP, STP, MSEB, Schools)</span>
+              <span>→</span>
+            </Link>
+            <Link
+              href="/projects"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: '#ffffff',
+                color: '#0f172a',
+                border: '1px solid #cbd5e1',
+                padding: '12px 28px',
+                borderRadius: '100px',
+                fontWeight: '600',
+                fontSize: '0.9rem',
+                textDecoration: 'none'
+              }}
+            >
+              <span>View All 20 Clusters & Floor Plans</span>
+              <span>→</span>
+            </Link>
+          </div>
         </div>
       </section>
 
