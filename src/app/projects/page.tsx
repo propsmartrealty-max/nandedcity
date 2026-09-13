@@ -243,7 +243,7 @@ export default function ProjectsPage() {
             {locations.map((loc) => (
               <Link 
                 key={loc.slug}
-                href={`/near/${loc.slug}`}
+                href={`/near/${loc.slug}/`}
                 style={{
                   padding: '10px 20px',
                   backgroundColor: '#fff',

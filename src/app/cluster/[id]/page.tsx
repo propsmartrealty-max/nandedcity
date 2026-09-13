@@ -726,10 +726,10 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
               Connected Neighborhoods around {cluster.name}
             </h4>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
-              {locations.slice(0, 8).map(loc => (
+              {locations.slice(0, 12).map(loc => (
                 <Link 
                   key={loc.slug}
-                  href={`/near/${loc.slug}`}
+                  href={`/near/${loc.slug}/`}
                   style={{
                     padding: '8px 16px',
                     backgroundColor: '#fff',

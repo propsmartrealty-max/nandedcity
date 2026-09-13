@@ -122,6 +122,7 @@ async function fetchSitemapUrls() {
   const urls = [
     `${SITE_URL}/`,
     `${SITE_URL}/projects/`,
+    `${SITE_URL}/infrastructure/`,
     `${SITE_URL}/contact/`,
     `${SITE_URL}/blog/`,
     `${SITE_URL}/about-us/`,
@@ -141,6 +142,10 @@ async function fetchSitemapUrls() {
     const blogsContent = fs.readFileSync('src/data/blogs.ts', 'utf-8');
     const blogSlugs = blogsContent.match(/slug:\s*['"]([^'"]+)['"]/g)?.map(m => m.match(/['"]([^'"]+)['"]/)[1]) || [];
     blogSlugs.forEach(slug => urls.push(`${SITE_URL}/blog/${slug}/`));
+
+    const locationsContent = fs.readFileSync('src/data/locations.ts', 'utf-8');
+    const locationSlugs = locationsContent.match(/slug:\s*['"]([^'"]+)['"]/g)?.map(m => m.match(/['"]([^'"]+)['"]/)[1]) || [];
+    locationSlugs.forEach(slug => urls.push(`${SITE_URL}/near/${slug}/`));
   } catch (err) {
     // ignore
   }

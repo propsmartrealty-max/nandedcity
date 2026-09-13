@@ -35,5 +35,22 @@ export const homeFaqs: FAQItem[] = [
   {
     question: "Can I buy NA bungalow plots to construct an independent villa in Nanded City?",
     answer: "Yes, Nanded City offers exclusive Collector NA-sanctioned bungalow plots through the Melody (Phases I, II, III) and Rhythm clusters, ranging from 2,000 to 4,500 sq. ft., featuring complete underground utility connections, perimeter gated security, and access to all township clubhouses."
+  },
+  {
+    question: "What is the average real estate price per sq.ft. on Sinhagad Road Pune in 2026?",
+    answer: "In 2026, standalone buildings along Sinhagad Road (Dhayari, Vadgaon, Anand Nagar, Hingne) trade between ₹5,800 and ₹8,200 per sq.ft. Premium integrated residences in Nanded City range from ₹7,800 to ₹10,500 per sq.ft. (with exclusive villa plots starting at ₹1.5 Cr+), commanding a ~25% premium due to captive water treatment, private ICSE schools, Destination Center malls, and 70% open green space."
+  },
+  {
+    question: "How has the new Sinhagad Road flyover impacted commute times and property prices?",
+    answer: "The newly operational multi-tier Sinhagad Road flyover (Rajaram Bridge to Fun Time Multiplex) has cut peak-hour travel times to Swargate and Kothrud from 45 minutes to just 8–10 minutes. This major arterial upgrade has triggered 12% to 15% annual capital appreciation across Nanded City and adjoining South-West Pune corridors."
+  },
+  {
+    question: "Can I buy verified resale flats in Nanded City Pune?",
+    answer: "Yes, Nanded City features 12 completed, fully inhabited residential communities including Asawari, Sargam, Bageshree, Mangal Bhairav, Madhuvanti, and Lalit. These clusters offer verified 2 BHK and 3 BHK resale inventory with full Occupancy Certificates (OC), clear bank titles, and active cooperative housing societies."
+  },
+  {
+    question: "Why do Pune homebuyers choose Nanded City Township over standalone buildings in South-West Pune?",
+    answer: "Unlike standalone buildings that face water tanker reliance, parking deficits, and narrow access lanes, Nanded City delivers 100% infrastructure autonomy: direct 24x7 treated water from Khadakwasla Dam, dedicated MSEB electrical substation, dual STP systems, on-campus ICSE schooling, Olympic sports facilities, and professional 3-tier security."
   }
 ];
+
