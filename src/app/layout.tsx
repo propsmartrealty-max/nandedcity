@@ -24,7 +24,7 @@ const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "500", "600",
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_CONFIG.name} | Luxury 2, 3 & 4 BHK Flats & NA Plots Sinhagad Road Pune`,
+    default: SITE_CONFIG.name,
     template: `%s | ${SITE_CONFIG.name}`,
   },
   description: SITE_CONFIG.description,
@@ -48,11 +48,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_CONFIG.name} | Premium Residential Flats`,
+    title: SITE_CONFIG.name,
     images: [SITE_CONFIG.brand.ogImage],
   },
   openGraph: {
-    title: `${SITE_CONFIG.name} | Built on Trust`,
+    title: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
     url: SITE_CONFIG.baseUrl,
     siteName: SITE_CONFIG.name,
@@ -165,13 +165,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ]
   };
 
-  // WebSite Schema with SearchAction — Sitelinks Search Box eligibility
+  // WebSite Schema with SearchAction — Sitelinks Search Box eligibility & Google Site Name
   const websiteSchema: any = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${SITE_CONFIG.baseUrl}/#website`,
-    "name": "Nanded City Township Pune Residences",
-    "url": SITE_CONFIG.baseUrl,
+    "name": "Nanded City Township Pune",
+    "alternateName": [
+      "Nanded City Pune",
+      "Nanded City",
+      "Nanded City Township"
+    ],
+    "url": `${SITE_CONFIG.baseUrl}/`,
     "description": "Authorized partner platform for Nanded City Township, Sinhagad Road, Pune — premium 2, 2.5, 3, 3.5 & 4.5 BHK flats and branded NA bungalow plots.",
     "publisher": {
       "@id": `${SITE_CONFIG.baseUrl}/#organization`

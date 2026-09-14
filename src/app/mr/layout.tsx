@@ -24,8 +24,12 @@ export default function MarathiLayout({ children }: { children: React.ReactNode 
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://www.nanded-city.in/mr/#website",
-    "name": "नांदेड सिटी पुणे",
-    "url": "https://www.nanded-city.in/mr",
+    "name": "Nanded City Township Pune",
+    "alternateName": [
+      "नांदेड सिटी पुणे",
+      "Nanded City Pune"
+    ],
+    "url": "https://www.nanded-city.in/mr/",
     "description": "नांदेड सिटी पुणे (सिंहगड रोड) मधील 2 BHK, 3 BHK आणि बंगलो प्लॉट्स.",
     "inLanguage": "mr-IN"
   };

@@ -103,6 +103,8 @@ class EnterpriseEdgeHeadInjector {
       `\n  <meta name="geo.placename" content="Nanded City, Sinhagad Road, Pune">` +
       `\n  <meta name="geo.position" content="18.4612;73.8015">` +
       `\n  <meta name="ICBM" content="18.4612, 73.8015">` +
+      `\n  <meta name="application-name" content="Nanded City Township Pune">` +
+      `\n  <meta name="apple-mobile-web-app-title" content="Nanded City Township Pune">` +
       `\n  <meta name="revisit-after" content="1 days">` +
       `\n  <meta name="rating" content="General">` +
       `\n  <meta name="distribution" content="Global">` +
@@ -147,7 +149,13 @@ class EnterpriseEdgeHeadInjector {
       "@context": "https://schema.org",
       "@type": "RealEstateAgent",
       "@id": "https://www.nanded-city.in/#organization",
-      "name": "Nanded City Township Pune - PropSmart Realty",
+      "name": "Nanded City Township Pune",
+      "alternateName": [
+        "Nanded City Pune",
+        "Nanded City",
+        "Nanded City Township"
+      ],
+      "legalName": "PropSmart Realty (Authorized Channel Partner)",
       "url": "https://www.nanded-city.in/",
       "logo": "https://www.nanded-city.in/icon.png",
       "telephone": "+91-7744009295",
@@ -254,6 +262,32 @@ class EdgeBotOptimizer {
   }
 }
 
+/**
+ * Edge Title Rewriter: Enforces clean "Nanded City Township Pune" title on homepage for all crawlers
+ */
+class EdgeTitleRewriter {
+  private isHomePage: boolean;
+
+  constructor(isHomePage: boolean) {
+    this.isHomePage = isHomePage;
+  }
+
+  element(element: any) {
+    if (this.isHomePage) {
+      element.setInnerContent('Nanded City Township Pune');
+    }
+  }
+}
+
+/**
+ * Edge OpenGraph Site Name Rewriter
+ */
+class EdgeOgSiteNameRewriter {
+  element(element: any) {
+    element.setAttribute('content', 'Nanded City Township Pune');
+  }
+}
+
 export async function onRequest(context: MiddlewareContext): Promise<Response> {
   const { request, next } = context;
   const url = new URL(request.url);
@@ -356,6 +390,8 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
 
   // 7. Execute Streaming HTMLRewriter Transformation
   const rewriter = new HTMLRewriter()
+    .on('title', new EdgeTitleRewriter(isHomePage))
+    .on('meta[property="og:site_name"]', new EdgeOgSiteNameRewriter())
     .on('head', new EnterpriseEdgeHeadInjector(isHomePage, isBot, edgeColo, cleanCanonical))
     .on('img', new EdgeImageOptimizer())
     .on('script', new EdgeBotOptimizer(isBot))
