@@ -3,105 +3,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
-interface SearchCategory {
-  id: string;
-  name: string;
-  keywords: { label: string; href: string }[];
-}
-
-const searchCategories: SearchCategory[] = [
-  {
-    id: "configurations",
-    name: "Configurations",
-    keywords: [
-      { label: "2 BHK Ready & Modern Flats", href: "/lp/2-bhk-flats" },
-      { label: "2.5 BHK Flats Nanded City", href: "/cluster/aalaap-1" },
-      { label: "3 BHK Luxury Flats Nanded City", href: "/lp/3-bhk-luxury" },
-      { label: "3.5 & 4.5 BHK Harmony", href: "/cluster/harmony" },
-      { label: "Branded NA Bungalow Plots", href: "/lp/na-bungalow-plots" },
-      { label: "Melody Luxury Villa Plots", href: "/cluster/melody-1" },
-      { label: "Rhythm Signature Plots", href: "/cluster/rhythm-1" },
-      { label: "Dhanashree Gated Plots", href: "/cluster/dhanashree" }
-    ]
-  },
-  {
-    id: "projects",
-    name: "Projects & Clusters",
-    keywords: [
-      { label: "Saajgiri 3 BHK High-Rise", href: "/cluster/saajgiri" },
-      { label: "Harmony 3.5 & 4.5 BHK Launch", href: "/cluster/harmony" },
-      { label: "Aalaap-I 2 & 3 BHK", href: "/cluster/aalaap-1" },
-      { label: "Melody I Bungalow Plots", href: "/cluster/melody-1" },
-      { label: "Melody II NA Plots", href: "/cluster/melody-2" },
-      { label: "Melody III Villa Plots", href: "/cluster/melody-3" },
-      { label: "Rhythm I Signature Plots", href: "/cluster/rhythm-1" },
-      { label: "Dhanashree Gated Plots", href: "/cluster/dhanashree" },
-      { label: "Pancham Phase 1 & 2 (P52100000288)", href: "/cluster/pancham" },
-      { label: "Sargam Skyline Towers", href: "/cluster/sargam" },
-      { label: "Asawari Family Cluster", href: "/cluster/asawari" },
-      { label: "Bageshree Modern Homes", href: "/cluster/bageshree" },
-      { label: "Kalashree Large Carpet 3 BHK", href: "/cluster/kalashree" },
-      { label: "Sarang Scenic Hill-View", href: "/cluster/sarang" },
-      { label: "Lalit Compact Smart Homes", href: "/cluster/lalit" },
-      { label: "Madhuvanti 2 BHK Resale", href: "/cluster/madhuvanti" },
-      { label: "Shubh Kalyan Luxury 3 BHK", href: "/cluster/shubh-kalyan" },
-      { label: "Sur Peaceful 2 BHK", href: "/cluster/sur" },
-      { label: "Mangal Bhairav 2 BHK", href: "/cluster/mangal-bhairav" },
-      { label: "Janaranjani 2 BHK Flats", href: "/cluster/janaranjani" },
-      { label: "All 20 Residential Clusters Directory", href: "/projects" }
-    ]
-  },
-  {
-    id: "connectivity",
-    name: "Connectivity & Localities",
-    keywords: [
-      { label: "Flats on Sinhagad Road", href: "/near/sinhagad-road" },
-      { label: "Nanded City to Kothrud (15 Mins)", href: "/near/kothrud" },
-      { label: "Nanded City to Hinjewadi IT Park", href: "/near/hinjewadi" },
-      { label: "Nanded City to Warje Flyover", href: "/near/warje" },
-      { label: "Nanded City to Bavdhan & Highway", href: "/near/bavdhan" },
-      { label: "Dhayari & Anand Nagar Properties", href: "/near/dhayari" },
-      { label: "Vadgaon Budruk Connectivity", href: "/near/vadgaon-budruk" },
-      { label: "Sinhagad Road Flyover Impact 2026", href: "/blog/sinhgad-road-flyover-impact-2026" }
-    ]
-  },
-  {
-    id: "infrastructure",
-    name: "Township & Amenities",
-    keywords: [
-      { label: "Nanded City Public School (ICSE)", href: "/about-us" },
-      { label: "Pawar Public School Vicinity", href: "/about-us" },
-      { label: "Symphony IT Park Micro-Economy", href: "/about-us" },
-      { label: "Destination Center I & II", href: "/about-us" },
-      { label: "Kridaangan Olympic Sports Complex", href: "/about-us" },
-      { label: "Eco-Friendly 70% Green Township", href: "/about-us" },
-      { label: "Water & Sewage Self-Reliance Plant", href: "/about-us" },
-      { label: "Club Harmony & Gymkhana", href: "/cluster/harmony" }
-    ]
-  },
-  {
-    id: "investment",
-    name: "Investment & Comparisons",
-    keywords: [
-      { label: "Nanded City vs Magarpatta City", href: "/blog/nanded-city-vs-standalone-projects-roi" },
-      { label: "Nanded City vs Amanora Park Town", href: "/blog/nanded-city-vs-standalone-projects-roi" },
-      { label: "Nanded City vs Standalone Projects ROI", href: "/blog/nanded-city-vs-standalone-projects-roi" },
-      { label: "12.5% YoY Capital Growth Data", href: "/blog" },
-      { label: "25% Rental Yield & Demand", href: "/blog" },
-      { label: "Nanded City Price List & Trends 2026", href: "/projects" },
-      { label: "MahaRERA Legal Verification", href: "/legal-compliance" },
-      { label: "Resale & Rental Assistance", href: "/contact" }
-    ]
-  }
-];
+import { ECOSYSTEM_KEYWORD_TAXONOMY } from '@/data/ecosystemKeywords';
 
 export default function SearchIntelligence() {
   const [activeTab, setActiveTab] = useState<string>("all");
 
   const displayedKeywords = activeTab === "all"
-    ? searchCategories.flatMap(c => c.keywords)
-    : searchCategories.find(c => c.id === activeTab)?.keywords || [];
+    ? ECOSYSTEM_KEYWORD_TAXONOMY.flatMap(c => c.keywords)
+    : ECOSYSTEM_KEYWORD_TAXONOMY.find(c => c.id === activeTab)?.keywords || [];
 
   return (
     <section 
@@ -111,15 +20,15 @@ export default function SearchIntelligence() {
       <div className="container">
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
           
-          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', maxWidth: '840px', margin: '0 auto' }}>
             <span style={{ fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent-gold)' }}>
-              Integrated Township Guide & Cluster Directory
+              Integrated Township Entity Graph & Search Directory
             </span>
             <h2 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.3rem)', color: '#0f172a', fontWeight: '800', marginTop: '8px', marginBottom: '12px' }}>
-              Nanded City Township Pune Directory
+              Nanded City Township Pune Directory & Ecosystem Matrix
             </h2>
             <p style={{ color: '#64748b', fontSize: '0.98rem', lineHeight: '1.6' }}>
-              Explore certified configurations, MahaRERA registrations, project clusters, arterial connectivity, and institutional investment metrics across the 700-acre integrated township.
+              Explore certified configurations, MahaRERA registrations, 20+ residential clusters, self-sustainable 700-acre infrastructure silos, arterial connectivity, and institutional investment metrics.
             </p>
           </div>
 
@@ -139,9 +48,9 @@ export default function SearchIntelligence() {
                 transition: 'all 0.25s ease'
               }}
             >
-              All Entities ({searchCategories.flatMap(c => c.keywords).length})
+              All Entities ({ECOSYSTEM_KEYWORD_TAXONOMY.flatMap(c => c.keywords).length})
             </button>
-            {searchCategories.map(cat => (
+            {ECOSYSTEM_KEYWORD_TAXONOMY.map(cat => (
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
@@ -157,7 +66,7 @@ export default function SearchIntelligence() {
                   transition: 'all 0.25s ease'
                 }}
               >
-                {cat.name}
+                {cat.name} ({cat.keywords.length})
               </button>
             ))}
           </div>
@@ -172,7 +81,7 @@ export default function SearchIntelligence() {
                 key={k.label}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.2, delay: Math.min(idx * 0.02, 0.3) }}
+                transition={{ duration: 0.2, delay: Math.min(idx * 0.015, 0.25) }}
               >
                 <Link 
                   href={k.href}
@@ -200,30 +109,44 @@ export default function SearchIntelligence() {
             ))}
           </motion.div>
 
-          {/* Google Compliance Semantic Answer-First Information Card */}
+          {/* Google Compliance Semantic Answer-First Information Cards */}
           <div 
             style={{ 
               marginTop: '16px',
-              padding: '28px 32px', 
+              padding: '32px', 
               backgroundColor: '#f8fafc', 
               borderRadius: '16px', 
               border: '1px solid #e2e8f0',
-              fontSize: '0.9rem', 
+              fontSize: '0.92rem', 
               color: '#475569', 
-              lineHeight: '1.7' 
+              lineHeight: '1.75' 
             }}
           >
-            <h3 style={{ fontSize: '1.05rem', fontWeight: '800', color: '#0f172a', marginBottom: '12px' }}>
-              Township Living & Architectural Landscape in Nanded City Pune
+            <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: '#0f172a', marginBottom: '14px' }}>
+              Township Architectural Landscape & Infrastructure Permutations in Nanded City Pune
             </h3>
-            <p style={{ marginBottom: '12px' }}>
-              <strong>Nanded City Township Pune</strong> is an integrated 700-acre residential, commercial, and educational ecosystem located on <strong>Sinhagad Road</strong>, Pune (Pin: 411041). Conceived on self-sustainable urban planning principles, Nanded City preserves over 70% open green cover while accommodating more than 15,000 resident families across diverse configurations: <strong>2 & 2.5 BHK modern apartments</strong> (Aalaap-I, Pancham Phase 1 & 2, Bageshree, Sargam, Asawari, Lalit, Madhuvanti, Mangal Bhairav, Janaranjani), <strong>3 BHK luxury high-rises</strong> (Saajgiri, Kalashree, Shubh Kalyan), <strong>palatial 3.5 & 4.5 BHK residences</strong> (Harmony), and <strong>exclusive Branded NA Bungalow Plots</strong> (Melody I, II, III, Rhythm, Dhanashree).
+            
+            <p style={{ marginBottom: '14px' }}>
+              <strong>Nanded City Township Pune</strong> is a landmark 700-acre integrated mega-township on <strong>Sinhagad Road</strong>, Pune (PIN: 411041), master-planned by Nanded City Development & Construction Company Limited. Anchored by strict eco-friendly planning, over 70% of the entire land parcel remains dedicated to green open spaces, manicured avenues, and pedestrian-first public realms. Today, more than 15,000 resident families thrive across diverse residential typologies: <strong>2 BHK & 2.5 BHK modern flats</strong> (Aalaap-I, Pancham Phase 1 & 2, Bageshree, Sargam, Asawari, Lalit, Madhuvanti, Mangal Bhairav, Janaranjani, Sur), <strong>3 BHK luxury high-rise residences</strong> (Saajgiri, Kalashree, Shubh Kalyan), <strong>3.5 & 4.5 BHK palatial skyline homes</strong> (Harmony), and <strong>exclusive Branded NA Bungalow Plots</strong> (Melody I, Melody II, Melody III, Rhythm, Dhanashree).
             </p>
-            <p style={{ marginBottom: '12px' }}>
-              <strong>Civic & Social Infrastructure:</strong> The township houses prestigious educational institutions like <em>Nanded City Public School (ICSE)</em> and Pawar Public School, healthcare dispensaries, the state-of-the-art <em>Symphony IT Park</em>, destination retail centers (Destination Center I & II), and the comprehensive <em>Kridaangan Olympic Sports Complex</em> equipped with tennis courts, skating rinks, and aquatic centers.
+
+            <p style={{ marginBottom: '14px' }}>
+              <strong>Self-Sustainable 700-Acre Infrastructure Silo:</strong> Unlike standalone residential developments, Nanded City Township Pune functions as a self-reliant municipal micro-city. Its core engineering infrastructure features:
             </p>
+            <ul style={{ paddingLeft: '24px', marginBottom: '14px' }}>
+              <li><strong>Captive Water Treatment Plant (WTP):</strong> Multi-tier automated filtration and chlorination network delivering 24x7 treated, potable water to every residential cluster.</li>
+              <li><strong>Zero-Discharge Sewage Treatment Plant (STP):</strong> Advanced biological wastewater treatment recycling 100% of greywater for township landscaping, flushing, and green belt irrigation.</li>
+              <li><strong>Dedicated 22 kV MSEB Substation:</strong> Express power infrastructure with underground HT/LT distribution, eliminating overhead wire hazards and ensuring high power uptime.</li>
+              <li><strong>Underground Utility & Optical Fiber Ducting:</strong> Future-proof civic ducting with high-speed FTTH broadband networks and automated stormwater drainage preventing waterlogging.</li>
+              <li><strong>Internal Fire Station & Central Command Security:</strong> 24/7 centralized surveillance room monitoring hundreds of IP CCTV cameras, controlled boom barriers, and an on-campus rapid-response fire brigade station and police outpost.</li>
+            </ul>
+
+            <p style={{ marginBottom: '14px' }}>
+              <strong>Civic, Social & Commercial Ecosystem:</strong> Within the township gates, residents have immediate walk-to-school access to prestigious institutions such as <em>Nanded City Public School (ICSE)</em> and Pawar Public School. Healthcare needs are served around the clock by <em>Sahyadri Multispeciality Hospital</em> and localized clinics. Economic vibrancy is supported by the <em>Symphony IT Park</em>, which hosts prominent IT/ITES enterprises, alongside twin commercial centers—<em>Destination Center I & II</em>—housing banks, ATMs, retail supermarkets, restaurants, and daily conveniences. For active living, the <em>Kridaangan Olympic Sports Complex</em> and <em>Club Harmony Gymkhana</em> offer professional tennis courts, swimming pools, badminton halls, and athletic tracks.
+            </p>
+
             <p style={{ margin: 0 }}>
-              <strong>Connectivity & Capital Appreciation:</strong> Strategically linked to Kothrud (15 mins via the Sinhagad Road flyover corridor), Warje, Bavdhan, Swargate, and the Mumbai-Bangalore Highway, Nanded City delivers an average <strong>12.5% YoY capital growth</strong> and consistent <strong>25% rental demand</strong>, offering a resilient alternative to standalone developments and establishing itself alongside Magarpatta City and Amanora Park Town as one of Pune&apos;s premier integrated townships.
+              <strong>Regional Connectivity & Investment Fundamentals:</strong> Benefiting from the newly operational <strong>Sinhagad Road multi-tier flyover corridor</strong>, Nanded City Township Pune connects directly to Kothrud in 15 minutes, Warje in 10 minutes, and Hinjewadi IT Park via the Mumbai-Bangalore Highway bypass. Real estate fundamentals demonstrate a consistent <strong>12.5% YoY capital appreciation</strong> and strong <strong>25% rental yields</strong>, establishing Nanded City alongside Magarpatta City and Amanora Park Town as Pune’s benchmark master-planned township investments. Consult authorized channel partner <strong>PropSmart Realty (MahaRERA: A7744009295)</strong> for certified pricing, floor plans, and priority site visits.
             </p>
           </div>
         </div>
@@ -241,4 +164,3 @@ export default function SearchIntelligence() {
     </section>
   );
 }
-

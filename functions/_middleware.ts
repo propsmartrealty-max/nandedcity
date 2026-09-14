@@ -153,7 +153,21 @@ class EnterpriseEdgeHeadInjector {
       "alternateName": [
         "Nanded City Pune",
         "Nanded City",
-        "Nanded City Township"
+        "Nanded City Township",
+        "Nanded City Sinhagad Road",
+        "Nanded City Sinhgad Road Pune",
+        "नांदेड सिटी पुणे",
+        "नांदेड सिटी टाऊनशिप पुणे"
+      ],
+      "keywords": "Nanded City Township Pune, Nanded City Pune, flats in Nanded City, 2 BHK, 2.5 BHK, 3 BHK, 3.5 BHK, 4 BHK, Melody NA bungalow plots, Saajgiri, Harmony, Sinhagad Road Pune",
+      "knowsAbout": [
+        "Nanded City Township Pune",
+        "Nanded City Pune 700 Acre Integrated Township",
+        "Sinhagad Road Real Estate Pune",
+        "Branded NA Bungalow Plots Pune",
+        "Luxury 2 BHK 2.5 BHK 3 BHK 4 BHK Flats",
+        "MahaRERA Real Estate Compliance Maharashtra",
+        "Sinhagad Road Flyover Corridor"
       ],
       "legalName": "PropSmart Realty (Authorized Channel Partner)",
       "url": "https://www.nanded-city.in/",

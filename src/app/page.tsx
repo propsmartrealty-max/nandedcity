@@ -73,7 +73,12 @@ export default function Home() {
         "name": "Nanded City Township Pune",
         "alternateName": [
           "Nanded City Pune",
-          "Nanded City"
+          "Nanded City",
+          "Nanded City Township",
+          "Nanded City Sinhagad Road",
+          "Nanded City Sinhgad Road Pune",
+          "नांदेड सिटी पुणे",
+          "नांदेड सिटी टाऊनशिप पुणे"
         ],
         "description": "700-Acre Integrated Township on Sinhagad Road Pune with luxury flats and NA bungalow plots.",
         "address": {
@@ -90,6 +95,16 @@ export default function Home() {
           "longitude": 73.8015
         }
       },
+      "mentions": [
+        { "@type": "Place", "name": "Sinhagad Road Pune" },
+        { "@type": "Place", "name": "Kothrud Pune" },
+        { "@type": "Place", "name": "Hinjewadi IT Park Pune" },
+        { "@type": "School", "name": "Nanded City Public School" },
+        { "@type": "Hospital", "name": "Sahyadri Hospital Nanded City" },
+        { "@type": "CivicStructure", "name": "Symphony IT Park" },
+        { "@type": "CivicStructure", "name": "Destination Centre I & II" },
+        { "@type": "CivicStructure", "name": "Kridaangan Sports Complex" }
+      ],
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [".speakable-title", ".hero-seo-text"]
@@ -140,9 +155,9 @@ export default function Home() {
       {/* Hero */}
       <ParallaxHero bgImage="https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp">
         <span className="badge badge-gold">Sinhagad Road · Pune</span>
-        <h1 className="speakable-title"><span className="metallic-gold-text">Nanded City Pune</span> – Luxury 2, 2.5, 3 & 4 BHK Flats & NA Bungalow Plots</h1>
+        <h1 className="speakable-title"><span className="metallic-gold-text">Nanded City Township Pune</span> – Luxury 2, 2.5, 3, 3.5 & 4.5 BHK Flats & Branded NA Bungalow Plots</h1>
         <p className="hero-seo-text">
-          Explore <strong>premium 2, 2.5, 3 & 4 BHK luxury flats</strong> and exclusive <strong>branded NA bungalow plots</strong> at <strong>Nanded City Pune on Sinhagad Road</strong>. An integrated 700-acre self-sustainable township featuring ICSE schools, Symphony IT Park, Destination Center retail, captive water & power infrastructure, and Olympic-grade sports complexes.
+          Explore <strong>premium 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats</strong> and exclusive <strong>branded NA bungalow plots</strong> across <strong>Nanded City Township Pune on Sinhagad Road</strong>. An integrated 700-acre self-sustainable township featuring ICSE schools, Sahyadri Hospital, Symphony IT Park, Destination Center retail, captive water & power infrastructure, and Olympic-grade sports complexes.
         </p>
         <HeroActions />
         <div className="hero-stats">
