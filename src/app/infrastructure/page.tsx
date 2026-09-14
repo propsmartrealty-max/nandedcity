@@ -374,7 +374,7 @@ export default function InfrastructurePage() {
                 Pedestrian safety in Nanded City is prioritized above all else. The entire road network is flanked by <strong>continuous, elevated paved footpaths</strong> constructed with anti-skid tactile paving for universal accessibility, accommodating senior citizens, strollers, and differently-abled individuals.
               </p>
               <p style={{ marginBottom: '16px' }}>
-                These pedestrian paths are segregated from motorized lanes by green verge buffers planted with native shade trees, providing thermal comfort even during Pune summers. Children can safely walk from their apartments in clusters like <Link href="/cluster/pancham" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Pancham</Link> or <Link href="/cluster/bageshree" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Bageshree</Link> directly to Vidya Pratishthan&apos;s Nanded City Public School without having to step onto a vehicular roadway.
+                These pedestrian paths are segregated from motorized lanes by green verge buffers planted with native shade trees, providing thermal comfort even during Pune summers. Children can safely walk from their apartments in clusters like <Link href="/cluster/pancham/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Pancham</Link> or <Link href="/cluster/bageshree/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Bageshree</Link> directly to Vidya Pratishthan&apos;s Nanded City Public School without having to step onto a vehicular roadway.
               </p>
             </section>
 
@@ -636,7 +636,7 @@ export default function InfrastructurePage() {
                 15. Kridaangan Sports Complex, Club Harmony &amp; Fitness Corridors
               </h2>
               <p style={{ marginBottom: '16px' }}>
-                Sports and physical wellness are core to Nanded City&apos;s lifestyle design. The township houses the renowned <strong>Kridaangan Sports Complex</strong> alongside <Link href="/cluster/harmony" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Club Harmony</Link> (spanning a 32-acre club precinct), comprising:
+                Sports and physical wellness are core to Nanded City&apos;s lifestyle design. The township houses the renowned <strong>Kridaangan Sports Complex</strong> alongside <Link href="/cluster/harmony/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Club Harmony</Link> (spanning a 32-acre club precinct), comprising:
               </p>
               <ul style={{ listStyleType: 'disc', paddingLeft: '24px', marginBottom: '20px' }}>
                 <li style={{ marginBottom: '8px' }}><strong>Olympic-Dimension Swimming Pool:</strong> Regulation swimming pool with dedicated toddler splash pools and certified aquatic coaches.</li>
@@ -883,7 +883,7 @@ export default function InfrastructurePage() {
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
             <Link
-              href="/contact"
+              href="/contact/"
               style={{
                 backgroundColor: 'var(--accent-gold)',
                 color: '#000000',

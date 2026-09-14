@@ -5,6 +5,7 @@ export const SITE_CONFIG = {
   contact: {
     phone: "+91 7744009295",
     phoneNumeric: "7744009295",
+    email: "propsmartrealty@gmail.com",
     address: "PropSmart Realty, Authorized Partner, Nanded City Township, Sinhagad Road, Pune - 411041",
     whatsapp: "https://wa.me/917744009295?text=Hi,%20I%20am%20interested%20in%20the%20project.",
     whatsappPrompt: "Chat with Sales Expert",
@@ -60,22 +61,22 @@ export function getWhatsappLink(pathname?: string | null) {
   let text = "Hi, I am interested in Nanded City properties.";
   
   if (pathname) {
-    if (pathname.includes('/cluster/')) {
-      const slug = pathname.split('/').pop() || '';
-      const projectName = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-      text = `Hi, I am interested in the ${projectName} project at Nanded City.`;
-    } else if (pathname.includes('/lp/')) {
-      const slug = pathname.split('/').pop() || '';
-      const campaignName = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-      text = `Hi, I am interested in ${campaignName} at Nanded City.`;
-    } else if (pathname.includes('/mr/')) {
-      const slug = pathname.split('/').pop() || '';
-      const campaignName = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-      text = `Hi, I am interested in ${campaignName} at Nanded City (Marathi Inquiry).`;
-    } else if (pathname.includes('/blog/')) {
-      const slug = pathname.split('/').pop() || '';
-      const blogName = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-      text = `Hi, I read the article "${blogName}" and am interested in Nanded City.`;
+    const clean = pathname.replace(/\/+$/, '');
+    const slug = clean.split('/').pop() || '';
+    const formatted = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
+    if (clean.includes('/cluster/')) {
+      text = `Hi, I am interested in the ${formatted} project at Nanded City. Please share brochure and price details.`;
+    } else if (clean.includes('/near/')) {
+      text = `Hi, I am looking for properties near ${formatted} and interested in exploring Nanded City Township.`;
+    } else if (clean.includes('/infrastructure/')) {
+      text = `Hi, I am interested in learning more about Nanded City's 700-acre township infrastructure and upcoming inventory.`;
+    } else if (clean.includes('/lp/')) {
+      text = `Hi, I am interested in ${formatted} at Nanded City. Please schedule a priority site visit.`;
+    } else if (clean.includes('/mr/')) {
+      text = `नमस्कार, मी नांदेड सिटी पुणे येथील ${formatted} प्रकल्पाबद्दल माहिती व दरपत्रक मिळवण्यासाठी संपर्क करत आहे.`;
+    } else if (clean.includes('/blog/')) {
+      text = `Hi, I read your analysis on "${formatted}" and would like to consult on properties in Nanded City.`;
     }
   }
   return `${base}?text=${encodeURIComponent(text)}`;

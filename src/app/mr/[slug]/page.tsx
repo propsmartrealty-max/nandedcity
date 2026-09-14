@@ -11,7 +11,9 @@ interface MarathiParams {
 export async function generateStaticParams() {
   return [
     { slug: '2-bhk-flats' },
-    { slug: 'bungalow-plots' }
+    { slug: '3-bhk-flats' },
+    { slug: 'bungalow-plots' },
+    { slug: 'sinhgad-road' }
   ];
 }
 
@@ -37,6 +39,18 @@ const mrData: Record<string, MarathiData> = {
       'महारेरा (MahaRERA) नोंदणीकृत व १००% कायदेशीर सुरक्षितता (अधिकृत संकेतस्थळ: maharera.maharashtra.gov.in)'
     ],
   },
+  '3-bhk-flats': {
+    title: 'नांदेड सिटी पुणे मध्ये 3 BHK लक्झरी फ्लॅट्स',
+    sub: 'सिंहगड रोड वरील भव्य टॉवर्स आणि सह्याद्रीचे विहंगम दृश्य. आजच भेट द्या.',
+    bhk: '3 BHK Luxury',
+    clusterName: 'Saajgiri',
+    heroImg: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    bullets: [
+      '१.२५ कोटी रुपयांपासून सुरुवात (प्रशस्त कार्पेट क्षेत्र)',
+      'साजगिरी व असवारी मधील आधुनिक सोयीसुविधा आणि क्लबहाऊस',
+      'महारेरा नोंदणीकृत आणि शून्य ब्रोकरेज थेट अधिकृत सहाय्य'
+    ],
+  },
   'bungalow-plots': {
     title: 'पुण्यातील सर्वात प्रीमियम N.A. बंगलो प्लॉट्स',
     sub: 'डॉक्टर, उद्योजक आणि आयटी प्रोफेशनल्सची पहिली पसंती.',
@@ -48,6 +62,18 @@ const mrData: Record<string, MarathiData> = {
       '१५,००० हून अधिक कुटुंबांचा विश्वास (नांदेड सिटी डेव्हलपर्स)',
       'स्वतःचा स्वतंत्र बंगला बांधण्याची सुवर्णसंधी'
     ],
+  },
+  'sinhgad-road': {
+    title: 'सिंहगड रोड पुणे वरील सर्वोत्तम टाऊनशिप फ्लॅट्स',
+    sub: 'नवीन उड्डाणपुलामुळे स्वारगेट अवघ्या १५ मिनिटांत. १५,००० हून अधिक समाधानी कुटुंबे.',
+    bhk: '2 & 3 BHK Township Homes',
+    clusterName: 'Nanded City',
+    heroImg: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    bullets: [
+      '२४ तास मुबलक पाणी (खडकवासला धरणातून थेट शुद्धीकरण)',
+      'पवार पब्लिक स्कूल आणि सिम्फनी आयटी पार्क टाऊनशिपमध्येच',
+      '२, ३ व ४ BHK फ्लॅट्स आणि एन.ए. बंगलो प्लॉट्स उपलब्ध'
+    ],
   }
 };
 
@@ -56,6 +82,10 @@ export async function generateMetadata({ params }: { params: Promise<MarathiPara
   const data = mrData[resolvedParams.slug];
   if (!data) return { title: 'नांदेड सिटी पुणे' };
 
+  const enLp = resolvedParams.slug === 'bungalow-plots' 
+    ? 'na-bungalow-plots' 
+    : (resolvedParams.slug === '3-bhk-flats' ? '3-bhk-luxury' : '2-bhk-flats');
+
   return {
     title: `${data.title} | Nanded City Pune`,
     description: `${data.sub} ${data.bullets[0]}`,
@@ -63,8 +93,8 @@ export async function generateMetadata({ params }: { params: Promise<MarathiPara
       canonical: `https://www.nanded-city.in/mr/${resolvedParams.slug}/`,
       languages: {
         'mr-IN': `https://www.nanded-city.in/mr/${resolvedParams.slug}/`,
-        'en-IN': `https://www.nanded-city.in/lp/${resolvedParams.slug === 'bungalow-plots' ? 'na-bungalow-plots' : '2-bhk-flats'}/`,
-        'x-default': `https://www.nanded-city.in/lp/${resolvedParams.slug === 'bungalow-plots' ? 'na-bungalow-plots' : '2-bhk-flats'}/`,
+        'en-IN': `https://www.nanded-city.in/lp/${enLp}/`,
+        'x-default': `https://www.nanded-city.in/lp/${enLp}/`,
       }
     },
     openGraph: {
@@ -87,7 +117,7 @@ export default async function MarathiLocalPage({ params }: { params: Promise<Mar
     "@type": "RealEstateListing",
     "name": data.title,
     "description": data.sub,
-    "url": `https://www.nanded-city.in/mr/${resolvedParams.slug}`,
+    "url": `https://www.nanded-city.in/mr/${resolvedParams.slug}/`,
     "image": data.heroImg,
     "brand": {
       "@type": "Brand",

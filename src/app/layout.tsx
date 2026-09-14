@@ -42,11 +42,8 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "EO-ezSz-FlhAk-eKdIWOB9xTRFXojS-rHXyMVZPAyQs",
-    yandex: "pending-yandex-verification-id",
-    yahoo: "pending-yahoo-verification-id",
     other: {
       me: [SITE_CONFIG.baseUrl],
-      "msvalidate.01": ["pending-bing-verification-id"],
     },
   },
   twitter: {
@@ -183,7 +180,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": `${SITE_CONFIG.baseUrl}/blog?q={search_term_string}`
+        "urlTemplate": `${SITE_CONFIG.baseUrl}/blog/?q={search_term_string}`
       },
       "query-input": "required name=search_term_string"
     },
@@ -244,22 +241,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <h4 style={{ color: '#fff', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '20px' }}>Residential Portfolio</h4>
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                     {[
-                      { name: 'Saajgiri — Luxury 3 BHK', href: '/cluster/saajgiri' },
-                      { name: 'Harmony — 3.5 & 4.5 BHK', href: '/cluster/harmony' },
-                      { name: 'Aalaap-I — 2 & 3 BHK', href: '/cluster/aalaap-1' },
-                      { name: 'Melody — NA Villa Plots', href: '/cluster/melody-1' },
-                      { name: 'Asawari — Resale Flats', href: '/cluster/asawari' },
-                      { name: 'Sargam — High Rise Towers', href: '/cluster/sargam' },
-                      { name: 'Pancham — Phase 1 & 2', href: '/cluster/pancham' },
-                      { name: 'Bageshree — 2 BHK Towers', href: '/cluster/bageshree' },
-                      { name: 'Janaranjani — MHADA Flats', href: '/cluster/janaranjani' },
+                      { name: 'Saajgiri — Luxury 3 BHK', href: '/cluster/saajgiri/' },
+                      { name: 'Harmony — 3.5 & 4.5 BHK', href: '/cluster/harmony/' },
+                      { name: 'Aalaap-I — 2 & 3 BHK', href: '/cluster/aalaap-1/' },
+                      { name: 'Melody — NA Villa Plots', href: '/cluster/melody-1/' },
+                      { name: 'Asawari — Resale Flats', href: '/cluster/asawari/' },
+                      { name: 'Sargam — High Rise Towers', href: '/cluster/sargam/' },
+                      { name: 'Pancham — Phase 1 & 2', href: '/cluster/pancham/' },
+                      { name: 'Bageshree — 2 BHK Towers', href: '/cluster/bageshree/' },
+                      { name: 'Janaranjani — MHADA Flats', href: '/cluster/janaranjani/' },
                     ].map(p => (
                       <li key={p.name}>
                         <Link href={p.href} className="footer-link" style={{ fontWeight: '500', fontSize: '0.82rem' }}>{p.name}</Link>
                       </li>
                     ))}
                     <li style={{ marginTop: '6px' }}>
-                      <Link href="/projects" style={{ color: 'var(--accent-gold)', fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', textDecoration: 'none' }}>
+                      <Link href="/projects/" style={{ color: 'var(--accent-gold)', fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', textDecoration: 'none' }}>
                         All 20 Clusters & Specs →
                       </Link>
                     </li>
@@ -271,17 +268,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <h4 style={{ color: '#fff', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '20px' }}>Market Insights</h4>
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                     {[
-                      { name: 'Bungalow Plots investment Pune', href: '/blog/branded-na-bungalow-plots-nanded-city-community' },
-                      { name: 'Nanded City Price List 2026', href: '/blog/nanded-city-pune-master-plan-price-list-guide' },
-                      { name: 'ROI flats Sinhagad Road', href: '/blog/nanded-city-investment-roi-doctors-professionals' },
-                      { name: 'Low cost flats near Nanded City', href: '/blog/affordable-homes-janaranjani-mhada-mangal-bhairav' },
+                      { name: 'Bungalow Plots investment Pune', href: '/blog/branded-na-bungalow-plots-nanded-city-community/' },
+                      { name: 'Nanded City Price List 2026', href: '/blog/nanded-city-pune-master-plan-price-list-guide/' },
+                      { name: 'ROI flats Sinhagad Road', href: '/blog/nanded-city-investment-roi-doctors-professionals/' },
+                      { name: 'Low cost flats near Nanded City', href: '/blog/affordable-homes-janaranjani-mhada-mangal-bhairav/' },
                     ].map(b => (
                        <li key={b.name}>
                         <Link href={b.href} className="footer-link">{b.name}</Link>
                       </li>
                     ))}
                     <li style={{ marginTop: '8px' }}>
-                      <Link href="/blog" style={{ color: 'var(--accent-gold)', fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', textDecoration: 'none' }}>All Intelligence →</Link>
+                      <Link href="/blog/" style={{ color: 'var(--accent-gold)', fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', textDecoration: 'none' }}>All Intelligence →</Link>
                     </li>
                   </ul>
                 </div>
@@ -291,11 +288,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <h4 style={{ color: '#fff', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '20px' }}>Hyperlocal Advantage</h4>
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '20px' }}>
                     {[
-                      { name: '700-Acre Infrastructure Guide', href: '/infrastructure' },
-                      { name: 'Nanded City Public School', href: '/blog/nanded-city-township-amenities-lifestyle-guide' },
-                      { name: 'Destination Centre Shopping', href: '/blog/nanded-city-township-amenities-lifestyle-guide' },
-                      { name: 'Nanded City Bus Stop', href: '/blog/sinhgad-road-property-price-trends-2026' },
-                      { name: 'Khadakwasla Dam Proximity', href: '/blog/sinhgad-road-property-price-trends-2026' },
+                      { name: '700-Acre Infrastructure Guide', href: '/infrastructure/' },
+                      { name: 'Nanded City Public School', href: '/blog/nanded-city-township-amenities-lifestyle-guide/' },
+                      { name: 'Destination Centre Shopping', href: '/blog/nanded-city-township-amenities-lifestyle-guide/' },
+                      { name: 'Nanded City Bus Stop', href: '/blog/sinhgad-road-property-price-trends-2026/' },
+                      { name: 'Khadakwasla Dam Proximity', href: '/blog/sinhgad-road-property-price-trends-2026/' },
                     ].map(r => (
                       <li key={r.name} style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.45)', lineHeight: '1.6' }}>
                         <Link href={r.href} style={{ color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontWeight: '600' }}>{r.name}</Link>
@@ -331,8 +328,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                 <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.8rem' }}>© {new Date().getFullYear()} Nanded City Township Pune. Built on trust.</span>
                 <div style={{ display: 'flex', gap: '24px' }}>
-                  <Link href="/privacy-policy" style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', textDecoration: 'none' }}>Privacy Policy</Link>
-                  <Link href="/terms" style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', textDecoration: 'none' }}>Terms of Use</Link>
+                  <Link href="/privacy-policy/" style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', textDecoration: 'none' }}>Privacy Policy</Link>
+                  <Link href="/terms/" style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', textDecoration: 'none' }}>Terms of Use</Link>
                 </div>
               </div>
             </div>

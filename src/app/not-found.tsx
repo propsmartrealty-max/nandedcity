@@ -24,7 +24,7 @@ export default function NotFound() {
           <Link href="/" style={{ padding: '16px 32px', backgroundColor: 'var(--primary-green)', color: '#fff', textDecoration: 'none', borderRadius: '100px', fontSize: '1rem', fontWeight: '600' }}>
             Return to Homepage
           </Link>
-          <Link href="/projects" style={{ padding: '16px 32px', backgroundColor: '#f1f5f9', color: '#0f172a', textDecoration: 'none', borderRadius: '100px', fontSize: '1rem', fontWeight: '600' }}>
+          <Link href="/projects/" style={{ padding: '16px 32px', backgroundColor: '#f1f5f9', color: '#0f172a', textDecoration: 'none', borderRadius: '100px', fontSize: '1rem', fontWeight: '600' }}>
             View Residential Projects
           </Link>
         </div>

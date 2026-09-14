@@ -289,8 +289,8 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
     <>
       <Breadcrumbs items={[
         { name: 'Home', href: '/' },
-        { name: 'Residential Clusters', href: '/projects' },
-        { name: cluster.name, href: `/cluster/${cluster.id}`, current: true }
+        { name: 'Residential Clusters', href: '/projects/' },
+        { name: cluster.name, href: `/cluster/${cluster.id}/`, current: true }
       ]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -304,18 +304,15 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
           backgroundSize: 'cover',
           position: 'relative'
         }}
-        aria-label={`${cluster.name} hero`}
       >
-        <div className="container cluster-hero-content" style={{ position: 'relative' }}>
-          
-            {/* Top Right Floating QR */}
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
             {cluster.qrImage && cluster.rera !== 'Completed' && (
               <div style={{ position: 'absolute', top: '0', right: '0', background: 'rgba(255,255,255,0.95)', padding: '6px', borderRadius: '8px', zIndex: 10 }}>
                 <ReraQrCode reraUrl={cluster.reraUrl} reraNumber={cluster.rera} qrImage={cluster.qrImage} />
               </div>
             )}
 
-            <Link href="/projects" className="back-link">← All 20 Clusters</Link>
+            <Link href="/projects/" className="back-link">← All 20 Clusters</Link>
             <span className={`badge ${cluster.type === 'new' ? 'badge-green' : 'badge-gold'}`}>
               {cluster.status}
             </span>
@@ -528,8 +525,8 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
                 Our research team has audited the capital appreciation potential and rental yield trends for the {cluster.name} segment in Nanded City. Explore our latest market intelligence reports to understand why this cluster is a preferred choice for the city&apos;s elite professionals.
               </p>
               <div style={{ display: 'flex', gap: '16px' }}>
-                <Link href="/blog/nanded-city-investment-roi-doctors-professionals" className="btn btn-gold" style={{ padding: '12px 28px' }}>ROI Audit Report</Link>
-                <Link href="/blog/sinhgad-road-flyover-impact-2026" className="btn btn-outline" style={{ padding: '12px 28px', color: '#0f172a', borderColor: '#e2e8f0' }}>Infrastructure Impact</Link>
+                <Link href="/blog/nanded-city-investment-roi-doctors-professionals/" className="btn btn-gold" style={{ padding: '12px 28px' }}>ROI Audit Report</Link>
+                <Link href="/blog/sinhgad-road-flyover-impact-2026/" className="btn btn-outline" style={{ padding: '12px 28px', color: '#0f172a', borderColor: '#e2e8f0' }}>Infrastructure Impact</Link>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
@@ -538,9 +535,9 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
                 <h4 style={{ fontSize: '1rem', color: '#0f172a', marginBottom: '16px', position: 'relative' }}>Relevant Market Insights</h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', position: 'relative' }}>
                   {[
-                    { label: 'Nanded City vs Standalone Projects ROI', href: '/blog/nanded-city-vs-standalone-projects-roi' },
-                    { label: 'Price List & Master Plan Guide 2026', href: '/blog/nanded-city-pune-master-plan-price-list-guide' },
-                    { label: 'Infrastructure Update: Sinhgad Road 2026', href: '/blog/sinhgad-road-flyover-impact-2026' }
+                    { label: 'Nanded City vs Standalone Projects ROI', href: '/blog/nanded-city-vs-standalone-projects-roi/' },
+                    { label: 'Price List & Master Plan Guide 2026', href: '/blog/nanded-city-pune-master-plan-price-list-guide/' },
+                    { label: 'Infrastructure Update: Sinhgad Road 2026', href: '/blog/sinhgad-road-flyover-impact-2026/' }
                   ].map((insight, idx) => (
                     <Link key={idx} href={insight.href} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px', padding: '12px', background: '#fff', borderRadius: '10px', fontSize: '0.82rem', fontWeight: '600', color: '#475569', border: '1px solid #f1f5f9' }}>
                       <span style={{ color: 'var(--accent-gold)' }}>→</span> {insight.label}
@@ -570,7 +567,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <Link 
-                href="/projects" 
+                href="/projects/" 
                 style={{ 
                   color: '#fff', 
                   backgroundColor: '#0f172a',
@@ -597,7 +594,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
               .slice(0, 4)
               .map((other, idx) => (
                 <ScrollReveal key={other.id} delay={idx * 0.1}>
-                  <Link href={`/cluster/${other.id}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                  <Link href={`/cluster/${other.id}/`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                     <div className="discovery-card" style={{ position: 'relative', height: '220px', borderRadius: '16px', overflow: 'hidden', marginBottom: '14px', border: '1px solid #e2e8f0' }}>
                       <Image 
                         src={other.image} 
@@ -649,7 +646,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
                     return (
                       <Link 
                         key={c.id} 
-                        href={`/cluster/${c.id}`}
+                        href={`/cluster/${c.id}/`}
                         style={{
                           display: 'flex',
                           justifyContent: 'space-between',
@@ -692,7 +689,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
                     return (
                       <Link 
                         key={c.id} 
-                        href={`/cluster/${c.id}`}
+                        href={`/cluster/${c.id}/`}
                         style={{
                           display: 'flex',
                           flexDirection: 'column',

@@ -23,7 +23,7 @@ export const blogs: BlogPost[] = [
     coverImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
     content: `
       <h2>The Benchmark of Status & Lifestyle</h2>
-      <p>In the high-stakes world of <strong>CEOs, CXOs, Doctors, and CAs</strong>, a home is more than just square footage—it is an statement of achievement. The <strong><a href="/cluster/rhythm-1">Branded NA Bungalow Plots at Nanded City Township</a></strong> have emerged as Pune's most aspiring bungalow community, offering a blend of vertical security and horizontal freedom.</p>
+      <p>In the high-stakes world of <strong>CEOs, CXOs, Doctors, and CAs</strong>, a home is more than just square footage—it is an statement of achievement. The <strong><a href="/cluster/rhythm-1/">Branded NA Bungalow Plots at Nanded City Township</a></strong> have emerged as Pune's most aspiring bungalow community, offering a blend of vertical security and horizontal freedom.</p>
     `,
     relatedCluster: "rhythm-1"
   },
@@ -71,7 +71,7 @@ export const blogs: BlogPost[] = [
     coverImage: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
     content: `
       <h2>A City Within a City: Nanded City Township Pune Master Plan</h2>
-      <p>Spanning 700 acres, the <strong>Nanded City master plan</strong> is a blueprint for self-reliant urban living. From residential clusters like <a href="/cluster/asawari">Asawari</a> and <a href="/cluster/saajgiri">Saajgiri</a> to the specialized <a href="/cluster/melody-1">Melody plots</a>, the township handles over 15,000 happy families.</p>
+      <p>Spanning 700 acres, the <strong>Nanded City master plan</strong> is a blueprint for self-reliant urban living. From residential clusters like <a href="/cluster/asawari/">Asawari</a> and <a href="/cluster/saajgiri/">Saajgiri</a> to the specialized <a href="/cluster/melody-1/">Melody plots</a>, the township handles over 15,000 happy families.</p>
       
       <h3>Location Advantage: Khadakwasla to Sinhagad Road</h3>
       <p>The <strong>Nanded City location advantage</strong> is unmatched in South Pune. Positioned near the Khadakwasla Dam and Anandnagar, the township offers proximity to the Nanded City School, Destination Centre, and the upcoming Sinhgad Road flyover—drastically reducing commute times.</p>
@@ -98,7 +98,7 @@ export const blogs: BlogPost[] = [
     coverImage: "https://images.unsplash.com/photo-1522708323590-d248b6d0267d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
     content: `
       <h2>Smart Township Living Without Compromise</h2>
-      <p><strong>Nanded City Township Pune</strong> has democratized luxury township living by providing high-quality <strong>value 2 BHK flats near Sinhagad Road</strong>. Clusters like <a href="/cluster/janaranjani">Janaranjani</a> and <a href="/cluster/mangal-bhairav">Mangal Bhairav</a> offer the perfect entry opportunity for first-time buyers seeking full access to 700 acres of world-class infrastructure.</p>
+      <p><strong>Nanded City Township Pune</strong> has democratized luxury township living by providing high-quality <strong>value 2 BHK flats near Sinhagad Road</strong>. Clusters like <a href="/cluster/janaranjani/">Janaranjani</a> and <a href="/cluster/mangal-bhairav/">Mangal Bhairav</a> offer the perfect entry opportunity for first-time buyers seeking full access to 700 acres of world-class infrastructure.</p>
       
       <h3>Highlights for Value Home Seekers</h3>
       <ul>
@@ -230,15 +230,15 @@ export const blogs: BlogPost[] = [
         <li><strong><a href="/near/vadgaon-budruk/">Vadgaon Budruk:</a></strong> Education and college hub around Sinhgad Institutes. Standalone rates average ₹6,500–₹7,800/sq.ft., with strong student rental demand but crowded residential lanes.</li>
         <li><strong><a href="/near/dhayari/">Dhayari & Dhayari Phata:</a></strong> High-volume residential pocket with prices from ₹5,500 to ₹6,800/sq.ft. Acute water tanker reliance and Dhayari Phata bottlenecks make upgrading to Nanded City's 24x7 water grid compelling.</li>
         <li><strong><a href="/near/narhe/">Narhe & Navale Bridge:</a></strong> Highway-proximate corridor favored for budget homes (₹5,400–₹6,600/sq.ft.). Suffers from heavy highway vehicle traffic and unregulated plot construction.</li>
-        <li><strong><a href="/near/khadakwasla/">Khadakwasla & Kirkatwadi:</a></strong> Scenic lakeside living with pristine climate. The epicenter of plotted villa developments like <a href="/cluster/melody-1">Melody</a> and <a href="/cluster/rhythm-1">Rhythm</a> in Nanded City.</li>
+        <li><strong><a href="/near/khadakwasla/">Khadakwasla & Kirkatwadi:</a></strong> Scenic lakeside living with pristine climate. The epicenter of plotted villa developments like <a href="/cluster/melody-1/">Melody</a> and <a href="/cluster/rhythm-1/">Rhythm</a> in Nanded City.</li>
       </ul>
 
       <h3>Why Nanded City Commands 65% of Organized Demand on Sinhagad Road</h3>
       <p>Within this vibrant corridor, <strong>Nanded City Township Pune</strong> represents the overwhelming choice for discerning families. Spanning 700 acres, it integrates 20 residential clusters offering:</p>
       <ul>
-        <li><strong>2 BHK Homes:</strong> Value-oriented, high-yield residences in <a href="/cluster/aalaap-1">Aalaap-I</a>, <a href="/cluster/pancham">Pancham</a>, <a href="/cluster/bageshree">Bageshree</a>, and <a href="/cluster/sargam">Sargam</a>.</li>
-        <li><strong>Luxury 3 & 4 BHK High-Rises:</strong> Panoramic Sahyadri-facing towers in <a href="/cluster/saajgiri">Saajgiri</a> and palace residences in <a href="/cluster/harmony">Harmony</a>.</li>
-        <li><strong>Collector NA Sanctioned Bungalow Plots:</strong> Elite plotted communities in Melody and Rhythm clusters for bespoke villa construction.</li>
+        <li><strong>2 BHK Homes:</strong> Value-oriented, high-yield residences in <a href="/cluster/aalaap-1/">Aalaap-I</a>, <a href="/cluster/pancham/">Pancham</a>, <a href="/cluster/bageshree/">Bageshree</a>, and <a href="/cluster/sargam/">Sargam</a>.</li>
+        <li><strong>Luxury 3 & 4 BHK High-Rises:</strong> Panoramic Sahyadri-facing towers in <a href="/cluster/saajgiri/">Saajgiri</a> and palace residences in <a href="/cluster/harmony/">Harmony</a>.</li>
+        <li><strong>Collector NA Sanctioned Bungalow Plots:</strong> Elite plotted communities in <a href="/cluster/melody-1/">Melody</a> and <a href="/cluster/rhythm-1/">Rhythm</a> clusters for bespoke villa construction.</li>
         <li><strong>Civic Excellence:</strong> Internal ICSE schools, Destination Center retail, multi-specialty healthcare, and 100% captive water and sewage plants.</li>
       </ul>
 

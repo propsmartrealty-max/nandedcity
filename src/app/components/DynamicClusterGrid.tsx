@@ -108,7 +108,7 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
                 transition={{ duration: 0.3 }}
                 className="cluster-card"
               >
-                <Link href={`/cluster/${cluster.id}`} className="card-image-link">
+                <Link href={`/cluster/${cluster.id}/`} className="card-image-link">
                   <div className="card-image">
                     <Image 
                       src={cluster.image} 
@@ -128,7 +128,7 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
                 
                 <div className="card-content">
                   <h3 className="card-title">
-                    <Link href={`/cluster/${cluster.id}`}>{cluster.name}</Link>
+                    <Link href={`/cluster/${cluster.id}/`}>{cluster.name}</Link>
                   </h3>
                   
                   <div className="card-meta">
@@ -174,7 +174,7 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
                       >
                         {isCompleted ? 'Resale Enquiry →' : 'Enquire Now →'}
                       </button>
-                      <Link href={`/cluster/${cluster.id}`} className="btn-details">
+                      <Link href={`/cluster/${cluster.id}/`} className="btn-details">
                         View Details →
                       </Link>
                     </div>

@@ -157,7 +157,7 @@ export default function ProjectsPage() {
                     }}
                   >
                     <td style={{ padding: '16px 20px', fontWeight: '700' }}>
-                      <Link href={`/cluster/${c.id}`} style={{ color: '#0f172a', textDecoration: 'none' }}>
+                      <Link href={`/cluster/${c.id}/`} style={{ color: '#0f172a', textDecoration: 'none' }}>
                         {c.name}
                       </Link>
                     </td>
@@ -200,7 +200,7 @@ export default function ProjectsPage() {
                     </td>
                     <td style={{ padding: '16px 20px' }}>
                       <Link 
-                        href={`/cluster/${c.id}`}
+                        href={`/cluster/${c.id}/`}
                         style={{ 
                           padding: '6px 14px',
                           backgroundColor: '#0f172a',

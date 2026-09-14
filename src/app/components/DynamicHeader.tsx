@@ -35,22 +35,22 @@ export default function DynamicHeader() {
   }, [mobileMenuOpen]);
 
   const navLinks: NavItem[] = [
-    { name: 'Infrastructure', href: '/infrastructure' },
-    { name: 'Connectivity', href: '/near/sinhagad-road' },
-    { name: 'ROI Reports', href: '/blog' },
-    { name: 'About', href: '/about-us' },
-    { name: 'Legal', href: '/legal-compliance' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Infrastructure', href: '/infrastructure/' },
+    { name: 'Connectivity', href: '/near/sinhagad-road/' },
+    { name: 'ROI Reports', href: '/blog/' },
+    { name: 'About', href: '/about-us/' },
+    { name: 'Legal', href: '/legal-compliance/' },
+    { name: 'Contact', href: '/contact/' }
   ];
 
   const mobileNavItems: NavItem[] = [
-    { name: 'All 20 Residences & Plots', href: '/projects' },
-    { name: '700-Acre Infrastructure Guide', href: '/infrastructure' },
-    { name: 'Locations & Connectivity', href: '/near/sinhagad-road' },
-    { name: 'Market Insights & ROI', href: '/blog' },
-    { name: 'About Township', href: '/about-us' },
-    { name: 'MahaRERA Compliance', href: '/legal-compliance' },
-    { name: 'Contact Sales Expert', href: '/contact' }
+    { name: 'All 20 Residences & Plots', href: '/projects/' },
+    { name: '700-Acre Infrastructure Guide', href: '/infrastructure/' },
+    { name: 'Locations & Connectivity', href: '/near/sinhagad-road/' },
+    { name: 'Market Insights & ROI', href: '/blog/' },
+    { name: 'About Township', href: '/about-us/' },
+    { name: 'MahaRERA Compliance', href: '/legal-compliance/' },
+    { name: 'Contact Sales Expert', href: '/contact/' }
   ];
 
   return (
@@ -137,7 +137,7 @@ export default function DynamicHeader() {
               onMouseLeave={() => setClustersMenuOpen(false)}
             >
               <Link 
-                href="/projects"
+                href="/projects/"
                 className="nav-link-premium"
                 style={{ 
                   color: clustersMenuOpen ? 'var(--primary-green)' : '#334155', 
@@ -208,19 +208,19 @@ export default function DynamicHeader() {
                             </span>
                           </div>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                            <Link href="/cluster/saajgiri" className="dropdown-cluster-item">
+                            <Link href="/cluster/saajgiri/" className="dropdown-cluster-item">
                               <span className="cluster-name">Saajgiri</span>
                               <span className="cluster-bhk">3 BHK Luxury High-Rise</span>
                             </Link>
-                            <Link href="/cluster/harmony" className="dropdown-cluster-item">
+                            <Link href="/cluster/harmony/" className="dropdown-cluster-item">
                               <span className="cluster-name">Harmony</span>
                               <span className="cluster-bhk">3.5 & 4.5 BHK Residences</span>
                             </Link>
-                            <Link href="/cluster/aalaap-1" className="dropdown-cluster-item">
+                            <Link href="/cluster/aalaap-1/" className="dropdown-cluster-item">
                               <span className="cluster-name">Aalaap-I</span>
                               <span className="cluster-bhk">2 & 3 BHK Premium</span>
                             </Link>
-                            <Link href="/cluster/melody-1" className="dropdown-cluster-item">
+                            <Link href="/cluster/melody-1/" className="dropdown-cluster-item">
                               <span className="cluster-name">Melody</span>
                               <span className="cluster-bhk">NA Bungalow Plots</span>
                             </Link>
@@ -235,19 +235,19 @@ export default function DynamicHeader() {
                             </span>
                           </div>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                            <Link href="/cluster/asawari" className="dropdown-cluster-item">
+                            <Link href="/cluster/asawari/" className="dropdown-cluster-item">
                               <span className="cluster-name">Asawari</span>
                               <span className="cluster-bhk">2 & 3 BHK Resale</span>
                             </Link>
-                            <Link href="/cluster/sargam" className="dropdown-cluster-item">
+                            <Link href="/cluster/sargam/" className="dropdown-cluster-item">
                               <span className="cluster-name">Sargam</span>
                               <span className="cluster-bhk">2 & 2.5 BHK Resale</span>
                             </Link>
-                            <Link href="/cluster/pancham" className="dropdown-cluster-item">
+                            <Link href="/cluster/pancham/" className="dropdown-cluster-item">
                               <span className="cluster-name">Pancham</span>
                               <span className="cluster-bhk">Phase 1 & 2 (2 BHK)</span>
                             </Link>
-                            <Link href="/cluster/bageshree" className="dropdown-cluster-item">
+                            <Link href="/cluster/bageshree/" className="dropdown-cluster-item">
                               <span className="cluster-name">Bageshree</span>
                               <span className="cluster-bhk">2 BHK Resale</span>
                             </Link>
@@ -258,7 +258,7 @@ export default function DynamicHeader() {
                       <div style={{ borderTop: '1px solid #f1f5f9', paddingTop: '12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <span style={{ fontSize: '0.74rem', color: '#64748b' }}>20 Master Clusters · 700 Acres</span>
                         <Link 
-                          href="/projects"
+                          href="/projects/"
                           style={{ 
                             fontSize: '0.78rem', 
                             fontWeight: '700', 
@@ -493,7 +493,7 @@ export default function DynamicHeader() {
                     </Link>
                   ))}
                   <Link
-                    href="/projects"
+                    href="/projects/"
                     onClick={() => setMobileMenuOpen(false)}
                     style={{
                       padding: '6px 11px',

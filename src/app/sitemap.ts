@@ -32,7 +32,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const mrUrls = [
     { slug: '2-bhk-flats', priority: 0.90 },
+    { slug: '3-bhk-flats', priority: 0.90 },
     { slug: 'bungalow-plots', priority: 0.90 },
+    { slug: 'sinhgad-road', priority: 0.90 },
   ].map((m) => ({
     url: `${baseUrl}/mr/${m.slug}/`,
     lastModified: currentDate,
@@ -100,6 +102,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.50,
+    },
+    {
+      url: `${baseUrl}/privacy-policy/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.40,
+    },
+    {
+      url: `${baseUrl}/terms/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.40,
     },
     ...clusterUrls,
     ...blogUrls,

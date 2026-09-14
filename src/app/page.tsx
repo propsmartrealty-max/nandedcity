@@ -188,7 +188,7 @@ export default function Home() {
                 ].map((item, idx) => (
                   <tr key={item.name} style={{ borderBottom: '1px solid #f1f5f9', backgroundColor: idx % 2 === 0 ? '#f8fafc' : '#ffffff' }}>
                     <td style={{ padding: '14px 16px', fontWeight: '700', color: '#0f172a' }}>
-                      <Link href={`/cluster/${item.slug}`} style={{ color: '#0f172a', textDecoration: 'none' }}>
+                      <Link href={`/cluster/${item.slug}/`} style={{ color: '#0f172a', textDecoration: 'none' }}>
                         {item.name}
                       </Link>
                     </td>
@@ -210,7 +210,7 @@ export default function Home() {
                     </td>
                     <td style={{ padding: '14px 16px', fontSize: '0.78rem', color: '#64748b', fontFamily: 'monospace' }}>{item.rera}</td>
                     <td style={{ padding: '14px 16px' }}>
-                      <Link href={`/cluster/${item.slug}`} style={{ color: 'var(--accent-gold)', fontWeight: '700', fontSize: '0.82rem', textDecoration: 'none' }}>
+                      <Link href={`/cluster/${item.slug}/`} style={{ color: 'var(--accent-gold)', fontWeight: '700', fontSize: '0.82rem', textDecoration: 'none' }}>
                         View Specs →
                       </Link>
                     </td>
@@ -240,7 +240,7 @@ export default function Home() {
               <span>→</span>
             </Link>
             <Link
-              href="/projects"
+              href="/projects/"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -357,7 +357,7 @@ export default function Home() {
             {completedClusters.map((cluster, index) => (
               <ScrollReveal key={cluster.id} delay={index * 0.08}>
                 <article className="cluster-card cluster-card-sm">
-                  <Link href={`/cluster/${cluster.id}`} className="card-image-link">
+                  <Link href={`/cluster/${cluster.id}/`} className="card-image-link">
                     <div className="card-image card-image-sm">
                       <Image 
                         src={cluster.image} 
@@ -374,7 +374,7 @@ export default function Home() {
                   </Link>
                   <div className="card-content">
                     <h3 className="card-title card-title-sm">
-                      <Link href={`/cluster/${cluster.id}`}>{cluster.name}</Link>
+                      <Link href={`/cluster/${cluster.id}/`}>{cluster.name}</Link>
                     </h3>
                     <div className="card-meta">
                       <span className="status-dot completed" />
@@ -386,7 +386,7 @@ export default function Home() {
                       <span style={{ fontSize: '0.78rem', color: 'var(--accent-gold)', fontWeight: '700' }}>
                         MahaRERA Handover ✅
                       </span>
-                      <Link href={`/cluster/${cluster.id}`} className="btn-details">
+                      <Link href={`/cluster/${cluster.id}/`} className="btn-details">
                         View Details →
                       </Link>
                     </div>
@@ -398,7 +398,7 @@ export default function Home() {
 
           <div style={{ textAlign: 'center', marginTop: '48px' }}>
             <Link 
-              href="/projects" 
+              href="/projects/" 
               className="btn btn-outline" 
               style={{ 
                 borderColor: 'var(--accent-gold)', 
@@ -431,7 +431,7 @@ export default function Home() {
             {blogs.slice(0, 3).map((blog, idx) => (
               <ScrollReveal key={blog.slug} delay={idx * 0.15}>
                 <article className="cluster-card" style={{ display: 'flex', flexDirection: 'column', height: '100%', border: '1px solid #e2e8f0', boxShadow: 'none' }}>
-                  <Link href={`/blog/${blog.slug}`} className="card-image-link" style={{ height: '220px', position: 'relative' }}>
+                  <Link href={`/blog/${blog.slug}/`} className="card-image-link" style={{ height: '220px', position: 'relative' }}>
                     <Image 
                       src={blog.coverImage} 
                       alt={`${blog.title} - Nanded City Township Pune Real Estate Blog Insights`} 
@@ -448,12 +448,12 @@ export default function Home() {
                       {blog.category.replace('-', ' ')}
                     </div>
                     <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', lineHeight: '1.4' }}>
-                      <Link href={`/blog/${blog.slug}`} style={{ color: '#0f172a', textDecoration: 'none' }}>{blog.title}</Link>
+                      <Link href={`/blog/${blog.slug}/`} style={{ color: '#0f172a', textDecoration: 'none' }}>{blog.title}</Link>
                     </h3>
                     <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '20px', flexGrow: 1 }}>
                       {blog.excerpt}
                     </p>
-                    <Link href={`/blog/${blog.slug}`} className="btn-details" style={{ alignSelf: 'flex-start', color: 'var(--primary-green)', fontWeight: '700' }}>
+                    <Link href={`/blog/${blog.slug}/`} className="btn-details" style={{ alignSelf: 'flex-start', color: 'var(--primary-green)', fontWeight: '700' }}>
                       Read Market Data →
                     </Link>
                   </div>
@@ -463,7 +463,7 @@ export default function Home() {
           </div>
           
           <div style={{ textAlign: 'center', marginTop: '40px' }}>
-            <Link href="/blog" className="btn btn-outline" style={{ borderColor: 'var(--primary-green)', color: 'var(--primary-green)' }}>
+            <Link href="/blog/" className="btn btn-outline" style={{ borderColor: 'var(--primary-green)', color: 'var(--primary-green)' }}>
               View All Insights & Data
             </Link>
           </div>
@@ -482,35 +482,35 @@ export default function Home() {
               <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#1e293b' }}>Luxury 3 BHK Flats</h3>
               <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: '1.6' }}>
                 Looking for <strong>spacious 3 BHK apartments in Pune</strong> with panoramic views? 
-                Explore the premium high-rise residences at <Link href="/cluster/saajgiri" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Saajgiri</Link>.
+                Explore the premium high-rise residences at <Link href="/cluster/saajgiri/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Saajgiri</Link>.
               </p>
             </div>
             <div style={{ padding: '24px', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#1e293b' }}>Luxury 3 & 4 BHK Flats</h3>
               <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: '1.6' }}>
                 Looking for <strong>spacious 3, 3.5 & 4.5 BHK apartments in Pune</strong> with panoramic Sahyadri views? 
-                Explore high-rise residences at <Link href="/cluster/saajgiri" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Saajgiri</Link> and the flagship palace towers at <Link href="/cluster/harmony" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Harmony</Link>.
+                Explore high-rise residences at <Link href="/cluster/saajgiri/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Saajgiri</Link> and the flagship palace towers at <Link href="/cluster/harmony/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Harmony</Link>.
               </p>
             </div>
             <div style={{ padding: '24px', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#1e293b' }}>Branded NA Bungalow Plots</h3>
               <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: '1.6' }}>
                 Invest in <strong>gated villa plots near Hinjewadi IT Park routes</strong> and Sinhagad Road. 
-                Secure your family legacy with build-ready plots at <Link href="/cluster/melody-1" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Melody</Link> and <Link href="/cluster/rhythm-1" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Rhythm</Link>.
+                Secure your family legacy with build-ready plots at <Link href="/cluster/melody-1/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Melody</Link> and <Link href="/cluster/rhythm-1/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Rhythm</Link>.
               </p>
             </div>
             <div style={{ padding: '24px', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#1e293b' }}>2 & 2.5 BHK Urban Homes</h3>
               <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: '1.6' }}>
                 Discover vibrant community living with <strong>MahaRERA registered 2 BHK flats in Pune</strong>. 
-                Experience tranquility and modern design at <Link href="/cluster/aalaap-1" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Aalaap-I</Link> and <Link href="/cluster/pancham" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Pancham Phase 1 & 2</Link>.
+                Experience tranquility and modern design at <Link href="/cluster/aalaap-1/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Aalaap-I</Link> and <Link href="/cluster/pancham/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Pancham Phase 1 & 2</Link>.
               </p>
             </div>
             <div style={{ padding: '24px', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#1e293b' }}>Resale & Ready Possession</h3>
               <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: '1.6' }}>
                 Seek immediate possession in thriving inhabited societies? 
-                Browse verified inventory across <Link href="/cluster/asawari" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Asawari</Link>, <Link href="/cluster/sargam" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Sargam</Link>, and <Link href="/cluster/lalit" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Lalit</Link>.
+                Browse verified inventory across <Link href="/cluster/asawari/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Asawari</Link>, <Link href="/cluster/sargam/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Sargam</Link>, and <Link href="/cluster/lalit/" style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>Lalit</Link>.
               </p>
             </div>
           </div>

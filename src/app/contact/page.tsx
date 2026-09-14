@@ -45,7 +45,7 @@ export default function ContactPage() {
           <Breadcrumbs 
             items={[
               { name: 'Home', href: '/' },
-              { name: 'Contact', href: '/contact', current: true }
+              { name: 'Contact', href: '/contact/', current: true }
             ]} 
           />
           <h1 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '16px', marginTop: '24px' }}>Contact Our Experts</h1>
