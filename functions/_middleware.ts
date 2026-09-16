@@ -277,7 +277,7 @@ class EdgeBotOptimizer {
 }
 
 /**
- * Edge Title Rewriter: Enforces clean "Nanded City Township Pune" title on homepage for all crawlers
+ * Edge Title Rewriter: Enforces keyword-dense "Nanded City Township Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road" title on homepage for all crawlers
  */
 class EdgeTitleRewriter {
   private isHomePage: boolean;
@@ -288,7 +288,7 @@ class EdgeTitleRewriter {
 
   element(element: any) {
     if (this.isHomePage) {
-      element.setInnerContent('Nanded City Township Pune');
+      element.setInnerContent('Nanded City Township Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road');
     }
   }
 }

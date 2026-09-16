@@ -25,14 +25,14 @@ import { SITE_CONFIG } from '../config/site';
 
 
 export const metadata: Metadata = {
-  title: "Nanded City Township Pune",
+  title: "Nanded City Township Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road",
   description: "Official guide to Nanded City Township Pune across 700 Acres on Sinhagad Road. Explore 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats and branded NA bungalow plots with updated 2026 prices, master plan, floor plans, MahaRERA certificates & site visits.",
   keywords: SITE_CONFIG.seo.primaryKeywords,
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/`,
   },
   openGraph: {
-    title: "Nanded City Township Pune",
+    title: "Nanded City Township Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road",
     description: "Official guide to Nanded City Township Pune across 700 Acres on Sinhagad Road. Explore luxury flats and NA bungalow plots.",
     url: `${SITE_CONFIG.baseUrl}/`,
     siteName: "Nanded City Township Pune",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nanded City Township Pune",
+    title: "Nanded City Township Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road",
     description: "Official guide to Nanded City Township Pune across 700 Acres on Sinhagad Road.",
   },
 };
