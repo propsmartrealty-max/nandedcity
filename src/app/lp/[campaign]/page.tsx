@@ -23,10 +23,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<CampaignParams> }): Promise<Metadata> {
   const resolvedParams = await params;
   const campaign = campaignData[resolvedParams.campaign];
-  if (!campaign) return { title: 'Nanded City | Premium Residences' };
+  if (!campaign) return { title: 'Nanded City Township Pune' };
 
   return {
-    title: `${campaign.title} | Nanded City Pune Residences`,
+    title: campaign.title,
     description: `Verified channel partner platform for ${campaign.title} in Nanded City. ${campaign.sub}. Book your priority site visit today.`,
     alternates: {
       canonical: `https://www.nanded-city.in/lp/${resolvedParams.campaign}/`,

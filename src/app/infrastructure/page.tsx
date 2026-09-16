@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: 'Nanded City Pune Infrastructure | Complete 700-Acre Master Township Facilities',
     description: 'Explore the self-sufficient civic, physical, and social infrastructure of Nanded City Township Pune across 700 acres on Sinhagad Road.',
     url: `${SITE_CONFIG.baseUrl}/infrastructure/`,
-    siteName: 'Nanded City Township Pune Residences',
+    siteName: 'Nanded City Township Pune',
     locale: 'en_IN',
     type: 'article',
     images: [
