@@ -1,6 +1,7 @@
 export interface Cluster {
   id: string;
   name: string;
+  mrName?: string;
   type: 'new' | 'completed';
   bhk: string;
   status: 'Ongoing' | 'Ready to Move' | 'Delivered' | 'New Launch';

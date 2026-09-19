@@ -11,7 +11,7 @@ import { locations } from '@/data/locations';
 export const metadata: Metadata = {
   title: `${SITE_CONFIG.name} Residential Clusters | All 20 Ongoing & Completed Projects`,
   description: `Explore all 20 residential clusters in ${SITE_CONFIG.name}, Sinhagad Road, Pune. Comprehensive directory of 2, 2.5, 3, 3.5, 4.5 BHK luxury flats and branded NA bungalow plots across the 700-acre master township with floor plans, prices, and MahaRERA details.`,
-  keywords: "Pune Real Estate Market, Central Pune Real Estate, Sinhgad Road Real Estate, Top Real Estate in Pune, Nanded City Projects, Ongoing projects in Pune, Ready to Move projects Pune, Nanded City 20 clusters, Saajgiri, Harmony, Aalaap, Melody, Asawari, Sargam, Pancham",
+  keywords: "Pune Real Estate Market, Central Pune Real Estate, Sinhgad Road Real Estate, Top Real Estate in Pune, Nanded City Projects, Ongoing projects in Pune, Ready to Move projects Pune, Nanded City 20 clusters, Saajgiri, Harmony, Aalaap, Melody, Asawari, Sargam, Pancham, Lalit, Bageshree, Kalashree, Sarang, Shubh Kalyan, Sur, Mangal Bhairav, Janaranjani, Dhanashree, Madhuvanti, Rhythm, Symphony, नांदेड़ सिटी पुणे, नांदेड सिटी गृहप्रकल्प, नांदेड सिटी फ्लॅट्स",
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/projects/`,
   },
@@ -157,9 +157,14 @@ export default function ProjectsPage() {
                     }}
                   >
                     <td style={{ padding: '16px 20px', fontWeight: '700' }}>
-                      <Link href={`/cluster/${c.id}/`} style={{ color: '#0f172a', textDecoration: 'none' }}>
+                      <Link href={`/cluster/${c.id}/`} style={{ color: '#0f172a', textDecoration: 'none', display: 'block' }}>
                         {c.name}
                       </Link>
+                      {c.mrName && (
+                        <span style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: '500' }}>
+                          {c.mrName}
+                        </span>
+                      )}
                     </td>
                     <td style={{ padding: '16px 20px', color: '#475569' }}>{c.bhk}</td>
                     <td style={{ padding: '16px 20px', color: '#475569' }}>{c.area}</td>
@@ -220,6 +225,43 @@ export default function ProjectsPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* All 20 Clusters Search Permutations & Quick Links */}
+          <div style={{ marginTop: '50px', padding: '32px', backgroundColor: '#f8fafc', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
+              Nanded City Township Pune — Complete 20-Cluster Index & Quick Navigation
+            </h3>
+            <p style={{ fontSize: '0.9rem', color: '#64748b', marginBottom: '20px', lineHeight: '1.6' }}>
+              Direct access to all 20 residential clusters in Nanded City Sinhagad Road Pune with verified price sheets, floor plan PDFs, resale listings, and MahaRERA registration details:
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '12px' }}>
+              {clusters.map((c) => (
+                <Link
+                  key={`perm-${c.id}`}
+                  href={`/cluster/${c.id}/`}
+                  style={{
+                    padding: '12px 16px',
+                    backgroundColor: '#fff',
+                    borderRadius: '10px',
+                    border: '1px solid #e2e8f0',
+                    textDecoration: 'none',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '4px',
+                    transition: 'all 0.2s ease',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.02)'
+                  }}
+                >
+                  <div style={{ fontWeight: '700', color: '#0f172a', fontSize: '0.92rem' }}>
+                    Nanded City {c.name} {c.mrName ? `(${c.mrName})` : ''}
+                  </div>
+                  <div style={{ fontSize: '0.8rem', color: '#64748b' }}>
+                    {c.bhk} • {c.status} • From {c.price}
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

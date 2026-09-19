@@ -4,6 +4,7 @@ export const clusters: Cluster[] = [
   {
     id: "melody-1",
     name: "Melody I",
+    mrName: "मेलोडी १",
     type: "new",
     bhk: "Branded NA Bungalow Plots",
     status: "Ongoing",
@@ -29,6 +30,7 @@ export const clusters: Cluster[] = [
   {
     id: "melody-2",
     name: "Melody II",
+    mrName: "मेलोडी २",
     type: "new",
     bhk: "Branded NA Bungalow Plots",
     status: "Ongoing",
@@ -54,6 +56,7 @@ export const clusters: Cluster[] = [
   {
     id: "melody-3",
     name: "Melody III",
+    mrName: "मेलोडी ३",
     type: "new",
     bhk: "Branded NA Bungalow Plots",
     status: "Ongoing",
@@ -78,6 +81,7 @@ export const clusters: Cluster[] = [
   {
     id: "aalaap-1",
     name: "Aalaap-I",
+    mrName: "आलाप १",
     type: "new",
     bhk: "2 & 3 BHK",
     status: "Ongoing",
@@ -103,6 +107,7 @@ export const clusters: Cluster[] = [
   {
     id: "saajgiri",
     name: "Saajgiri",
+    mrName: "साजगिरी",
     type: "new",
     bhk: "3 BHK",
     status: "Ongoing",
@@ -128,6 +133,7 @@ export const clusters: Cluster[] = [
   {
     id: "harmony",
     name: "Harmony",
+    mrName: "हार्मोनी",
     type: "new",
     bhk: "3.5 & 4.5 BHK Luxury",
     status: "New Launch",
@@ -153,6 +159,7 @@ export const clusters: Cluster[] = [
   {
     id: "rhythm-1",
     name: "Rhythm I",
+    mrName: "रिदम १",
     type: "new",
     bhk: "Premium Bungalow Plots",
     status: "Ongoing",
@@ -178,6 +185,7 @@ export const clusters: Cluster[] = [
   {
     id: "asawari",
     name: "Asawari",
+    mrName: "असावरी",
     type: "completed",
     bhk: "2 & 3 BHK",
     status: "Ready to Move",
@@ -202,6 +210,7 @@ export const clusters: Cluster[] = [
   {
     id: "sargam",
     name: "Sargam",
+    mrName: "सरगम",
     type: "completed",
     bhk: "2 & 2.5 BHK",
     status: "Ready to Move",
@@ -226,6 +235,7 @@ export const clusters: Cluster[] = [
   {
     id: "pancham",
     name: "Pancham (Phase 1 & 2)",
+    mrName: "पंचम",
     type: "completed",
     bhk: "2 BHK",
     status: "Ready to Move",
@@ -250,6 +260,7 @@ export const clusters: Cluster[] = [
   {
     id: "lalit",
     name: "Lalit",
+    mrName: "ललित",
     type: "completed",
     bhk: "2.5 & 3 BHK",
     status: "Ready to Move",
@@ -274,6 +285,7 @@ export const clusters: Cluster[] = [
   {
     id: "bageshree",
     name: "Bageshree",
+    mrName: "बागेश्री",
     type: "completed",
     bhk: "2 BHK",
     status: "Ready to Move",
@@ -298,6 +310,7 @@ export const clusters: Cluster[] = [
   {
     id: "kalashree",
     name: "Kalashree",
+    mrName: "कलाश्री",
     type: "completed",
     bhk: "2.5 & 3 BHK",
     status: "Ready to Move",
@@ -321,6 +334,7 @@ export const clusters: Cluster[] = [
   {
     id: "madhuvanti",
     name: "Madhuvanti",
+    mrName: "मधुवंती",
     type: "completed",
     bhk: "2 BHK",
     status: "Ready to Move",
@@ -344,6 +358,7 @@ export const clusters: Cluster[] = [
   {
     id: "sarang",
     name: "Sarang",
+    mrName: "सारंग",
     type: "completed",
     bhk: "2 BHK",
     status: "Ready to Move",
@@ -367,6 +382,7 @@ export const clusters: Cluster[] = [
   {
     id: "shubh-kalyan",
     name: "Shubh Kalyan",
+    mrName: "शुभ कल्याण",
     type: "completed",
     bhk: "3 BHK",
     status: "Ready to Move",
@@ -390,6 +406,7 @@ export const clusters: Cluster[] = [
   {
     id: "sur",
     name: "Sur",
+    mrName: "सूर",
     type: "completed",
     bhk: "2 BHK",
     status: "Ready to Move",
@@ -413,6 +430,7 @@ export const clusters: Cluster[] = [
   {
     id: "mangal-bhairav",
     name: "Mangal Bhairav",
+    mrName: "मंगल भैरव",
     type: "completed",
     bhk: "2 BHK",
     status: "Ready to Move",
@@ -436,6 +454,7 @@ export const clusters: Cluster[] = [
   {
     id: "janaranjani",
     name: "Janaranjani",
+    mrName: "जानरंजनी",
     type: "completed",
     bhk: "2 BHK",
     status: "Ready to Move",
@@ -459,6 +478,7 @@ export const clusters: Cluster[] = [
   {
     id: "dhanashree",
     name: "Dhanashree",
+    mrName: "धनाश्री",
     type: "new",
     bhk: "Premium Plots",
     status: "Ongoing",

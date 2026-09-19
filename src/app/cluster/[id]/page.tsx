@@ -34,17 +34,24 @@ export async function generateMetadata({ params }: { params: Promise<ClusterPara
   if (!cluster) return {};
   const permutations = [
     `${cluster.name} Nanded City`,
+    `${cluster.name} Nanded City Pune`,
     `${cluster.name} Pune`,
     `${cluster.name} Sinhagad Road`,
+    `${cluster.name} Sinhgad Road Pune`,
     `${cluster.name} ${cluster.bhk}`,
     `${cluster.name} price list 2026`,
-    `${cluster.name} floor plan brochure`,
+    `${cluster.name} price per sq ft`,
+    `${cluster.name} floor plan brochure PDF`,
     `${cluster.name} MahaRERA ${cluster.rera}`,
-    `${cluster.name} possession ${cluster.possession}`,
-    `${cluster.name} resale flats`,
+    `${cluster.name} possession date ${cluster.possession}`,
+    `${cluster.name} resale flats for sale`,
     `${cluster.name} review ratings`,
+    `buy flat in ${cluster.name} Nanded City`,
+    `${cluster.name} sample flat video tour`,
     `${cluster.bhk} flats Sinhagad Road Pune`,
     `Nanded City 700 acres township`,
+    `PropSmart Realty ${cluster.name}`,
+    ...(cluster.mrName ? [`${cluster.mrName} नांदेड सिटी`, `${cluster.mrName} फ्लॅट्स पुणे`] : []),
     ...(cluster.searchKeywords || [])
   ].join(', ');
 
@@ -153,6 +160,13 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
     "@type": "RealEstateProject",
     "@id": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/#project`,
     "name": `${cluster.name} by ${SITE_CONFIG.brand.developerName}`,
+    "alternateName": [
+      `${cluster.name} Nanded City`,
+      `${cluster.name} Nanded City Pune`,
+      `${cluster.name} Sinhagad Road`,
+      `${cluster.name} ${cluster.bhk}`,
+      ...(cluster.mrName ? [`${cluster.mrName} नांदेड सिटी`] : [])
+    ],
     "description": `${cluster.description}. A premium offering dominating the Pune Real Estate Market on Sinhagad Road and Central Pune.`,
     "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/`,
     "image": cluster.heroImage,
