@@ -175,8 +175,8 @@ async function main() {
     console.error('🔥 IndexNow Error:', err.message);
   }
 
-  // 2. Google Search Console Sitemap Calibration
-  console.log('\n🚀 Calibrating Google Search Console Sitemap...');
+  // 2. Google Search Console Sitemap Calibration & Real-Time Indexing API
+  console.log('\n🚀 Calibrating Google Search Console & Real-Time Indexing API...');
   const creds = getEnvCredentials();
   if (!creds) {
     console.log('⚠️ Google Service Account credentials not found in .env.local');
@@ -184,7 +184,7 @@ async function main() {
     try {
       const gscScope = 'https://www.googleapis.com/auth/webmasters';
       const token = await getGoogleAccessToken(creds.email, creds.privateKey, gscScope);
-      console.log('✅ Google OAuth2 Token generated successfully.');
+      console.log('✅ Google OAuth2 Webmasters Token generated successfully.');
 
       const result = await submitGoogleSitemap(token, `${SITE_URL}/`, SITEMAP_URL);
       if (result.status === 200 || result.status === 204) {
@@ -197,6 +197,31 @@ async function main() {
       }
     } catch (err) {
       console.error('🔥 Google Calibration Error:', err.message);
+    }
+
+    // 3. Direct Google Indexing API Real-Time Pipeline
+    try {
+      const indexingScope = 'https://www.googleapis.com/auth/indexing';
+      const indexToken = await getGoogleAccessToken(creds.email, creds.privateKey, indexingScope);
+      console.log('\n🚀 Pushing URLs directly to Google Indexing API real-time crawler pipeline...');
+      let published = 0;
+      for (const u of urls) {
+        try {
+          const res = await fetch('https://indexing.googleapis.com/v3/urlNotifications:publish', {
+            method: 'POST',
+            headers: {
+              Authorization: `Bearer ${indexToken}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ url: u, type: 'URL_UPDATED' })
+          });
+          if (res.status === 200) published++;
+          await new Promise(r => setTimeout(r, 120));
+        } catch (e) {}
+      }
+      console.log(`✅ Google Indexing API: ${published}/${urls.length} URLs successfully queued for instant Googlebot crawling.`);
+    } catch (err) {
+      console.error('🔥 Google Indexing API Error:', err.message);
     }
   }
 
