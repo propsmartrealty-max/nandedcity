@@ -130,6 +130,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "areaServed": "IN",
       "availableLanguage": ["en", "hi", "mr"]
     },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "1420",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "founder": {
       "@type": "Person",
       "name": "Satish Magar"
@@ -185,7 +192,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": `${SITE_CONFIG.baseUrl}/blog/?q={search_term_string}`
+        "urlTemplate": `${SITE_CONFIG.baseUrl}/projects/?q={search_term_string}`
       },
       "query-input": "required name=search_term_string"
     },

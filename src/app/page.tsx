@@ -93,6 +93,13 @@ export default function Home() {
           "@type": "GeoCoordinates",
           "latitude": 18.4612,
           "longitude": 73.8015
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "1420",
+          "bestRating": "5",
+          "worstRating": "1"
         }
       },
       "mentions": [
