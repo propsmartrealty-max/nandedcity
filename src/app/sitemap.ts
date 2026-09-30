@@ -87,6 +87,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/master-plan/`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/floor-plans/`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/emi-calculator/`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/resale-rental-guide/`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.90,
+    },
+    {
       url: `${baseUrl}/contact/`,
       lastModified: currentDate,
       changeFrequency: 'daily',

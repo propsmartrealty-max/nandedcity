@@ -35,20 +35,26 @@ export default function DynamicHeader() {
   }, [mobileMenuOpen]);
 
   const navLinks: NavItem[] = [
+    { name: 'Master Plan', href: '/master-plan/' },
+    { name: 'Floor Plans', href: '/floor-plans/' },
+    { name: 'EMI Calculator', href: '/emi-calculator/' },
     { name: 'Infrastructure', href: '/infrastructure/' },
-    { name: 'Connectivity', href: '/near/sinhagad-road/' },
+    { name: 'Resale & Rent', href: '/resale-rental-guide/' },
     { name: 'FAQs', href: '/faq/' },
-    { name: 'ROI Reports', href: '/blog/' },
-    { name: 'About', href: '/about-us/' },
-    { name: 'Legal', href: '/legal-compliance/' },
+    { name: 'मराठी', href: '/mr/' },
     { name: 'Contact', href: '/contact/' }
   ];
 
   const mobileNavItems: NavItem[] = [
     { name: 'All 20 Residences & Plots', href: '/projects/' },
+    { name: '700-Acre Master Plan & Sectors', href: '/master-plan/' },
+    { name: 'Floor Plans & Layout Directory', href: '/floor-plans/' },
+    { name: 'EMI & Stamp Duty Calculator', href: '/emi-calculator/' },
+    { name: 'Resale & Rental Intelligence Guide', href: '/resale-rental-guide/' },
     { name: '700-Acre Infrastructure Guide', href: '/infrastructure/' },
     { name: 'Locations & Connectivity', href: '/near/sinhagad-road/' },
     { name: 'Buyer & Resident FAQs', href: '/faq/' },
+    { name: 'मराठी निवासी दालन', href: '/mr/' },
     { name: 'Market Insights & ROI', href: '/blog/' },
     { name: 'About Township', href: '/about-us/' },
     { name: 'MahaRERA Compliance', href: '/legal-compliance/' },

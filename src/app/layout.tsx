@@ -317,6 +317,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Popular Searches & Buyer Portals
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', fontSize: '0.78rem', alignItems: 'center' }}>
+                  <Link href="/master-plan/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>700-Acre Master Plan</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/floor-plans/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Floor Plans & Layouts</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/emi-calculator/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>EMI & Stamp Duty Calculator</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/resale-rental-guide/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Resale & Rental Guide 2026</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/mr/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>मराठी निवासी दालन</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
                   <Link href="/lp/resale-flats/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Nanded City Resale Flats</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
                   <Link href="/lp/ready-to-move/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Ready to Move Flats</Link>
