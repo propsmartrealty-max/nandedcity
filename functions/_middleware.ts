@@ -144,72 +144,7 @@ class EnterpriseEdgeHeadInjector {
       { html: true }
     );
 
-    // 6. Edge-Verified RealEstateAgent & Speakable Authority Schema for Voice Search
-    const edgeAuthoritySchema = {
-      "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "@id": "https://www.nanded-city.in/#organization",
-      "name": "Nanded City Township Pune",
-      "alternateName": [
-        "Nanded City Pune",
-        "Nanded City",
-        "Nanded City Township",
-        "Nanded City Sinhagad Road",
-        "Nanded City Sinhgad Road Pune",
-        "नांदेड सिटी पुणे",
-        "नांदेड सिटी टाऊनशिप पुणे"
-      ],
-      "keywords": "Nanded City Township Pune, Nanded City Pune, flats in Nanded City, 2 BHK, 2.5 BHK, 3 BHK, 3.5 BHK, 4 BHK, Melody NA bungalow plots, Saajgiri, Harmony, Sinhagad Road Pune",
-      "knowsAbout": [
-        "Nanded City Township Pune",
-        "Nanded City Pune 700 Acre Integrated Township",
-        "Sinhagad Road Real Estate Pune",
-        "Branded NA Bungalow Plots Pune",
-        "Luxury 2 BHK 2.5 BHK 3 BHK 4 BHK Flats",
-        "MahaRERA Real Estate Compliance Maharashtra",
-        "Sinhagad Road Flyover Corridor"
-      ],
-      "legalName": "PropSmart Realty (Authorized Channel Partner)",
-      "url": "https://www.nanded-city.in/",
-      "logo": "https://www.nanded-city.in/icon.png",
-      "telephone": "+91-7744009295",
-      "priceRange": "₹58 Lakhs - ₹3.50 Crore+",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Nanded City, Sinhagad Road",
-        "addressLocality": "Pune",
-        "addressRegion": "Maharashtra",
-        "postalCode": "411041",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 18.4612,
-        "longitude": 73.8015
-      },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".speakable-title", ".hero-seo-text"]
-      },
-      "areaServed": [
-        "Nanded City",
-        "Sinhagad Road",
-        "Dhayari",
-        "Vadgaon Budruk",
-        "Khadakwasla",
-        "Kothrud",
-        "Warje",
-        "Swargate",
-        "Pune"
-      ]
-    };
-
-    element.append(
-      `\n  <script type="application/ld+json" id="cf-edge-authority-metadata">` +
-      JSON.stringify(edgeAuthoritySchema) +
-      `</script>`,
-      { html: true }
-    );
+    // Edge Head processing complete
   }
 }
 

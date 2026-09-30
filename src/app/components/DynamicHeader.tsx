@@ -98,7 +98,8 @@ export default function DynamicHeader() {
             href="/" 
             style={{ 
               display: 'inline-flex', 
-              alignItems: 'center', 
+              flexDirection: 'column',
+              alignItems: 'flex-start', 
               textDecoration: 'none', 
               flexShrink: 0,
               paddingRight: '8px'
@@ -107,17 +108,20 @@ export default function DynamicHeader() {
           >
             <Image 
               src="/nc-logo.png" 
-              alt="Nanded City Township Pune Official Logo" 
+              alt="Nanded City Township Pune" 
               width={130} 
               height={36} 
               priority
               style={{ 
                 objectFit: 'contain', 
-                height: '30px', 
+                height: '26px', 
                 width: 'auto', 
                 display: 'block' 
               }}
             />
+            <span style={{ fontSize: '0.62rem', color: '#64748b', fontWeight: '600', letterSpacing: '0.2px', marginTop: '1px' }}>
+              Authorized Partner • MahaRERA A7744009295
+            </span>
           </Link>
 
           {/* Center: Desktop Nav (Hidden on Mobile) */}

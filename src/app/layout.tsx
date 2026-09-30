@@ -130,18 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "areaServed": "IN",
       "availableLanguage": ["en", "hi", "mr"]
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "1420",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Satish Magar"
-    },
-    "foundingDate": "2010",
+    "foundingDate": "2018",
     "knowsAbout": [
       "Real Estate Investment in Pune",
       "Pune Real Estate Market",

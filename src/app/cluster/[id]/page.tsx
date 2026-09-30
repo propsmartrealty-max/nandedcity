@@ -195,35 +195,6 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
     ]
   };
 
-  // Google Products Integration with AggregateRating for SERP Stars
-  const ratingValue = (4.5 + (cluster.id.length % 5) * 0.1).toFixed(1);
-  const reviewCount = 120 + cluster.id.length * 15;
-  
-  const productSchema: any = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/#product`,
-    "name": `${cluster.name} Nanded City`,
-    "image": cluster.image,
-    "description": cluster.description,
-    "sku": cluster.rera,
-    "brand": { "@id": `${SITE_CONFIG.baseUrl}/#organization` },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": ratingValue,
-      "bestRating": "5",
-      "worstRating": "1",
-      "ratingCount": reviewCount.toString(),
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "INR",
-      "lowPrice": cluster.price.match(/\d+/) ? parseFloat(cluster.price.match(/\d+/)![0]) * (cluster.price.includes('Cr') ? 10000000 : 100000) : 0,
-      "offerCount": cluster.units.match(/\d+/) ? parseInt(cluster.units.match(/\d+/)![0]) : 1,
-      "availability": cluster.status === 'Ready to Move' ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
-      "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/`
-    }
-  };
 
   // BreadcrumbList Schema
   const breadcrumbSchema: any = {
@@ -290,7 +261,6 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
   };
 
   const jsonLd = [
-    productSchema, 
     projectSchema, 
     residenceSchema, 
     faqSchema, 
