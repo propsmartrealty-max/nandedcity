@@ -116,15 +116,6 @@ class EnterpriseEdgeHeadInjector {
       { html: true }
     );
 
-    // 3. Explicit Googlebot Directives
-    if (this.isBot) {
-      element.append(
-        `\n  <!-- Edge Crawl Directive -->` +
-        `\n  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">` +
-        `\n  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">`,
-        { html: true }
-      );
-    }
 
     // 4. Homepage Critical LCP Hero Image Preload for Sub-800ms LCP
     if (this.isHomePage) {
