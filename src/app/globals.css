@@ -443,12 +443,13 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--primary-green); line-height: 1.2
    10. CLUSTER DETAIL PAGE
 ───────────────────────────────────────── */
 .cluster-hero {
-  min-height: 65vh;
+  min-height: 55vh;
   display: flex;
   align-items: flex-end;
   background-size: cover;
   background-position: center;
-  padding-bottom: 60px;
+  padding-top: 130px;
+  padding-bottom: 50px;
   position: relative;
 }
 .cluster-hero-content {
@@ -457,12 +458,15 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--primary-green); line-height: 1.2
   gap: 14px;
 }
 .back-link {
-  display: inline-block;
-  color: rgba(255, 255, 255, 0.75);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.88rem;
   font-weight: 600;
   transition: var(--transition-fast);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  text-decoration: none;
 }
 .back-link:hover { color: var(--accent-gold); }
 .cluster-hero h1 {
@@ -470,8 +474,89 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--primary-green); line-height: 1.2
   color: #fff;
   font-weight: 800;
   letter-spacing: -0.5px;
+  margin: 12px 0 6px;
 }
-.cluster-hero-sub { font-size: 1.05rem; color: rgba(255, 255, 255, 0.75); }
+.cluster-hero-sub { font-size: 1.05rem; color: rgba(255, 255, 255, 0.85); }
+
+/* Cluster Detail Layout */
+.cluster-main {
+  background-color: #fff;
+  min-height: 600px;
+}
+
+.cluster-details-section {
+  padding: 60px 0;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .container-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.cluster-content-col {
+  min-width: 0;
+}
+
+.cluster-sidebar-col {
+  min-width: 0;
+}
+
+.cluster-description-large {
+  font-size: 1.15rem;
+  color: #334155;
+  line-height: 1.8;
+  margin-top: 16px;
+}
+
+.enquiry-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.enquiry-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.enquiry-trust {
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.discovery-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.discovery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.amenities-grid-small {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
 
 /* Stats bar */
 .stats-bar {

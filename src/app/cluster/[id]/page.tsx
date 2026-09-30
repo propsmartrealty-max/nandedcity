@@ -9,9 +9,6 @@ import EnquiryForm from '../../components/EnquiryForm';
 import ReraQrCode from '../../components/ReraQrCode';
 import ScrollReveal from '../../components/ScrollReveal';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import FloatingActionBar from '../../components/FloatingActionBar';
-import StickyMobileCta from '../../components/StickyMobileCta';
-import EnquiryModal from '../../components/EnquiryModal';
 import GoogleMap from '../../components/GoogleMap';
 import SearchIntelligence from '../../components/SearchIntelligence';
 import ShareWidget from '../../components/ShareWidget';
@@ -271,42 +268,45 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
 
   return (
     <>
-      <Breadcrumbs items={[
-        { name: 'Home', href: '/' },
-        { name: 'Residential Clusters', href: '/projects/' },
-        { name: cluster.name, href: `/cluster/${cluster.id}/`, current: true }
-      ]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Hero */}
       <section
         className="cluster-hero"
         style={{ 
-          backgroundImage: `linear-gradient(rgba(14,38,22,0.78), rgba(14,38,22,0.78)), url('${cluster.heroImage}')`,
-          backgroundAttachment: 'fixed',
+          backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.88)), url('${cluster.heroImage}')`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           position: 'relative'
         }}
       >
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2, width: '100%' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '16px', marginBottom: '20px' }}>
+            <div>
+              <Breadcrumbs items={[
+                { name: 'Home', href: '/' },
+                { name: 'Residential Clusters', href: '/projects/' },
+                { name: cluster.name, href: `/cluster/${cluster.id}/`, current: true }
+              ]} />
+              <Link href="/projects/" className="back-link">← All 20 Clusters</Link>
+            </div>
             {cluster.qrImage && cluster.rera !== 'Completed' && (
-              <div style={{ position: 'absolute', top: '0', right: '0', background: 'rgba(255,255,255,0.95)', padding: '6px', borderRadius: '8px', zIndex: 10 }}>
+              <div style={{ background: 'rgba(255,255,255,0.95)', padding: '8px', borderRadius: '12px', boxShadow: '0 4px 16px rgba(0,0,0,0.2)' }}>
                 <ReraQrCode reraUrl={cluster.reraUrl} reraNumber={cluster.rera} qrImage={cluster.qrImage} />
               </div>
             )}
-
-            <Link href="/projects/" className="back-link">← All 20 Clusters</Link>
-            <span className={`badge ${cluster.type === 'new' ? 'badge-green' : 'badge-gold'}`}>
-              {cluster.status}
-            </span>
-            <h1>{cluster.name}</h1>
-            <p className="cluster-hero-sub">{cluster.bhk} · Nanded City, Sinhagad Road, Pune</p>
-            <ShareWidget title={`${cluster.name} in Nanded City Township Pune`} />
-            {/* SEO Optimization: Image hint for LCP (Largest Contentful Paint) */}
-            <link rel="preload" as="image" href={cluster.heroImage} fetchPriority="high" />
           </div>
-        </section>
+
+          <span className={`badge ${cluster.type === 'new' ? 'badge-green' : 'badge-gold'}`}>
+            {cluster.status}
+          </span>
+          <h1>{cluster.name}</h1>
+          <p className="cluster-hero-sub">{cluster.bhk} · Nanded City, Sinhagad Road, Pune</p>
+          <div style={{ marginTop: '20px' }}>
+            <ShareWidget title={`${cluster.name} in Nanded City Township Pune`} />
+          </div>
+        </div>
+      </section>
 
       <main className="cluster-main">
         {/* Quick Stats Grid */}
@@ -730,10 +730,6 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
           </div>
         </div>
       </section>
-
-      <FloatingActionBar />
-      <EnquiryModal />
-      <StickyMobileCta />
     </>
   );
 }
