@@ -16,7 +16,11 @@ export async function generateStaticParams() {
     { slug: 'sinhgad-road' },
     { slug: 'resale-flats' },
     { slug: 'saajgiri' },
-    { slug: 'harmony' }
+    { slug: 'harmony' },
+    { slug: 'bageshree' },
+    { slug: 'asawari' },
+    { slug: 'melody-plots' },
+    { slug: 'pancham' }
   ];
 }
 
@@ -113,6 +117,54 @@ const mrData: Record<string, MarathiData> = {
       'प्रायव्हेट लिफ्ट, क्लबहाऊस आणि टेम्परेचर-कंट्रोल्ड पूल',
       '१.८५ कोटी रुपयांपासून पुढे'
     ],
+  },
+  'bageshree': {
+    title: 'बागेश्री नांदेड सिटी - २ बीएचके हक्काचे घर',
+    sub: 'नांदेड सिटीमधील सर्वाधिक लोकप्रिय आणि शांत परिसर. उत्तम कनेक्टिव्हिटी.',
+    bhk: '2 BHK Compact & Regular',
+    clusterName: 'Bageshree',
+    heroImg: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    bullets: [
+      '६२० ते ८५० चौ. फूट कार्यक्षम लेआऊट',
+      'कमी मेंटेनन्स आणि भाड्याने देण्यासाठी सर्वाधिक मागणी',
+      '६८ लाख रुपयांपासून पुढे खात्रीशीर खरेदी'
+    ],
+  },
+  'asawari': {
+    title: 'असावरी नांदेड सिटी - २ व ३ बीएचके प्राइम घरे',
+    sub: 'डेस्टिनेशन सेंटर १ च्या अगदी समोर मध्यवर्ती ठिकाणी स्थित नामांकित सोसायटी.',
+    bhk: '2 & 3 BHK Prime',
+    clusterName: 'Asawari',
+    heroImg: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    bullets: [
+      'डेस्टिनेशन सेंटर व क्रीडांगणापासून अवघ्या २ मिनिटांच्या अंतरावर',
+      'सुसज्ज बाग, मुलांचे खेळाचे मैदान आणि ज्येष्ठ नागरिकांसाठी कट्टा',
+      '८५ लाख ते १.१५ कोटी दरम्यान रीसेल उपलब्ध'
+    ],
+  },
+  'melody-plots': {
+    title: 'मेलोडी एन.ए. व्हिला प्लॉट्स नांदेड सिटी',
+    sub: 'स्वतःचा स्वतंत्र बंगला बांधण्यासाठी ७०० एकर टाऊनशिपमधील सर्वोत्तम एन.ए. प्लॉट्स.',
+    bhk: 'Branded NA Bungalow Plots',
+    clusterName: 'Melody',
+    heroImg: 'https://nandedcitypune.com/melody/assets/img/Melody%20Big%20League%20Living_Home.webp',
+    bullets: [
+      '२,४०० चौ. फुटांपासून भव्य एन.ए. प्लॉट्स',
+      'रस्त्यांचे डांबरीकरण, पाणी, वीज व सुरक्षा व्यवस्था पूर्ण',
+      'महारेरा नोंदणीकृत आणि तत्काळ बांधकामासाठी अनुकूल'
+    ],
+  },
+  'pancham': {
+    title: 'पंचम नांदेड सिटी - १ व २ बीएचके बजेट होम्स',
+    sub: 'नांदेड सिटीच्या प्रवेशद्वाराजवळ पहिली पसंती. शाळा आणि बस स्टॉप जवळ.',
+    bhk: '1 & 2 BHK Mid-Rise',
+    clusterName: 'Pancham',
+    heroImg: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    bullets: [
+      'पवार पब्लिक स्कूलपासून अवघ्या ३ मिनिटांच्या अंतरावर',
+      'कमी बजेटमध्ये नांदेड सिटीची जागतिक दर्जाची जीवनशैली',
+      '५२ लाख रुपयांपासून सुरुवात'
+    ],
   }
 };
 
@@ -121,9 +173,14 @@ export async function generateMetadata({ params }: { params: Promise<MarathiPara
   const data = mrData[resolvedParams.slug];
   if (!data) return { title: 'नांदेड सिटी पुणे' };
 
-  const enLp = resolvedParams.slug === 'bungalow-plots' 
-    ? 'na-bungalow-plots' 
-    : (resolvedParams.slug === '3-bhk-flats' ? '3-bhk-luxury' : '2-bhk-flats');
+  let enUrl = 'https://www.nanded-city.in/lp/2-bhk-flats/';
+  if (['saajgiri', 'harmony', 'bageshree', 'asawari', 'pancham'].includes(resolvedParams.slug)) {
+    enUrl = `https://www.nanded-city.in/cluster/${resolvedParams.slug}/`;
+  } else if (resolvedParams.slug === 'melody-plots' || resolvedParams.slug === 'bungalow-plots') {
+    enUrl = 'https://www.nanded-city.in/cluster/melody-1/';
+  } else if (resolvedParams.slug === '3-bhk-flats') {
+    enUrl = 'https://www.nanded-city.in/lp/3-bhk-luxury/';
+  }
 
   return {
     title: `${data.title} | Nanded City Pune`,
@@ -132,8 +189,8 @@ export async function generateMetadata({ params }: { params: Promise<MarathiPara
       canonical: `https://www.nanded-city.in/mr/${resolvedParams.slug}/`,
       languages: {
         'mr-IN': `https://www.nanded-city.in/mr/${resolvedParams.slug}/`,
-        'en-IN': `https://www.nanded-city.in/lp/${enLp}/`,
-        'x-default': `https://www.nanded-city.in/lp/${enLp}/`,
+        'en-IN': enUrl,
+        'x-default': enUrl,
       }
     },
     openGraph: {

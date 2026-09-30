@@ -37,10 +37,11 @@ export default function DynamicHeader() {
   const navLinks: NavItem[] = [
     { name: 'Master Plan', href: '/master-plan/' },
     { name: 'Floor Plans', href: '/floor-plans/' },
-    { name: 'EMI Calculator', href: '/emi-calculator/' },
-    { name: 'Infrastructure', href: '/infrastructure/' },
-    { name: 'Resale & Rent', href: '/resale-rental-guide/' },
-    { name: 'FAQs', href: '/faq/' },
+    { name: 'Compare', href: '/compare/' },
+    { name: 'Brochures', href: '/brochures/' },
+    { name: 'Transit', href: '/connectivity/' },
+    { name: 'Directory', href: '/township-directory/' },
+    { name: 'EMI Calc', href: '/emi-calculator/' },
     { name: 'मराठी', href: '/mr/' },
     { name: 'Contact', href: '/contact/' }
   ];
@@ -49,6 +50,10 @@ export default function DynamicHeader() {
     { name: 'All 20 Residences & Plots', href: '/projects/' },
     { name: '700-Acre Master Plan & Sectors', href: '/master-plan/' },
     { name: 'Floor Plans & Layout Directory', href: '/floor-plans/' },
+    { name: 'Cluster Comparison Matrix', href: '/compare/' },
+    { name: 'Brochures & RERA Certificates Vault', href: '/brochures/' },
+    { name: 'Commute, Flyover & Metro Guide', href: '/connectivity/' },
+    { name: 'Township Resident & Utilities Directory', href: '/township-directory/' },
     { name: 'EMI & Stamp Duty Calculator', href: '/emi-calculator/' },
     { name: 'Resale & Rental Intelligence Guide', href: '/resale-rental-guide/' },
     { name: '700-Acre Infrastructure Guide', href: '/infrastructure/' },

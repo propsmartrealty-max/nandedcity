@@ -322,6 +322,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
                   <Link href="/floor-plans/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Floor Plans & Layouts</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/compare/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Cluster Comparison Matrix</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/connectivity/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Transit & Flyover Corridor</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/township-directory/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Township Resident Directory</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/brochures/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Brochures & RERA Vault</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
                   <Link href="/emi-calculator/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>EMI & Stamp Duty Calculator</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
                   <Link href="/resale-rental-guide/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Resale & Rental Guide 2026</Link>

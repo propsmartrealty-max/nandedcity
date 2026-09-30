@@ -38,6 +38,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'resale-flats', priority: 0.90 },
     { slug: 'saajgiri', priority: 0.90 },
     { slug: 'harmony', priority: 0.90 },
+    { slug: 'bageshree', priority: 0.90 },
+    { slug: 'asawari', priority: 0.90 },
+    { slug: 'melody-plots', priority: 0.90 },
+    { slug: 'pancham', priority: 0.90 },
   ].map((m) => ({
     url: `${baseUrl}/mr/${m.slug}/`,
     lastModified: currentDate,
@@ -94,6 +98,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/floor-plans/`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/compare/`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/connectivity/`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/township-directory/`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/brochures/`,
       lastModified: currentDate,
       changeFrequency: 'daily',
       priority: 0.95,
