@@ -14,6 +14,7 @@ import MarketIntelligence from './components/MarketIntelligence';
 import dynamic from 'next/dynamic';
 
 const TownshipEcosystem = dynamic(() => import('./components/TownshipEcosystem'), { ssr: true });
+const TownshipInfographics = dynamic(() => import('./components/TownshipInfographics'), { ssr: true });
 const TrustSection = dynamic(() => import('./components/TrustSection'), { ssr: true });
 const Testimonials = dynamic(() => import('./components/Testimonials'), { ssr: true });
 const SearchIntelligence = dynamic(() => import('./components/SearchIntelligence'), { ssr: true });
@@ -172,6 +173,7 @@ export default function Home() {
       </ParallaxHero>
       <MarketIntelligence />
       <TownshipEcosystem />
+      <TownshipInfographics />
 
       {/* Ongoing Projects */}
       <section id="ongoing" className="section-padding" style={{ backgroundColor: '#fff' }}>

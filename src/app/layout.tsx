@@ -270,9 +270,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                     {[
                       { name: 'Bungalow Plots investment Pune', href: '/blog/branded-na-bungalow-plots-nanded-city-community/' },
-                      { name: 'Nanded City Price List 2026', href: '/blog/nanded-city-pune-master-plan-price-list-guide/' },
-                      { name: 'ROI flats Sinhagad Road', href: '/blog/nanded-city-investment-roi-doctors-professionals/' },
-                      { name: 'Low cost flats near Nanded City', href: '/blog/affordable-homes-janaranjani-mhada-mangal-bhairav/' },
+                      { name: 'Nanded City Price List 2026', href: '/blog/nanded-city-pune-price-list-2026-carpet-area-cost-sheet/' },
+                      { name: 'Buyer & Resident FAQs 2026', href: '/faq/' },
+                      { name: 'Nanded City vs Magarpatta City', href: '/blog/nanded-city-vs-magarpatta-city-comparison-analysis/' },
+                      { name: 'Resale Flats 2026 Buying Guide', href: '/blog/nanded-city-pune-resale-flats-buying-guide-2026/' },
                     ].map(b => (
                        <li key={b.name}>
                         <Link href={b.href} className="footer-link">{b.name}</Link>
@@ -335,6 +336,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <Link href="/blog/nanded-city-pune-price-list-2026-carpet-area-cost-sheet/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Price List 2026</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
                   <Link href="/blog/nanded-city-pune-resale-flats-buying-guide-2026/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Resale Flats Guide</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/faq/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Township FAQs</Link>
                 </div>
               </div>
 
