@@ -130,7 +130,7 @@ class EnterpriseEdgeHeadInjector {
     element.append(
       `\n  <!-- Chrome Speculation Rules: Instant 0ms Prerender on Edge -->` +
       `\n  <script type="speculationrules">` +
-      `{"prerender":[{"source":"list","urls":["/projects/","/infrastructure/","/cluster/saajgiri/","/cluster/harmony/","/near/sinhagad-road/","/near/dhayari/","/near/vadgaon-budruk/","/blog/","/contact/"],"eagerness":"moderate"}]}` +
+      `{"prerender":[{"source":"list","urls":["/projects/","/faq/","/lp/resale-flats/","/lp/ready-to-move/","/infrastructure/","/cluster/saajgiri/","/cluster/harmony/","/blog/","/contact/"],"eagerness":"moderate"}]}` +
       `</script>`,
       { html: true }
     );
