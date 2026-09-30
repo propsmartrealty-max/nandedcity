@@ -291,10 +291,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '20px' }}>
                     {[
                       { name: '700-Acre Infrastructure Guide', href: '/infrastructure/' },
-                      { name: 'Nanded City Public School', href: '/blog/nanded-city-township-amenities-lifestyle-guide/' },
-                      { name: 'Destination Centre Shopping', href: '/blog/nanded-city-township-amenities-lifestyle-guide/' },
-                      { name: 'Nanded City Bus Stop', href: '/blog/sinhgad-road-property-price-trends-2026/' },
-                      { name: 'Khadakwasla Dam Proximity', href: '/blog/sinhgad-road-property-price-trends-2026/' },
+                      { name: 'Nanded City Public School Hub', href: '/infrastructure/' },
+                      { name: 'Destination Centre Shopping Hub', href: '/infrastructure/' },
+                      { name: 'Sinhagad Road Flyover Corridor', href: '/near/sinhagad-road/' },
+                      { name: 'Khadakwasla Dam Proximity', href: '/near/khadakwasla/' },
                     ].map(r => (
                       <li key={r.name} style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.45)', lineHeight: '1.6' }}>
                         <Link href={r.href} style={{ color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontWeight: '600' }}>{r.name}</Link>

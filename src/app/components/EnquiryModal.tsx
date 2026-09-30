@@ -104,7 +104,7 @@ export default function EnquiryModal() {
               {!isSubmitted && (
                 <div style={{ display: 'flex', gap: '16px', paddingTop: '24px', opacity: 0.6 }}>
                    <div style={{ flex: 1, fontSize: '0.7rem', color: '#64748b', fontWeight: '500' }}>
-                     ✅ Official Partner Access
+                     ✅ Authorised Partner Access
                    </div>
                    <div style={{ flex: 1, fontSize: '0.7rem', color: '#64748b', fontWeight: '500' }}>
                      <a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color: '#475569', textDecoration: 'none' }}>

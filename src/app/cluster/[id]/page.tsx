@@ -397,7 +397,7 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
                 <EnquiryForm clusterName={cluster.name} bhk={cluster.bhk} />
                 <div className="enquiry-trust" style={{ marginTop: '24px', fontSize: '0.85rem', color: '#666', borderTop: '1px solid #eee', paddingTop: '16px' }}>
                   <div style={{ marginBottom: '8px' }}>✅ MahaRERA Verified Project</div>
-                  <div style={{ marginBottom: '8px' }}>✅ Official {SITE_CONFIG.brand.developerName} Partner</div>
+                  <div style={{ marginBottom: '8px' }}>✅ Authorised Marketing Partner (MahaRERA: {SITE_CONFIG.brand.rera})</div>
                   <div>✅ Free Site Visit Arranged</div>
                 </div>
 

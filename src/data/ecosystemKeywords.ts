@@ -134,13 +134,13 @@ export const ECOSYSTEM_KEYWORD_TAXONOMY: KeywordCategoryGroup[] = [
       { label: "Flats on Sinhagad Road Pune", href: "/near/sinhagad-road", category: "connectivity", searchIntent: "commercial" },
       { label: "Sinhagad Road Multi-Tier Flyover Impact", href: "/blog/sinhgad-road-flyover-impact-2026", category: "connectivity", searchIntent: "informational" },
       { label: "Nanded City to Kothrud (15 Mins Direct)", href: "/near/kothrud", category: "connectivity", searchIntent: "informational" },
-      { label: "Nanded City to Hinjewadi IT Park", href: "/near/hinjewadi", category: "connectivity", searchIntent: "informational" },
+      { label: "Nanded City to Hinjewadi IT Park (Via Bypass)", href: "/near/bavdhan", category: "connectivity", searchIntent: "informational" },
       { label: "Nanded City to Warje Flyover", href: "/near/warje", category: "connectivity", searchIntent: "informational" },
       { label: "Nanded City to Bavdhan & Mumbai Highway", href: "/near/bavdhan", category: "connectivity", searchIntent: "informational" },
-      { label: "Nanded City to Swargate & Deccan", href: "/near/sinhagad-road", category: "connectivity", searchIntent: "informational" },
+      { label: "Nanded City to Swargate & Deccan", href: "/near/swargate", category: "connectivity", searchIntent: "informational" },
       { label: "Dhayari & Anand Nagar Properties", href: "/near/dhayari", category: "connectivity", searchIntent: "commercial" },
       { label: "Vadgaon Budruk Connectivity", href: "/near/vadgaon-budruk", category: "connectivity", searchIntent: "commercial" },
-      { label: "Khadakwasla Dam & NDA Road Link", href: "/near/sinhagad-road", category: "connectivity", searchIntent: "informational" }
+      { label: "Khadakwasla Dam & NDA Road Link", href: "/near/khadakwasla", category: "connectivity", searchIntent: "informational" }
     ]
   },
   {
@@ -158,7 +158,7 @@ export const ECOSYSTEM_KEYWORD_TAXONOMY: KeywordCategoryGroup[] = [
       { label: "25% Rental Yield & Tenant Demand", href: "/blog", category: "investment-intent", searchIntent: "informational" },
       { label: "Nanded City vs Magarpatta vs Amanora", href: "/blog/nanded-city-vs-standalone-projects-roi", category: "investment-intent", searchIntent: "informational" },
       { label: "Schedule Priority Site Visit", href: "/contact", category: "investment-intent", searchIntent: "transactional" },
-      { label: "PropSmart Realty Authorized Partner (+91 7744009295)", href: "/contact", category: "investment-intent", searchIntent: "transactional" }
+      { label: "PropSmart Realty (Authorised Marketing Partner: MahaRERA A031262401295)", href: "/contact", category: "investment-intent", searchIntent: "transactional" }
     ]
   }
 ];

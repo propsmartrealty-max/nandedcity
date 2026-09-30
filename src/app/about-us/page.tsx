@@ -161,7 +161,7 @@ export default function AboutUs() {
         <div className="container">
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ fontSize: '2rem', color: 'var(--primary-green)', marginBottom: '16px' }}>
-              Why Choose an Authorized Advisory Partner?
+              Why Choose an Authorised Marketing Partner?
             </h2>
             <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '32px' }}>
               Navigating a 700-acre township with over a dozen active clusters can be overwhelming. As an Authorised Marketing Partner: MahaRERA <strong>{SITE_CONFIG.brand.rera}</strong>, <strong>{SITE_CONFIG.brand.organizationName}</strong> provides 100% free, unbiased property guidance, direct developer pricing, and end-to-end MahaRERA documentation support.
@@ -170,7 +170,7 @@ export default function AboutUs() {
               <span style={{ fontSize: '1.5rem' }}>📜</span>
               <div style={{ textAlign: 'left' }}>
                 <div style={{ fontWeight: 700, color: '#0f172a', fontSize: '0.95rem' }}>MahaRERA Registration</div>
-                <div style={{ color: '#64748b', fontSize: '0.85rem' }}>Agent Reg. No: {SITE_CONFIG.brand.rera}</div>
+                <div style={{ color: '#64748b', fontSize: '0.85rem' }}>Authorised Marketing Partner: MahaRERA {SITE_CONFIG.brand.rera}</div>
                 <a 
                   href="https://maharera.maharashtra.gov.in/" 
                   target="_blank" 

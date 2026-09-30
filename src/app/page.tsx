@@ -65,7 +65,7 @@ export default function Home() {
       "@id": `${SITE_CONFIG.baseUrl}/#webpage`,
       "url": `${SITE_CONFIG.baseUrl}/`,
       "name": "Nanded City Township Pune",
-      "description": "Authorized partner portal for Nanded City Township Pune on Sinhagad Road.",
+      "description": "Authorised Marketing Partner: MahaRERA A031262401295 portal for Nanded City Township Pune on Sinhagad Road.",
       "isPartOf": {
         "@id": `${SITE_CONFIG.baseUrl}/#website`
       },

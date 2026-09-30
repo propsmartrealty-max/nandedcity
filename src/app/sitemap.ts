@@ -105,6 +105,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.90,
     },
     {
+      url: `${baseUrl}/mr/`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.90,
+    },
+    {
       url: `${baseUrl}/about-us/`,
       lastModified: currentDate,
       changeFrequency: 'monthly',

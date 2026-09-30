@@ -105,7 +105,7 @@ export const SITE_CONFIG = {
       "gated community township Sinhagad Road",
       "Nanded City price list 2026",
       "Nanded City resale flats",
-      "PropSmart Realty authorized partner Nanded City"
+      "PropSmart Realty Authorised Marketing Partner: MahaRERA A031262401295"
     ].join(", "),
   }
 };

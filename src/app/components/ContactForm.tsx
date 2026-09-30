@@ -31,7 +31,7 @@ export default function ContactForm({ ongoingClusters }: ContactFormProps) {
 
       {!isSubmitted && (
         <p style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.4)', textAlign: 'center', marginTop: '20px', lineHeight: '1.6' }}>
-          Authorized Partner: A{SITE_CONFIG.contact.phoneNumeric}<br />
+          {SITE_CONFIG.brand.partnerStatus}: MahaRERA {SITE_CONFIG.brand.rera}<br />
           MahaRERA: P52100055134 · P52100051948 · P52100051867<br />
           <a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '600' }}>
             Verify official records: maharera.maharashtra.gov.in ↗
