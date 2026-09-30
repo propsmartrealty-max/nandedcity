@@ -6,7 +6,7 @@ import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
   title: "MahaRERA Compliance & Legal Records | Nanded City Township Pune",
-  description: "Independent authorized channel partner compliance directory for Nanded City Township Pune. Verify all MahaRERA registration certificates and QR codes for ongoing residential clusters on Sinhagad Road.",
+  description: "Official compliance directory for Nanded City Township Pune. Verify all MahaRERA registration certificates and QR codes for ongoing residential clusters on Sinhagad Road.",
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/legal-compliance/`,
   },
@@ -33,7 +33,7 @@ export default function LegalCompliance() {
             MahaRERA Compliance Hub
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.6' }}>
-            PropSmart Realty (MahaRERA: {SITE_CONFIG.brand.rera}) presents the verified regulatory compliance directory for Nanded City Township Pune. Below are the official MahaRERA Registration details and direct verification links to the Govt. of Maharashtra portal (<a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)' }}>maharera.maharashtra.gov.in</a>) for every active cluster.
+            Authorised Marketing Partner: MahaRERA <strong>{SITE_CONFIG.brand.rera}</strong> ({SITE_CONFIG.brand.organizationName}) presents the verified regulatory compliance directory for Nanded City Township Pune. Below are the official MahaRERA Registration details and direct verification links to the Govt. of Maharashtra portal (<a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)' }}>maharera.maharashtra.gov.in</a>) for every active cluster.
           </p>
         </div>
       </section>

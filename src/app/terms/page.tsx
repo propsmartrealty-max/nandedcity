@@ -19,7 +19,7 @@ export default function TermsOfUse() {
     "@id": `${SITE_CONFIG.baseUrl}/terms/#webpage`,
     "url": `${SITE_CONFIG.baseUrl}/terms/`,
     "name": "Terms of Use - Nanded City Township Pune",
-    "description": "Terms and conditions, regulatory disclosures, and channel partner disclaimer for Nanded City residential advisory.",
+    "description": "Terms and conditions, regulatory disclosures, and marketing partner disclaimer for Nanded City residential advisory.",
     "publisher": {
       "@type": "RealEstateAgent",
       "@id": `${SITE_CONFIG.baseUrl}/#organization`,
@@ -56,10 +56,10 @@ export default function TermsOfUse() {
           
           <div style={{ padding: '24px', backgroundColor: '#fffbeb', borderRadius: '12px', borderLeft: '4px solid #d97706', marginBottom: '36px' }}>
             <h3 style={{ margin: '0 0 8px 0', fontSize: '1.1rem', color: '#92400e', fontWeight: '700' }}>
-              Important MahaRERA Channel Partner Disclosure
+              Important MahaRERA Regulatory Disclosure
             </h3>
             <p style={{ margin: 0, fontSize: '0.95rem', color: '#78350f' }}>
-              <strong>PropSmart Realty</strong> (MahaRERA Registration No: <strong>{SITE_CONFIG.brand.rera}</strong>) operates as an <strong>Authorized Real Estate Channel Partner</strong> for Nanded City Township Pune. This platform is an independent marketing, information, and facilitation portal. It is not the official developer website of Nanded City Development and Construction Co. Ltd.
+              <strong>PropSmart Realty</strong> operates as an <strong>Authorised Marketing Partner: MahaRERA {SITE_CONFIG.brand.rera}</strong> for Nanded City Township Pune. This platform is an independent marketing, information, and facilitation portal. It is not the official developer website of Nanded City Development and Construction Co. Ltd.
             </p>
           </div>
 
@@ -85,7 +85,7 @@ export default function TermsOfUse() {
 
           <h2 style={{ fontSize: '1.6rem', color: '#0f172a', marginTop: '36px', marginBottom: '16px' }}>5. Intellectual Property Rights</h2>
           <p>
-            Brand names, project titles (e.g., Saajgiri, Harmony, Aalaap, Melody, Rhythm, Asawari, Sargam), and developer logos referenced on this website remain the sole intellectual property of Nanded City Development & Construction Co. Ltd. and their respective titleholders. Their use on this channel partner portal is strictly for descriptive identification purposes.
+            Brand names, project titles (e.g., Saajgiri, Harmony, Aalaap, Melody, Rhythm, Asawari, Sargam), and developer logos referenced on this website remain the sole intellectual property of Nanded City Development & Construction Co. Ltd. and their respective titleholders. Their use on this marketing partner portal is strictly for descriptive identification purposes.
           </p>
 
           <div style={{ marginTop: '48px', display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>

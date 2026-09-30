@@ -146,7 +146,7 @@ export default function SearchIntelligence() {
             </p>
 
             <p style={{ margin: 0 }}>
-              <strong>Regional Connectivity & Investment Fundamentals:</strong> Benefiting from the newly operational <strong>Sinhagad Road multi-tier flyover corridor</strong>, Nanded City Township Pune connects directly to Kothrud in 15 minutes, Warje in 10 minutes, and Hinjewadi IT Park via the Mumbai-Bangalore Highway bypass. Real estate fundamentals demonstrate a consistent <strong>12.5% YoY capital appreciation</strong> and strong <strong>25% rental yields</strong>, establishing Nanded City alongside Magarpatta City and Amanora Park Town as Pune’s benchmark master-planned township investments. Consult Authorised Marketing Partner <strong>PropSmart Realty (MahaRERA: A031262401295)</strong> for certified pricing, floor plans, and priority site visits.
+              <strong>Regional Connectivity & Investment Fundamentals:</strong> Benefiting from the newly operational <strong>Sinhagad Road multi-tier flyover corridor</strong>, Nanded City Township Pune connects directly to Kothrud in 15 minutes, Warje in 10 minutes, and Hinjewadi IT Park via the Mumbai-Bangalore Highway bypass. Real estate fundamentals demonstrate a consistent <strong>12.5% YoY capital appreciation</strong> and strong <strong>25% rental yields</strong>, establishing Nanded City alongside Magarpatta City and Amanora Park Town as Pune’s benchmark master-planned township investments.
             </p>
           </div>
         </div>

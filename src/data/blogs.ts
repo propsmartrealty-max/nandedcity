@@ -242,7 +242,7 @@ export const blogs: BlogPost[] = [
         <li><strong>Civic Excellence:</strong> Internal ICSE schools, Destination Center retail, multi-specialty healthcare, and 100% captive water and sewage plants.</li>
       </ul>
 
-      <p>For site visits, verified inventory details, and floor plans across Sinhagad Road and Nanded City, connect with <strong>PropSmart Realty</strong> (Authorised Marketing Partner: MahaRERA A031262401295) at +91 80108 92265.</p>
+      <p>For site visits, verified inventory details, and floor plans across Sinhagad Road and Nanded City, connect with <strong>PropSmart Realty</strong> (Authorised Marketing Partner: MahaRERA A031262401295) at +91 7744009295.</p>
     `,
     relatedCluster: "saajgiri"
   },

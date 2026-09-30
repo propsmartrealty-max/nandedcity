@@ -729,7 +729,7 @@ export const locations: LocationData[] = [
       },
       {
         question: "How do I schedule a priority site visit to Nanded City from Shivajinagar?",
-        answer: "Contact PropSmart Realty (Authorized Channel Partner) at +91 80108 92265 for an authorized guided tour across all ongoing towers and plotted clusters."
+        answer: "Contact PropSmart Realty (Authorised Marketing Partner: MahaRERA A031262401295) at +91 7744009295 for an authorized guided tour across all ongoing towers and plotted clusters."
       }
     ],
     metaKeywords: "Flats near Shivajinagar Pune, Shivajinagar real estate, luxury flats near Pune Station, Nanded City to Shivajinagar distance, 3 BHK flats near Pune court"

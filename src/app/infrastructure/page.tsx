@@ -914,7 +914,7 @@ export default function InfrastructurePage() {
             </a>
           </div>
           <div style={{ marginTop: '24px', fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.4)' }}>
-            MahaRERA Registration No. {SITE_CONFIG.brand.rera} • Authorized Channel Partner for Nanded City Developers
+            Authorised Marketing Partner: MahaRERA <strong>{SITE_CONFIG.brand.rera}</strong> ({SITE_CONFIG.brand.organizationName})
           </div>
         </div>
 

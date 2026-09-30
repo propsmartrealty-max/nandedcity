@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
           
           <div style={{ padding: '20px 24px', backgroundColor: '#f8fafc', borderRadius: '12px', borderLeft: '4px solid var(--accent-gold)', marginBottom: '36px' }}>
             <p style={{ margin: 0, fontSize: '0.95rem', color: '#0f172a' }}>
-              <strong>Channel Partner Transparency Notice:</strong> This website is maintained by <strong>{SITE_CONFIG.brand.organizationName}</strong>, an Authorized Channel Partner for Nanded City Township Pune (MahaRERA Registration No: <strong>{SITE_CONFIG.brand.rera}</strong>). We facilitate independent residential advisory and site-visit assistance for prospective homebuyers.
+              <strong>Regulatory Partner Notice:</strong> This website is maintained by <strong>{SITE_CONFIG.brand.organizationName}</strong>, Authorised Marketing Partner: MahaRERA <strong>{SITE_CONFIG.brand.rera}</strong> for Nanded City Township Pune. We facilitate verified residential advisory and site-visit assistance for prospective homebuyers.
             </p>
           </div>
 

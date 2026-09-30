@@ -88,11 +88,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@type": "RealEstateAgent",
     "@id": `${SITE_CONFIG.baseUrl}/#organization`,
     "name": SITE_CONFIG.brand.organizationName,
-    "alternateName": `${SITE_CONFIG.brand.partnerStatus} for ${SITE_CONFIG.brand.developerName}`,
+    "alternateName": `${SITE_CONFIG.brand.partnerStatus}: MahaRERA ${SITE_CONFIG.brand.rera}`,
     "url": SITE_CONFIG.baseUrl,
     "logo": `${SITE_CONFIG.baseUrl}${SITE_CONFIG.brand.logo}`, 
     "image": SITE_CONFIG.brand.ogImage,
-    "description": `${SITE_CONFIG.brand.organizationName} is an Independent Authorized Channel Partner (MahaRERA: ${SITE_CONFIG.brand.rera}) offering property advisory for Nanded City Township Pune.`,
+    "description": `${SITE_CONFIG.brand.organizationName} is an Authorised Marketing Partner: MahaRERA ${SITE_CONFIG.brand.rera} offering verified property advisory for Nanded City Township Pune.`,
     "telephone": SITE_CONFIG.contact.phoneNumeric,
     "address": {
       "@type": "PostalAddress",
@@ -173,7 +173,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "Nanded City Township"
     ],
     "url": `${SITE_CONFIG.baseUrl}/`,
-    "description": "Authorized partner platform for Nanded City Township, Sinhagad Road, Pune — premium 2, 2.5, 3, 3.5 & 4.5 BHK flats and branded NA bungalow plots.",
+    "description": "Comprehensive residential platform for Nanded City Township, Sinhagad Road, Pune — premium 2, 2.5, 3, 3.5 & 4.5 BHK flats and branded NA bungalow plots.",
     "publisher": {
       "@id": `${SITE_CONFIG.baseUrl}/#organization`
     },

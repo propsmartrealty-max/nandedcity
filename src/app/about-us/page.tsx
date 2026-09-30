@@ -19,7 +19,7 @@ export default function AboutUs() {
     "mainEntity": {
       "@type": "RealEstateAgent",
       "name": SITE_CONFIG.brand.organizationName,
-      "description": `Authorized Channel Partner for Nanded City Township Pune.`,
+      "description": `Authorised Marketing Partner: MahaRERA ${SITE_CONFIG.brand.rera} for Nanded City Township Pune.`,
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Nanded City Township, Sinhagad Road",
@@ -164,7 +164,7 @@ export default function AboutUs() {
               Why Choose an Authorized Advisory Partner?
             </h2>
             <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '32px' }}>
-              Navigating a 700-acre township with over a dozen active clusters can be overwhelming. As an Authorized Channel Partner, <strong>{SITE_CONFIG.brand.organizationName}</strong> provides 100% free, unbiased property guidance, direct developer pricing, and end-to-end MahaRERA documentation support.
+              Navigating a 700-acre township with over a dozen active clusters can be overwhelming. As an Authorised Marketing Partner: MahaRERA <strong>{SITE_CONFIG.brand.rera}</strong>, <strong>{SITE_CONFIG.brand.organizationName}</strong> provides 100% free, unbiased property guidance, direct developer pricing, and end-to-end MahaRERA documentation support.
             </p>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '16px', background: '#fff', padding: '16px 28px', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 2px 6px rgba(0,0,0,0.05)' }}>
               <span style={{ fontSize: '1.5rem' }}>📜</span>
