@@ -98,8 +98,7 @@ export default function DynamicHeader() {
             href="/" 
             style={{ 
               display: 'inline-flex', 
-              flexDirection: 'column',
-              alignItems: 'flex-start', 
+              alignItems: 'center', 
               textDecoration: 'none', 
               flexShrink: 0,
               paddingRight: '8px'
@@ -114,14 +113,11 @@ export default function DynamicHeader() {
               priority
               style={{ 
                 objectFit: 'contain', 
-                height: '26px', 
+                height: '30px', 
                 width: 'auto', 
                 display: 'block' 
               }}
             />
-            <span style={{ fontSize: '0.62rem', color: '#64748b', fontWeight: '600', letterSpacing: '0.2px', marginTop: '1px' }}>
-              Authorised Marketing Partner: MahaRERA A031262401295
-            </span>
           </Link>
 
           {/* Center: Desktop Nav (Hidden on Mobile) */}
