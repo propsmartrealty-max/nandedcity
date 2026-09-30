@@ -310,6 +310,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               </div>
 
+              {/* Programmatic Property Hubs & Marathi Portals */}
+              <div style={{ marginBottom: '40px', padding: '20px', borderRadius: '12px', backgroundColor: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)' }}>
+                <div style={{ color: 'var(--accent-gold)', fontSize: '0.75rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '12px' }}>
+                  Popular Searches & Buyer Portals
+                </div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', fontSize: '0.78rem', alignItems: 'center' }}>
+                  <Link href="/lp/resale-flats/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Nanded City Resale Flats</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/lp/ready-to-move/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Ready to Move Flats</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/lp/luxury-apartments/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>3.5 & 4.5 BHK Luxury Apartments</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/lp/budget-flats/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Budget 2 BHK Flats</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/lp/na-bungalow-plots/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>NA Bungalow Plots</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/mr/resale-flats/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>नांदेड सिटी रीसेल फ्लॅट्स</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/mr/saajgiri/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>साजगिरी ३ बीएचके</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/mr/harmony/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>हार्मोनी ४.५ बीएचके</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/blog/nanded-city-pune-price-list-2026-carpet-area-cost-sheet/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Price List 2026</Link>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
+                  <Link href="/blog/nanded-city-pune-resale-flats-buying-guide-2026/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Resale Flats Guide</Link>
+                </div>
+              </div>
+
               {/* Divider */}
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.06)', marginBottom: '32px' }} />
 

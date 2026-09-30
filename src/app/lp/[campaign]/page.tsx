@@ -16,7 +16,11 @@ export async function generateStaticParams() {
   return [
     { campaign: '2-bhk-flats' },
     { campaign: '3-bhk-luxury' },
-    { campaign: 'na-bungalow-plots' }
+    { campaign: 'na-bungalow-plots' },
+    { campaign: 'resale-flats' },
+    { campaign: 'ready-to-move' },
+    { campaign: 'luxury-apartments' },
+    { campaign: 'budget-flats' },
   ];
 }
 
@@ -26,8 +30,8 @@ export async function generateMetadata({ params }: { params: Promise<CampaignPar
   if (!campaign) return { title: 'Nanded City Township Pune' };
 
   return {
-    title: campaign.title,
-    description: `Verified channel partner platform for ${campaign.title} in Nanded City. ${campaign.sub}. Book your priority site visit today.`,
+    title: `${campaign.title} | Nanded City Township Pune`,
+    description: `Explore ${campaign.title} in Nanded City Township, Sinhagad Road Pune. ${campaign.sub}. Book your priority site visit today.`,
     alternates: {
       canonical: `https://www.nanded-city.in/lp/${resolvedParams.campaign}/`,
       languages: {
@@ -35,10 +39,11 @@ export async function generateMetadata({ params }: { params: Promise<CampaignPar
         'x-default': `https://www.nanded-city.in/lp/${resolvedParams.campaign}/`,
         ...(resolvedParams.campaign === '2-bhk-flats' ? { 'mr-IN': 'https://www.nanded-city.in/mr/2-bhk-flats/' } : {}),
         ...(resolvedParams.campaign === 'na-bungalow-plots' ? { 'mr-IN': 'https://www.nanded-city.in/mr/bungalow-plots/' } : {}),
+        ...(resolvedParams.campaign === 'resale-flats' ? { 'mr-IN': 'https://www.nanded-city.in/mr/resale-flats/' } : {}),
       }
     },
     openGraph: {
-      title: campaign.title,
+      title: `${campaign.title} | Nanded City Township Pune`,
       description: campaign.sub,
       url: `https://www.nanded-city.in/lp/${resolvedParams.campaign}/`,
       images: [{ url: campaign.heroImg, width: 1200, height: 630 }],
@@ -79,6 +84,38 @@ const campaignData: Record<string, CampaignInfo> = {
     clusterName: 'Melody I',
     heroImg: 'https://nandedcitypune.com/wp-content/uploads/2023/08/Melody-I_Rera.jpeg',
     bullets: ['High Appreciation Plots Sinhagad Road', 'Premium Infrastructure & Road Access', '2,400 sq. ft. Onwards Plot Area Configurations'],
+  },
+  'resale-flats': {
+    title: 'Verified Resale Flats in Nanded City Pune',
+    sub: 'Immediate Possession | 2, 2.5 & 3 BHK Homes | Verified Title & Society NOC',
+    bhk: '2 & 3 BHK Resale',
+    clusterName: 'Asawari, Sargam, Pancham',
+    heroImg: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    bullets: ['Ready Possession with Occupancy Certificate', 'Mature Township Greens & Active Communities', 'Transparent Valuation & Seamless Registry Support'],
+  },
+  'ready-to-move': {
+    title: 'Ready to Move Flats in Nanded City Pune',
+    sub: 'Instant Handover | OC Received | Zero GST on Ready Properties',
+    bhk: '2 & 3 BHK Ready',
+    clusterName: 'Pancham & Sarang',
+    heroImg: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    bullets: ['Immediate Key Handover & Registration', 'No Construction Risk | Save Pre-EMI Costs', 'Full Access to ICSE Schools, Hospitals & Clubs'],
+  },
+  'luxury-apartments': {
+    title: '3.5 & 4.5 BHK Luxury Apartments in Nanded City',
+    sub: 'Harmony Signature Towers | ₹1.85 Cr Onwards | Palatial Living',
+    bhk: '3.5 & 4.5 BHK',
+    clusterName: 'Harmony',
+    heroImg: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    bullets: ['Up to 2,400 sq.ft. Spacious Carpet Area', 'Private Lobbies, Clubhouse & Heated Pools', 'Exclusive Top Floor Penthouses Available'],
+  },
+  'budget-flats': {
+    title: 'Affordable Flats in Nanded City Pune Under ₹75 Lakhs',
+    sub: 'Smart 2 BHK Homes | Lowest Entry Price into 700-Acre Township',
+    bhk: '2 BHK Compact',
+    clusterName: 'Janaranjani & Sur',
+    heroImg: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    bullets: ['Starting ₹58 Lakhs Onwards', 'Full Township Amenities & 24/7 Security', 'Ideal for First-Time Homebuyers & High Rental Yields'],
   },
 };
 

@@ -35,6 +35,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: '3-bhk-flats', priority: 0.90 },
     { slug: 'bungalow-plots', priority: 0.90 },
     { slug: 'sinhgad-road', priority: 0.90 },
+    { slug: 'resale-flats', priority: 0.90 },
+    { slug: 'saajgiri', priority: 0.90 },
+    { slug: 'harmony', priority: 0.90 },
   ].map((m) => ({
     url: `${baseUrl}/mr/${m.slug}/`,
     lastModified: currentDate,
@@ -46,6 +49,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: '2-bhk-flats', priority: 0.90 },
     { slug: '3-bhk-luxury', priority: 0.90 },
     { slug: 'na-bungalow-plots', priority: 0.90 },
+    { slug: 'resale-flats', priority: 0.90 },
+    { slug: 'ready-to-move', priority: 0.90 },
+    { slug: 'luxury-apartments', priority: 0.90 },
+    { slug: 'budget-flats', priority: 0.90 },
   ].map((l) => ({
     url: `${baseUrl}/lp/${l.slug}/`,
     lastModified: currentDate,

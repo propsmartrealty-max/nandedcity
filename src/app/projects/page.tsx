@@ -266,6 +266,77 @@ export default function ProjectsPage() {
         </div>
       </section>
 
+      {/* Specialized Inventory Portals & Language Editions */}
+      <section style={{ padding: '60px 0', backgroundColor: '#fff', borderTop: '1px solid #e2e8f0' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+            <span style={{ fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent-gold)' }}>
+              Curated Buyer Portals
+            </span>
+            <h2 style={{ fontSize: '1.8rem', color: '#0f172a', marginTop: '6px', fontWeight: '800' }}>
+              Specialized Inventory Hubs & Marathi Editions
+            </h2>
+            <p style={{ color: '#64748b', fontSize: '0.95rem' }}>
+              Find properties tailored by budget, occupancy readiness, luxury specifications, and regional language assistance.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginBottom: '16px' }}>
+            <div style={{ padding: '24px', backgroundColor: '#f8fafc', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+              <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#0f172a', marginBottom: '14px' }}>🏡 Specific Inventory Collections</h3>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <li>
+                  <Link href="/lp/resale-flats/" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: '600', fontSize: '0.92rem' }}>
+                    → Verified Resale Flats in Nanded City (2 & 3 BHK)
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/lp/ready-to-move/" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: '600', fontSize: '0.92rem' }}>
+                    → Ready to Move Flats with Immediate OC & Possession
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/lp/luxury-apartments/" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: '600', fontSize: '0.92rem' }}>
+                    → Luxury 3.5 & 4.5 BHK Apartments (Harmony & Saajgiri)
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/lp/budget-flats/" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: '600', fontSize: '0.92rem' }}>
+                    → Budget 2 BHK Flats Under ₹75 Lakhs
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div style={{ padding: '24px', backgroundColor: '#f8fafc', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+              <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#0f172a', marginBottom: '14px' }}>🚩 प्रादेशिक माहिती दालन (मराठी)</h3>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <li>
+                  <Link href="/mr/resale-flats/" style={{ color: '#0d9488', textDecoration: 'none', fontWeight: '600', fontSize: '0.92rem' }}>
+                    → नांदेड सिटी पुणे रीसेल फ्लॅट्स (तात्काळ ताबा)
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/mr/saajgiri/" style={{ color: '#0d9488', textDecoration: 'none', fontWeight: '600', fontSize: '0.92rem' }}>
+                    → साजगिरी नांदेड सिटी ३ बीएचके लक्झरी टॉवर्स
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/mr/harmony/" style={{ color: '#0d9488', textDecoration: 'none', fontWeight: '600', fontSize: '0.92rem' }}>
+                    → हार्मोनी नांदेड सिटी ३.५ व ४.५ बीएचके फ्लॅट्स
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/mr/2-bhk-flats/" style={{ color: '#0d9488', textDecoration: 'none', fontWeight: '600', fontSize: '0.92rem' }}>
+                    → नांदेड सिटी २ बीएचके फ्लॅट्स माहिती व दर
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hyperlocal Connectivity & Location Mesh */}
       <section style={{ padding: '60px 0', backgroundColor: '#f1f5f9', borderTop: '1px solid #e2e8f0' }}>
         <div className="container">

@@ -245,6 +245,75 @@ export const blogs: BlogPost[] = [
       <p>For site visits, verified inventory details, and floor plans across Sinhagad Road and Nanded City, connect with <strong>PropSmart Realty</strong> (Authorised Marketing Partner: MahaRERA A031262401295) at +91 80108 92265.</p>
     `,
     relatedCluster: "saajgiri"
+  },
+  {
+    slug: "nanded-city-pune-resale-flats-buying-guide-2026",
+    category: "apartments",
+    project: "asawari",
+    title: "Nanded City Resale Flats Complete 2026 Buying Guide: Prices, Transfer Fees, Society NOC & Top Clusters",
+    excerpt: "Everything you need to know about buying a resale flat in Nanded City Pune: cluster price comparisons, society NOC process, legal documentation, and stamp duty calculation.",
+    author: "vikram-deshmukh",
+    date: "2026-09-25",
+    readTime: "8 min read",
+    coverImage: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    content: `
+      <h2>The Nanded City Resale Real Estate Ecosystem</h2>
+      <p>With over 15,000 families residing across its 700-acre master plan, <strong>Nanded City Township Pune</strong> has established one of the most vibrant and liquid secondary real estate markets in South Pune. Discerning buyers seeking immediate possession, mature greenery, and ready community infrastructure increasingly prefer verified resale apartments.</p>
+
+      <h3>Resale Price Benchmark Across Top Nanded City Clusters (2026)</h3>
+      <ul>
+        <li><strong><a href="/cluster/asawari/">Asawari (2 & 3 BHK):</a></strong> One of the premier ready-possession clusters with excellent open views. 2 BHK resale rates range between ₹72 Lakhs to ₹85 Lakhs; 3 BHK flats command ₹1.05 Cr to ₹1.25 Cr depending on floor and interior fittings.</li>
+        <li><strong><a href="/cluster/sargam/">Sargam (2 & 3 BHK):</a></strong> Centrally positioned towers with active cooperative societies. 2 BHK resale units typically trade between ₹70 Lakhs to ₹82 Lakhs.</li>
+        <li><strong><a href="/cluster/pancham/">Pancham (2 BHK):</a></strong> Popular for compact, efficient family layouts with prices from ₹65 Lakhs to ₹74 Lakhs.</li>
+        <li><strong><a href="/cluster/madhuvanti/">Madhuvanti (2 BHK):</a></strong> Attractive entry-level pricing for budget-conscious buyers, trading between ₹62 Lakhs to ₹70 Lakhs.</li>
+        <li><strong><a href="/cluster/shubh-kalyan/">Shubh Kalyan (3 BHK):</a></strong> Spacious 3 BHK layouts with high owner-occupancy, commanding ₹1.20 Cr to ₹1.35 Cr.</li>
+      </ul>
+
+      <h3>Step-by-Step Legal & Transfer Procedure</h3>
+      <p>Buying a resale home in Nanded City involves a streamlined, society-governed legal process:</p>
+      <ol>
+        <li><strong>Title Search & Encumbrance Verification:</strong> Verifying the seller's original allotment letter, registered agreement to sale, index-II, and loan clearance from existing financial institutions.</li>
+        <li><strong>Society No-Objection Certificate (NOC):</strong> Applying for society transfer clearance and settling outstanding maintenance dues.</li>
+        <li><strong>Stamp Duty & Registration:</strong> Payment of 7% stamp duty and ₹30,000 registration fees via Maharashtra IGR portal.</li>
+        <li><strong>Khata & Property Tax Transfer:</strong> Updating PMC / municipal tax records following completion of sale deed registration.</li>
+      </ol>
+
+      <p>For verified inventory with clean legal titles and end-to-end documentation assistance, contact our dedicated resale advisory team.</p>
+    `,
+    relatedCluster: "asawari"
+  },
+  {
+    slug: "nanded-city-pune-price-list-2026-carpet-area-cost-sheet",
+    category: "market-data",
+    project: "all",
+    title: "Nanded City Pune 2026 Master Price Sheet: 2, 2.5, 3 & 4 BHK Carpet Area, All-Inclusive Costs & RERA Status",
+    excerpt: "Comprehensive 2026 cost sheet for all 20 residential clusters in Nanded City Pune. Compare base price, stamp duty, GST, and all-inclusive costs across ongoing and ready projects.",
+    author: "ananya-kulkarni",
+    date: "2026-09-28",
+    readTime: "9 min read",
+    coverImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    content: `
+      <h2>2026 Nanded City Comprehensive Pricing & Configuration Matrix</h2>
+      <p>Navigating property prices across a 700-acre township requires transparent data. Here is the verified price benchmark and configuration breakdown across Nanded City's ongoing and ready-to-move portfolio for 2026.</p>
+
+      <h3>Flagship Ongoing Clusters (MahaRERA Registered)</h3>
+      <ul>
+        <li><strong><a href="/cluster/saajgiri/">Saajgiri (3 BHK):</a></strong> Carpet Area: 1,050 – 1,250 sq.ft. Starting Base Price: ₹1.05 Cr*. All-inclusive estimate: ₹1.22 Cr – ₹1.45 Cr. MahaRERA: PR1260002501621.</li>
+        <li><strong><a href="/cluster/harmony/">Harmony (3.5 & 4.5 BHK Royal):</a></strong> Carpet Area: 1,650 – 2,400 sq.ft. Starting Base Price: ₹1.85 Cr*. All-inclusive estimate: ₹2.15 Cr – ₹2.80 Cr. MahaRERA: P52100055134.</li>
+        <li><strong><a href="/cluster/aalaap-1/">Aalaap-I (2 & 3 BHK):</a></strong> Carpet Area: 780 – 1,020 sq.ft. Starting Base Price: ₹78 Lakhs*. All-inclusive estimate: ₹89 Lakhs – ₹1.15 Cr. MahaRERA: P52100051234.</li>
+        <li><strong><a href="/cluster/melody-1/">Melody (NA Bungalow Plots):</a></strong> Plot Area: 2,000 – 4,500 sq.ft. Starting Base Price: ₹1.35 Cr*. Ready to build collector sanctioned NA plots. MahaRERA: P52100051948.</li>
+      </ul>
+
+      <h3>Understanding the All-Inclusive Cost Structure</h3>
+      <p>When purchasing a residence in Nanded City, the total investment comprises:</p>
+      <ul>
+        <li><strong>Base Agreement Value:</strong> Calculated on RERA carpet area.</li>
+        <li><strong>Stamp Duty & Registration:</strong> 7% Stamp Duty (Maharashtra) + ₹30,000 Registration fee.</li>
+        <li><strong>Goods & Services Tax (GST):</strong> 5% for under-construction properties (0% for ready-to-move OC received units).</li>
+        <li><strong>Infrastructure, Maintenance & Club Charges:</strong> Dedicated corpus fund for 24/7 water filtration, private security, and sports facilities.</li>
+      </ul>
+    `,
+    relatedCluster: "harmony"
   }
 ];
 

@@ -13,7 +13,10 @@ export async function generateStaticParams() {
     { slug: '2-bhk-flats' },
     { slug: '3-bhk-flats' },
     { slug: 'bungalow-plots' },
-    { slug: 'sinhgad-road' }
+    { slug: 'sinhgad-road' },
+    { slug: 'resale-flats' },
+    { slug: 'saajgiri' },
+    { slug: 'harmony' }
   ];
 }
 
@@ -73,6 +76,42 @@ const mrData: Record<string, MarathiData> = {
       '२४ तास मुबलक पाणी (खडकवासला धरणातून थेट शुद्धीकरण)',
       'पवार पब्लिक स्कूल आणि सिम्फनी आयटी पार्क टाऊनशिपमध्येच',
       '२, ३ व ४ BHK फ्लॅट्स आणि एन.ए. बंगलो प्लॉट्स उपलब्ध'
+    ],
+  },
+  'resale-flats': {
+    title: 'नांदेड सिटी पुणे रीसेल फ्लॅट्स - तत्काळ ताबा',
+    sub: 'असावरी, सरगम, पंचम व इतर सोसायट्यांमध्ये खात्रीशीर २ व ३ बीएचके रीसेल घरे.',
+    bhk: '2 & 3 BHK Resale',
+    clusterName: 'Asawari, Sargam, Pancham',
+    heroImg: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    bullets: [
+      'ऑक्युपन्सी सर्टिफिकेट (OC) सह तत्काळ ताबा',
+      'सोसायटी एनओसी आणि १००% बँक कर्ज सुविधा',
+      '७० लाख रुपयांपासून पुढे खात्रीशीर व्यवहार'
+    ],
+  },
+  'saajgiri': {
+    title: 'साजगिरी नांदेड सिटी - ३ बीएचके लक्झरी रेसिडेन्सेस',
+    sub: 'सिंहगड रोड वरील आगामी अल्ट्रा-प्रीमियम टॉवर्स. महारेरा नोंदणी क्रमांक: PR1260002501621.',
+    bhk: '3 BHK High-Rise',
+    clusterName: 'Saajgiri',
+    heroImg: 'https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp',
+    bullets: [
+      '१,०५० ते १,२५० चौ. फूट भव्य कार्पेट क्षेत्र',
+      'सह्याद्रीच्या डोंगररांगांचे निसर्गरम्य दृश्य',
+      '१.०५ कोटी रुपयांपासून बुकिंग सुरू'
+    ],
+  },
+  'harmony': {
+    title: 'हार्मोनी नांदेड सिटी - ३.५ व ४.५ बीएचके रॉयल फ्लॅट्स',
+    sub: 'पुण्यातील सर्वात भव्य राजेशाही फ्लॅट्स. महारेरा नोंदणी क्रमांक: P52100055134.',
+    bhk: '3.5 & 4.5 BHK Royal',
+    clusterName: 'Harmony',
+    heroImg: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    bullets: [
+      '१,६५० ते २,४०० चौ. फूट भव्य कार्पेट क्षेत्र',
+      'प्रायव्हेट लिफ्ट, क्लबहाऊस आणि टेम्परेचर-कंट्रोल्ड पूल',
+      '१.८५ कोटी रुपयांपासून पुढे'
     ],
   }
 };
