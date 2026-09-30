@@ -430,7 +430,7 @@ export default async function LocationPage({ params }: { params: Promise<Locatio
       <section style={{ padding: '30px 20px', backgroundColor: '#fff', borderTop: '1px solid #e2e8f0', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p style={{ color: '#64748b', fontSize: '0.82rem', lineHeight: '1.6', margin: 0 }}>
-            Marketed by <strong>PropSmart Realty</strong>, Authorized Channel Partner for Nanded City Township (MahaRERA: <strong>A7744009295</strong>). Project registered under MahaRERA. The information provided on this page is for guidance purposes to assist property seekers comparing residential options near {loc.name} with Nanded City Township Pune.
+            Marketed by <strong>PropSmart Realty</strong>, Authorised Marketing Partner: MahaRERA <strong>A031262401295</strong> for Nanded City Township Pune. Project registered under MahaRERA. The information provided on this page is for guidance purposes to assist property seekers comparing residential options near {loc.name} with Nanded City Township Pune.
           </p>
         </div>
       </section>

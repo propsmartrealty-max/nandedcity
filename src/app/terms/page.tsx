@@ -6,7 +6,7 @@ import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
   title: "Terms of Use & Legal Disclaimer | Nanded City Township Pune",
-  description: "Terms of Use and MahaRERA authorized partner disclaimers for Nanded City Township Pune partner portal (PropSmart Realty, MahaRERA A7744009295).",
+  description: "Terms of Use and MahaRERA authorized partner disclaimers for Nanded City Township Pune partner portal (PropSmart Realty, Authorised Marketing Partner: MahaRERA A031262401295).",
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/terms/`,
   },

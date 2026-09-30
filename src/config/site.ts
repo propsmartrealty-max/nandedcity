@@ -21,8 +21,8 @@ export const SITE_CONFIG = {
   brand: {
     organizationName: "PropSmart Realty",
     developerName: "Nanded City Development & Construction Company Limited",
-    partnerStatus: "Independent Authorized Channel Partner",
-    rera: "A7744009295",
+    partnerStatus: "Authorised Marketing Partner",
+    rera: "A031262401295",
     logo: "/nc-logo.png",
     ogImage: "https://nandedcitypune.com/aalaap/assets/img/img-hero-banner-02.jpg",
   },

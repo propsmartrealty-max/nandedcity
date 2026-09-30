@@ -6,7 +6,7 @@ import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Nanded City Township Pune",
-  description: "Privacy Policy for Nanded City Township Pune partner portal (PropSmart Realty, MahaRERA A7744009295). Learn how we handle your enquiry data and privacy.",
+  description: "Privacy Policy for Nanded City Township Pune partner portal (PropSmart Realty, Authorised Marketing Partner: MahaRERA A031262401295). Learn how we handle your enquiry data and privacy.",
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/privacy-policy/`,
   },

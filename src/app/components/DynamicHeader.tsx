@@ -120,7 +120,7 @@ export default function DynamicHeader() {
               }}
             />
             <span style={{ fontSize: '0.62rem', color: '#64748b', fontWeight: '600', letterSpacing: '0.2px', marginTop: '1px' }}>
-              Authorized Partner • MahaRERA A7744009295
+              Authorised Marketing Partner: MahaRERA A031262401295
             </span>
           </Link>
 
