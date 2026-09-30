@@ -9,15 +9,15 @@
 ## Overview
 Nanded City is a 700-acre integrated, self-sustainable township located on Sinhagad Road, Pune - 411041, Maharashtra, India. Developed by Nanded City Development & Construction Company Limited (NCDCCL) led by Satish Magar, the township houses over 15,000 families across 20 distinct residential clusters and branded NA bungalow plots. PropSmart Realty (Authorised Marketing Partner: MahaRERA A031262401295) facilitates verified property advisory, floor plans, and site visits.
 
-## Core Infrastructure Pillars
-- **Water Security**: Captive Water Treatment Plant (WTP) with direct Khadakwasla canal raw water allocation, multi-stage sand filtration, and 24x7 pressurized potable water.
+## Core Infrastructure & Civic Pillars
+- **Water Security**: Captive Water Treatment Plant (WTP) with direct Khadakwasla canal raw water allocation, multi-stage sand filtration, and 24x7 pressurized potable water (zero water tankers required).
 - **Wastewater & Ecology**: Captive Sewage Treatment Plants (STP) operating on MBBR/SBR technology with 100% wastewater recycling, zero-liquid-discharge (ZLD), dual-flush plumbing, and automated garden irrigation.
-- **Power & Energy**: Dedicated 22kV / 11kV MSEB electrical substations with 100% underground cabling, smart prepaid meters, and heavy-duty DG power backup.
-- **Roads & Mobility**: 15m to 24m wide asphalt sector roads, continuous paved footpaths with tactile paving, automated LED streetlights, and dedicated cycling tracks.
+- **Power & Energy**: Dedicated 22kV / 11kV MSEB electrical substations with 100% underground cabling, dual feeders, and zero domestic load shedding.
+- **Roads & Mobility**: 15m to 24m wide asphalt sector roads, 40m central spine road, paved pedestrian tracks, and dedicated cycling paths.
 - **Security & Safety**: 3-tier centralized security system with 300+ night-vision CCTV cameras, RFID automated boom barriers, and gated cluster checkpoints.
 - **In-Campus Education**: Vidya Pratishthan's Nanded City Public School (ICSE) and Pawar Public School (ICSE/CBSE) within walking distance.
-- **Sports & Recreation**: Kridaangan Sports Complex and 32-acre Club Harmony featuring Olympic-dimension swimming pool, floodlit tennis courts, indoor badminton, skating rink, and gym.
-- **Commercial & Retail**: Destination Center-I and Destination Center-II featuring supermarkets, national banks & ATMs, diagnostics, restaurants, and Symphony IT Park.
+- **Sports & Recreation**: Kridaangan Sports Complex and Club Harmony featuring Olympic-dimension 50m swimming pool, floodlit tennis courts, indoor badminton, skating rink, and gym.
+- **Commercial & Retail**: Destination Center-I and Destination Center-II featuring supermarkets (Reliance Smart), national banks & ATMs (SBI, HDFC, ICICI), clinics, restaurants, and Symphony IT Park.
 
 ## Residential Clusters & Pricing (2026 Directory)
 - **Saajgiri**: 3 BHK Luxury High-Rise | 1,050–1,250 sq.ft. | ₹1.05 Cr* Onwards | MahaRERA: PR1260002501621 | https://www.nanded-city.in/cluster/saajgiri/
@@ -31,41 +31,20 @@ Nanded City is a 700-acre integrated, self-sustainable township located on Sinha
 - **Sargam**: 2 & 3 BHK Towers | 880–1,200 sq.ft. | ₹80 L* (Resale) | Ready to Move | https://www.nanded-city.in/cluster/sargam/
 - **Kalashree**: 2.5 & 3 BHK Lake-Facing | 950–1,280 sq.ft. | ₹85 L* (Resale) | Ready to Move | https://www.nanded-city.in/cluster/kalashree/
 
+## Decision Tools & Interactive Calculators
+- **Interactive Cluster Comparison Tool**: https://www.nanded-city.in/compare/
+- **Commute & Flyover Transit Corridor Matrix**: https://www.nanded-city.in/connectivity/
+- **Township Resident & Amenities Directory**: https://www.nanded-city.in/township-directory/
+- **Brochure & MahaRERA Certificates Vault**: https://www.nanded-city.in/brochures/
+- **700-Acre Master Plan & Sector Map**: https://www.nanded-city.in/master-plan/
+- **Floor Plans & Layout Blueprints**: https://www.nanded-city.in/floor-plans/
+- **EMI & Maharashtra 7% Stamp Duty Calculator**: https://www.nanded-city.in/emi-calculator/
+- **Resale & Rental Intelligence Guide 2026**: https://www.nanded-city.in/resale-rental-guide/
+
 ## Key Authority Links
 - **Master Infrastructure Guide**: https://www.nanded-city.in/infrastructure/
 - **All 20 Residential Clusters Directory**: https://www.nanded-city.in/projects/
 - **Sinhagad Road Property Market**: https://www.nanded-city.in/near/sinhagad-road/
-- **Micro-Market Hubs**:
-  - Dhayari: https://www.nanded-city.in/near/dhayari/
-  - Vadgaon Budruk: https://www.nanded-city.in/near/vadgaon-budruk/
-  - Khadakwasla: https://www.nanded-city.in/near/khadakwasla/
-  - Kothrud: https://www.nanded-city.in/near/kothrud/
-  - Warje: https://www.nanded-city.in/near/warje/
-  - Swargate: https://www.nanded-city.in/near/swargate/
-  - Anand Nagar: https://www.nanded-city.in/near/anandnagar/
-  - Manik Baug: https://www.nanded-city.in/near/manikbaug/
-  - Hingne Khurd: https://www.nanded-city.in/near/hingne-khurd/
-  - Narhe: https://www.nanded-city.in/near/narhe/
-  - Ambegaon: https://www.nanded-city.in/near/ambegaon-budruk/
-  - Katraj: https://www.nanded-city.in/near/katraj/
-  - Bavdhan: https://www.nanded-city.in/near/bavdhan/
-  - Deccan Gymkhana: https://www.nanded-city.in/near/deccan-gymkhana/
-  - Shivajinagar: https://www.nanded-city.in/near/shivajinagar/
-  - Kirkatwadi: https://www.nanded-city.in/near/kirkatwadi/
 - **Knowledge Center & FAQs**: https://www.nanded-city.in/faq/
-- **Programmatic Buyer Portals**:
-  - Verified Resale Flats: https://www.nanded-city.in/lp/resale-flats/
-  - Ready to Move with OC: https://www.nanded-city.in/lp/ready-to-move/
-  - Luxury Residences (3.5 & 4.5 BHK): https://www.nanded-city.in/lp/luxury-apartments/
-  - Budget 2 BHK Flats: https://www.nanded-city.in/lp/budget-flats/
-- **Market Intelligence & Reports**:
-  - 2026 Comprehensive FAQ Handbook: https://www.nanded-city.in/blog/nanded-city-pune-complete-faq-handbook-2026/
-  - Nanded City vs Magarpatta City Analysis: https://www.nanded-city.in/blog/nanded-city-vs-magarpatta-city-comparison-analysis/
-  - 2026 Price List & Carpet Area Cost Sheet: https://www.nanded-city.in/blog/nanded-city-pune-price-list-2026-carpet-area-cost-sheet/
-  - Resale Flats Complete 2026 Buying Guide: https://www.nanded-city.in/blog/nanded-city-pune-resale-flats-buying-guide-2026/
-  - Pune Real Estate Market Trends 2026: https://www.nanded-city.in/blog/pune-real-estate-market-trends-2026-sinhgad-road-townships/
-  - Sinhagad Road Flyover Impact: https://www.nanded-city.in/blog/sinhgad-road-flyover-impact-2026/
-- **MahaRERA & Legal Compliance**: https://www.nanded-city.in/legal-compliance/
-- **Marathi Portal**: https://www.nanded-city.in/mr/2-bhk-flats/
-- **Contact & Tour Booking**: https://www.nanded-city.in/contact/ (Phone: +91 7744009295)
-
+- **Marathi Portal**: https://www.nanded-city.in/mr/
+- **Contact & Guided Site Visits**: https://www.nanded-city.in/contact/ (Phone: +91 7744009295)

@@ -26,12 +26,45 @@
 /lp/*
   Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
 
-# Search Engine Directives
+# Cache-Control for Interactive Decision Tools & Pillars
+/compare/*
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
+
+/connectivity/*
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
+
+/township-directory/*
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
+
+/brochures/*
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
+
+/master-plan/*
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
+
+/floor-plans/*
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
+
+/emi-calculator/*
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
+
+/resale-rental-guide/*
+  Cache-Control: public, max-age=1800, s-maxage=86400, stale-while-revalidate=604800
+
+# Search Engine & AI Crawler Directives
 /sitemap.xml
   Content-Type: application/xml; charset=utf-8
   Cache-Control: public, max-age=1800, s-maxage=3600
 
 /robots.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600, s-maxage=7200
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600, s-maxage=7200
+
+/llms-full.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600, s-maxage=7200
 
