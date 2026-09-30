@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     },
     languages: {
       'en-IN': `${SITE_CONFIG.baseUrl}/`,
-      'mr-IN': `${SITE_CONFIG.baseUrl}/mr/2-bhk-flats/`, // High-intent Marathi landing
+      'mr-IN': `${SITE_CONFIG.baseUrl}/mr/`,
     },
   },
   verification: {
@@ -121,7 +121,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "sameAs": [
       SITE_CONFIG.social.facebook,
       SITE_CONFIG.social.instagram,
-      "https://en.wikipedia.org/wiki/Nanded_City"
+      "https://en.wikipedia.org/wiki/Nanded_City",
+      "https://www.wikidata.org/wiki/Q16954933"
     ],
     "contactPoint": {
       "@type": "ContactPoint",

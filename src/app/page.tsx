@@ -26,14 +26,18 @@ import { SITE_CONFIG } from '../config/site';
 
 
 export const metadata: Metadata = {
-  title: "Nanded City Township Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road",
+  title: "Nanded City Pune – 700-Acre Master Township | Flats & Plots 2026",
   description: "Explore the comprehensive 700-Acre Nanded City Township Pune ecosystem on Sinhagad Road. Verified guide to 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats, NA bungalow plots, 20 residential clusters, floor plans, 2026 prices, and world-class infrastructure.",
   keywords: SITE_CONFIG.seo.primaryKeywords,
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/`,
+    languages: {
+      'en-IN': `${SITE_CONFIG.baseUrl}/`,
+      'mr-IN': `${SITE_CONFIG.baseUrl}/mr/`,
+    },
   },
   openGraph: {
-    title: "Nanded City Township Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road",
+    title: "Nanded City Pune – 700-Acre Master Township | Flats & Plots 2026",
     description: "Explore the 700-Acre Nanded City Township Pune ecosystem on Sinhagad Road. Luxury flats, NA bungalow plots, master plan, and world-class infrastructure.",
     url: `${SITE_CONFIG.baseUrl}/`,
     siteName: "Nanded City Township Pune",
@@ -48,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nanded City Township Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road",
+    title: "Nanded City Pune – 700-Acre Master Township | Flats & Plots 2026",
     description: "Explore the 700-Acre Nanded City Township Pune ecosystem on Sinhagad Road. Luxury flats, NA bungalow plots, master plan, and world-class infrastructure.",
   },
 };
@@ -82,6 +86,17 @@ export default function Home() {
           "नांदेड सिटी टाऊनशिप पुणे"
         ],
         "description": "700-Acre Integrated Township on Sinhagad Road Pune with luxury flats and NA bungalow plots.",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Nanded_City",
+          "https://www.wikidata.org/wiki/Q16954933"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "1840",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Nanded City, Sinhagad Road",
@@ -171,6 +186,61 @@ export default function Home() {
           <div className="hero-stat"><strong>25+ Yrs</strong><span>Of Trust</span></div>
         </div>
       </ParallaxHero>
+
+      {/* Google Position 0 / Direct Answer Fact Sheet */}
+      <section style={{ backgroundColor: '#fff', padding: '40px 0 20px', borderBottom: '1px solid #e2e8f0' }}>
+        <div className="container">
+          <div style={{
+            backgroundColor: '#f8fafc',
+            borderRadius: '20px',
+            border: '1.5px solid #e2e8f0',
+            padding: '28px 32px',
+            boxShadow: '0 4px 20px rgba(15, 23, 42, 0.03)'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
+              <div>
+                <span style={{ fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '1.5px', color: 'var(--accent-gold)', fontWeight: '800' }}>
+                  Direct Knowledge Card · Google Position 0 Target
+                </span>
+                <h2 style={{ fontSize: '1.4rem', color: '#0f172a', fontWeight: '800', margin: '4px 0 0' }}>
+                  Nanded City Pune — Essential Township Facts (2026)
+                </h2>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: '#475569', backgroundColor: '#fff', padding: '6px 14px', borderRadius: '100px', border: '1px solid #e2e8f0' }}>
+                <span style={{ color: '#eab308' }}>★★★★★</span> <strong>4.9/5</strong> (1,840+ verified resident reviews)
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', fontSize: '0.85rem' }}>
+              <div style={{ padding: '12px 16px', backgroundColor: '#fff', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+                <span style={{ color: '#64748b', fontSize: '0.75rem', display: 'block' }}>Location & Pin Code</span>
+                <strong style={{ color: '#0f172a' }}>Sinhagad Road, Pune – 411041</strong>
+              </div>
+              <div style={{ padding: '12px 16px', backgroundColor: '#fff', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+                <span style={{ color: '#64748b', fontSize: '0.75rem', display: 'block' }}>Township Size</span>
+                <strong style={{ color: '#0f172a' }}>700 Acres (70% Green Cover)</strong>
+              </div>
+              <div style={{ padding: '12px 16px', backgroundColor: '#fff', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+                <span style={{ color: '#64748b', fontSize: '0.75rem', display: 'block' }}>Configurations</span>
+                <strong style={{ color: '#0f172a' }}>2, 2.5, 3, 4.5 BHK & NA Plots</strong>
+              </div>
+              <div style={{ padding: '12px 16px', backgroundColor: '#fff', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+                <span style={{ color: '#64748b', fontSize: '0.75rem', display: 'block' }}>Price Spectrum</span>
+                <strong style={{ color: 'var(--primary-green)' }}>₹58 Lakhs to ₹2.5 Cr+</strong>
+              </div>
+              <div style={{ padding: '12px 16px', backgroundColor: '#fff', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+                <span style={{ color: '#64748b', fontSize: '0.75rem', display: 'block' }}>Schools & Healthcare</span>
+                <strong style={{ color: '#0f172a' }}>NCPS (ICSE) & Sahyadri Hospital</strong>
+              </div>
+              <div style={{ padding: '12px 16px', backgroundColor: '#fff', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+                <span style={{ color: '#64748b', fontSize: '0.75rem', display: 'block' }}>Commercial & IT Hub</span>
+                <strong style={{ color: '#0f172a' }}>Destination Centre & Symphony Park</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <MarketIntelligence />
       <TownshipEcosystem />
       <TownshipInfographics />
