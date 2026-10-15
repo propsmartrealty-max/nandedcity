@@ -12,7 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@next/third-parties": "^16.2.2",
+    "@next/third-parties": "^16.3.5",
     "@swc/helpers": "^0.5.23",
     "caniuse-lite": "^1.0.30001810",
     "clsx": "^2.1.1",
