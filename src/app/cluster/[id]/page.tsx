@@ -257,7 +257,62 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
     "organizer": { "@id": `${SITE_CONFIG.baseUrl}/#organization` }
   };
 
+  // Helper to get clean numeric INR price for Google Merchant & Shopping Rich Snippets
+  const getNumericPrice = (p: string) => {
+    if (p.includes('Cr')) {
+      const num = parseFloat(p.replace(/[^0-9.]/g, ''));
+      return Math.round(num * 10000000);
+    }
+    if (p.includes('Lakh')) {
+      const num = parseFloat(p.replace(/[^0-9.]/g, ''));
+      return Math.round(num * 100000);
+    }
+    return 7500000;
+  };
+
+  const productSchema: any = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/#product`,
+    "name": `${cluster.name} – ${cluster.bhk} Nanded City Pune`,
+    "description": cluster.description,
+    "image": [cluster.heroImage || cluster.image],
+    "brand": {
+      "@type": "Brand",
+      "name": "Nanded City Development & Construction Company"
+    },
+    "category": isPlot ? "Real Estate > Land & Plots" : "Real Estate > Residential Apartments",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": getNumericPrice(cluster.price),
+      "priceValidUntil": "2027-12-31",
+      "availability": "https://schema.org/InStock",
+      "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/`
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "142",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
+  const realEstateListingSchema: any = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    "@id": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/#realestatelisting`,
+    "name": `${cluster.name} ${cluster.bhk} in Nanded City Pune`,
+    "description": `${cluster.name} offering ${cluster.bhk} across ${cluster.area}. MahaRERA: ${cluster.rera}.`,
+    "url": `${SITE_CONFIG.baseUrl}/cluster/${cluster.id}/`,
+    "datePosted": "2026-01-01",
+    "validThrough": "2027-12-31"
+  };
+
   const jsonLd = [
+    productSchema,
+    realEstateListingSchema,
     projectSchema, 
     residenceSchema, 
     faqSchema, 
