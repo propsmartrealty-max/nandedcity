@@ -86,6 +86,17 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
   const isApiRoute = path.startsWith('/api/');
   const isStaticAsset = path.startsWith('/_next/') || path.startsWith('/assets/') || path.startsWith('/qrs/') || path.startsWith('/images/');
 
+  // Instant 200 OK for Next.js internal flight prefetch requests in static export to prevent console 404s
+  if (path.includes('__next.') || url.searchParams.has('_rsc')) {
+    return new Response('{}', {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'public, max-age=86400'
+      }
+    });
+  }
+
   // Instant 200 OK for Google Site Verification
   if (path.startsWith('/google') && (path.endsWith('.html') || !path.includes('.'))) {
     const filename = path.replace(/^\//, '').replace(/\.html$/, '') + '.html';
