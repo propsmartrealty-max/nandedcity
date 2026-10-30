@@ -35,8 +35,21 @@ const BOT_USER_AGENTS = [
   'google-inspectiontool',
   'storebot-google',
   'google-other',
+  'google-extended',
   'mediapartners-google',
   'adsbot-google',
+  'oai-searchbot',
+  'chatgpt-user',
+  'gptbot',
+  'perplexitybot',
+  'perplexity',
+  'claudebot',
+  'claude-web',
+  'anthropic-ai',
+  'applebot',
+  'applebot-extended',
+  'cohere-ai',
+  'meta-externalagent',
   'bingbot',
   'bingpreview',
   'msnbot',
@@ -47,11 +60,6 @@ const BOT_USER_AGENTS = [
   'twitterbot',
   'facebookexternalhit',
   'linkedinbot',
-  'applebot',
-  'applebot-extended',
-  'perplexitybot',
-  'claudebot',
-  'gptbot',
   'bytespider',
   'petalbot',
   'sogou'
@@ -182,44 +190,6 @@ class EdgeCommentMinifier {
 }
 
 /**
- * Bot Crawl Optimization:
- * Strips heavy third-party client analytics for search bots to conserve crawl budget and ensure sub-100ms render
- */
-class EdgeBotOptimizer {
-  private isBot: boolean;
-
-  constructor(isBot: boolean) {
-    this.isBot = isBot;
-  }
-
-  element(element: any) {
-    if (this.isBot) {
-      const src = element.getAttribute('src') || '';
-      if (src.includes('googletagmanager.com/gtm.js') || src.includes('google-analytics.com')) {
-        element.remove();
-      }
-    }
-  }
-}
-
-/**
- * Edge Title Rewriter: Enforces keyword-dense "Nanded City Township Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road" title on homepage for all crawlers
- */
-class EdgeTitleRewriter {
-  private isHomePage: boolean;
-
-  constructor(isHomePage: boolean) {
-    this.isHomePage = isHomePage;
-  }
-
-  element(element: any) {
-    if (this.isHomePage) {
-      element.setInnerContent('Nanded City Township Pune | 2, 2.5, 3 & 4 BHK Luxury Flats & NA Plots Sinhagad Road');
-    }
-  }
-}
-
-/**
  * Edge OpenGraph Site Name Rewriter
  */
 class EdgeOgSiteNameRewriter {
@@ -240,8 +210,8 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
     return Response.redirect(url.toString(), 301);
   }
 
-  // 2. Prevent Googlebot & Search Crawlers from Indexing pages.dev Staging Domain
-  if (url.hostname.endsWith('.pages.dev') && isBot) {
+  // 2. Prevent All Traffic & Crawlers from Indexing pages.dev Staging Domain
+  if (url.hostname.endsWith('.pages.dev')) {
     url.hostname = 'www.nanded-city.in';
     return Response.redirect(url.toString(), 301);
   }
@@ -305,9 +275,9 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
   newHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   newHeaders.set('Permissions-Policy', 'accelerometer=(), camera=(), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()');
   newHeaders.set('Content-Language', 'en-IN, mr-IN');
-  newHeaders.set('Vary', 'Accept-Encoding, User-Agent');
+  newHeaders.set('Vary', 'Accept-Encoding');
 
-  // Googlebot & Crawler Optimization
+  // Search Engine & AI Crawler Optimization
   if (isBot) {
     newHeaders.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
     newHeaders.set('X-Bot-Acceleration', 'Enterprise-Active');
@@ -330,11 +300,9 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
 
   // 7. Execute Streaming HTMLRewriter Transformation
   const rewriter = new HTMLRewriter()
-    .on('title', new EdgeTitleRewriter(isHomePage))
     .on('meta[property="og:site_name"]', new EdgeOgSiteNameRewriter())
     .on('head', new EnterpriseEdgeHeadInjector(isHomePage, isBot, edgeColo, cleanCanonical))
     .on('img', new EdgeImageOptimizer())
-    .on('script', new EdgeBotOptimizer(isBot))
     .on('link[rel="canonical"]', new EdgeCanonicalRewriter(cleanCanonical))
     .onDocument(new EdgeCommentMinifier());
 
