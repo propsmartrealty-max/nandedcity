@@ -50,6 +50,8 @@ export default function FaqClientDirectory({ faqs }: FaqClientDirectoryProps) {
         <div style={{ marginBottom: '32px' }}>
           <div style={{ position: 'relative', maxWidth: '640px', margin: '0 auto' }}>
             <input
+              id="faq-search-input"
+              aria-label="Search frequently asked questions"
               type="text"
               placeholder="Search questions (e.g. water supply, resale, school, Saajgiri, RERA)..."
               value={searchQuery}

@@ -1,13 +1,7 @@
 /**
- * Enterprise-Grade Cloudflare Edge Engine & HTMLRewriter 2.0
- * Peak Performance Google SEO Hardening, Sub-50ms TTFB, 0ms Prerendering, and Sub-800ms Core Web Vitals.
+ * Enterprise-Grade Cloudflare Edge Engine
+ * Clean Canonical Normalization, Security Headers, Sub-50ms TTFB, and Zero React Hydration Mismatches.
  */
-
-declare class HTMLRewriter {
-  on(selector: string, handlers: any): this;
-  onDocument(handlers: any): this;
-  transform(response: Response): Response;
-}
 
 interface CloudflareRequest extends Request {
   cf?: {
@@ -70,141 +64,13 @@ function isSearchBot(userAgent: string): boolean {
   return BOT_USER_AGENTS.some(bot => ua.includes(bot));
 }
 
-/**
- * Enterprise HTMLRewriter Head Injector:
- * - Dynamic DNS Preconnects & High-Priority Resource Hints
- * - Hyper-Local Pune Geo Tags (IN-MH, coordinates, ICBM)
- * - LCP Critical Hero Preloads (fetchpriority=high)
- * - Chrome Speculation Rules API for 0ms Instant Client Prerender
- * - Edge Authority JSON-LD Schema with Speakable specification for Voice Search
- */
-class EnterpriseEdgeHeadInjector {
-  private isHomePage: boolean;
-  private isBot: boolean;
-  private edgeColo: string;
-  private cleanCanonical: string;
-
-  constructor(isHomePage: boolean, isBot: boolean, edgeColo: string, cleanCanonical: string) {
-    this.isHomePage = isHomePage;
-    this.isBot = isBot;
-    this.edgeColo = edgeColo;
-    this.cleanCanonical = cleanCanonical;
-  }
-
-  element(element: any) {
-    // 1. High-Priority Early Preconnects & DNS Prefetch
-    element.prepend(
-      `\n  <!-- Enterprise Cloudflare Edge Resource Hints -->` +
-      `\n  <link rel="preconnect" href="https://fonts.googleapis.com">` +
-      `\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` +
-      `\n  <link rel="dns-prefetch" href="https://nandedcitypune.com">` +
-      `\n  <link rel="dns-prefetch" href="https://images.unsplash.com">` +
-      `\n  <link rel="dns-prefetch" href="https://static.cloudflareinsights.com">` +
-      `\n  <link rel="dns-prefetch" href="https://www.googletagmanager.com">`,
-      { html: true }
-    );
-
-    // 2. High-Precision Local SEO & Geo Meta Tags for Google.com Pune SERP Dominance
-    element.append(
-      `\n  <!-- Enterprise Edge Geo-Targeting & Local SERP Microdata -->` +
-      `\n  <meta name="geo.region" content="IN-MH">` +
-      `\n  <meta name="geo.placename" content="Nanded City, Sinhagad Road, Pune">` +
-      `\n  <meta name="geo.position" content="18.4612;73.8015">` +
-      `\n  <meta name="ICBM" content="18.4612, 73.8015">` +
-      `\n  <meta name="application-name" content="Nanded City Township Pune">` +
-      `\n  <meta name="apple-mobile-web-app-title" content="Nanded City Township Pune">` +
-      `\n  <meta name="revisit-after" content="1 days">` +
-      `\n  <meta name="rating" content="General">` +
-      `\n  <meta name="distribution" content="Global">` +
-      `\n  <meta name="coverage" content="Worldwide">` +
-      `\n  <meta name="format-detection" content="telephone=yes">` +
-      `\n  <meta name="theme-color" content="#0a1628">` +
-      `\n  <meta name="cf-edge-colo" content="${this.edgeColo}">` +
-      `\n  <meta name="cf-edge-engine" content="Cloudflare-Pages-Enterprise-2.0">`,
-      { html: true }
-    );
-
-
-    // 4. Homepage Critical LCP Hero Image Preload for Sub-800ms LCP
-    if (this.isHomePage) {
-      element.append(
-        `\n  <!-- Edge LCP Image Priority Acceleration -->` +
-        `\n  <link rel="preload" as="image" href="https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp" fetchpriority="high">`,
-        { html: true }
-      );
-    }
-
-    // 5. Modern Chrome Speculation Rules API for 0ms Instant Prerender on Internal Navigation
-    element.append(
-      `\n  <!-- Chrome Speculation Rules: Instant 0ms Prerender on Edge -->` +
-      `\n  <script type="speculationrules">` +
-      `{"prerender":[{"source":"list","urls":["/projects/","/faq/","/lp/resale-flats/","/lp/ready-to-move/","/infrastructure/","/cluster/saajgiri/","/cluster/harmony/","/blog/","/contact/"],"eagerness":"moderate"}]}` +
-      `</script>`,
-      { html: true }
-    );
-
-    // Edge Head processing complete
-  }
-}
-
-/**
- * Image Optimization & CLS Prevention at Edge
- * Ensures decoding="async" and proper loading attributes on all images
- */
-class EdgeImageOptimizer {
-  element(element: any) {
-    if (!element.getAttribute('decoding')) {
-      element.setAttribute('decoding', 'async');
-    }
-    const fetchPriority = element.getAttribute('fetchpriority');
-    if (fetchPriority !== 'high' && !element.getAttribute('loading')) {
-      element.setAttribute('loading', 'lazy');
-    }
-  }
-}
-
-/**
- * Enforces pure canonical URLs on the wire, stripping tracking/ad query strings
- */
-class EdgeCanonicalRewriter {
-  private canonicalUrl: string;
-
-  constructor(canonicalUrl: string) {
-    this.canonicalUrl = canonicalUrl;
-  }
-
-  element(element: any) {
-    element.setAttribute('href', this.canonicalUrl);
-  }
-}
-
-/**
- * Strips non-essential HTML comments at the edge to reduce byte payload
- */
-class EdgeCommentMinifier {
-  comments(comment: any) {
-    if (!comment.text.includes('[if') && !comment.text.includes('Cloudflare') && !comment.text.includes('Enterprise')) {
-      comment.remove();
-    }
-  }
-}
-
-/**
- * Edge OpenGraph Site Name Rewriter
- */
-class EdgeOgSiteNameRewriter {
-  element(element: any) {
-    element.setAttribute('content', 'Nanded City Township Pune');
-  }
-}
-
 export async function onRequest(context: MiddlewareContext): Promise<Response> {
   const { request, next } = context;
   const url = new URL(request.url);
   const userAgent = request.headers.get('user-agent') || '';
   const isBot = isSearchBot(userAgent);
 
-  // 1. Non-www to www Canonical Normalization
+  // 1. Apex to www Canonical Normalization
   if (url.hostname === 'nanded-city.in') {
     url.hostname = 'www.nanded-city.in';
     return Response.redirect(url.toString(), 301);
@@ -262,13 +128,12 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
 
   const edgeColo = request.cf?.colo || 'EDGE';
   const isHomePage = path === '/' || path === '/index.html';
-  const cleanCanonical = `https://www.nanded-city.in${path === '/' ? '/' : path}`;
 
   // 5. Construct enterprise-grade response headers
   const newHeaders = new Headers(response.headers);
   newHeaders.set('X-Edge-Colo', edgeColo);
-  newHeaders.set('X-Edge-Engine', 'Cloudflare Pages Enterprise HTMLRewriter 2.0');
-  newHeaders.set('Server-Timing', `cf-edge;desc="Cloudflare Pages Enterprise", cf-colo;desc="${edgeColo}", cf-render;dur=0.8`);
+  newHeaders.set('X-Edge-Engine', 'Cloudflare Pages Enterprise Edge');
+  newHeaders.set('Server-Timing', `cf-edge;desc="Cloudflare Pages Enterprise", cf-colo;desc="${edgeColo}"`);
   newHeaders.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
   newHeaders.set('X-Content-Type-Options', 'nosniff');
   newHeaders.set('X-Frame-Options', 'SAMEORIGIN');
@@ -286,7 +151,7 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
     newHeaders.set('Cache-Control', 'public, max-age=600, s-maxage=3600, stale-while-revalidate=86400');
   }
 
-  // 6. HTTP 103 Early Hints & Preload Links for Instant Browser Fetching
+  // 6. HTTP 103 Early Hints & Preload Links
   const preloadLinks = [
     '<https://fonts.googleapis.com>; rel=preconnect',
     '<https://fonts.gstatic.com>; rel=preconnect; crossorigin',
@@ -298,22 +163,9 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
   }
   newHeaders.set('Link', preloadLinks.join(', '));
 
-  // 7. Execute Streaming HTMLRewriter Transformation
-  const rewriter = new HTMLRewriter()
-    .on('meta[property="og:site_name"]', new EdgeOgSiteNameRewriter())
-    .on('head', new EnterpriseEdgeHeadInjector(isHomePage, isBot, edgeColo, cleanCanonical))
-    .on('img', new EdgeImageOptimizer())
-    .on('link[rel="canonical"]', new EdgeCanonicalRewriter(cleanCanonical))
-    .onDocument(new EdgeCommentMinifier());
-
-  const transformedResponse = rewriter.transform(
-    new Response(response.body, {
-      status: response.status,
-      statusText: response.statusText,
-      headers: newHeaders
-    })
-  );
-
-  return transformedResponse;
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers: newHeaders
+  });
 }
-

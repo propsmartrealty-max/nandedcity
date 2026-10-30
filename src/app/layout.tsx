@@ -44,6 +44,12 @@ export const metadata: Metadata = {
     google: "EO-ezSz-FlhAk-eKdIWOB9xTRFXojS-rHXyMVZPAyQs",
     other: {
       me: [SITE_CONFIG.baseUrl],
+      'geo.region': 'IN-MH',
+      'geo.placename': 'Nanded City, Sinhagad Road, Pune',
+      'geo.position': '18.4612;73.8015',
+      'ICBM': '18.4612, 73.8015',
+      'distribution': 'Global',
+      'coverage': 'Worldwide',
     },
   },
   twitter: {
@@ -203,6 +209,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://nandedcitypune.com" />
         <link rel="dns-prefetch" href="https://www.nanded-city.in" />
         <link rel="manifest" href="/manifest.json" />
       </head>

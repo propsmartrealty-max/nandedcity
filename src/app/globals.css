@@ -117,11 +117,21 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--primary-green); line-height: 1.2
 .section-header p { color: var(--text-muted); font-size: 1.05rem; }
 .section-eyebrow {
   display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-size: 0.82rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--accent-gold);
+  color: #8c6b2d;
+}
+.why-section .section-eyebrow,
+.glass-luxury-dark .section-eyebrow,
+[style*="background: #0f172a"] .section-eyebrow,
+[style*="backgroundColor: #0f172a"] .section-eyebrow,
+[style*="backgroundColor: '#0f172a'"] .section-eyebrow,
+[style*="backgroundColor: rgb(15, 23, 42)"] .section-eyebrow,
+[style*="background: #0a1628"] .section-eyebrow,
+[style*="backgroundColor: #0a1628"] .section-eyebrow {
+  color: #d4af37 !important;
 }
 
 /* ─────────────────────────────────────────
@@ -390,10 +400,17 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--primary-green); line-height: 1.2
   font-family: monospace;
 }
 .btn-details {
-  font-size: 0.82rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--accent-gold);
   white-space: nowrap;
+  border-radius: 8px;
   transition: var(--transition-fast);
 }
 .btn-details:hover { color: var(--accent-gold-hover); letter-spacing: 0.3px; }

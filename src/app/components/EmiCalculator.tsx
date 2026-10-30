@@ -108,10 +108,12 @@ export default function EmiCalculator() {
             {/* Property Price */}
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                <label style={{ fontSize: '0.88rem', fontWeight: '700', color: '#475569' }}>Property Value</label>
+                <label htmlFor="emi-property-price" style={{ fontSize: '0.88rem', fontWeight: '700', color: '#475569' }}>Property Value</label>
                 <span style={{ fontSize: '1.1rem', fontWeight: '800', color: 'var(--primary-green)' }}>{formatINR(propertyPrice)}</span>
               </div>
               <input
+                id="emi-property-price"
+                aria-label="Property Value Slider"
                 type="range"
                 min="4500000"
                 max="30000000"
@@ -130,10 +132,12 @@ export default function EmiCalculator() {
             {/* Down Payment */}
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                <label style={{ fontSize: '0.88rem', fontWeight: '700', color: '#475569' }}>Down Payment ({downPaymentPercent}%)</label>
+                <label htmlFor="emi-down-payment" style={{ fontSize: '0.88rem', fontWeight: '700', color: '#475569' }}>Down Payment ({downPaymentPercent}%)</label>
                 <span style={{ fontSize: '1rem', fontWeight: '700', color: '#0f172a' }}>{formatINR(downPaymentAmount)}</span>
               </div>
               <input
+                id="emi-down-payment"
+                aria-label="Down Payment Percentage Slider"
                 type="range"
                 min="10"
                 max="50"
@@ -152,10 +156,12 @@ export default function EmiCalculator() {
             {/* Interest Rate & Tenure */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#475569', marginBottom: '8px' }}>
+                <label htmlFor="emi-interest-rate" style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#475569', marginBottom: '8px' }}>
                   Interest Rate (% p.a.)
                 </label>
                 <input
+                  id="emi-interest-rate"
+                  aria-label="Interest Rate Percentage"
                   type="number"
                   step="0.05"
                   min="6.5"
@@ -167,10 +173,12 @@ export default function EmiCalculator() {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#475569', marginBottom: '8px' }}>
+                <label htmlFor="emi-tenure-years" style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#475569', marginBottom: '8px' }}>
                   Loan Tenure
                 </label>
                 <select
+                  id="emi-tenure-years"
+                  aria-label="Loan Tenure in Years"
                   value={tenureYears}
                   onChange={(e) => setTenureYears(Number(e.target.value))}
                   style={{ width: '100%', padding: '12px', borderRadius: '10px', border: '1px solid #cbd5e1', fontSize: '0.95rem', fontWeight: '700', color: '#0f172a', backgroundColor: '#fff' }}

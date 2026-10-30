@@ -167,10 +167,25 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
                         </a>
                       </div>
                     )}
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px', flexShrink: 0 }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px', flexShrink: 0 }}>
                       <button 
                         onClick={() => openEnquiry(cluster.id, getEnquiryContext(cluster))}
-                        style={{ background: 'none', border: 'none', color: 'var(--accent-gold)', fontWeight: '700', fontSize: '0.82rem', cursor: 'pointer', padding: 0 }}
+                        aria-label={`Enquire about ${cluster.name}`}
+                        style={{ 
+                          background: 'rgba(197, 168, 114, 0.08)', 
+                          border: '1px solid rgba(197, 168, 114, 0.3)', 
+                          color: 'var(--accent-gold)', 
+                          fontWeight: '700', 
+                          fontSize: '0.82rem', 
+                          cursor: 'pointer', 
+                          padding: '10px 14px',
+                          minHeight: '44px',
+                          minWidth: '44px',
+                          borderRadius: '8px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          justifyContent: 'center'
+                        }}
                       >
                         {isCompleted ? 'Resale Enquiry →' : 'Enquire Now →'}
                       </button>

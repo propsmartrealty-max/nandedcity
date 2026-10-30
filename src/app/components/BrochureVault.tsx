@@ -53,6 +53,8 @@ export default function BrochureVault() {
         {/* Search Input */}
         <div style={{ flex: '1', minWidth: '260px' }}>
           <input
+            id="brochure-search-input"
+            aria-label="Search brochures by cluster name, BHK, or MahaRERA number"
             type="text"
             placeholder="Search by cluster name, BHK (e.g. 2 BHK, 3 BHK), or MahaRERA number..."
             value={search}

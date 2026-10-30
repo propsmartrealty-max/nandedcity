@@ -36,10 +36,12 @@ export default function ROICalculator() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
-                  <label style={{ fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1' }}>Investment Value</label>
+                  <label htmlFor="roi-investment-input" style={{ fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1' }}>Investment Value</label>
                   <span style={{ color: 'var(--accent-gold)', fontWeight: '700' }}>{formatCurrency(investment)}</span>
                 </div>
                 <input 
+                  id="roi-investment-input"
+                  aria-label="Investment Value Slider"
                   type="range" min="3000000" max="30000000" step="500000"
                   value={investment} onChange={(e) => setInvestment(Number(e.target.value))}
                   style={{ width: '100%', accentColor: 'var(--accent-gold)' }}
@@ -48,8 +50,10 @@ export default function ROICalculator() {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1', marginBottom: '12px' }}>Horizon (Years)</label>
+                  <label htmlFor="roi-years-select" style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1', marginBottom: '12px' }}>Horizon (Years)</label>
                   <select 
+                    id="roi-years-select"
+                    aria-label="Investment Horizon in Years"
                     value={years} onChange={(e) => setYears(Number(e.target.value))}
                     style={{ width: '100%', padding: '12px', borderRadius: '8px', backgroundColor: '#1e293b', border: '1px solid #334155', color: '#fff' }}
                   >
@@ -57,8 +61,10 @@ export default function ROICalculator() {
                   </select>
                 </div>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1', marginBottom: '12px' }}>Annual Growth (%)</label>
+                  <label htmlFor="roi-growth-input" style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1', marginBottom: '12px' }}>Annual Growth (%)</label>
                   <input 
+                    id="roi-growth-input"
+                    aria-label="Annual Expected Growth Rate"
                     type="number" value={growth} onChange={(e) => setGrowth(Number(e.target.value))}
                     style={{ width: '100%', padding: '12px', borderRadius: '8px', backgroundColor: '#1e293b', border: '1px solid #334155', color: '#fff' }}
                   />

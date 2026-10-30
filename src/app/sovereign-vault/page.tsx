@@ -98,6 +98,8 @@ export default function SovereignVault() {
           
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <input 
+              id="vault-passphrase-input"
+              aria-label="System Passphrase"
               type="password" 
               placeholder="System Passphrase" 
               required

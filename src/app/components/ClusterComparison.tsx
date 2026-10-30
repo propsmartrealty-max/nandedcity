@@ -90,10 +90,12 @@ export default function ClusterComparison() {
       {/* Selectors */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginBottom: '32px' }}>
         <div style={{ backgroundColor: '#f8fafc', padding: '16px 20px', borderRadius: '16px', border: '1.5px solid #e2e8f0' }}>
-          <label style={{ display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '800', color: 'var(--primary-green)', marginBottom: '8px' }}>
+          <label htmlFor="compare-cluster-select-a" style={{ display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '800', color: 'var(--primary-green)', marginBottom: '8px' }}>
             Cluster 1 (Left Side)
           </label>
           <select
+            id="compare-cluster-select-a"
+            aria-label="Select first cluster to compare"
             value={selectedClusterA}
             onChange={(e) => setSelectedClusterA(e.target.value)}
             style={{
@@ -117,10 +119,12 @@ export default function ClusterComparison() {
         </div>
 
         <div style={{ backgroundColor: '#f8fafc', padding: '16px 20px', borderRadius: '16px', border: '1.5px solid #e2e8f0' }}>
-          <label style={{ display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '800', color: 'var(--accent-gold)', marginBottom: '8px' }}>
+          <label htmlFor="compare-cluster-select-b" style={{ display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '800', color: '#8c6b2d', marginBottom: '8px' }}>
             Cluster 2 (Right Side)
           </label>
           <select
+            id="compare-cluster-select-b"
+            aria-label="Select second cluster to compare"
             value={selectedClusterB}
             onChange={(e) => setSelectedClusterB(e.target.value)}
             style={{

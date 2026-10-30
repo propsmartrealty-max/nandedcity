@@ -164,6 +164,8 @@ export default function StepForm({
           >
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <input 
+                id="stepform-name"
+                aria-label="Full Name"
                 type="text" 
                 placeholder="Full Name" 
                 required 
@@ -172,6 +174,8 @@ export default function StepForm({
                 onChange={e => setFormData({...formData, name: e.target.value})}
               />
               <input 
+                id="stepform-phone"
+                aria-label="Mobile Number"
                 type="tel" 
                 placeholder="Mobile Number" 
                 required 
@@ -183,6 +187,7 @@ export default function StepForm({
               {/* Anti-spam Honeypot */}
               <div style={{ display: 'none' }} aria-hidden="true">
                 <input 
+                  aria-label="Spam verification protection"
                   type="text" 
                   name="bot_field_honey" 
                   tabIndex={-1} 
