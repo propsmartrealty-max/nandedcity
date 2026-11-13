@@ -29,33 +29,18 @@ export async function generateMetadata({ params }: { params: Promise<ClusterPara
   const resolvedParams = await params;
   const cluster = clusters.find((c) => c.id === resolvedParams.id);
   if (!cluster) return {};
-  const permutations = [
+  const naturalKeywords = [
     `${cluster.name} Nanded City`,
-    `${cluster.name} Nanded City Pune`,
     `${cluster.name} Pune`,
-    `${cluster.name} Sinhagad Road`,
-    `${cluster.name} Sinhgad Road Pune`,
     `${cluster.name} ${cluster.bhk}`,
     `${cluster.name} price list 2026`,
-    `${cluster.name} price per sq ft`,
-    `${cluster.name} floor plan brochure PDF`,
-    `${cluster.name} MahaRERA ${cluster.rera}`,
-    `${cluster.name} possession date ${cluster.possession}`,
-    `${cluster.name} resale flats for sale`,
-    `${cluster.name} review ratings`,
-    `buy flat in ${cluster.name} Nanded City`,
-    `${cluster.name} sample flat video tour`,
-    `${cluster.bhk} flats Sinhagad Road Pune`,
-    `Nanded City 700 acres township`,
-    `PropSmart Realty ${cluster.name}`,
-    ...(cluster.mrName ? [`${cluster.mrName} नांदेड सिटी`, `${cluster.mrName} फ्लॅट्स पुणे`] : []),
-    ...(cluster.searchKeywords || [])
+    `MahaRERA ${cluster.rera}`
   ].join(', ');
 
   return {
     title: `${cluster.name} – ${cluster.bhk} in Nanded City Pune | MahaRERA ${cluster.rera}`,
     description: `${cluster.description} Explore ${cluster.bhk} luxury residences in ${cluster.name} across the 700-acre Nanded City Township, Sinhagad Road Pune. Starting at ${cluster.price}. Official MahaRERA: ${cluster.rera}.`,
-    keywords: permutations,
+    keywords: naturalKeywords,
     openGraph: {
       title: `${cluster.name} | ${SITE_CONFIG.name}`,
       description: cluster.description,

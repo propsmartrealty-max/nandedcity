@@ -84,7 +84,7 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
 
   const path = url.pathname;
   const isApiRoute = path.startsWith('/api/');
-  const isStaticAsset = path.startsWith('/_next/') || path.startsWith('/assets/') || path.startsWith('/qrs/') || path.startsWith('/images/');
+  const isStaticAsset = path.startsWith('/_next/') || path.startsWith('/assets/') || path.startsWith('/qrs/') || path.startsWith('/images/') || path.startsWith('/opengraph-image') || path.startsWith('/twitter-image') || path.startsWith('/icon') || path.startsWith('/apple-icon') || path.startsWith('/favicon');
 
   // Instant 200 OK for Next.js internal flight prefetch requests in static export to prevent console 404s
   if (path.includes('__next.') || url.searchParams.has('_rsc')) {

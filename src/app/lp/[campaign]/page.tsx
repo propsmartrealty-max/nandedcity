@@ -130,7 +130,7 @@ export default async function LandingPage({ params }: { params: Promise<Campaign
     "@type": "RealEstateAgent",
     "name": `Nanded City Official Sales - ${campaign.title}`,
     "description": campaign.sub,
-    "url": `https://www.nanded-city.in/lp/${resolvedParams.campaign}`,
+    "url": `https://www.nanded-city.in/lp/${resolvedParams.campaign}/`,
     "image": campaign.heroImg,
     "telephone": "+91 7744009295",
     "address": {

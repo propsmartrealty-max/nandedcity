@@ -24,7 +24,7 @@ export const SITE_CONFIG = {
     partnerStatus: "Authorised Marketing Partner",
     rera: "A031262401295",
     logo: "/nc-logo.png",
-    ogImage: "https://nandedcitypune.com/aalaap/assets/img/img-hero-banner-02.jpg",
+    ogImage: "https://www.nanded-city.in/opengraph-image",
   },
   seo: {
     primaryKeywords: [
