@@ -128,43 +128,6 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
     return Response.redirect(url.toString(), 301);
   }
 
-  // Execute request to retrieve origin static asset
-  const response = await next();
-
-  // If not HTML (e.g. image, font, json), return response as-is
-  const contentType = response.headers.get('content-type') || '';
-  if (!contentType.includes('text/html')) {
-    return response;
-  }
-
-  const edgeColo = request.cf?.colo || 'EDGE';
-  const isHomePage = path === '/' || path === '/index.html';
-
-  // 5. Construct enterprise-grade response headers
-  const newHeaders = new Headers(response.headers);
-  newHeaders.set('X-Edge-Colo', edgeColo);
-  newHeaders.set('X-Edge-Engine', 'Cloudflare Pages Enterprise Edge');
-  newHeaders.set('Server-Timing', `cf-edge;desc="Cloudflare Pages Enterprise", cf-colo;desc="${edgeColo}"`);
-  newHeaders.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
-  newHeaders.set('X-Content-Type-Options', 'nosniff');
-  newHeaders.set('X-Frame-Options', 'SAMEORIGIN');
-  newHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  newHeaders.set('Permissions-Policy', 'accelerometer=(), camera=(), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()');
-  newHeaders.set('Content-Language', 'en-IN, mr-IN');
-  newHeaders.set('Vary', 'Accept-Encoding');
-
-  // Search Engine & AI Crawler Optimization
-  if (isBot) {
-    newHeaders.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
-    newHeaders.set('X-Bot-Acceleration', 'Enterprise-Active');
-    newHeaders.set('Cache-Control', 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800');
-  } else {
-    newHeaders.set('Cache-Control', 'public, max-age=600, s-maxage=3600, stale-while-revalidate=86400');
-  }
-
-  return new Response(response.body, {
-    status: response.status,
-    statusText: response.statusText,
-    headers: newHeaders
-  });
+  // Direct origin static pass-through (avoids worker stream buffering & 504 Gateway Timeouts)
+  return next();
 }
