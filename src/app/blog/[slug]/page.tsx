@@ -182,7 +182,7 @@ export default async function BlogPost({ params }: { params: Promise<PostParams>
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${SITE_CONFIG.baseUrl}/blog/${post.slug}/#webpage`,
-    "url": `${SITE_CONFIG.baseUrl}/blog/${post.slug}`,
+    "url": `${SITE_CONFIG.baseUrl}/blog/${post.slug}/`,
     "name": post.title,
     "description": post.excerpt,
     "isPartOf": { "@id": `${SITE_CONFIG.baseUrl}/#website` },
@@ -280,7 +280,7 @@ export default async function BlogPost({ params }: { params: Promise<PostParams>
               <h3 style={{ fontSize: '1.7rem', color: '#0f172a', marginBottom: '12px' }}>Ready to Invest in Your Future?</h3>
               <p style={{ color: '#64748b', marginBottom: '28px', maxWidth: '480px', margin: '0 auto 28px' }}>Explore premium MahaRERA registered projects inside Nanded City. Secure your property in Pune&apos;s most robust micro-market.</p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: '14px', flexWrap: 'wrap' }}>
-                <Link href={`/cluster/${relatedEntity.id}`} className="btn btn-gold">View {relatedEntity.name}</Link>
+                <Link href={`/cluster/${relatedEntity.id}/`} className="btn btn-gold">View {relatedEntity.name}</Link>
                 <Link href="/#contact" className="btn btn-outline" style={{ borderColor: '#94a3b8', color: '#475569' }}>Request Data Report</Link>
               </div>
             </div>
@@ -301,7 +301,7 @@ export default async function BlogPost({ params }: { params: Promise<PostParams>
                 <h4 style={{ fontSize: '0.82rem', fontWeight: '700', color: '#0f172a', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>Related Insights</h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {relatedPosts.map(rp => (
-                    <Link key={rp.slug} href={`/blog/${rp.slug}`} style={{ textDecoration: 'none' }}>
+                    <Link key={rp.slug} href={`/blog/${rp.slug}/`} style={{ textDecoration: 'none' }}>
                       <div style={{ padding: '12px', backgroundColor: '#f8fafc', borderRadius: '10px', fontSize: '0.82rem', fontWeight: '600', color: '#1e293b', lineHeight: '1.4' }}>
                         {rp.title}
                         <div style={{ color: '#94a3b8', fontWeight: '400', marginTop: '4px', fontSize: '0.72rem' }}>{rp.readTime}</div>

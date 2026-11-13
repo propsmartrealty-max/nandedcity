@@ -63,7 +63,7 @@ export default function BlogHub() {
                 className="cluster-card"
                 style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
               >
-                <Link href={`/blog/${blog.slug}`} className="card-image-link" style={{ position: 'relative', display: 'block', height: '240px' }}>
+                <Link href={`/blog/${blog.slug}/`} className="card-image-link" style={{ position: 'relative', display: 'block', height: '240px' }}>
                   <Image 
                     src={blog.coverImage} 
                     alt={blog.title} 
@@ -82,12 +82,12 @@ export default function BlogHub() {
                     {blog.category.replace('-', ' ')} • {blog.date}
                   </div>
                   <h2 style={{ fontSize: '1.25rem', lineHeight: '1.4', marginBottom: '12px', color: '#1e293b' }}>
-                    <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
+                    <Link href={`/blog/${blog.slug}/`}>{blog.title}</Link>
                   </h2>
                   <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '20px', flexGrow: 1 }}>
                     {blog.excerpt}
                   </p>
-                  <Link href={`/blog/${blog.slug}`} className="btn-details" style={{ alignSelf: 'flex-start' }}>
+                  <Link href={`/blog/${blog.slug}/`} className="btn-details" style={{ alignSelf: 'flex-start' }}>
                     Read Complete Data →
                   </Link>
                 </div>

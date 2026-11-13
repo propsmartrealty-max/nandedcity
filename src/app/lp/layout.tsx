@@ -5,8 +5,15 @@ export const metadata: Metadata = {
   title: "Nanded City Township Pune | Exclusive Offers & Pricing",
   description: "Secure the best pricing with zero brokerage for premium 2, 2.5, and 3 BHK luxury flats at Nanded City, Sinhagad Road, Pune.",
   robots: {
-    index: false, // Essential: We DO NOT want Google indexing ad-specific landing pages and causing duplicate content penalties.
-    follow: false,
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   }
 };
 
