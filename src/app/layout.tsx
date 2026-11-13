@@ -32,9 +32,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.baseUrl),
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/`,
-    types: {
-      'application/rss+xml': `${SITE_CONFIG.baseUrl}/api/rss`,
-    },
     languages: {
       'en-IN': `${SITE_CONFIG.baseUrl}/`,
       'mr-IN': `${SITE_CONFIG.baseUrl}/mr/`,
@@ -95,7 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@id": `${SITE_CONFIG.baseUrl}/#organization`,
     "name": SITE_CONFIG.brand.organizationName,
     "alternateName": `${SITE_CONFIG.brand.partnerStatus}: MahaRERA ${SITE_CONFIG.brand.rera}`,
-    "url": SITE_CONFIG.baseUrl,
+    "url": `${SITE_CONFIG.baseUrl}/`,
     "logo": `${SITE_CONFIG.baseUrl}${SITE_CONFIG.brand.logo}`, 
     "image": SITE_CONFIG.brand.ogImage,
     "description": `${SITE_CONFIG.brand.organizationName} is an Authorised Marketing Partner: MahaRERA ${SITE_CONFIG.brand.rera} offering verified property advisory for Nanded City Township Pune.`,

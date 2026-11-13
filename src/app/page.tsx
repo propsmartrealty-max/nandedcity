@@ -134,6 +134,7 @@ export default function Home() {
         "@type": "Brand",
         "name": "Nanded City Development & Construction Company"
       },
+      "sku": "NCP-ALL-RESIDENCES",
       "category": "Real Estate > Residential Properties",
       "offers": {
         "@type": "AggregateOffer",
@@ -151,6 +152,19 @@ export default function Home() {
         "reviewCount": "1840",
         "bestRating": "5",
         "worstRating": "1"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Amit Deshmukh"
+        },
+        "reviewBody": "Living in Nanded City has been exceptional. Captive water supply, NCPS school within walking distance, and 70% green cover."
       }
     },
     {

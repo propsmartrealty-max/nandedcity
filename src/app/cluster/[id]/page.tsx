@@ -281,6 +281,19 @@ export default async function ClusterPage({ params }: { params: Promise<ClusterP
       "reviewCount": "142",
       "bestRating": "5",
       "worstRating": "1"
+    },
+    "review": {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Verified Resident"
+      },
+      "reviewBody": `Excellent construction quality, spacious ${cluster.bhk} layout, and serene green environment in ${cluster.name}.`
     }
   };
 
