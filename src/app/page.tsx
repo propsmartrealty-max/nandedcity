@@ -26,8 +26,8 @@ import { SITE_CONFIG } from '../config/site';
 
 
 export const metadata: Metadata = {
-  title: "Nanded City Township Pune | Luxury Flats & Plots Sinhagad Road",
-  description: "Explore the comprehensive 700-Acre Nanded City Township Pune ecosystem on Sinhagad Road. Verified guide to 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats, NA bungalow plots, 20 residential clusters, floor plans, 2026 prices, and world-class infrastructure.",
+  title: "Nanded City Pune – 700-Acre Master Township | Flats & Plots 2026",
+  description: "Explore the comprehensive 700-Acre Nanded City Pune master township ecosystem on Sinhagad Road. Verified guide to 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats, NA bungalow plots, 20 residential clusters, floor plans, 2026 prices, and world-class infrastructure.",
   keywords: SITE_CONFIG.seo.primaryKeywords,
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/`,
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Nanded City Township Pune | Luxury Flats & Plots Sinhagad Road",
-    description: "Explore the 700-Acre Nanded City Township Pune ecosystem on Sinhagad Road. Luxury flats, NA bungalow plots, master plan, and world-class infrastructure.",
+    title: "Nanded City Pune – 700-Acre Master Township | Flats & Plots 2026",
+    description: "Explore the 700-Acre Nanded City Pune ecosystem on Sinhagad Road. Luxury flats, NA bungalow plots, master plan, and world-class infrastructure.",
     url: `${SITE_CONFIG.baseUrl}/`,
     siteName: "Nanded City Township Pune",
     images: [
@@ -46,14 +46,14 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.brand.ogImage,
         width: 1200,
         height: 630,
-        alt: "Nanded City Township Pune",
+        alt: "Nanded City Pune Master Township",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nanded City Township Pune | Luxury Flats & Plots Sinhagad Road",
-    description: "Explore the 700-Acre Nanded City Township Pune ecosystem on Sinhagad Road. Luxury flats, NA bungalow plots, master plan, and world-class infrastructure.",
+    title: "Nanded City Pune – 700-Acre Master Township | Flats & Plots 2026",
+    description: "Explore the 700-Acre Nanded City Pune ecosystem on Sinhagad Road. Luxury flats, NA bungalow plots, master plan, and world-class infrastructure.",
   },
 };
 
@@ -102,7 +102,8 @@ export default function Home() {
           "@type": "GeoCoordinates",
           "latitude": 18.4612,
           "longitude": 73.8015
-        }
+        },
+        "hasMap": "https://maps.google.com/?q=Nanded+City+Pune+Sinhagad+Road"
       },
       "mentions": [
         { "@type": "Place", "name": "Sinhagad Road Pune" },
@@ -207,9 +208,9 @@ export default function Home() {
       {/* Hero */}
       <ParallaxHero bgImage="https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp">
         <span className="badge badge-gold">Sinhagad Road · Pune</span>
-        <h1 className="speakable-title"><span className="metallic-gold-text">Nanded City Township Pune</span> – Luxury 2, 2.5, 3, 3.5 & 4.5 BHK Flats & Branded NA Bungalow Plots</h1>
+        <h1 className="speakable-title"><span className="metallic-gold-text">Nanded City Pune</span> – 700-Acre Master Township | Luxury Flats & NA Bungalow Plots</h1>
         <p className="hero-seo-text">
-          Explore <strong>premium 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats</strong> and exclusive <strong>branded NA bungalow plots</strong> across <strong>Nanded City Township Pune on Sinhagad Road</strong>. An integrated 700-acre self-sustainable township featuring ICSE schools, Sahyadri Hospital, Symphony IT Park, Destination Center retail, captive water & power infrastructure, and Olympic-grade sports complexes.
+          Explore <strong>premium 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats</strong> and exclusive <strong>branded NA bungalow plots</strong> across <strong>Nanded City Pune on Sinhagad Road</strong>. An integrated 700-acre self-sustainable township featuring ICSE schools, Sahyadri Hospital, Symphony IT Park, Destination Center retail, captive water & power infrastructure, and Olympic-grade sports complexes.
         </p>
         <HeroActions />
         <div className="hero-stats">
@@ -247,6 +248,11 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Google Position #0 Featured Snippet Target Definition */}
+            <p className="featured-snippet-text" style={{ fontSize: '1.02rem', lineHeight: '1.75', color: '#334155', margin: '0 0 20px', padding: '16px 20px', backgroundColor: '#ffffff', borderRadius: '12px', borderLeft: '4px solid var(--primary-green)' }}>
+              <strong>Nanded City Pune</strong> is an integrated 700-acre sustainable satellite township located on Sinhagad Road, Pune (Pin Code: 411041), Maharashtra. Developed by NCDCCL under Satish Magar, the township houses 15,000+ resident families across 20 residential clusters, featuring ICSE schools, Sahyadri Hospital, Destination Center retail, captive WTP/STP, and 70% green cover with 2 to 4.5 BHK luxury flats and branded NA bungalow plots starting from ₹58 Lakhs to ₹2.65 Cr.
+            </p>
+
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', fontSize: '0.85rem' }}>
               <div style={{ padding: '12px 16px', backgroundColor: '#fff', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
                 <span style={{ color: '#64748b', fontSize: '0.75rem', display: 'block' }}>Location & Pin Code</span>
@@ -273,6 +279,19 @@ export default function Home() {
                 <strong style={{ color: '#0f172a' }}>Destination Centre & Symphony Park</strong>
               </div>
             </div>
+
+            {/* SERP Sitelinks Jump Anchor Navigation */}
+            <nav aria-label="Page Quick Links" style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid #e2e8f0', display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'center' }}>
+              <span style={{ fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: '#64748b', letterSpacing: '1px' }}>Quick Jump:</span>
+              <a href="#price-list" style={{ fontSize: '0.82rem', fontWeight: '700', color: '#0f172a', backgroundColor: '#fff', border: '1px solid #cbd5e1', padding: '6px 14px', borderRadius: '8px', textDecoration: 'none' }}>📊 2026 Price List</a>
+              <a href="#ongoing" style={{ fontSize: '0.82rem', fontWeight: '700', color: '#0f172a', backgroundColor: '#fff', border: '1px solid #cbd5e1', padding: '6px 14px', borderRadius: '8px', textDecoration: 'none' }}>🏢 All 20 Clusters</a>
+              <a href="/master-plan/" style={{ fontSize: '0.82rem', fontWeight: '700', color: '#0f172a', backgroundColor: '#fff', border: '1px solid #cbd5e1', padding: '6px 14px', borderRadius: '8px', textDecoration: 'none' }}>🗺️ 700-Acre Master Plan</a>
+              <a href="/floor-plans/" style={{ fontSize: '0.82rem', fontWeight: '700', color: '#0f172a', backgroundColor: '#fff', border: '1px solid #cbd5e1', padding: '6px 14px', borderRadius: '8px', textDecoration: 'none' }}>📐 Floor Plans</a>
+              <a href="/infrastructure/" style={{ fontSize: '0.82rem', fontWeight: '700', color: '#0f172a', backgroundColor: '#fff', border: '1px solid #cbd5e1', padding: '6px 14px', borderRadius: '8px', textDecoration: 'none' }}>🏗️ Infrastructure</a>
+              <a href="/connectivity/" style={{ fontSize: '0.82rem', fontWeight: '700', color: '#0f172a', backgroundColor: '#fff', border: '1px solid #cbd5e1', padding: '6px 14px', borderRadius: '8px', textDecoration: 'none' }}>🛣️ Sinhagad Road Flyover</a>
+              <a href="/faq/" style={{ fontSize: '0.82rem', fontWeight: '700', color: '#0f172a', backgroundColor: '#fff', border: '1px solid #cbd5e1', padding: '6px 14px', borderRadius: '8px', textDecoration: 'none' }}>❓ FAQs</a>
+              <a href="/contact/" style={{ fontSize: '0.82rem', fontWeight: '700', color: 'var(--primary-green)', backgroundColor: '#ecfdf5', border: '1px solid #a7f3d0', padding: '6px 14px', borderRadius: '8px', textDecoration: 'none' }}>📞 Visit & Contact</a>
+            </nav>
           </div>
         </div>
       </section>
@@ -295,7 +314,7 @@ export default function Home() {
       </section>
 
       {/* 2026 Master Price List & Configuration Directory (SEO Authority Matrix) */}
-      <section className="section-padding" style={{ backgroundColor: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+      <section id="price-list" className="section-padding" style={{ backgroundColor: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
         <div className="container">
           <ScrollReveal className="section-header" style={{ marginBottom: '32px' }}>
             <span className="section-eyebrow">Market Calibration 2026</span>
