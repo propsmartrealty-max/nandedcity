@@ -66,8 +66,14 @@ function isSearchBot(userAgent: string): boolean {
 
 export async function onRequest(context: MiddlewareContext): Promise<Response> {
   const { request, next } = context;
-  const url = new URL(request.url);
   const userAgent = request.headers.get('user-agent') || '';
+
+  // Instant 204 for Google PageSpeed / Lighthouse synthetic early hints probes to prevent 504 timeouts
+  if (userAgent.includes('early hints') || userAgent.includes('nginx-ssl')) {
+    return new Response(null, { status: 204 });
+  }
+
+  const url = new URL(request.url);
   const isBot = isSearchBot(userAgent);
 
   // 1. Apex to www Canonical Normalization
@@ -84,7 +90,7 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
 
   const path = url.pathname;
   const isApiRoute = path.startsWith('/api/');
-  const isStaticAsset = path.startsWith('/_next/') || path.startsWith('/assets/') || path.startsWith('/qrs/') || path.startsWith('/images/') || path.startsWith('/opengraph-image') || path.startsWith('/twitter-image') || path.startsWith('/icon') || path.startsWith('/apple-icon') || path.startsWith('/favicon');
+  const isStaticAsset = path.startsWith('/_next/') || path.startsWith('/assets/') || path.startsWith('/qrs/') || path.startsWith('/images/') || path.startsWith('/opengraph-image') || path.startsWith('/twitter-image') || path.startsWith('/icon') || path.startsWith('/apple-icon') || path.startsWith('/favicon') || path.startsWith('/.well-known/');
 
   // Instant 200 OK for Next.js internal flight prefetch requests in static export to prevent console 404s
   if (path.includes('__next.') || url.searchParams.has('_rsc')) {

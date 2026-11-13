@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "name": "Nanded City Township Pune AI Catalog",
+  "description": "AI agent catalog and service directory for Nanded City Township Pune properties, clusters, and floor plans.",
+  "endpoints": {
+    "llms": "https://www.nanded-city.in/llms.txt",
+    "llms_full": "https://www.nanded-city.in/llms-full.txt"
+  }
+}
