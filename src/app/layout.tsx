@@ -321,32 +321,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div style={{ color: 'var(--accent-gold)', fontSize: '0.75rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '12px' }}>
                   Popular Searches & Buyer Portals
                 </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', fontSize: '0.78rem', alignItems: 'center' }}>
-                  <Link href="/master-plan/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>700-Acre Master Plan</Link>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', fontSize: '0.8rem', alignItems: 'center' }}>
+                  <Link href="/master-plan/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>700-Acre Master Plan</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/floor-plans/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Floor Plans & Layouts</Link>
+                  <Link href="/floor-plans/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Floor Plans & Layouts</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/compare/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Cluster Comparison Matrix</Link>
+                  <Link href="/compare/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Cluster Comparison Matrix</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/connectivity/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Transit & Flyover Corridor</Link>
+                  <Link href="/connectivity/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Transit & Flyover Corridor</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/township-directory/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Township Resident Directory</Link>
+                  <Link href="/township-directory/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Township Resident Directory</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/brochures/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Brochures & RERA Vault</Link>
+                  <Link href="/brochures/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Brochures & RERA Vault</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/emi-calculator/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>EMI & Stamp Duty Calculator</Link>
+                  <Link href="/emi-calculator/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>EMI & Stamp Duty Calculator</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/resale-rental-guide/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>Resale & Rental Guide 2026</Link>
+                  <Link href="/resale-rental-guide/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Resale & Rental Guide 2026</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/mr/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700' }}>मराठी निवासी दालन</Link>
+                  <Link href="/mr/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>मराठी निवासी दालन</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/lp/resale-flats/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Nanded City Resale Flats</Link>
+                  <Link href="/lp/resale-flats/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', padding: '6px 4px', display: 'inline-block' }}>Nanded City Resale Flats</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/lp/ready-to-move/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Ready to Move Flats</Link>
+                  <Link href="/lp/ready-to-move/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', padding: '6px 4px', display: 'inline-block' }}>Ready to Move Flats</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/lp/luxury-apartments/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>3.5 & 4.5 BHK Luxury Apartments</Link>
+                  <Link href="/lp/luxury-apartments/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', padding: '6px 4px', display: 'inline-block' }}>3.5 & 4.5 BHK Luxury Apartments</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/lp/budget-flats/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Budget 2 BHK Flats</Link>
+                  <Link href="/lp/budget-flats/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', padding: '6px 4px', display: 'inline-block' }}>Budget 2 BHK Flats</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
                   <Link href="/lp/na-bungalow-plots/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>NA Bungalow Plots</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
@@ -373,7 +373,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </p>
 
               <div style={{ backgroundColor: 'rgba(255,255,255,0.03)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', marginBottom: '32px' }}>
-                <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.7rem', lineHeight: '1.8', margin: 0 }}>
+                <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.72rem', lineHeight: '1.8', margin: 0 }}>
                   <strong style={{ color: 'var(--accent-gold)' }}>Authorised Marketing Partner:</strong> MahaRERA <strong>A031262401295</strong> ({SITE_CONFIG.brand.organizationName} — {SITE_CONFIG.contact.phone}). Facilitating verified property advisory and site-visit arrangements for Nanded City Township Pune. All information, properties, prices, and floor plans featured on this independent portal are for representational and informational purposes only and are subject to change without notice. This platform does not constitute an official offer or guarantee from Nanded City Developers. All trademarks and logos belong to their respective owners. Project details and MahaRERA certificates can be verified at <a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>maharera.maharashtra.gov.in</a>.
                 </p>
               </div>
@@ -381,10 +381,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
               {/* Footer Bottom Bar */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-                <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.8rem' }}>© {new Date().getFullYear()} Nanded City Township Pune. Built on trust.</span>
+                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem' }}>© {new Date().getFullYear()} Nanded City Township Pune. Built on trust.</span>
                 <div style={{ display: 'flex', gap: '24px' }}>
-                  <Link href="/privacy-policy/" style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', textDecoration: 'none' }}>Privacy Policy</Link>
-                  <Link href="/terms/" style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', textDecoration: 'none' }}>Terms of Use</Link>
+                  <Link href="/privacy-policy/" style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.8rem', textDecoration: 'none', padding: '6px 4px', display: 'inline-block' }}>Privacy Policy</Link>
+                  <Link href="/terms/" style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.8rem', textDecoration: 'none', padding: '6px 4px', display: 'inline-block' }}>Terms of Use</Link>
                 </div>
               </div>
             </div>

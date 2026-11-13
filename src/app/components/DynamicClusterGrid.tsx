@@ -58,8 +58,8 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
   const btnStyle = (isActive: boolean): React.CSSProperties => ({
     padding: '10px 24px',
     borderRadius: '30px',
-    border: isActive ? '1px solid var(--accent-gold)' : '1px solid rgba(203, 213, 225, 0.6)',
-    backgroundColor: isActive ? 'var(--accent-gold)' : 'rgba(255, 255, 255, 0.75)',
+    border: isActive ? '1px solid #0f172a' : '1px solid rgba(203, 213, 225, 0.6)',
+    backgroundColor: isActive ? '#0f172a' : 'rgba(255, 255, 255, 0.75)',
     backdropFilter: 'blur(10px)',
     WebkitBackdropFilter: 'blur(10px)',
     color: isActive ? '#fff' : '#334155',
@@ -69,7 +69,7 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
     fontSize: '0.92rem',
     outline: 'none',
     boxShadow: isActive 
-      ? '0 6px 20px -2px rgba(201, 168, 76, 0.45), inset 0 1px 1px rgba(255,255,255,0.4)'
+      ? '0 6px 20px -2px rgba(15, 23, 42, 0.3), inset 0 1px 1px rgba(255,255,255,0.2)'
       : '0 4px 12px rgba(0,0,0,0.04), inset 0 1px 1px rgba(255,255,255,0.8)',
   });
 
@@ -161,7 +161,7 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
                           href="https://maharera.maharashtra.gov.in/" 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          style={{ fontSize: '0.72rem', color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '600' }}
+                          style={{ fontSize: '0.72rem', color: '#8c6823', textDecoration: 'none', fontWeight: '600' }}
                         >
                           maharera.maharashtra.gov.in ↗
                         </a>
@@ -170,11 +170,11 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px', flexShrink: 0 }}>
                       <button 
                         onClick={() => openEnquiry(cluster.id, getEnquiryContext(cluster))}
-                        aria-label={`Enquire about ${cluster.name}`}
+                        aria-label={isCompleted ? `Resale Enquiry for ${cluster.name}` : `Enquire Now for ${cluster.name}`}
                         style={{ 
-                          background: 'rgba(197, 168, 114, 0.08)', 
-                          border: '1px solid rgba(197, 168, 114, 0.3)', 
-                          color: 'var(--accent-gold)', 
+                          background: 'rgba(140, 104, 35, 0.08)', 
+                          border: '1px solid rgba(140, 104, 35, 0.35)', 
+                          color: '#8c6823', 
                           fontWeight: '700', 
                           fontSize: '0.82rem', 
                           cursor: 'pointer', 

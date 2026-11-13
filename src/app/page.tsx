@@ -250,7 +250,7 @@ export default function Home() {
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
               <div>
-                <span style={{ fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '1.5px', color: 'var(--accent-gold)', fontWeight: '800' }}>
+                <span style={{ fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '1.5px', color: '#8c6823', fontWeight: '800' }}>
                   Direct Knowledge Card · Google Position 0 Target
                 </span>
                 <h2 style={{ fontSize: '1.4rem', color: '#0f172a', fontWeight: '800', margin: '4px 0 0' }}>

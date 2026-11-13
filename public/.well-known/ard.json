@@ -2,6 +2,23 @@
   "version": "1.0",
   "name": "Nanded City Township Pune",
   "description": "Comprehensive residential platform for Nanded City Township Pune across 700 Acres on Sinhagad Road.",
+  "entries": [
+    {
+      "type": "llms-txt",
+      "uri": "https://www.nanded-city.in/llms.txt",
+      "description": "Structured guide for AI assistants regarding Nanded City Pune"
+    },
+    {
+      "type": "llms-full-txt",
+      "uri": "https://www.nanded-city.in/llms-full.txt",
+      "description": "Complete cluster-by-cluster intelligence file"
+    },
+    {
+      "type": "sitemap",
+      "uri": "https://www.nanded-city.in/sitemap.xml",
+      "description": "XML sitemap index of all township routes"
+    }
+  ],
   "resources": {
     "llms": "https://www.nanded-city.in/llms.txt",
     "llms_full": "https://www.nanded-city.in/llms-full.txt",
