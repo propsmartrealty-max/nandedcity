@@ -162,18 +162,6 @@ export async function onRequest(context: MiddlewareContext): Promise<Response> {
     newHeaders.set('Cache-Control', 'public, max-age=600, s-maxage=3600, stale-while-revalidate=86400');
   }
 
-  // 6. HTTP 103 Early Hints & Preload Links
-  const preloadLinks = [
-    '<https://fonts.googleapis.com>; rel=preconnect',
-    '<https://fonts.gstatic.com>; rel=preconnect; crossorigin',
-    '<https://nandedcitypune.com>; rel=dns-prefetch',
-    '<https://images.unsplash.com>; rel=dns-prefetch'
-  ];
-  if (isHomePage) {
-    preloadLinks.push('<https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp>; rel=preload; as=image; fetchpriority=high');
-  }
-  newHeaders.set('Link', preloadLinks.join(', '));
-
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
