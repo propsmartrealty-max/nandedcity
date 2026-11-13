@@ -321,32 +321,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div style={{ color: 'var(--accent-gold)', fontSize: '0.75rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '12px' }}>
                   Popular Searches & Buyer Portals
                 </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', fontSize: '0.8rem', alignItems: 'center' }}>
-                  <Link href="/master-plan/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>700-Acre Master Plan</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/floor-plans/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Floor Plans & Layouts</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/compare/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Cluster Comparison Matrix</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/connectivity/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Transit & Flyover Corridor</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/township-directory/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Township Resident Directory</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/brochures/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Brochures & RERA Vault</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/emi-calculator/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>EMI & Stamp Duty Calculator</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/resale-rental-guide/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>Resale & Rental Guide 2026</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/mr/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '6px 4px', display: 'inline-block' }}>मराठी निवासी दालन</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/lp/resale-flats/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', padding: '6px 4px', display: 'inline-block' }}>Nanded City Resale Flats</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/lp/ready-to-move/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', padding: '6px 4px', display: 'inline-block' }}>Ready to Move Flats</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/lp/luxury-apartments/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', padding: '6px 4px', display: 'inline-block' }}>3.5 & 4.5 BHK Luxury Apartments</Link>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
-                  <Link href="/lp/budget-flats/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', padding: '6px 4px', display: 'inline-block' }}>Budget 2 BHK Flats</Link>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', fontSize: '0.8rem', alignItems: 'center' }}>
+                  <Link href="/master-plan/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>700-Acre Master Plan</Link>
+                  <Link href="/floor-plans/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>Floor Plans & Layouts</Link>
+                  <Link href="/compare/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>Cluster Comparison Matrix</Link>
+                  <Link href="/connectivity/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>Transit & Flyover Corridor</Link>
+                  <Link href="/township-directory/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>Township Resident Directory</Link>
+                  <Link href="/brochures/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>Brochures & RERA Vault</Link>
+                  <Link href="/emi-calculator/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>EMI & Stamp Duty Calculator</Link>
+                  <Link href="/resale-rental-guide/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>Resale & Rental Guide 2026</Link>
+                  <Link href="/mr/" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '700', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>मराठी निवासी दालन</Link>
+                  <Link href="/lp/resale-flats/" style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>Nanded City Resale Flats</Link>
+                  <Link href="/lp/ready-to-move/" style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>Ready to Move Flats</Link>
+                  <Link href="/lp/luxury-apartments/" style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>3.5 & 4.5 BHK Luxury Apartments</Link>
+                  <Link href="/lp/budget-flats/" style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', padding: '8px 14px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', minHeight: '38px', display: 'inline-flex', alignItems: 'center' }}>Budget 2 BHK Flats</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
                   <Link href="/lp/na-bungalow-plots/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>NA Bungalow Plots</Link>
                   <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
