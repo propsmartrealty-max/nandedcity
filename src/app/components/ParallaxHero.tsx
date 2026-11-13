@@ -1,7 +1,6 @@
 "use client";
 
 import React, { ReactNode } from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 interface ParallaxHeroProps {
@@ -58,15 +57,12 @@ export default function ParallaxHero({ bgImage, children }: ParallaxHeroProps) {
         aria-hidden="true"
       />
       
-      <motion.div 
+      <div 
         className="container hero-inner"
-        initial={{ opacity: 0, y: 25 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         style={{ zIndex: 2, position: 'relative' }}
       >
         {children}
-      </motion.div>
+      </div>
     </section>
   );
 }
