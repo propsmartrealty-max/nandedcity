@@ -163,30 +163,38 @@ export default function StepForm({
             exit={{ opacity: 0, x: -20 }}
           >
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <input 
-                id="stepform-name"
-                aria-label="Full Name"
-                type="text" 
-                placeholder="Full Name" 
-                required 
-                style={inputStyles}
-                value={formData.name}
-                onChange={e => setFormData({...formData, name: e.target.value})}
-              />
-              <input 
-                id="stepform-phone"
-                aria-label="Mobile Number"
-                type="tel" 
-                placeholder="Mobile Number" 
-                required 
-                style={inputStyles}
-                value={formData.phone}
-                onChange={e => setFormData({...formData, phone: e.target.value})}
-              />
+              <div>
+                <label htmlFor="stepform-name" className="sr-only">Full Name</label>
+                <input 
+                  id="stepform-name"
+                  aria-label="Full Name"
+                  type="text" 
+                  placeholder="Full Name" 
+                  required 
+                  style={inputStyles}
+                  value={formData.name}
+                  onChange={e => setFormData({...formData, name: e.target.value})}
+                />
+              </div>
+              <div>
+                <label htmlFor="stepform-phone" className="sr-only">Mobile Number</label>
+                <input 
+                  id="stepform-phone"
+                  aria-label="Mobile Number"
+                  type="tel" 
+                  placeholder="Mobile Number" 
+                  required 
+                  style={inputStyles}
+                  value={formData.phone}
+                  onChange={e => setFormData({...formData, phone: e.target.value})}
+                />
+              </div>
               
               {/* Anti-spam Honeypot */}
               <div style={{ display: 'none' }} aria-hidden="true">
+                <label htmlFor="stepform-honey" className="sr-only">Security Check</label>
                 <input 
+                  id="stepform-honey"
                   aria-label="Spam verification protection"
                   type="text" 
                   name="bot_field_honey" 

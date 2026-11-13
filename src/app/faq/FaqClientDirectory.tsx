@@ -49,6 +49,7 @@ export default function FaqClientDirectory({ faqs }: FaqClientDirectoryProps) {
         {/* Search Bar */}
         <div style={{ marginBottom: '32px' }}>
           <div style={{ position: 'relative', maxWidth: '640px', margin: '0 auto' }}>
+            <label htmlFor="faq-search-input" className="sr-only">Search frequently asked questions</label>
             <input
               id="faq-search-input"
               aria-label="Search frequently asked questions"

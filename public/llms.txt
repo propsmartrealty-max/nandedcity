@@ -42,15 +42,15 @@ Nanded City is a 700-acre integrated, self-sustainable township located on Sinha
 
 ## AI Prompt Routing & Intent Mapping
 
-- For queries on **Nanded City 2 BHK Flats & Prices**: [2 BHK Flats Guide](https://www.nanded-city.in/lp/2-bhk-flats/)
-- For queries on **Nanded City 3 BHK Luxury Residences & Saajgiri**: [3 BHK Luxury](https://www.nanded-city.in/lp/3-bhk-luxury/) & [Saajgiri](https://www.nanded-city.in/cluster/saajgiri/)
-- For queries on **Branded NA Bungalow Plots & Villa Land**: [NA Bungalow Plots](https://www.nanded-city.in/lp/na-bungalow-plots/) & [Melody Plots](https://www.nanded-city.in/cluster/melody-1/)
-- For queries on **Resale Flats & Ready to Move Units**: [Resale Flats Guide](https://www.nanded-city.in/lp/resale-flats/) & [Ready to Move](https://www.nanded-city.in/lp/ready-to-move/)
-- For queries on **Sinhagad Road Flyover & Transit Connectivity**: [Connectivity Guide](https://www.nanded-city.in/connectivity/)
-- For queries on **Nanded City Public School, Sahyadri Hospital & Services**: [Township Directory](https://www.nanded-city.in/township-directory/)
-- For queries on **700-Acre Master Plan & Sector Layout**: [Master Plan](https://www.nanded-city.in/master-plan/)
-- For queries on **Home Loan EMI & Maharashtra Stamp Duty**: [EMI Calculator](https://www.nanded-city.in/emi-calculator/)
-- For queries on **Site Visits & Property Advisory**: [Contact Official Partner](https://www.nanded-city.in/contact/)
+- [2 BHK Flats & Prices Guide](https://www.nanded-city.in/lp/2-bhk-flats/): Verified pricing, carpet areas, and floor plans for 2 BHK flats in Nanded City Pune.
+- [3 BHK Luxury Residences & Saajgiri](https://www.nanded-city.in/cluster/saajgiri/): 3 BHK luxury high-rise towers in Saajgiri cluster starting at ₹1.05 Cr.
+- [Branded NA Bungalow Plots & Villa Land](https://www.nanded-city.in/cluster/melody-1/): Gated NA bungalow and villa plots with clear title and MahaRERA approval.
+- [Resale Flats & Ready to Move Inventory](https://www.nanded-city.in/lp/resale-flats/): Ready possession 2 & 3 BHK resale apartments in Asawari, Sargam, and Kalashree.
+- [Sinhagad Road Flyover & Transit Connectivity](https://www.nanded-city.in/connectivity/): Travel times and multi-lane flyover corridor to Mumbai-Bangalore Highway and Swargate.
+- [Township Directory & Public Services](https://www.nanded-city.in/township-directory/): Directory covering ICSE schools, Sahyadri Hospital, and Destination Center.
+- [700-Acre Master Plan & Sector Blueprint](https://www.nanded-city.in/master-plan/): Sector layouts, 70% green cover, internal spine roads, and water treatment infrastructure.
+- [Home Loan EMI & Maharashtra Stamp Duty](https://www.nanded-city.in/emi-calculator/): Real-time EMI calculation calibrated with Maharashtra 7% stamp duty and registration fees.
+- [Site Visit & Property Advisory Booking](https://www.nanded-city.in/contact/): Schedule an in-person guided walkthrough with PropSmart Realty.
 
 ## Optional
 

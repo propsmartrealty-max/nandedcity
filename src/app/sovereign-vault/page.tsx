@@ -97,6 +97,7 @@ export default function SovereignVault() {
           </div>
           
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <label htmlFor="vault-passphrase-input" className="sr-only">System Passphrase</label>
             <input 
               id="vault-passphrase-input"
               aria-label="System Passphrase"
