@@ -67,12 +67,6 @@ function isSearchBot(userAgent: string): boolean {
 export async function onRequest(context: MiddlewareContext): Promise<Response> {
   const { request, next } = context;
   const userAgent = request.headers.get('user-agent') || '';
-
-  // Instant 204 for Google PageSpeed / Lighthouse synthetic early hints probes to prevent 504 timeouts
-  if (userAgent.includes('early hints') || userAgent.includes('nginx-ssl')) {
-    return new Response(null, { status: 204 });
-  }
-
   const url = new URL(request.url);
   const isBot = isSearchBot(userAgent);
 
