@@ -26,8 +26,8 @@ import { SITE_CONFIG } from '../config/site';
 
 
 export const metadata: Metadata = {
-  title: "Nanded City Pune – 700-Acre Master Township | Flats & Plots 2026",
-  description: "Explore the comprehensive 700-Acre Nanded City Pune master township ecosystem on Sinhagad Road. Verified guide to 2, 2.5, 3, 3.5 & 4.5 BHK luxury flats, NA bungalow plots, 20 residential clusters, floor plans, 2026 prices, and world-class infrastructure.",
+  title: "Nanded City Pune – 700-Acre Township | 2, 3 BHK Flats, Plots & Price 2026",
+  description: "Explore Nanded City Township on Sinhagad Road Pune. Verified 2026 prices, floor plans, resale flats, 2, 3, 4.5 BHK luxury homes, NA bungalow plots, ICSE schools & captive infrastructure. Authorised Partner: PropSmart Realty (MahaRERA: A031262401295).",
   keywords: SITE_CONFIG.seo.primaryKeywords,
   alternates: {
     canonical: `${SITE_CONFIG.baseUrl}/`,
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Nanded City Pune – 700-Acre Master Township | Flats & Plots 2026",
-    description: "Explore the 700-Acre Nanded City Pune ecosystem on Sinhagad Road. Luxury flats, NA bungalow plots, master plan, and world-class infrastructure.",
+    title: "Nanded City Pune – 700-Acre Township | 2, 3 BHK Flats, Plots & Price 2026",
+    description: "Explore Nanded City Township on Sinhagad Road Pune. Verified 2026 prices, floor plans, resale flats, 2, 3, 4.5 BHK homes & NA bungalow plots. Authorised Partner: PropSmart Realty (MahaRERA: A031262401295).",
     url: `${SITE_CONFIG.baseUrl}/`,
     siteName: "Nanded City Township Pune",
     images: [
@@ -52,8 +52,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nanded City Pune – 700-Acre Master Township | Flats & Plots 2026",
-    description: "Explore the 700-Acre Nanded City Pune ecosystem on Sinhagad Road. Luxury flats, NA bungalow plots, master plan, and world-class infrastructure.",
+    title: "Nanded City Pune – 700-Acre Township | 2, 3 BHK Flats, Plots & Price 2026",
+    description: "Explore Nanded City Township on Sinhagad Road Pune. Verified 2026 prices, floor plans, resale flats, 2, 3, 4.5 BHK homes & NA bungalow plots. Authorised Partner: PropSmart Realty (MahaRERA: A031262401295).",
   },
 };
 
@@ -117,7 +117,92 @@ export default function Home() {
       ],
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": [".speakable-title", ".hero-seo-text"]
+        "cssSelector": [".speakable-title", ".hero-seo-text", ".featured-snippet-text"]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "@id": `${SITE_CONFIG.baseUrl}/#authorized-agent`,
+      "name": "PropSmart Realty",
+      "alternateName": "Authorised Marketing Partner: Nanded City Pune (MahaRERA A031262401295)",
+      "url": `${SITE_CONFIG.baseUrl}/`,
+      "telephone": SITE_CONFIG.contact.phoneNumeric,
+      "priceRange": "₹58 Lakhs - ₹2.65 Cr",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nanded City Township, Sinhagad Road",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411041",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.4612,
+        "longitude": 73.8015
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Nanded City Pune Residential Configurations & Plotted Enclaves",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Residence",
+              "name": "2 BHK & 2.5 BHK Modern Apartments (Aalaap-I, Pancham, Bageshree)",
+              "description": "Ready and under-construction 2 & 2.5 BHK flats with carpet areas from 620 to 850 sq.ft."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "INR",
+              "minPrice": "5800000",
+              "maxPrice": "8500000"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Residence",
+              "name": "3 BHK Luxury High-Rise Residences (Saajgiri & Kalashree)",
+              "description": "Premium 3 BHK towers with Sahyadri hill views, carpet areas from 980 to 1,280 sq.ft."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "INR",
+              "minPrice": "11500000",
+              "maxPrice": "16500000"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Residence",
+              "name": "3.5 & 4.5 BHK Flagship Palace Residences (Harmony)",
+              "description": "Ultra-luxury skyline residences with bespoke club privileges and large sundecks."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "INR",
+              "minPrice": "19500000",
+              "maxPrice": "26500000"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Residence",
+              "name": "Branded NA Bungalow & Villa Plots (Melody I, II, III & Rhythm)",
+              "description": "Sanctioned Collector NA plots for custom private villa construction from 2,000 to 4,500 sq.ft."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "INR",
+              "minPrice": "15000000",
+              "maxPrice": "35000000"
+            }
+          }
+        ]
       }
     },
     {
@@ -264,7 +349,7 @@ export default function Home() {
 
             {/* Google Position #0 Featured Snippet Target Definition */}
             <p className="featured-snippet-text" style={{ fontSize: '1.02rem', lineHeight: '1.75', color: '#334155', margin: '0 0 20px', padding: '16px 20px', backgroundColor: '#ffffff', borderRadius: '12px', borderLeft: '4px solid var(--primary-green)' }}>
-              <strong>Nanded City Pune</strong> is an integrated 700-acre sustainable satellite township located on Sinhagad Road, Pune (Pin Code: 411041), Maharashtra. Developed by NCDCCL under Satish Magar, the township houses 15,000+ resident families across 20 residential clusters, featuring ICSE schools, Sahyadri Hospital, Destination Center retail, captive WTP/STP, and 70% green cover with 2 to 4.5 BHK luxury flats and branded NA bungalow plots starting from ₹58 Lakhs to ₹2.65 Cr.
+              <strong>Nanded City Pune</strong> is an integrated 700-acre sustainable satellite township on Sinhagad Road, Pune (PIN: 411041), Maharashtra. Master-planned with 70% open green space, it accommodates 15,000+ families across 20 residential clusters, offering 2 to 4.5 BHK flats and NA bungalow plots from ₹58 Lakhs to ₹2.65 Cr, with captive WTP/STP, ICSE schools, and Sahyadri Hospital.
             </p>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', fontSize: '0.85rem' }}>
