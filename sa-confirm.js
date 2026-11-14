@@ -44,7 +44,7 @@ async function getAccessToken() {
 }
 
 async function confirmToken(accessToken) {
-  const res = await fetch('https://www.googleapis.com/siteVerification/v1/webResource?verificationMethod=FILE', {
+  const res = await fetch('https://www.googleapis.com/siteVerification/v1/webResource?verificationMethod=META', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
