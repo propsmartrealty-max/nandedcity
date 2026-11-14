@@ -1075,3 +1075,24 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--primary-green); line-height: 1.2
 .shimmer-hover:hover::after {
   animation: shimmerSweep 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* ─────────────────────────────────────────
+   Responsive Device Breakpoint Utilities
+───────────────────────────────────────── */
+@media (max-width: 991px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: inline-flex !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .desktop-only {
+    display: flex !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+}
