@@ -1,34 +1,35 @@
-"use client";
-
 import React, { ReactNode } from 'react';
-import Image from 'next/image';
 
 interface ParallaxHeroProps {
-  bgImage: string;
+  bgImage?: string;
   children: ReactNode;
 }
 
-export default function ParallaxHero({ bgImage, children }: ParallaxHeroProps) {
+export default function ParallaxHero({ children }: ParallaxHeroProps) {
   return (
     <section 
       className="hero" 
       style={{ position: 'relative', overflow: 'hidden' }}
       aria-label="Nanded City Hero"
     >
-      <Image
-        src={bgImage}
-        alt="Nanded City Township"
-        fill
-        priority
-        fetchPriority="high"
-        style={{
-          objectFit: 'cover',
-          objectPosition: 'center',
-          position: 'absolute',
-          zIndex: 0,
-        }}
-        sizes="100vw"
-      />
+      <picture>
+        <source media="(max-width: 768px)" srcSet="/hero-banner-mobile.webp" type="image/webp" />
+        <img
+          src="/hero-banner.webp"
+          alt="Nanded City Township Pune Master Township Ecosystem"
+          fetchPriority="high"
+          decoding="async"
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center',
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            inset: 0,
+            zIndex: 0,
+          }}
+        />
+      </picture>
       {/* Dark overlay for text legibility */}
       <div 
         style={{

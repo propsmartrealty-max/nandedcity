@@ -20,7 +20,12 @@ import "./globals.css";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-XXXXXXX';
 
-const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], display: "swap" });
+const outfit = Outfit({ 
+  subsets: ["latin"], 
+  weight: ["300", "400", "500", "600", "700"], 
+  display: "swap",
+  variable: "--font-outfit" 
+});
 
 export const metadata: Metadata = {
   title: {
@@ -206,14 +211,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema]) }}
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preload" as="image" href="/hero-banner-mobile.webp" media="(max-width: 768px)" type="image/webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/hero-banner.webp" media="(min-width: 769px)" type="image/webp" fetchPriority="high" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
-        <link rel="dns-prefetch" href="https://nandedcitypune.com" />
         <link rel="dns-prefetch" href="https://www.nanded-city.in" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={outfit.className}>
+      <body className={`${outfit.className} ${outfit.variable}`}>
         <ModalProvider>
           <DynamicHeader />
 
@@ -230,7 +234,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {/* Column 1: Brand */}
                 <div>
                   <Image 
-                    src="/nc-logo.png" 
+                    src="/nc-logo.webp" 
                     alt="Nanded City Township Pune Official Logo" 
                     width={180} height={50}
                     style={{ objectFit: 'contain', filter: 'brightness(0) invert(1) opacity(0.9)', marginBottom: '20px' }}

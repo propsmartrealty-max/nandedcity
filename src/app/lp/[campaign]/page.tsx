@@ -156,7 +156,7 @@ export default async function LandingPage({ params }: { params: Promise<Campaign
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(lpSchema) }} />
       {/* Stripped LP Header */}
       <header style={{ padding: '20px 40px', background: '#fff', borderBottom: '1px solid #e2e8f0', display: 'flex', justifyContent: 'center' }}>
-        <Image src="/nc-logo.png" alt="Nanded City Township Pune Official Logo" width={180} height={50} style={{ objectFit: 'contain' }} />
+        <Image src="/nc-logo.webp" alt="Nanded City Township Pune Official Logo" width={180} height={50} style={{ objectFit: 'contain' }} />
       </header>
 
       {/* Hero / Above the Fold Conversion Trap */}

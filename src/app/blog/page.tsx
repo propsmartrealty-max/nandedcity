@@ -78,7 +78,7 @@ export default function BlogHub() {
                   </div>
                 </Link>
                 <div className="card-content" style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--accent-gold)', fontWeight: '700', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                  <div style={{ fontSize: '0.8rem', color: '#705315', fontWeight: '700', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '1px' }}>
                     {blog.category.replace('-', ' ')} • {blog.date}
                   </div>
                   <h2 style={{ fontSize: '1.25rem', lineHeight: '1.4', marginBottom: '12px', color: '#1e293b' }}>

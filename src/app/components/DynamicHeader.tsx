@@ -119,7 +119,7 @@ export default function DynamicHeader() {
             aria-label="Nanded City Township Pune Home"
           >
             <Image 
-              src="/nc-logo.png" 
+              src="/nc-logo.webp" 
               alt="Nanded City Township Pune" 
               width={130} 
               height={36} 
@@ -422,7 +422,7 @@ export default function DynamicHeader() {
           >
             {/* Drawer Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '20px', borderBottom: '1px solid #f1f5f9', marginBottom: '24px' }}>
-              <Image src="/nc-logo.png" alt="Nanded City Logo" width={110} height={32} style={{ objectFit: 'contain', height: '28px', width: 'auto' }} />
+              <Image src="/nc-logo.webp" alt="Nanded City Logo" width={110} height={32} style={{ objectFit: 'contain', height: '28px', width: 'auto' }} />
               <button 
                 onClick={() => setMobileMenuOpen(false)}
                 aria-label="Close Navigation Menu"

@@ -220,7 +220,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Hero */}
-      <ParallaxHero bgImage="https://nandedcitypune.com/wp-content/uploads/2026/02/saajgiri-ncp-banner-img-01.webp">
+      <ParallaxHero bgImage="/hero-banner.webp">
         <span className="badge badge-gold">Sinhagad Road · Pune</span>
         <h1 className="speakable-title"><span className="metallic-gold-text">Nanded City Pune</span> – 700-Acre Master Township | Luxury Flats & NA Bungalow Plots</h1>
         <p className="hero-seo-text">
@@ -561,7 +561,7 @@ export default function Home() {
                     </div>
                     <p className="card-desc" style={{ fontSize: '0.875rem' }}>{cluster.description}</p>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '16px' }}>
-                      <span style={{ fontSize: '0.78rem', color: 'var(--accent-gold)', fontWeight: '700' }}>
+                      <span style={{ fontSize: '0.78rem', color: '#705315', fontWeight: '700' }}>
                         MahaRERA Handover ✅
                       </span>
                       <Link href={`/cluster/${cluster.id}/`} className="btn-details">
@@ -622,7 +622,7 @@ export default function Home() {
                     </div>
                   </Link>
                   <div className="card-content" style={{ padding: '24px', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ color: 'var(--accent-gold)', fontWeight: '700', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>
+                    <div style={{ color: '#705315', fontWeight: '700', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>
                       {blog.category.replace('-', ' ')}
                     </div>
                     <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', lineHeight: '1.4' }}>
