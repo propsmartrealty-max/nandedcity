@@ -219,7 +219,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </TransitionFrame>
 
           <footer id="site-footer" role="contentinfo" style={{ backgroundColor: '#080f1e', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-            <div className="container" style={{ paddingTop: '80px', paddingBottom: '40px' }}>
+            <div className="container" style={{ paddingTop: '80px', paddingBottom: '120px' }}>
               
               {/* Top 4-column grid */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '48px', marginBottom: '60px' }}>
