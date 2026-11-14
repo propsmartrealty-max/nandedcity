@@ -63,55 +63,70 @@ async function notifyIndexing(url, accessToken) {
   return data;
 }
 
-// Extract slugs from data files
-const extractSlugs = () => {
-    const urls = [
-        'https://www.nanded-city.in/',
-        'https://www.nanded-city.in/blog',
-        'https://www.nanded-city.in/about-us',
-        'https://www.nanded-city.in/legal-compliance',
-        'https://www.nanded-city.in/mr/2-bhk-flats',
-        'https://www.nanded-city.in/mr/bungalow-plots',
-        'https://www.nanded-city.in/lp/2-bhk-flats',
-        'https://www.nanded-city.in/lp/3-bhk-luxury',
-        'https://www.nanded-city.in/lp/na-bungalow-plots',
-    ];
-
-    // Read clusters
-    const clustersContent = fs.readFileSync('src/data/clusters.ts', 'utf-8');
-    const clusterIds = clustersContent.match(/id:\s*['"]([^'"]+)['"]/g)?.map(m => m.match(/['"]([^'"]+)['"]/)[1]) || [];
-    clusterIds.forEach(id => urls.push(`https://www.nanded-city.in/cluster/${id}`));
-
-    // Read blogs
-    const blogsContent = fs.readFileSync('src/data/blogs.ts', 'utf-8');
-    const blogSlugs = blogsContent.match(/slug:\s*['"]([^'"]+)['"]/g)?.map(m => m.match(/['"]([^'"]+)['"]/)[1]) || [];
-    blogSlugs.forEach(slug => urls.push(`https://www.nanded-city.in/blog/${slug}`));
-
+// Extract canonical URLs directly from sitemap.xml
+const extractSlugs = async () => {
+  try {
+    const res = await fetch('https://www.nanded-city.in/sitemap.xml');
+    const xml = await res.text();
+    const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1].trim());
+    console.log(`📋 Parsed ${urls.length} canonical URLs directly from live sitemap.xml`);
     return [...new Set(urls)];
+  } catch (err) {
+    console.warn('⚠️ Could not fetch live sitemap.xml, attempting fallback to local out/sitemap.xml...', err.message);
+    if (fs.existsSync('out/sitemap.xml')) {
+      const xml = fs.readFileSync('out/sitemap.xml', 'utf-8');
+      const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1].trim());
+      console.log(`📋 Parsed ${urls.length} canonical URLs from local out/sitemap.xml`);
+      return [...new Set(urls)];
+    }
+    console.error('Failed to read local sitemap, using fallback static list');
+    return [
+      'https://www.nanded-city.in/',
+      'https://www.nanded-city.in/projects/',
+      'https://www.nanded-city.in/master-plan/',
+      'https://www.nanded-city.in/floor-plans/',
+      'https://www.nanded-city.in/infrastructure/',
+      'https://www.nanded-city.in/connectivity/',
+      'https://www.nanded-city.in/township-directory/',
+      'https://www.nanded-city.in/brochures/',
+      'https://www.nanded-city.in/emi-calculator/',
+      'https://www.nanded-city.in/resale-rental-guide/',
+      'https://www.nanded-city.in/about-us/',
+      'https://www.nanded-city.in/legal-compliance/',
+      'https://www.nanded-city.in/contact/',
+      'https://www.nanded-city.in/blog/',
+      'https://www.nanded-city.in/faq/',
+      'https://www.nanded-city.in/mr/',
+    ];
+  }
 };
 
 (async () => {
   try {
-    console.log('🚀 Starting "Hard-Force" Indexing for Nanded City...');
+    console.log('🚀 Starting Google Indexing API submission for Nanded City...');
     const accessToken = await getAccessToken();
-    const urls = extractSlugs();
+    const urls = await extractSlugs();
     
-    console.log(`📡 Found ${urls.length} target URLs to index.`);
+    console.log(`📡 Submitting ${urls.length} canonical 200 OK URLs to Google Indexing API...`);
+
+    let successCount = 0;
+    let failCount = 0;
 
     for (let i = 0; i < urls.length; i++) {
         const url = urls[i];
-        console.log(`[${i+1}/${urls.length}] Pinging Google for: ${url}`);
         const result = await notifyIndexing(url, accessToken);
         if (result.error) {
-            console.error(`❌ Error indexing ${url}:`, result.error.message);
+            console.error(`❌ [${i+1}/${urls.length}] Error: ${url} -> ${result.error.message}`);
+            failCount++;
         } else {
-            console.log(`✅ Success: ${url}`);
+            console.log(`✅ [${i+1}/${urls.length}] Google Indexing Queued: ${url}`);
+            successCount++;
         }
-        // Small delay to avoid rate limiting
-        await new Promise(r => setTimeout(r, 200));
+        // Delay to respect Google Indexing API rate limits (60 requests per minute)
+        await new Promise(r => setTimeout(r, 1050));
     }
 
-    console.log('\n🌟 "Hard-Force" Indexing Complete. Search dominance incoming.');
+    console.log(`\n🎉 Indexing API Complete: ${successCount} queued, ${failCount} failed.`);
   } catch (err) {
     console.error('🔥 Critical error during indexing:', err);
   }
