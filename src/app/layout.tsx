@@ -38,7 +38,10 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "EO-ezSz-FlhAk-eKdIWOB9xTRFXojS-rHXyMVZPAyQs",
+    google: [
+      "EO-ezSz-FlhAk-eKdIWOB9xTRFXojS-rHXyMVZPAyQs",
+      "xPwov9ckfykpu-uvWtHmHLCnhEXZDPLkjNMFeV5_-Xk",
+    ],
     other: {
       me: [SITE_CONFIG.baseUrl],
       'geo.region': 'IN-MH',
