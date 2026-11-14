@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
 import { useEnquiryModal } from '../context/ModalContext';
 import { NavItem } from '@/types';
 import { SITE_CONFIG, getWhatsappLink } from '@/config/site';
@@ -83,10 +82,7 @@ export default function DynamicHeader() {
           transition: 'padding 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
         }}
       >
-        <motion.div 
-          initial={{ y: -16, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+        <div 
           style={{
             pointerEvents: 'auto',
             display: 'flex',
@@ -103,7 +99,7 @@ export default function DynamicHeader() {
             border: '1px solid rgba(226, 232, 240, 0.8)',
             width: '100%',
             maxWidth: '1160px',
-            transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
+            transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
           }}
         >
           {/* Left: Brand Logo */}
@@ -188,23 +184,19 @@ export default function DynamicHeader() {
                 </svg>
               </Link>
 
-              <AnimatePresence>
-                {clustersMenuOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 8, scale: 0.98 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 6, scale: 0.98 }}
-                    transition={{ duration: 0.18, ease: 'easeOut' }}
-                    style={{
-                      position: 'absolute',
-                      top: '100%',
-                      left: '50%',
-                      transform: 'translateX(-50%)',
-                      paddingTop: '10px',
-                      zIndex: 1100,
-                      minWidth: '420px'
-                    }}
-                  >
+              {clustersMenuOpen && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '100%',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    paddingTop: '10px',
+                    zIndex: 1100,
+                    minWidth: '420px',
+                    animation: 'fadeInMenu 0.18s ease-out'
+                  }}
+                >
                     <div style={{
                       backgroundColor: '#ffffff',
                       borderRadius: '18px',
@@ -286,9 +278,8 @@ export default function DynamicHeader() {
                         </Link>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
             </div>
 
             {navLinks.map((item) => (
@@ -394,31 +385,27 @@ export default function DynamicHeader() {
               <div style={{ width: '12px', height: '2px', backgroundColor: '#0f172a', borderRadius: '2px', alignSelf: 'center' }} />
             </button>
           </div>
-        </motion.div>
+        </div>
       </header>
 
       {/* Mobile Drawer Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div 
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 220 }}
-            style={{
-              position: 'fixed',
-              top: 0,
-              right: 0,
-              width: '100%',
-              maxWidth: '420px',
-              height: '100vh',
-              backgroundColor: '#ffffff',
-              zIndex: 2000,
-              display: 'flex',
-              flexDirection: 'column',
-              padding: '24px',
-              boxShadow: '-10px 0 30px rgba(0,0,0,0.15)'
-            }}
+      {mobileMenuOpen && (
+        <div 
+          style={{
+            position: 'fixed',
+            top: 0,
+            right: 0,
+            width: '100%',
+            maxWidth: '420px',
+            height: '100vh',
+            backgroundColor: '#ffffff',
+            zIndex: 2000,
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '24px',
+            boxShadow: '-10px 0 30px rgba(0,0,0,0.15)',
+            animation: 'slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1)'
+          }}
           >
             {/* Drawer Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '20px', borderBottom: '1px solid #f1f5f9', marginBottom: '24px' }}>
@@ -447,12 +434,7 @@ export default function DynamicHeader() {
             {/* Nav Items List */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', overflowY: 'auto', flex: 1, paddingRight: '4px' }}>
               {mobileNavItems.map((item, idx) => (
-                <motion.div
-                  key={item.name}
-                  initial={{ opacity: 0, x: 15 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.04 }}
-                >
+                <div key={item.name}>
                   <Link 
                     href={item.href} 
                     onClick={() => setMobileMenuOpen(false)}
@@ -470,7 +452,7 @@ export default function DynamicHeader() {
                   >
                     {item.name}
                   </Link>
-                </motion.div>
+                </div>
               ))}
 
               {/* Popular Clusters Quick Grid */}
@@ -566,9 +548,8 @@ export default function DynamicHeader() {
                 <span>WhatsApp Sales Expert</span>
               </a>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
 
       <style jsx>{`
         @media (max-width: 991px) {
