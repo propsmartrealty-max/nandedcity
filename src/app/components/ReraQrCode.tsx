@@ -19,7 +19,7 @@ export default function ReraQrCode({ reraUrl, reraNumber, qrImage }: ReraQrCodeP
           href={officialUrl} 
           target="_blank" 
           rel="noopener noreferrer"
-          style={{ fontSize: '0.72rem', color: '#8c6823', textDecoration: 'none', fontWeight: '600', marginTop: '2px', display: 'inline-block' }}
+          style={{ fontSize: '0.72rem', color: '#705315', textDecoration: 'none', fontWeight: '600', marginTop: '2px', display: 'inline-block' }}
         >
           Verify: maharera.maharashtra.gov.in ↗
         </a>
@@ -50,7 +50,7 @@ export default function ReraQrCode({ reraUrl, reraNumber, qrImage }: ReraQrCodeP
         href={officialUrl} 
         target="_blank" 
         rel="noopener noreferrer"
-        style={{ fontSize: '0.7rem', color: '#8c6823', textDecoration: 'none', fontWeight: '600', marginTop: '3px' }}
+        style={{ fontSize: '0.7rem', color: '#705315', textDecoration: 'none', fontWeight: '600', marginTop: '3px' }}
       >
         maharera.maharashtra.gov.in ↗
       </a>

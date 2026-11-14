@@ -136,7 +136,7 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
                     <span style={{ fontWeight: '600', color: isCompleted ? 'var(--primary-green)' : '#0f172a' }}>
                       {cluster.status}
                     </span>
-                    <span style={{ marginLeft: 'auto', fontWeight: '500', color: '#64748b' }}>
+                    <span style={{ marginLeft: 'auto', fontWeight: '500', color: '#475569' }}>
                       📐 {cluster.area}
                     </span>
                   </div>
@@ -161,7 +161,7 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
                           href="https://maharera.maharashtra.gov.in/" 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          style={{ fontSize: '0.72rem', color: '#8c6823', textDecoration: 'none', fontWeight: '600' }}
+                          style={{ fontSize: '0.72rem', color: '#705315', textDecoration: 'none', fontWeight: '600' }}
                         >
                           maharera.maharashtra.gov.in ↗
                         </a>
@@ -172,9 +172,9 @@ export default function DynamicClusterGrid({ clusters }: DynamicClusterGridProps
                         onClick={() => openEnquiry(cluster.id, getEnquiryContext(cluster))}
                         aria-label={isCompleted ? `Resale Enquiry for ${cluster.name}` : `Enquire Now for ${cluster.name}`}
                         style={{ 
-                          background: 'rgba(140, 104, 35, 0.08)', 
-                          border: '1px solid rgba(140, 104, 35, 0.35)', 
-                          color: '#8c6823', 
+                          background: 'rgba(112, 83, 21, 0.08)', 
+                          border: '1px solid rgba(112, 83, 21, 0.35)', 
+                          color: '#705315', 
                           fontWeight: '700', 
                           fontSize: '0.82rem', 
                           cursor: 'pointer', 

@@ -420,12 +420,12 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--primary-green); line-height: 1.2
   padding: 8px 14px;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #8c6823;
+  color: #705315;
   white-space: nowrap;
   border-radius: 8px;
   transition: var(--transition-fast);
 }
-.btn-details:hover { color: #6d4f16; letter-spacing: 0.3px; }
+.btn-details:hover { color: #4d370b; letter-spacing: 0.3px; }
 
 /* ─────────────────────────────────────────
    9. WHY SECTION
